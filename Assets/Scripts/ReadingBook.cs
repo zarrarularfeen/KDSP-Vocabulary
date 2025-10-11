@@ -25,7 +25,7 @@ public enum Books
 public struct ContentPicturePair
 {
     public string content;
-    public Image image;
+    public Sprite image;
 }
 
 [System.Serializable]
@@ -42,8 +42,11 @@ public class ReadingBook : MonoBehaviour
     [SerializeField] private List<BookInformation> booksList = new List<BookInformation>();
     [SerializeField] private TextMeshProUGUI displayText;
     [SerializeField] private Image displayImage;
+    [SerializeField] private Button nextButton;
+    [SerializeField] private Button previousButton;
 
     private List<ContentPicturePair> content = new List<ContentPicturePair>();
+    private int currentidx = 0;
 
     void Awake()
     {
@@ -58,6 +61,16 @@ public class ReadingBook : MonoBehaviour
     void Start()
     {
         GetCurrentEnabledDictionary();
+        nextButton.onClick.AddListener(Next);
+        previousButton.onClick.AddListener(Previous);
+        nextButton.gameObject.SetActive(false);
+        previousButton.gameObject.SetActive(false);
+        DisplayContent();
+    }
+
+    void Update()
+    {
+
     }
 
     void GetCurrentEnabledDictionary()
@@ -71,13 +84,39 @@ public class ReadingBook : MonoBehaviour
         }
     }
 
+    void Next()
+    {
+        currentidx++;
+        DisplayContent();
+    }
+
+    void Previous()
+    {
+        currentidx--;
+        DisplayContent();
+    }
+
     void DisplayContent()
     {
-        int currentidx = 0;
-        ContentPicturePair currentContent = content[currentidx];
+        if (currentidx == 0 && content.Count > 1)
+        {
+            nextButton.gameObject.SetActive(true);
+            previousButton.gameObject.SetActive(false);
+        }
+        else if (currentidx == content.Count - 1)
+        {
+            nextButton.gameObject.SetActive(false);
+            previousButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            nextButton.gameObject.SetActive(true);
+            previousButton.gameObject.SetActive(true);
+        }
 
+        ContentPicturePair currentContent = content[currentidx];
         displayText.text = currentContent.content;
-        displayImage = currentContent.image;
+        displayImage.sprite = currentContent.image;
         displayImage.SetNativeSize();
     }
 }
