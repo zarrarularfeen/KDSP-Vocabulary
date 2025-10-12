@@ -7,7 +7,12 @@ public enum Scenes
     Home,
     GameSelection,
     ReadingBookDisplay,
-    ReadingBookDisplaySelection
+    ReadingBookDisplaySelection,
+    EnableBooks,
+    Vocabulary,
+    Phrases,
+    Sentences,
+    VocabularyMatching
 
 }
 
@@ -42,6 +47,14 @@ public class SceneController : MonoBehaviour
             ReadingBookDisplay.SetRequestedBook(book);
         }
         SceneManager.LoadScene(currentScene.ToString());
+    }
+
+    public void EnableBooks(string bookName)
+    {
+        if (System.Enum.TryParse(bookName, out Books book))
+        {
+            ReadingBook.Instance.SetBookEnabled(book, true);
+        }
     }
 
     public void OpenLevelSelect(string gameName)

@@ -91,4 +91,18 @@ public class ReadingBook : MonoBehaviour
 
         return null;
     }
+
+    public void SetBookEnabled(Books requestedBook, bool enabled)
+    {
+        for (int i = 0; i < booksList.Count; i++)
+        {
+            if (booksList[i].book == requestedBook)
+            {
+                BookInformation temp = booksList[i];
+                temp.enabled = enabled;
+                booksList[i] = temp;
+                break;
+            }
+        }
+    }
 }

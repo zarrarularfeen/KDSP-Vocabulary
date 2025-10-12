@@ -20,6 +20,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ReadingBookDisplay.unity
     guid: c428edcac5cb84d47927dd7ed9b9d64a
+  - enabled: 1
+    path: Assets/Scenes/Vocabulary.unity
+    guid: 4c59c3952b1ff554690d2130be619e7d
+  - enabled: 1
+    path: Assets/Scenes/Phrases.unity
+    guid: 9f9c2d8d4e4f1b64b9dc5bf51829e480
+  - enabled: 1
+    path: Assets/Scenes/Sentences.unity
+    guid: dfcbee4b89ecdd147871f713c4b35924
+  - enabled: 1
+    path: Assets/Scenes/EnableBooks.unity
+    guid: 438dfb924dc73744a8fe889136607a34
+  - enabled: 1
+    path: Assets/Scenes/VocabularyMatching.unity
+    guid: a002367230bc2ea46897a0c51b97abc4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
