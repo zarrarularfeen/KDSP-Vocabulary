@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9104999748308217120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2917942335529847797}
+  - component: {fileID: 9089496931141336420}
+  m_Layer: 0
+  m_Name: ReadingBookManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2917942335529847797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104999748308217120}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9089496931141336420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104999748308217120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbe6c372f0d593429d6b7d63e3d636e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  booksList:
+  - book: 0
+    enabled: 0
+    contentList:
+    - content: v1-pink
+      image: {fileID: -2739511634412878451, guid: 3a7b64d2f93a7cf41a2fe17f4e3f114b, type: 3}
+    - content: v1-red
+      image: {fileID: 5453984923137981733, guid: 70dd96ee7aa840646ac549be73f9f737, type: 3}
+    - content: v1-white
+      image: {fileID: -7445570063379084358, guid: c036799e43daa454e8b20b2ef2237225, type: 3}
+  - book: 1
+    enabled: 0
+    contentList:
+    - content: v2-red
+      image: {fileID: 5453984923137981733, guid: 70dd96ee7aa840646ac549be73f9f737, type: 3}
+    - content: v2-pink
+      image: {fileID: -2739511634412878451, guid: 3a7b64d2f93a7cf41a2fe17f4e3f114b, type: 3}
+    - content: v2-white
+      image: {fileID: -7445570063379084358, guid: c036799e43daa454e8b20b2ef2237225, type: 3}
+  - book: 2
+    enabled: 0
+    contentList:
+    - content: v3-white
+      image: {fileID: -7445570063379084358, guid: c036799e43daa454e8b20b2ef2237225, type: 3}
+    - content: v3-red
+      image: {fileID: 5453984923137981733, guid: 70dd96ee7aa840646ac549be73f9f737, type: 3}
+    - content: v3-pink
+      image: {fileID: -2739511634412878451, guid: 3a7b64d2f93a7cf41a2fe17f4e3f114b, type: 3}

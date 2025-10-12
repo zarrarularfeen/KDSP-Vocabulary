@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 
+[System.Serializable]
 public enum Books
 {
     Vocabulary1,
@@ -40,13 +41,8 @@ public class ReadingBook : MonoBehaviour
 {
     public static ReadingBook Instance { get; private set; }
     [SerializeField] private List<BookInformation> booksList = new List<BookInformation>();
-    [SerializeField] private TextMeshProUGUI displayText;
-    [SerializeField] private Image displayImage;
-    [SerializeField] private Button nextButton;
-    [SerializeField] private Button previousButton;
 
     private List<ContentPicturePair> content = new List<ContentPicturePair>();
-    private int currentidx = 0;
 
     void Awake()
     {
@@ -60,12 +56,7 @@ public class ReadingBook : MonoBehaviour
 
     void Start()
     {
-        GetCurrentEnabledDictionary();
-        nextButton.onClick.AddListener(Next);
-        previousButton.onClick.AddListener(Previous);
-        nextButton.gameObject.SetActive(false);
-        previousButton.gameObject.SetActive(false);
-        DisplayContent();
+
     }
 
     void Update()
@@ -73,7 +64,7 @@ public class ReadingBook : MonoBehaviour
 
     }
 
-    void GetCurrentEnabledDictionary()
+    public List<ContentPicturePair> GetCurrentEnabledDictionary()
     {
         foreach (BookInformation book in booksList)
         {
@@ -82,41 +73,22 @@ public class ReadingBook : MonoBehaviour
                 content.AddRange(book.contentList);
             }
         }
+
+        return content;
     }
 
-    void Next()
+    public List<ContentPicturePair> GetRequestedBook(Books requestedBook)
     {
-        currentidx++;
-        DisplayContent();
-    }
+        List<ContentPicturePair> displayBook = new List<ContentPicturePair>();
 
-    void Previous()
-    {
-        currentidx--;
-        DisplayContent();
-    }
-
-    void DisplayContent()
-    {
-        if (currentidx == 0 && content.Count > 1)
+        foreach (BookInformation book in booksList)
         {
-            nextButton.gameObject.SetActive(true);
-            previousButton.gameObject.SetActive(false);
-        }
-        else if (currentidx == content.Count - 1)
-        {
-            nextButton.gameObject.SetActive(false);
-            previousButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            nextButton.gameObject.SetActive(true);
-            previousButton.gameObject.SetActive(true);
+            if (book.book == requestedBook)
+            {
+                return book.contentList;
+            }
         }
 
-        ContentPicturePair currentContent = content[currentidx];
-        displayText.text = currentContent.content;
-        displayImage.sprite = currentContent.image;
-        displayImage.SetNativeSize();
+        return null;
     }
 }
