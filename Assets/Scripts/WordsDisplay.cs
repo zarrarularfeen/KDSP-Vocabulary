@@ -6,8 +6,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 
-public class VocabularyMatching : MonoBehaviour
+
+public class WordsDisplay : MonoBehaviour
 {
+
     private List<ContentPicturePair> content = new List<ContentPicturePair>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,15 +21,9 @@ public class VocabularyMatching : MonoBehaviour
             Debug.Log(pair.content);
         }
     }
-
     // Update is called once per frame
     void Update()
     {
 
     }
-
-    // void display()
-    // {
-        
-    // }
 }
