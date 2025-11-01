@@ -12,7 +12,8 @@ public enum Scenes
     Vocabulary,
     Phrases,
     Sentences,
-    VocabularyMatching
+    VocabularyMatching,
+    WordsDisplay
 
 }
 
