@@ -40,13 +40,26 @@ public class WordsDisplay : MonoBehaviour
             newButton.gameObject.SetActive(true);
             wordText = newButton.GetComponentInChildren<TextMeshProUGUI>();
             wordText.text = pair.content;
+            newButton.onClick.AddListener(() => OnWordButtonClicked(pair));
             Debug.Log("button added to grid: " + pair.content);
         }
     }
 
-    // void setGrid()
-    // {
-    //     wordsGrid.GetComponent<re>
-    // }
+    void OnWordButtonClicked(ContentPicturePair pair)
+    {
+        Debug.Log("Word button clicked: " + pair.content);
+        // Add your logic here for what happens when a word button is clicked
+
+
+        if (!VocabularyMatching.selectedContent.Contains(pair))
+        {
+            VocabularyMatching.selectedContent.Add(pair);
+            Debug.Log("Added to selectedContent: " + pair.content);
+        }
+        else
+        {
+            Debug.Log("Already in selectedContent: " + pair.content);
+        }
+    }
     
 }

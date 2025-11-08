@@ -102,6 +102,26 @@ public class SceneController : MonoBehaviour
     //     SceneManager.LoadScene(currentScene.ToString());
     // }
 
+    public void SetVocabularyMode(VocabularyMode mode)
+    {
+        VocabularyMatching.SetVocabularyMode(mode);
+    }
+
+    public void SetVocabularyModeMatch()
+    {
+        SetVocabularyMode(VocabularyMode.Match);
+    }
+
+    public void SetVocabularyModeSelect()
+    {
+        SetVocabularyMode(VocabularyMode.Select);
+    }
+
+    public void SetVocabularyModeName()
+    {
+        SetVocabularyMode(VocabularyMode.Name);
+    }
+
     public void ExitApplication()
     {
         Application.Quit();
