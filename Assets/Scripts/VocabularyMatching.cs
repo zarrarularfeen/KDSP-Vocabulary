@@ -119,7 +119,8 @@ public class VocabularyMatching : MonoBehaviour
     {
         if (currentIndex >= selectedContent.Count)
         {
-            Debug.Log("All words marched!");
+            Debug.Log("All words matched!");
+            SceneController.Instance.OpenLevelSelect("Vocabulary");
             return;
         }
 
@@ -174,6 +175,7 @@ public class VocabularyMatching : MonoBehaviour
         else
         {
             Debug.Log("All select cards shown!");
+            SceneController.Instance.OpenLevelSelect("Vocabulary");
         }
     }
     void ClearGrids()
