@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b8e85c94919d4b84ebc13a31804f1a21
+guid: bd372a29fa1bd9c459b4bf469896efbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 357585243727820222
-    second: chair_0
+      213: -6201643588580411042
+    second: brick-converted_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chair_0
+      name: brick-converted_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3360
-        height: 2240
+        width: 600
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb5715572e566f400800000000000000
-      internalID: 357585243727820222
+      spriteID: e59f51f83065fe9a0800000000000000
+      internalID: -6201643588580411042
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chair_0: 357585243727820222
+      brick-converted_0: -6201643588580411042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3a2066919ecf0934e8c64634f963c97b
+guid: 6c8a0e74e0da8db4e8c8e7840da3704e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8030835215644163416
-    second: car_0
+      213: 8480513908758751684
+    second: bath-converted_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: car_0
+      name: bath-converted_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 6554
-        height: 8192
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a205d9abedbc8090800000000000000
-      internalID: -8030835215644163416
+      spriteID: 4c92354e776d0b570800000000000000
+      internalID: 8480513908758751684
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      car_0: -8030835215644163416
+      bath-converted_0: 8480513908758751684
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

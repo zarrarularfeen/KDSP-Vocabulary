@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 44dc95cdb79d7ea4b91b32255eea0ccf
+guid: 2c2ef4bb15dc8ba4d81758859f08b2e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -557185414492787049
-    second: bath_0
+      213: -1985167962653851331
+    second: coat-converted_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bath_0
+      name: coat-converted_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 4227
-        height: 6340
+        width: 2000
+        height: 3200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79ee02f41da7448f0800000000000000
-      internalID: -557185414492787049
+      spriteID: d31088e71444374e0800000000000000
+      internalID: -1985167962653851331
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bath_0: -557185414492787049
+      coat-converted_0: -1985167962653851331
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

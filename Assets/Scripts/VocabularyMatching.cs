@@ -106,10 +106,11 @@ public class VocabularyMatching : MonoBehaviour
         {
             GameObject target = Instantiate(targetPrefab, questionsGrid.transform);
             string word = selectedContent[i].content;
-            target.GetComponentInChildren<TextMeshProUGUI>().text = word;
+            target.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
-            target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
+            // target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         }
 
         SpawnNextDraggable();
@@ -141,11 +142,12 @@ public class VocabularyMatching : MonoBehaviour
 
         GameObject dragCard = Instantiate(dragPrefab, answersGrid.transform);
         string word = selectedContent[currentIndex].content;
-        dragCard.GetComponentInChildren<TextMeshProUGUI>().text = word;
+        dragCard.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        dragCard.GetComponentInChildren<Image>().sprite = selectedContent[currentIndex].image;
         DraggableCard draggable = dragCard.GetComponent<DraggableCard>();
         draggable.word = word;
         Debug.Log("Spawned draggable for word: " + word);
-        dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
+        // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
     }
     // Called when a correct match is made
     public void OnCorrectMatch()
@@ -159,8 +161,8 @@ public class VocabularyMatching : MonoBehaviour
         ClearGrids();
         Button selectCard = Instantiate(selectButton, questionsGrid.transform);
         selectCard.gameObject.SetActive(true);
-        selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[index].content;
-        selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
+        selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
+        // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         selectCard.onClick.AddListener(() => OnSelectCardClicked(index));
 
     }

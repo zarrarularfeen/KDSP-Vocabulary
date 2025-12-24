@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 40a1a7d36bfc29f4387375ac08ee80c5
+guid: 18a05a0498f2be948be90af9a44112f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6749276748630484902
-    second: socks_0
+      213: 5328332788402992666
+    second: baby_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: socks_0
+      name: baby_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3681
-        height: 4871
+        width: 3110
+        height: 2332
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a76ce4917f3aad50800000000000000
-      internalID: 6749276748630484902
+      spriteID: a16b3d9b07a02f940800000000000000
+      internalID: 5328332788402992666
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      socks_0: 6749276748630484902
+      baby_0: 5328332788402992666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

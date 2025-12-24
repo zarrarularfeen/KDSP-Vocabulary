@@ -4,7 +4,7 @@ using TMPro;
 
 public class DropTarget : MonoBehaviour, IDropHandler
 {
-    public string word;
+    [HideInInspector]public string word;
 
     public void OnDrop(PointerEventData eventData)
     {
