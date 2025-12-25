@@ -66,6 +66,8 @@ public class ReadingBook : MonoBehaviour
 
     public List<ContentPicturePair> GetCurrentEnabledDictionary()
     {
+        content.Clear();
+
         foreach (BookInformation book in booksList)
         {
             if (book.enabled)

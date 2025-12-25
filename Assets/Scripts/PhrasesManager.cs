@@ -6,20 +6,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 
-[System.Serializable]
-public struct ContentPictureTrio
-{
-    public string content;
-    public Sprite phraseImage;
-    public Sprite sightWordImage;
-}
 
 [System.Serializable]
 public struct PBI
 {
     public string phraseContext;
     public int index;
-    public List<ContentPictureTrio> contentList;
+    public List<ContentPicturePair> contentList;
 }
 
 
@@ -28,6 +21,7 @@ public struct PhrasesBookInformation
 {
     public Books book;
     public bool enabled;
+    public List<ContentPicturePair> sightWordList;
     public List<PBI> PBIList;
 
 }
@@ -37,7 +31,9 @@ public class PhrasesManager : MonoBehaviour
     public static PhrasesManager Instance { get; private set; }
     [SerializeField] private List<PhrasesBookInformation> booksList = new List<PhrasesBookInformation>();
 
-    private List<ContentPictureTrio> content = new List<ContentPictureTrio>();
+    private List<ContentPicturePair> content = new List<ContentPicturePair>();
+
+    private List<ContentPicturePair> sightWords = new List<ContentPicturePair>();
 
     void Awake()
     {
@@ -59,8 +55,10 @@ public class PhrasesManager : MonoBehaviour
 
     }
 
-    public List<ContentPictureTrio> GetCurrentEnabledDictionary()
+    public List<ContentPicturePair> GetCurrentEnabledDictionaryPhrases()
     {
+        content.Clear();
+
         foreach (PhrasesBookInformation book in booksList)
         {
             if (book.enabled)
@@ -75,9 +73,24 @@ public class PhrasesManager : MonoBehaviour
         return content;
     }
 
-    public List<ContentPictureTrio> GetRequestedBook(Books requestedBook, string requestedContext)
+    public List<ContentPicturePair> GetCurrentEnabledDictionarySightWords()
     {
-        List<ContentPictureTrio> displayBook = new List<ContentPictureTrio>();
+        sightWords.Clear();
+
+        foreach (PhrasesBookInformation book in booksList)
+        {
+            if (book.enabled)
+            {
+                sightWords.AddRange(book.sightWordList);
+            }
+        }
+
+        return sightWords;
+    }
+
+    public List<ContentPicturePair> GetRequestedBookPhrases(Books requestedBook, string requestedContext)
+    {
+        List<ContentPicturePair> displayBook = new List<ContentPicturePair>();
         int check = 0;
 
         foreach (PhrasesBookInformation book in booksList)
@@ -102,6 +115,21 @@ public class PhrasesManager : MonoBehaviour
         return null;
     }
 
+    public List<ContentPicturePair> GetRequestedBookSightWords(Books requestedBook)
+    {
+        List<ContentPicturePair> displayBook = new List<ContentPicturePair>();
+
+        foreach (PhrasesBookInformation book in booksList)
+        {
+            if (book.book == requestedBook)
+            {
+                return book.sightWordList;
+            }
+        }
+
+        return null;
+    }
+
     public void SetBookEnabled(Books requestedBook, bool enabled)
     {
         for (int i = 0; i < booksList.Count; i++)
@@ -114,20 +142,5 @@ public class PhrasesManager : MonoBehaviour
                 break;
             }
         }
-    }
-
-    public List<string> ExtractSightWords(List<PBI> list)
-    {
-        List<string> sightWords = new List<string>();
-
-        foreach (PBI b in list)
-        {
-            foreach (ContentPictureTrio c in b.contentList)
-            {
-                sightWords.Add(c.content.Split()[b.index]);
-            }
-        }
-
-        return sightWords;
     }
 }
