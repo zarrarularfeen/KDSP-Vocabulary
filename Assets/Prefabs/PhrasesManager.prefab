@@ -48,9 +48,37 @@ MonoBehaviour:
   - book: 3
     enabled: 0
     sightWordList:
-    - content: doll
+    - content: baby
+      image: {fileID: 0}
+    - content: ball
       image: {fileID: 0}
     - content: bear
+      image: {fileID: 0}
+    - content: bed
+      image: {fileID: 0}
+    - content: brushing
+      image: {fileID: 0}
+    - content: cat
+      image: {fileID: 0}
+    - content: chair
+      image: {fileID: 0}
+    - content: dog
+      image: {fileID: 0}
+    - content: doll
+      image: {fileID: 0}
+    - content: drinking
+      image: {fileID: 0}
+    - content: eating
+      image: {fileID: 0}
+    - content: on
+      image: {fileID: 0}
+    - content: sitting
+      image: {fileID: 0}
+    - content: sleeping
+      image: {fileID: 0}
+    - content: table
+      image: {fileID: 0}
+    - content: washing
       image: {fileID: 0}
     PBIList:
     - phraseContext: eating
@@ -60,10 +88,102 @@ MonoBehaviour:
         image: {fileID: 0}
       - content: bear is eating
         image: {fileID: 0}
-    - phraseContext: washing
+      - content: baby is eating
+        image: {fileID: 0}
+      - content: cat is eating
+        image: {fileID: 0}
+      - content: dog is eating
+        image: {fileID: 0}
+    - phraseContext: sleeping
       index: 1
       contentList:
+      - content: 'doll is sleeping '
+        image: {fileID: 0}
+      - content: 'bear is sleeping '
+        image: {fileID: 0}
+      - content: baby is sleeping
+        image: {fileID: 0}
+      - content: 'cat is sleeping '
+        image: {fileID: 0}
+      - content: 'dog is sleeping '
+        image: {fileID: 0}
+    - phraseContext: drinking
+      index: 2
+      contentList:
+      - content: 'doll is drinking '
+        image: {fileID: 0}
+      - content: bear is drinking
+        image: {fileID: 0}
+      - content: baby is drinking
+        image: {fileID: 0}
+      - content: 'cat is drinking '
+        image: {fileID: 0}
+      - content: 'dog is drinking '
+        image: {fileID: 0}
+    - phraseContext: sitting
+      index: 1
+      contentList:
+      - content: 'doll is sitting '
+        image: {fileID: 0}
+      - content: bear is sitting
+        image: {fileID: 0}
+      - content: baby is sitting
+        image: {fileID: 0}
+      - content: cat is sitting
+        image: {fileID: 0}
+      - content: 'dog is sitting '
+        image: {fileID: 0}
+    - phraseContext: washing
+      index: 4
+      contentList:
       - content: washing doll
+        image: {fileID: 0}
+      - content: washing bear
+        image: {fileID: 0}
+      - content: washing baby
+        image: {fileID: 0}
+      - content: washing cat
+        image: {fileID: 0}
+      - content: washing dog
+        image: {fileID: 0}
+    - phraseContext: brushing
+      index: 5
+      contentList:
+      - content: brushing doll
+        image: {fileID: 0}
+      - content: brushing bear
+        image: {fileID: 0}
+      - content: brushing baby
+        image: {fileID: 0}
+      - content: brushing cat
+        image: {fileID: 0}
+      - content: brushing dog
+        image: {fileID: 0}
+    - phraseContext: who's ball
+      index: 5
+      contentList:
+      - content: doll's ball
+        image: {fileID: 0}
+      - content: bear's ball
+        image: {fileID: 0}
+      - content: baby's ball
+        image: {fileID: 0}
+      - content: cat's ball
+        image: {fileID: 0}
+      - content: dog's ball
+        image: {fileID: 0}
+    - phraseContext: who's ball
+      index: 5
+      contentList:
+      - content: doll's ball
+        image: {fileID: 0}
+      - content: bear's ball
+        image: {fileID: 0}
+      - content: baby's ball
+        image: {fileID: 0}
+      - content: cat's ball
+        image: {fileID: 0}
+      - content: dog's ball
         image: {fileID: 0}
   - book: 0
     enabled: 0

@@ -61,7 +61,7 @@ MonoBehaviour:
     - content: bath
       image: {fileID: 8480513908758751684, guid: 6c8a0e74e0da8db4e8c8e7840da3704e, type: 3}
     - content: bear
-      image: {fileID: 7935234321397735378, guid: 5c5eec4fc14e6464299f2ed911e5e3ff, type: 3}
+      image: {fileID: -8384973831825190149, guid: e288d1cc9f70cba4ebbb93341972da38, type: 3}
     - content: bed
       image: {fileID: 2122107185238573207, guid: 2eca4404d458d3f4291f9a0f75a001aa, type: 3}
     - content: bird
