@@ -23,11 +23,13 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     void Start()
     {
-        startPosition = rectTransform.anchoredPosition;
+        
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        startPosition = rectTransform.anchoredPosition;
+        Debug.Log("start position in OnBeginDrag function: " + startPosition);
         canvasGroup.blocksRaycasts = false; // Allow raycasts to pass through
     }
     public void OnDrag(PointerEventData eventData)
@@ -38,7 +40,9 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true; // Restore raycast blocking
-        rectTransform.anchoredPosition = startPosition; // Reset position if not dropped on a target    
+        Debug.Log("start position in OnEndDrag function before setting value: " + startPosition);
+        rectTransform.anchoredPosition = startPosition; // Reset position if not dropped on a target
+        Debug.Log("start position in OnEndDrag function after setting value: " + startPosition);    
     }
     
     public void ResetPosition()
