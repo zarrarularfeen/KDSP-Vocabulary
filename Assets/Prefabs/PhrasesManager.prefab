@@ -49,545 +49,776 @@ MonoBehaviour:
     enabled: 0
     sightWordList:
     - content: baby
-      image: {fileID: 0}
+      image: {fileID: 5328332788402992666, guid: 18a05a0498f2be948be90af9a44112f9, type: 3}
+      audio: {fileID: 0}
     - content: ball
-      image: {fileID: 0}
+      image: {fileID: -3603556060819865620, guid: 65676024c7730b249a2efa2573b16b99, type: 3}
+      audio: {fileID: 0}
     - content: bear
-      image: {fileID: 0}
+      image: {fileID: -8384973831825190149, guid: e288d1cc9f70cba4ebbb93341972da38, type: 3}
+      audio: {fileID: 0}
     - content: bed
-      image: {fileID: 0}
+      image: {fileID: 2122107185238573207, guid: 2eca4404d458d3f4291f9a0f75a001aa, type: 3}
+      audio: {fileID: 0}
     - content: brushing
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: cat
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: chair
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: dog
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: doll
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: drinking
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: eating
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: on
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: sitting
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: sleeping
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: table
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: washing
       image: {fileID: 0}
+      audio: {fileID: 0}
     PBIList:
     - phraseContext: eating
       index: 0
       contentList:
       - content: doll is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bear is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: baby is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cat is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: dog is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: sleeping
       index: 1
       contentList:
       - content: 'doll is sleeping '
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: 'bear is sleeping '
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: baby is sleeping
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: 'cat is sleeping '
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: 'dog is sleeping '
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: drinking
       index: 2
       contentList:
       - content: 'doll is drinking '
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bear is drinking
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: baby is drinking
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: 'cat is drinking '
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: 'dog is drinking '
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: sitting
       index: 3
       contentList:
       - content: 'doll is sitting '
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bear is sitting
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: baby is sitting
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cat is sitting
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: 'dog is sitting '
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: washing
       index: 4
       contentList:
       - content: washing doll
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: washing bear
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: washing baby
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: washing cat
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: washing dog
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: brushing
       index: 5
       contentList:
       - content: brushing doll
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: brushing bear
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: brushing baby
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: brushing cat
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: brushing dog
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: who's ball
       index: 6
       contentList:
       - content: doll's ball
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bear's ball
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: baby's ball
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cat's ball
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: dog's ball
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: on
       index: 7
       contentList:
       - content: doll is on chair
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: doll is on bed
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: doll is on table
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bear is on chair
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bear is on bed
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bear is on table
         image: {fileID: 0}
+        audio: {fileID: 0}
   - book: 4
     enabled: 0
     sightWordList:
     - content: apple
-      image: {fileID: 0}
+      image: {fileID: -7832214784768987486, guid: 21bc7f33d9fd42541ad2f2e6de2a03be, type: 3}
+      audio: {fileID: 0}
     - content: ball
-      image: {fileID: 0}
+      image: {fileID: -3603556060819865620, guid: 65676024c7730b249a2efa2573b16b99, type: 3}
+      audio: {fileID: 0}
     - content: banana
-      image: {fileID: 0}
+      image: {fileID: -9182177788924653191, guid: dac01b4553861c04a81258b9cbc2b108, type: 3}
+      audio: {fileID: 0}
     - content: bed
-      image: {fileID: 0}
+      image: {fileID: 2122107185238573207, guid: 2eca4404d458d3f4291f9a0f75a001aa, type: 3}
+      audio: {fileID: 0}
     - content: biscuit/cookie
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: big
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: boat
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: bread
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: bubbles
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: bus
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: car
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: cat
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: chair
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: coat
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: cutting
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: dinner
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: dirty
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: dog
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: eating
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: fish
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: flower
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: hair
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: horse
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: jumping
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: little
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: monkey
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: on
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: playing
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: rabbit
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: shoe
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: train
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: wet
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: yogurt
       image: {fileID: 0}
+      audio: {fileID: 0}
     PBIList:
     - phraseContext: eatingOne
       index: 0
       contentList:
       - content: cat is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: dog is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: horse is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: rabbit is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: monkey is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: fish is eating
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: jumping
       index: 1
       contentList:
       - content: cat is jumping
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: dog is jumping
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: horse is jumping
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: rabbit is jumping
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: monkey is jumping
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: fish is jumping
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: bigLittle
       index: 2
       contentList:
       - content: big dog
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: little dog
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: big monkey
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: little monkey
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: big ball
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: little ball
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: on
       index: 3
       contentList:
       - content: on the chair
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the bus
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the train
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the horse
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the boat
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the bed
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: eatingTwo
       index: 4
       contentList:
       - content: eating apple
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: eating bread
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: eating banana
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: eating yoghurt/yogurt
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: eating biscuit/cookie
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: eating dinner
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: cutting
       index: 5
       contentList:
       - content: cutting banana
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cutting apple
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cutting bread
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cutting dinner
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cutting flower
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cutting hair
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: playing
       index: 6
       contentList:
       - content: playing with bus
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: playing with boat
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: playing with car
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: playing with train
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: playing with doll
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: playing with bubbles
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: wetDirty
       index: 7
       contentList:
       - content: wet dog
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: wet coat
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: dirty car
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: dirty shoe
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: wet hair
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: dirty bus
         image: {fileID: 0}
+        audio: {fileID: 0}
   - book: 5
     enabled: 0
     sightWordList:
     - content: baby
-      image: {fileID: 0}
+      image: {fileID: 5328332788402992666, guid: 18a05a0498f2be948be90af9a44112f9, type: 3}
+      audio: {fileID: 0}
     - content: bath
-      image: {fileID: 0}
+      image: {fileID: 8480513908758751684, guid: 6c8a0e74e0da8db4e8c8e7840da3704e, type: 3}
+      audio: {fileID: 0}
     - content: bike
-      image: {fileID: 0}
+      image: {fileID: -5064401156898091283, guid: b977af3f222a87246960d2be8c0a64ce, type: 3}
+      audio: {fileID: 0}
     - content: bird
-      image: {fileID: 0}
+      image: {fileID: -5064401156898091283, guid: b977af3f222a87246960d2be8c0a64ce, type: 3}
+      audio: {fileID: 0}
     - content: bowl
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: box
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: boy
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: car
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: cat
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: chairs
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: climbing
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: dog
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: down
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: duck
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: ducks
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: feeding
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: fish
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: fork
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: garden
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: girl
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: hat
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: horse
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: house
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: in
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: monkey
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: on
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: plate
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: potty
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: rabbit
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: running
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: sand
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: scarf
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: shoes
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: socks
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: spoon
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: stairs
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: swimming
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: swing
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: swings
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: table
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: tiger
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: towel
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: tractor
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: tree
       image: {fileID: 0}
+      audio: {fileID: 0}
     - content: up
       image: {fileID: 0}
+      audio: {fileID: 0}
     PBIList:
     - phraseContext: feeding
       index: 0
       contentList:
       - content: feeding baby
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: feeding dog
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: feeding horse
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: feeding ducks
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: feeding bird
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: feeding rabbit
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: 'swimming '
       index: 1
       contentList:
       - content: dog is swimming
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: duck is swimming
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: horse is swimming
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: fish is swimming
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: boy is swimming
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: girl is swimming
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: running
       index: 2
       contentList:
       - content: dog is running
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: tiger is running
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: girl is running
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: boy is running
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cat is running
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: rabbit is running
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: climbing
       index: 3
       contentList:
       - content: monkey is climbing
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: dog is climbing
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: girl is climbing
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: boy is climbing
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: cat is climbing
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: tiger is climbing
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: upDown
       index: 4
       contentList:
       - content: boy is up
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: boy is down
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: 'swing is down '
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: swing is up
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bike is up
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: bike is down
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: 5
       index: 3
       contentList:
       - content: in the bath
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: in the car
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: in the box
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: in the garden
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: in the tree
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: in the house
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: on
       index: 6
       contentList:
       - content: on the bike
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the potty
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the stairs
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the swings
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the sand
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: on the tractor
         image: {fileID: 0}
+        audio: {fileID: 0}
     - phraseContext: together
       index: 7
       contentList:
       - content: socks and shoes
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: hat and scarf
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: 'bowl and spoon '
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: plate and fork
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: towel and bath
         image: {fileID: 0}
+        audio: {fileID: 0}
       - content: table and chairs
         image: {fileID: 0}
+        audio: {fileID: 0}

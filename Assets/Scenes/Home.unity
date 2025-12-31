@@ -725,6 +725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManagerPrefab: {fileID: 8215173375408026917, guid: 41dea3fce39a0f64095d7d899f464fb8, type: 3}
   readingBookPrefab: {fileID: 9104999748308217120, guid: bba7c710c91701e44864028c1b445d95, type: 3}
+  phrasesManagerPrefab: {fileID: 605071970979306963, guid: 1d5a7e23c015a1549a791353a85fa985, type: 3}
 --- !u!1 &1466750081
 GameObject:
   m_ObjectHideFlags: 0

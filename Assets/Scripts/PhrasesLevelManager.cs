@@ -7,14 +7,16 @@ using System.Collections.Generic;
 using UnityEngine.Rendering;
 using System;
 
-public enum VocabularyMode
+public enum PhrasesLevelMode
 {
-    Match,
-    Select,
-    Name
+    MatchSghtWord,
+    SelectSightWord,
+    ReadSightWord,
+    UnderstandSightWord,
+    UnderstandPhrase,
 
 }
-public class VocabularyMatching : MonoBehaviour
+public class PhrasesLevelManager : MonoBehaviour
 {
     public static List<ContentPictureAudioTrio> selectedContent = new List<ContentPictureAudioTrio>();
     [SerializeField] private GridLayoutGroup questionsGrid;
@@ -24,37 +26,21 @@ public class VocabularyMatching : MonoBehaviour
     [SerializeField] private Button selectButton;
     private int currentBatchStart = 0;
     private int currentIndex = 0;
-    public static VocabularyMatching Instance { get; private set; }
-
-    public static VocabularyMode currentMode = VocabularyMode.Match;
-
-    void Awake()
-    {
-        // Ensure only one instance of SceneController exists
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject); // Destroy duplicate instances
-        }
-        Instance = this;
-    }
+    public static PhrasesLevelManager Instance { get; private set; }
+    public static PhrasesLevelMode currentMode = PhrasesLevelMode.MatchSghtWord;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // content = ReadingBook.Instance.GetCurrentEnabledDictionary();
-        // foreach (ContentPictureAudioTrio pair in content)
-        // {
-        //     Debug.Log(pair.content);
-        // }
-
-        Debug.Log("VocabularyMatching started with selectedContent: " + selectedContent.Count);
+        Debug.Log("PhrasesLevel started with selectedContent: " + selectedContent.Count);
 
         foreach (ContentPictureAudioTrio pair in selectedContent)
         {
             Debug.Log(pair.content);
         }
-        SetContent(currentMode);
+        SetContent(currentMode);   
     }
 
-    public static void SetVocabularyMode(VocabularyMode mode)
+    public static void SetPhrasesLevelMode(PhrasesLevelMode mode)
     {
         currentMode = mode;
 
@@ -62,19 +48,25 @@ public class VocabularyMatching : MonoBehaviour
 
 
 
-    void SetContent(VocabularyMode mode)
+    void SetContent(PhrasesLevelMode mode)
     {
         switch (mode)
         {
-            case VocabularyMode.Match:
+            case PhrasesLevelMode.MatchSghtWord:
                 SetContentMatch();
                 break;
-            case VocabularyMode.Select:
+            case PhrasesLevelMode.SelectSightWord:
                 // Set content for Select mode
                 SetContentSelect();
                 break;
-            case VocabularyMode.Name:
-                // Set content for Name mode
+            case PhrasesLevelMode.ReadSightWord:
+                // Set content for Read mode
+                break;
+            case PhrasesLevelMode.UnderstandSightWord:
+                // Set content for Understand mode
+                break;
+            case PhrasesLevelMode.UnderstandPhrase:
+                // Set content for Understand Phrase mode
                 break;
         }
     }
@@ -198,3 +190,5 @@ public class VocabularyMatching : MonoBehaviour
 
 
 }
+
+

@@ -30,11 +30,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Sentences.unity
     guid: dfcbee4b89ecdd147871f713c4b35924
   - enabled: 1
-    path: Assets/Scenes/EnableBooks.unity
+    path: Assets/Scenes/EnableBooksVocabulary.unity
     guid: 438dfb924dc73744a8fe889136607a34
+  - enabled: 1
+    path: Assets/Scenes/EnableBooksPhrases.unity
+    guid: 2d6a57f7e498eec4ab8d3cd56524ea8d
   - enabled: 1
     path: Assets/Scenes/WordsDisplay.unity
     guid: f16c6ec3e5a29c54fa3424cc690032f1
+  - enabled: 1
+    path: Assets/Scenes/PhrasesLevel.unity
+    guid: f60adb7c1b5690946af8715cc6ce47c4
   - enabled: 1
     path: Assets/Scenes/VocabularyMatching.unity
     guid: a002367230bc2ea46897a0c51b97abc4

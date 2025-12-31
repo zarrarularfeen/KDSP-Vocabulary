@@ -1240,7 +1240,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1024637645}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: EnableBooks
+        m_MethodName: EnableBooksVocabulary
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1854,7 +1854,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1024637645}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: EnableBooks
+        m_MethodName: EnableBooksVocabulary
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1988,7 +1988,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1024637645}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: EnableBooks
+        m_MethodName: EnableBooksVocabulary
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

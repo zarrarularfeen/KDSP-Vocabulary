@@ -4,6 +4,7 @@ public class BootstrapLoader : MonoBehaviour
 {
     [SerializeField] private GameObject audioManagerPrefab;
     [SerializeField] private GameObject readingBookPrefab;
+    [SerializeField] private GameObject phrasesManagerPrefab;
 
     void Awake()
     {
@@ -17,6 +18,12 @@ public class BootstrapLoader : MonoBehaviour
         {
             GameObject readingBookInstance = Instantiate(readingBookPrefab);
             DontDestroyOnLoad(readingBookPrefab); // Ensure it persists across scenes
+        }
+
+        if (PhrasesManager.Instance == null)
+        {
+            GameObject phrasesManagerInstance = Instantiate(phrasesManagerPrefab);
+            DontDestroyOnLoad(phrasesManagerPrefab); // Ensure it persists across scenes
         }
     }
 

@@ -8,11 +8,13 @@ public enum Scenes
     GameSelection,
     ReadingBookDisplay,
     ReadingBookDisplaySelection,
-    EnableBooks,
+    EnableBooksVocabulary,
+    EnableBooksPhrases,
     Vocabulary,
     Phrases,
     Sentences,
     VocabularyMatching,
+    PhrasesLevel,
     WordsDisplay
 
 }
@@ -50,11 +52,19 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(currentScene.ToString());
     }
 
-    public void EnableBooks(string bookName)
+    public void EnableBooksVocabulary(string bookName)
     {
         if (System.Enum.TryParse(bookName, out Books book))
         {
             ReadingBook.Instance.SetBookEnabled(book, true);
+        }
+    }
+
+    public void EnableBooksPhrases(string bookName)
+    {
+        if (System.Enum.TryParse(bookName, out Books book))
+        {
+            PhrasesManager.Instance.SetBookEnabled(book, true);
         }
     }
 
@@ -102,6 +112,7 @@ public class SceneController : MonoBehaviour
     //     SceneManager.LoadScene(currentScene.ToString());
     // }
 
+    //Vocabulary Mode selection
     public void SetVocabularyMode(VocabularyMode mode)
     {
         VocabularyMatching.SetVocabularyMode(mode);
@@ -121,7 +132,50 @@ public class SceneController : MonoBehaviour
     {
         SetVocabularyMode(VocabularyMode.Name);
     }
+    //Words Display Mode selection
+    public void SetWordsDisplayMode(WordsDisplayMode mode)
+    {
+        WordsDisplay.SetWordsDisplayMode(mode);
+    }
 
+    public void SetWordsDisplayModeVocabulary()
+    {
+        SetWordsDisplayMode(WordsDisplayMode.Vocabulary);
+    }
+    public void SetWordsDisplayModeSightWords()
+    {
+        SetWordsDisplayMode(WordsDisplayMode.SightWords);
+    }
+    public void SetWordsDisplayModePhrases()
+    {
+        SetWordsDisplayMode(WordsDisplayMode.Phrases);
+    }
+
+    //Phrases Level Mode selection
+    public void SetPhrasesMode(PhrasesLevelMode mode)
+    {
+        PhrasesLevelManager.SetPhrasesLevelMode(mode);
+    }
+    public void SetPhrasesModeMatch()
+    {
+        SetPhrasesMode(PhrasesLevelMode.MatchSghtWord);
+    }
+    public void SetPhrasesModeSelect()
+    {
+        SetPhrasesMode(PhrasesLevelMode.SelectSightWord);
+    }
+    public void SetPhrasesModeRead()
+    {
+        SetPhrasesMode(PhrasesLevelMode.ReadSightWord);
+    }
+    public void SetPhrasesModeUnderstandSightWord()
+    {
+        SetPhrasesMode(PhrasesLevelMode.UnderstandSightWord);
+    }
+    public void SetPhrasesModeUnderstandPhrase()
+    {
+        SetPhrasesMode(PhrasesLevelMode.UnderstandPhrase);
+    }
     public void ExitApplication()
     {
         Application.Quit();

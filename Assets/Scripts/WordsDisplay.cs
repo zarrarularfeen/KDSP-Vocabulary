@@ -8,6 +8,12 @@ using UnityEngine.Rendering;
 using NUnit.Framework;
 using Unity.VisualScripting;
 
+public enum WordsDisplayMode
+{
+    Vocabulary,
+    SightWords,
+    Phrases
+}
 
 public class WordsDisplay : MonoBehaviour
 {
@@ -16,12 +22,37 @@ public class WordsDisplay : MonoBehaviour
     private TextMeshProUGUI wordText;
     [SerializeField] private Button wordButton;
     [SerializeField] private GridLayoutGroup wordsGrid;
+    public static WordsDisplayMode currentMode;
+    public static WordsDisplay Instance { get; private set; }
 
+
+    void Awake()
+    {
+        // Ensure only one instance exists
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate instances
+        }
+        Instance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        content = ReadingBook.Instance.GetCurrentEnabledDictionary();
+        
+        if (currentMode == WordsDisplayMode.Vocabulary)
+        {
+            content = ReadingBook.Instance.GetCurrentEnabledDictionary();
+        }
+        else if (currentMode == WordsDisplayMode.Phrases)
+        {
+            content = PhrasesManager.Instance.GetCurrentEnabledDictionaryPhrases();
+        }
+        else if (currentMode == WordsDisplayMode.SightWords)
+        {
+            content = PhrasesManager.Instance.GetCurrentEnabledDictionarySightWords();
+        }
+        
         foreach (ContentPictureAudioTrio pair in content)
         {
             Debug.Log(pair.content);
@@ -30,7 +61,10 @@ public class WordsDisplay : MonoBehaviour
         DisplayWords();
     }
     // Update is called once per frame
-
+    public static void SetWordsDisplayMode(WordsDisplayMode mode)
+    {
+        currentMode = mode;
+    }
 
     void DisplayWords()
     {
@@ -51,9 +85,9 @@ public class WordsDisplay : MonoBehaviour
         // Add your logic here for what happens when a word button is clicked
 
 
-        if (!VocabularyMatching.selectedContent.Contains(pair))
+        if (!PhrasesLevelManager.selectedContent.Contains(pair))
         {
-            VocabularyMatching.selectedContent.Add(pair);
+            PhrasesLevelManager.selectedContent.Add(pair);
             Debug.Log("Added to selectedContent: " + pair.content);
         }
         else
