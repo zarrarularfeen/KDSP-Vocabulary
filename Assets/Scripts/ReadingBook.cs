@@ -23,10 +23,11 @@ public enum Books
 }
 
 [System.Serializable]
-public struct ContentPicturePair
+public struct ContentPictureAudioTrio
 {
     public string content;
     public Sprite image;
+    public AudioClip audio;
 }
 
 [System.Serializable]
@@ -34,7 +35,7 @@ public struct BookInformation
 {
     public Books book;
     public bool enabled;
-    public List<ContentPicturePair> contentList;
+    public List<ContentPictureAudioTrio> contentList;
 }
 
 public class ReadingBook : MonoBehaviour
@@ -42,7 +43,7 @@ public class ReadingBook : MonoBehaviour
     public static ReadingBook Instance { get; private set; }
     [SerializeField] private List<BookInformation> booksList = new List<BookInformation>();
 
-    private List<ContentPicturePair> content = new List<ContentPicturePair>();
+    private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
 
     void Awake()
     {
@@ -64,7 +65,7 @@ public class ReadingBook : MonoBehaviour
 
     }
 
-    public List<ContentPicturePair> GetCurrentEnabledDictionary()
+    public List<ContentPictureAudioTrio> GetCurrentEnabledDictionary()
     {
         content.Clear();
 
@@ -79,9 +80,9 @@ public class ReadingBook : MonoBehaviour
         return content;
     }
 
-    public List<ContentPicturePair> GetRequestedBook(Books requestedBook)
+    public List<ContentPictureAudioTrio> GetRequestedBook(Books requestedBook)
     {
-        List<ContentPicturePair> displayBook = new List<ContentPicturePair>();
+        List<ContentPictureAudioTrio> displayBook = new List<ContentPictureAudioTrio>();
 
         foreach (BookInformation book in booksList)
         {

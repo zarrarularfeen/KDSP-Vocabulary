@@ -7,11 +7,11 @@ public class BootstrapLoader : MonoBehaviour
 
     void Awake()
     {
-        // if (AudioManager.Instance == null)
-        // {
-        //     GameObject audioManagerInstance = Instantiate(audioManagerPrefab);
-        //     DontDestroyOnLoad(audioManagerInstance); // Ensure it persists across scenes
-        // }
+        if (AudioManager.Instance == null)
+        {
+            GameObject audioManagerInstance = Instantiate(audioManagerPrefab);
+            DontDestroyOnLoad(audioManagerInstance); // Ensure it persists across scenes
+        }
 
         if (ReadingBook.Instance == null)
         {

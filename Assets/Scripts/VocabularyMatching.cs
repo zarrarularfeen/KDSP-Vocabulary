@@ -16,8 +16,8 @@ public enum VocabularyMode
 }
 public class VocabularyMatching : MonoBehaviour
 {
-    private List<ContentPicturePair> content = new List<ContentPicturePair>();
-    public static List<ContentPicturePair> selectedContent = new List<ContentPicturePair>();
+    private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
+    public static List<ContentPictureAudioTrio> selectedContent = new List<ContentPictureAudioTrio>();
     [SerializeField] private GridLayoutGroup questionsGrid;
     [SerializeField] private GridLayoutGroup answersGrid;
     [SerializeField] private GameObject targetPrefab;
@@ -32,18 +32,18 @@ public class VocabularyMatching : MonoBehaviour
     void Awake()
     {
         Instance = this;
-    } 
+    }
     void Start()
     {
         // content = ReadingBook.Instance.GetCurrentEnabledDictionary();
-        // foreach (ContentPicturePair pair in content)
+        // foreach (ContentPictureAudioTrio pair in content)
         // {
         //     Debug.Log(pair.content);
         // }
 
         Debug.Log("VocabularyMatching started with selectedContent: " + selectedContent.Count);
-        
-        foreach (ContentPicturePair pair in selectedContent)
+
+        foreach (ContentPictureAudioTrio pair in selectedContent)
         {
             Debug.Log(pair.content);
         }
@@ -53,7 +53,7 @@ public class VocabularyMatching : MonoBehaviour
     public static void SetVocabularyMode(VocabularyMode mode)
     {
         currentMode = mode;
-        
+
     }
 
 
@@ -74,7 +74,7 @@ public class VocabularyMatching : MonoBehaviour
                 break;
         }
     }
-    
+
     // Set up content for Matching mode and Calls relevant methods
     void SetContentMatch()
     {
@@ -138,7 +138,7 @@ public class VocabularyMatching : MonoBehaviour
             return;
         }
 
-        
+
 
         GameObject dragCard = Instantiate(dragPrefab, answersGrid.transform);
         string word = selectedContent[currentIndex].content;
@@ -191,6 +191,6 @@ public class VocabularyMatching : MonoBehaviour
             Destroy(child.gameObject);
         }
     }
-    
-    
+
+
 }

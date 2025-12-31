@@ -13,7 +13,7 @@ public class ReadingBookDisplay : MonoBehaviour
     [SerializeField] private Button nextButton;
     [SerializeField] private Button previousButton;
 
-    private List<ContentPicturePair> content = new List<ContentPicturePair>();
+    private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
     private int currentidx = 0;
     private static Books requestedBook;
 
@@ -72,7 +72,7 @@ public class ReadingBookDisplay : MonoBehaviour
             previousButton.gameObject.SetActive(true);
         }
 
-        ContentPicturePair currentContent = content[currentidx];
+        ContentPictureAudioTrio currentContent = content[currentidx];
         displayText.text = currentContent.content;
         displayImage.sprite = currentContent.image;
         displayImage.SetNativeSize();

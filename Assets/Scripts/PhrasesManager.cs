@@ -12,7 +12,7 @@ public struct PBI
 {
     public string phraseContext;
     public int index;
-    public List<ContentPicturePair> contentList;
+    public List<ContentPictureAudioTrio> contentList;
 }
 
 
@@ -21,7 +21,7 @@ public struct PhrasesBookInformation
 {
     public Books book;
     public bool enabled;
-    public List<ContentPicturePair> sightWordList;
+    public List<ContentPictureAudioTrio> sightWordList;
     public List<PBI> PBIList;
 
 }
@@ -31,9 +31,9 @@ public class PhrasesManager : MonoBehaviour
     public static PhrasesManager Instance { get; private set; }
     [SerializeField] private List<PhrasesBookInformation> booksList = new List<PhrasesBookInformation>();
 
-    private List<ContentPicturePair> content = new List<ContentPicturePair>();
+    private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
 
-    private List<ContentPicturePair> sightWords = new List<ContentPicturePair>();
+    private List<ContentPictureAudioTrio> sightWords = new List<ContentPictureAudioTrio>();
 
     void Awake()
     {
@@ -55,7 +55,7 @@ public class PhrasesManager : MonoBehaviour
 
     }
 
-    public List<ContentPicturePair> GetCurrentEnabledDictionaryPhrases()
+    public List<ContentPictureAudioTrio> GetCurrentEnabledDictionaryPhrases()
     {
         content.Clear();
 
@@ -73,7 +73,7 @@ public class PhrasesManager : MonoBehaviour
         return content;
     }
 
-    public List<ContentPicturePair> GetCurrentEnabledDictionarySightWords()
+    public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySightWords()
     {
         sightWords.Clear();
 
@@ -88,9 +88,9 @@ public class PhrasesManager : MonoBehaviour
         return sightWords;
     }
 
-    public List<ContentPicturePair> GetRequestedBookPhrases(Books requestedBook, string requestedContext)
+    public List<ContentPictureAudioTrio> GetRequestedBookPhrases(Books requestedBook, string requestedContext)
     {
-        List<ContentPicturePair> displayBook = new List<ContentPicturePair>();
+        List<ContentPictureAudioTrio> displayBook = new List<ContentPictureAudioTrio>();
         int check = 0;
 
         foreach (PhrasesBookInformation book in booksList)
@@ -115,9 +115,9 @@ public class PhrasesManager : MonoBehaviour
         return null;
     }
 
-    public List<ContentPicturePair> GetRequestedBookSightWords(Books requestedBook)
+    public List<ContentPictureAudioTrio> GetRequestedBookSightWords(Books requestedBook)
     {
-        List<ContentPicturePair> displayBook = new List<ContentPicturePair>();
+        List<ContentPictureAudioTrio> displayBook = new List<ContentPictureAudioTrio>();
 
         foreach (PhrasesBookInformation book in booksList)
         {

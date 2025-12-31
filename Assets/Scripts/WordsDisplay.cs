@@ -12,17 +12,17 @@ using Unity.VisualScripting;
 public class WordsDisplay : MonoBehaviour
 {
 
-    private List<ContentPicturePair> content = new List<ContentPicturePair>();
+    private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
     private TextMeshProUGUI wordText;
     [SerializeField] private Button wordButton;
     [SerializeField] private GridLayoutGroup wordsGrid;
-    
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         content = ReadingBook.Instance.GetCurrentEnabledDictionary();
-        foreach (ContentPicturePair pair in content)
+        foreach (ContentPictureAudioTrio pair in content)
         {
             Debug.Log(pair.content);
         }
@@ -34,7 +34,7 @@ public class WordsDisplay : MonoBehaviour
 
     void DisplayWords()
     {
-        foreach (ContentPicturePair pair in content)
+        foreach (ContentPictureAudioTrio pair in content)
         {
             Button newButton = Instantiate(wordButton, wordsGrid.transform);
             newButton.gameObject.SetActive(true);
@@ -45,7 +45,7 @@ public class WordsDisplay : MonoBehaviour
         }
     }
 
-    void OnWordButtonClicked(ContentPicturePair pair)
+    void OnWordButtonClicked(ContentPictureAudioTrio pair)
     {
         Debug.Log("Word button clicked: " + pair.content);
         // Add your logic here for what happens when a word button is clicked
@@ -61,5 +61,5 @@ public class WordsDisplay : MonoBehaviour
             Debug.Log("Already in selectedContent: " + pair.content);
         }
     }
-    
+
 }

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e27691932e58640a3b32274e7f80f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  backgroundMusicSource: {fileID: 0}
+  audioSource: {fileID: 6085539781166950112}
+  backgroundMusicSource: {fileID: 1657131107162878445}
   backgroundMusic: {fileID: 0}
   winningSound: {fileID: 0}
   correctSound: {fileID: 0}
