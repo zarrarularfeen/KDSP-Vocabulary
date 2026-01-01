@@ -150,6 +150,23 @@ public class SceneController : MonoBehaviour
     {
         SetWordsDisplayMode(WordsDisplayMode.Phrases);
     }
+    //Words Display Game Mode selection
+    public void SetWordsDisplayGameMode(GameMode mode)
+    {
+        WordsDisplay.SetGameMode(mode);
+    }
+    public void SetWordsDisplayGameModeVocabulary()
+    {
+        SetWordsDisplayGameMode(GameMode.Vocabulary);
+    }
+    public void SetWordsDisplayGameModePhrases()
+    {
+        SetWordsDisplayGameMode(GameMode.Phrases);
+    }
+    public void SetWordsDisplayGameModeSentences()
+    {
+        SetWordsDisplayGameMode(GameMode.Sentences);
+    }
 
     //Phrases Level Mode selection
     public void SetPhrasesMode(PhrasesLevelMode mode)

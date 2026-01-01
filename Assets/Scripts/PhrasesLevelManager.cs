@@ -28,6 +28,16 @@ public class PhrasesLevelManager : MonoBehaviour
     private int currentIndex = 0;
     public static PhrasesLevelManager Instance { get; private set; }
     public static PhrasesLevelMode currentMode = PhrasesLevelMode.MatchSghtWord;
+
+    void Awake()
+    {
+        // Ensure only one instance of SceneController exists
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate instances
+        }
+        Instance = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

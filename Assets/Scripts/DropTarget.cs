@@ -18,7 +18,17 @@ public class DropTarget : MonoBehaviour, IDropHandler
         {
             Debug.Log("Correct match for word: " + word);
             Destroy(dragged.gameObject);
-            VocabularyMatching.Instance.OnCorrectMatch();   
+            if (WordsDisplay.currentGameMode == GameMode.Vocabulary)
+            {
+                Debug.Log("Calling VocabularyMatching OnCorrectMatch");
+                VocabularyMatching.Instance.OnCorrectMatch();
+            }    
+            else if (WordsDisplay.currentGameMode == GameMode.Phrases)
+            {
+                Debug.Log("Calling PhrasesLevelManager OnCorrectMatch");
+                PhrasesLevelManager.Instance.OnCorrectMatch();
+            }
+                
         }
         else
         {

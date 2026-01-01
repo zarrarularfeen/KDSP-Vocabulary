@@ -1123,6 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordButton: {fileID: 51087927}
+  NextButton: {fileID: 909983351}
   wordsGrid: {fileID: 1585225709}
 --- !u!4 &1151774096
 Transform:
@@ -1991,8 +1992,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 489396668}
   m_HandleRect: {fileID: 489396667}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.99999803
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

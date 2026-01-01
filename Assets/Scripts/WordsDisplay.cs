@@ -15,14 +15,22 @@ public enum WordsDisplayMode
     Phrases
 }
 
+public enum GameMode
+{
+    Vocabulary,
+    Phrases,
+    Sentences
+}
 public class WordsDisplay : MonoBehaviour
 {
 
     private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
     private TextMeshProUGUI wordText;
     [SerializeField] private Button wordButton;
+    [SerializeField] private Button NextButton;
     [SerializeField] private GridLayoutGroup wordsGrid;
     public static WordsDisplayMode currentMode;
+    public static GameMode currentGameMode;
     public static WordsDisplay Instance { get; private set; }
 
 
@@ -59,11 +67,17 @@ public class WordsDisplay : MonoBehaviour
         }
 
         DisplayWords();
+        OnNextButtonClicked(NextButton);
     }
     // Update is called once per frame
     public static void SetWordsDisplayMode(WordsDisplayMode mode)
     {
         currentMode = mode;
+    }
+
+    public static void SetGameMode(GameMode mode)
+    {
+        currentGameMode = mode;
     }
 
     void DisplayWords()
@@ -84,16 +98,39 @@ public class WordsDisplay : MonoBehaviour
         Debug.Log("Word button clicked: " + pair.content);
         // Add your logic here for what happens when a word button is clicked
 
+        if (currentGameMode == GameMode.Vocabulary)
+        {
+            if (!VocabularyMatching.selectedContent.Contains(pair))
+            {
+                VocabularyMatching.selectedContent.Add(pair);
+                Debug.Log("Added to selectedContent: " + pair.content);
+            }
+            else
+            {
+                Debug.Log("Already in selectedContent: " + pair.content);
+            }
+        }
+        else if (currentGameMode == GameMode.Phrases)
+        {
+            if (!PhrasesLevelManager.selectedContent.Contains(pair))
+            {
+                PhrasesLevelManager.selectedContent.Add(pair);
+                Debug.Log("Added to selectedContent: " + pair.content);
+            }
+            else
+            {
+                Debug.Log("Already in selectedContent: " + pair.content);
+            }
+        }
+        
+    }
 
-        if (!PhrasesLevelManager.selectedContent.Contains(pair))
-        {
-            PhrasesLevelManager.selectedContent.Add(pair);
-            Debug.Log("Added to selectedContent: " + pair.content);
-        }
-        else
-        {
-            Debug.Log("Already in selectedContent: " + pair.content);
-        }
+    void OnNextButtonClicked(Button nextButton)
+    {
+        if (currentGameMode == GameMode.Vocabulary)
+            nextButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("VocabularyMatching"));
+        else if (currentGameMode == GameMode.Phrases)
+            nextButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("PhrasesLevel"));
     }
 
 }
