@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
+using System;
 
 
 [System.Serializable]
@@ -26,14 +27,19 @@ public struct PhrasesBookInformation
 
 }
 
+public class ContextListEntry
+{
+    public string context;
+    public List<ContentPictureAudioTrio> list;
+}
+
+
 public class PhrasesManager : MonoBehaviour
 {
     public static PhrasesManager Instance { get; private set; }
     [SerializeField] private List<PhrasesBookInformation> booksList = new List<PhrasesBookInformation>();
-
-    private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
-
     private List<ContentPictureAudioTrio> sightWords = new List<ContentPictureAudioTrio>();
+    private List<ContextListEntry> contextList = new() { new ContextListEntry { context = "", list = new List<ContentPictureAudioTrio>() } };
 
     void Awake()
     {
@@ -55,9 +61,9 @@ public class PhrasesManager : MonoBehaviour
 
     }
 
-    public List<ContentPictureAudioTrio> GetCurrentEnabledDictionaryPhrases()
+    public List<ContextListEntry> GetCurrentEnabledDictionaryPhrases()
     {
-        content.Clear();
+        contextList.Clear();
 
         foreach (PhrasesBookInformation book in booksList)
         {
@@ -65,12 +71,17 @@ public class PhrasesManager : MonoBehaviour
             {
                 foreach (PBI b in book.PBIList)
                 {
-                    content.AddRange(b.contentList);
+                    ContextListEntry entry = new ContextListEntry
+                    {
+                        context = b.phraseContext,
+                        list = new List<ContentPictureAudioTrio>(b.contentList)
+                    };
+                    contextList.Add(entry);
                 }
             }
         }
 
-        return content;
+        return contextList;
     }
 
     public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySightWords()

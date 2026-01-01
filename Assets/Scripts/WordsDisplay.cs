@@ -47,20 +47,20 @@ public class WordsDisplay : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
         if (currentMode == WordsDisplayMode.Vocabulary)
         {
             content = ReadingBook.Instance.GetCurrentEnabledDictionary();
         }
         else if (currentMode == WordsDisplayMode.Phrases)
         {
-            content = PhrasesManager.Instance.GetCurrentEnabledDictionaryPhrases();
+            // content = PhrasesManager.Instance.GetCurrentEnabledDictionaryPhrases();
         }
         else if (currentMode == WordsDisplayMode.SightWords)
         {
             content = PhrasesManager.Instance.GetCurrentEnabledDictionarySightWords();
         }
-        
+
         foreach (ContentPictureAudioTrio pair in content)
         {
             Debug.Log(pair.content);
@@ -122,7 +122,7 @@ public class WordsDisplay : MonoBehaviour
                 Debug.Log("Already in selectedContent: " + pair.content);
             }
         }
-        
+
     }
 
     void OnNextButtonClicked(Button nextButton)
