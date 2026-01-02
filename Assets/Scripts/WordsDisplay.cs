@@ -28,6 +28,7 @@ public class WordsDisplay : MonoBehaviour
     private TextMeshProUGUI wordText;
     [SerializeField] private Button wordButton;
     [SerializeField] private Button NextButton;
+    [SerializeField] private Button BackButton;
     [SerializeField] private GridLayoutGroup wordsGrid;
     public static WordsDisplayMode currentMode;
     public static GameMode currentGameMode;
@@ -68,6 +69,7 @@ public class WordsDisplay : MonoBehaviour
 
         DisplayWords();
         OnNextButtonClicked(NextButton);
+        OnBackButtonClicked(BackButton);
     }
     // Update is called once per frame
     public static void SetWordsDisplayMode(WordsDisplayMode mode)
@@ -131,6 +133,14 @@ public class WordsDisplay : MonoBehaviour
             nextButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("VocabularyMatching"));
         else if (currentGameMode == GameMode.Phrases)
             nextButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("PhrasesLevel"));
+    }
+
+    void OnBackButtonClicked(Button backButton)
+    {
+        if (currentGameMode == GameMode.Vocabulary)
+            backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("EnableBooksVocabulary"));
+        else if (currentGameMode == GameMode.Phrases)
+            backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("EnableBooksPhrases"));
     }
 
 }
