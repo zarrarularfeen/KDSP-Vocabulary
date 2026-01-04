@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 2152055476745781269}
   - component: {fileID: 5352388634696249086}
   - component: {fileID: 7158551053563089058}
+  - component: {fileID: 6213162424250391573}
   m_Layer: 5
   m_Name: DragPrefab
   m_TagString: Untagged
@@ -239,3 +240,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &6213162424250391573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5604409699959600468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.48616055, g: 0.48616055, b: 0.8962264, a: 1}
+  m_EffectDistance: {x: 10, y: 10}
+  m_UseGraphicAlpha: 1

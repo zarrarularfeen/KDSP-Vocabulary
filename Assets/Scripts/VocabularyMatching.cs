@@ -22,6 +22,7 @@ public class VocabularyMatching : MonoBehaviour
     [SerializeField] private GameObject targetPrefab;
     [SerializeField] private GameObject dragPrefab;
     [SerializeField] private Button selectButton;
+    
     private int currentIndex = 0;
     private int batchSize = 4; // can be 1 to 4
 

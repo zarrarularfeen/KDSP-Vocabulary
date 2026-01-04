@@ -113,14 +113,30 @@ public class WordsDisplay : MonoBehaviour
     {
         Debug.Log("Word button clicked: " + pair.content);
         // Add your logic here for what happens when a word button is clicked
-        if (!VocabularyMatching.selectedContent.Contains(pair))
+        
+        if (currentGameMode == GameMode.Vocabulary)
         {
-            VocabularyMatching.selectedContent.Add(pair);
-            Debug.Log("Added to selectedContent: " + pair.content);
+            if (!VocabularyMatching.selectedContent.Contains(pair))
+            {
+                VocabularyMatching.selectedContent.Add(pair);
+                Debug.Log("Added to selectedContent: " + pair.content);
+            }
+            else
+            {
+                Debug.Log("Already in selectedContent: " + pair.content);
+            }
         }
-        else
+        else if (currentGameMode == GameMode.Phrases)
         {
-            Debug.Log("Already in selectedContent: " + pair.content);
+            if (!PhrasesLevelManager.selectedContent.Contains(pair))
+            {
+                PhrasesLevelManager.selectedContent.Add(pair);
+                Debug.Log("Added to selectedContent: " + pair.content);
+            }
+            else
+            {
+                Debug.Log("Already in selectedContent: " + pair.content);
+            }
         }
     }
 

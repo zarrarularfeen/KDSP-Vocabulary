@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
 
 public class DropTarget : MonoBehaviour, IDropHandler
 {
     [HideInInspector]public string word;
+   
 
     public void OnDrop(PointerEventData eventData)
     {
