@@ -18,14 +18,17 @@ public enum PhrasesLevelMode
 }
 public class PhrasesLevelManager : MonoBehaviour
 {
+    //Words list selected from wordsdisplay
     public static List<ContentPictureAudioTrio> selectedContent = new List<ContentPictureAudioTrio>();
+    //Phrases book list selected from wordsdisplay
+    public static List<ContextListEntry> selectedContextList = new List<ContextListEntry>();
     [SerializeField] private GridLayoutGroup questionsGrid;
     [SerializeField] private GridLayoutGroup answersGrid;
     [SerializeField] private GameObject targetPrefab;
     [SerializeField] private GameObject dragPrefab;
     [SerializeField] private Button selectButton;
-    private int currentBatchStart = 0;
     private int currentIndex = 0;
+    private int batchSize = 4; // can be 1 to 4
     public static PhrasesLevelManager Instance { get; private set; }
     public static PhrasesLevelMode currentMode = PhrasesLevelMode.MatchSghtWord;
 
@@ -46,6 +49,28 @@ public class PhrasesLevelManager : MonoBehaviour
         foreach (ContentPictureAudioTrio pair in selectedContent)
         {
             Debug.Log(pair.content);
+        }
+
+        Debug.Log("PhrasesLevel started with selectedContextList: " + selectedContextList.Count);
+
+        foreach (ContextListEntry entry in selectedContextList)
+        {
+            Debug.Log(entry.context);
+            foreach (ContentPictureAudioTrio pair in entry.list)
+            {
+                Debug.Log(" - " + pair.content);
+            }
+        }
+
+        foreach (ContextListEntry entry in selectedContextList)
+        {
+            foreach (ContentPictureAudioTrio pair in entry.list)
+            {
+                if (!selectedContent.Contains(pair))
+                {
+                    selectedContent.Add(pair);
+                }
+            }
         }
         SetContent(currentMode);   
     }
@@ -71,12 +96,15 @@ public class PhrasesLevelManager : MonoBehaviour
                 break;
             case PhrasesLevelMode.ReadSightWord:
                 // Set content for Read mode
+                SetContentName();
                 break;
             case PhrasesLevelMode.UnderstandSightWord:
                 // Set content for Understand mode
+                SetContentMatch();
                 break;
             case PhrasesLevelMode.UnderstandPhrase:
                 // Set content for Understand Phrase mode
+                SetContentMatch();
                 break;
         }
     }
@@ -85,73 +113,83 @@ public class PhrasesLevelManager : MonoBehaviour
     void SetContentMatch()
     {
         ClearGrids();
-        currentBatchStart = 0;
-        currentIndex = 0;
-
+        
         SpawnNextBatch();
     }
-    // Set up content for Select mode and Calls relevant methods
+    //Set up content for Select mode and Calls relevant methods
     void SetContentSelect()
     {
         // Implement Select mode content setup
         ClearGrids();
-        SetSelectCard(0);
+        currentIndex = 0; // start from the first word
+
+        int batchStart = 0;
+        int batchEnd = Mathf.Min(batchSize, selectedContent.Count);
+
+        SpawnSelectButtons(batchStart, batchEnd);
+
+    }
+    // Set up content for Name mode and Calls relevant methods
+    void SetContentName()
+    {
+        // Implement Select mode content setup
+        ClearGrids();
+        SetNameCard(0);
 
     }
     // Spawn next batch of 4 words in questions grid for Matching mode
     void SpawnNextBatch()
     {
-        foreach (Transform child in questionsGrid.transform)
-        {
-            Destroy(child.gameObject);
-        }
+        ClearGrids();
 
-        int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
+        // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
+        int currentBatch = currentIndex / batchSize;
+        int batchStart = currentBatch * batchSize;
+        int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
 
-        for (int i = currentBatchStart; i < end; i++)
+        for (int i = batchStart; i < batchEnd; i++)
         {
             GameObject target = Instantiate(targetPrefab, questionsGrid.transform);
             string word = selectedContent[i].content;
-            target.GetComponentInChildren<TextMeshProUGUI>().text = "";
-            target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
-            // target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
+            if (currentMode == PhrasesLevelMode.UnderstandSightWord || currentMode == PhrasesLevelMode.UnderstandPhrase)
+            {
+                target.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
+            }
+            else
+            {
+                target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
+                // target.GetComponentInChildren<Image>().sprite = null;
+                target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                target.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+            }
         }
 
         SpawnNextDraggable();
     }
     // Spawn next draggable card in answers grid for Matching mode
-    public void SpawnNextDraggable()
+    void SpawnNextDraggable()
     {
         if (currentIndex >= selectedContent.Count)
         {
-            Debug.Log("All words matched!");
-            SceneController.Instance.OpenLevelSelect("Vocabulary");
             return;
         }
-
-        //if we have finished current batch of 4, move to next batch
-        if (currentIndex >= currentBatchStart + 4)
-        {
-            currentBatchStart += 4;
-            if (currentBatchStart >= selectedContent.Count)
-            {
-                Debug.Log("All batches done!");
-                return;
-            }
-            SpawnNextBatch();
-            return;
-        }
-
+        
 
 
         GameObject dragCard = Instantiate(dragPrefab, answersGrid.transform);
         string word = selectedContent[currentIndex].content;
-        dragCard.GetComponentInChildren<TextMeshProUGUI>().text = "";
-        dragCard.GetComponentInChildren<Image>().sprite = selectedContent[currentIndex].image;
         DraggableCard draggable = dragCard.GetComponent<DraggableCard>();
         draggable.word = word;
+        
+        
+        dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
+        // dragCard.GetComponentInChildren<Image>().sprite = null;
+        dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+        dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+    
         Debug.Log("Spawned draggable for word: " + word);
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
     }
@@ -159,31 +197,105 @@ public class PhrasesLevelManager : MonoBehaviour
     public void OnCorrectMatch()
     {
         currentIndex++;
-        SpawnNextDraggable();
-    }
+        // Check if all words are done
+        if (currentIndex >= selectedContent.Count)
+        {
+            Debug.Log("All words matched!");
+            selectedContent.Clear();
+            SceneController.Instance.OpenLevelSelect("Home");
+            return;
+        }
 
-    void SetSelectCard(int index)
+        // Compute current batch
+        // int currentBatch = currentIndex / batchSize;
+        // int batchStart = currentBatch * batchSize;
+        // int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
+
+        // If currentIndex has passed the current batch, spawn next batch
+        if (currentIndex % batchSize == 0)
+        {
+            SpawnNextBatch(); // This will automatically spawn the first draggable of the new batch
+        }
+        else
+        {
+            // Spawn next draggable in current batch
+            SpawnNextDraggable();
+        }
+    }
+    void SetNameCard(int index)
     {
         ClearGrids();
         Button selectCard = Instantiate(selectButton, questionsGrid.transform);
         selectCard.gameObject.SetActive(true);
-        selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
-        // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
-        selectCard.onClick.AddListener(() => OnSelectCardClicked(index));
+        
+        selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[index].content;
+        // selectCard.GetComponentInChildren<Image>().sprite = null;
+        selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+        selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+        
+        selectCard.onClick.AddListener(() => OnNameCardClicked(index));
 
     }
 
-    void OnSelectCardClicked(int index)
+    void OnNameCardClicked(int index)
     {
-        Debug.Log("Select card clicked: " + selectedContent[index].content);
+        Debug.Log("Name card clicked: " + selectedContent[index].content);
         if (index + 1 < selectedContent.Count)
         {
-            SetSelectCard(index + 1);
+            SetNameCard(index + 1);
         }
         else
         {
-            Debug.Log("All select cards shown!");
-            SceneController.Instance.OpenLevelSelect("Vocabulary");
+            Debug.Log("All Name cards shown!");
+            selectedContent.Clear();
+            SceneController.Instance.OpenLevelSelect("Home");
+        }
+    }
+
+    void SpawnSelectButtons(int batchStart, int batchEnd)
+    {
+        ClearGrids();
+
+        // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
+
+        for (int i = batchStart; i < batchEnd; i++)
+        {
+            Button selectCard = Instantiate(selectButton, questionsGrid.transform);
+            selectCard.gameObject.SetActive(true);
+            SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
+            selectCardData.word = selectedContent[i].content;
+            
+            selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
+            // selectCard.GetComponentInChildren<Image>().sprite = null;
+            selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+            selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+            selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word));
+        }
+    }
+
+    void OnSelectCardClicked(string selectedWord)
+    {
+        string correctWord = selectedContent[currentIndex].content;
+        if (selectedWord == correctWord)
+        {
+            Debug.Log("Correct selection for word: " + selectedWord);
+            currentIndex++;
+            if (currentIndex >= selectedContent.Count)
+            {
+                Debug.Log("All words selected!");
+                selectedContent.Clear();
+                SceneController.Instance.OpenLevelSelect("Home");
+                return;
+            }
+            int currentBatch = currentIndex / batchSize;
+            int batchStart = currentBatch * batchSize;
+            int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
+            //if we have finished current batch of 4, move to next batch
+            SpawnSelectButtons(batchStart, batchEnd);
+        }
+        else
+        {
+            Debug.Log("Incorrect selection for word: " + selectedWord);
         }
     }
     void ClearGrids()

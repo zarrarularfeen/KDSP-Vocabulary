@@ -624,7 +624,7 @@ MonoBehaviour:
   answersGrid: {fileID: 1851443993}
   targetPrefab: {fileID: 7684589979136511581, guid: 42eec109d2bfc34429a91ea91baf0224, type: 3}
   dragPrefab: {fileID: 5604409699959600468, guid: a36b7c19d06c97444b2f9badd2578b70, type: 3}
-  selectButton: {fileID: 1321739718}
+  selectButton: {fileID: 8054830844424793572, guid: 576f3c69d00944a4ebf5a758c4be3155, type: 3}
 --- !u!4 &1446332097
 Transform:
   m_ObjectHideFlags: 0

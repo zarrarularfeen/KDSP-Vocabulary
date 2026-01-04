@@ -25,6 +25,7 @@ public class WordsDisplay : MonoBehaviour
 {
 
     private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
+    private List<ContextListEntry> contextList = new List<ContextListEntry>();
     private TextMeshProUGUI wordText;
     [SerializeField] private Button wordButton;
     [SerializeField] private Button NextButton;
@@ -55,7 +56,7 @@ public class WordsDisplay : MonoBehaviour
         }
         else if (currentMode == WordsDisplayMode.Phrases)
         {
-            // content = PhrasesManager.Instance.GetCurrentEnabledDictionaryPhrases();
+            contextList = PhrasesManager.Instance.GetCurrentEnabledDictionaryPhrases();
         }
         else if (currentMode == WordsDisplayMode.SightWords)
         {
@@ -84,14 +85,27 @@ public class WordsDisplay : MonoBehaviour
 
     void DisplayWords()
     {
-        foreach (ContentPictureAudioTrio pair in content)
+        if (currentMode == WordsDisplayMode.SightWords || currentMode == WordsDisplayMode.Vocabulary)
+            foreach (ContentPictureAudioTrio pair in content)
+            {
+                Button newButton = Instantiate(wordButton, wordsGrid.transform);
+                newButton.gameObject.SetActive(true);
+                wordText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+                wordText.text = pair.content;
+                newButton.onClick.AddListener(() => OnWordButtonClicked(pair));
+                Debug.Log("button added to grid: " + pair.content);
+            }
+        else if (currentMode == WordsDisplayMode.Phrases)
         {
-            Button newButton = Instantiate(wordButton, wordsGrid.transform);
-            newButton.gameObject.SetActive(true);
-            wordText = newButton.GetComponentInChildren<TextMeshProUGUI>();
-            wordText.text = pair.content;
-            newButton.onClick.AddListener(() => OnWordButtonClicked(pair));
-            Debug.Log("button added to grid: " + pair.content);
+            foreach (ContextListEntry entry in contextList)
+            {
+                Button newButton = Instantiate(wordButton, wordsGrid.transform);
+                newButton.gameObject.SetActive(true);
+                wordText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+                wordText.text = entry.context;
+                newButton.onClick.AddListener(() => OnWordButtonClickedPhrases(entry));
+                Debug.Log("button added to grid phrases: " + entry.context);
+            }
         }
     }
 
@@ -99,32 +113,30 @@ public class WordsDisplay : MonoBehaviour
     {
         Debug.Log("Word button clicked: " + pair.content);
         // Add your logic here for what happens when a word button is clicked
-
-        if (currentGameMode == GameMode.Vocabulary)
+        if (!VocabularyMatching.selectedContent.Contains(pair))
         {
-            if (!VocabularyMatching.selectedContent.Contains(pair))
-            {
-                VocabularyMatching.selectedContent.Add(pair);
-                Debug.Log("Added to selectedContent: " + pair.content);
-            }
-            else
-            {
-                Debug.Log("Already in selectedContent: " + pair.content);
-            }
+            VocabularyMatching.selectedContent.Add(pair);
+            Debug.Log("Added to selectedContent: " + pair.content);
         }
-        else if (currentGameMode == GameMode.Phrases)
+        else
         {
-            if (!PhrasesLevelManager.selectedContent.Contains(pair))
-            {
-                PhrasesLevelManager.selectedContent.Add(pair);
-                Debug.Log("Added to selectedContent: " + pair.content);
-            }
-            else
-            {
-                Debug.Log("Already in selectedContent: " + pair.content);
-            }
+            Debug.Log("Already in selectedContent: " + pair.content);
         }
+    }
 
+    void OnWordButtonClickedPhrases(ContextListEntry entry)
+    {
+        Debug.Log("Phrase context button clicked: " + entry.context);
+        // Add your logic here for what happens when a phrase context button is clicked
+        if (!PhrasesLevelManager.selectedContextList.Contains(entry))
+        {
+            PhrasesLevelManager.selectedContextList.Add(entry);
+            Debug.Log("Added to selectedContextList: " + entry.context);
+        }
+        else
+        {
+            Debug.Log("Already in selectedContextList: " + entry.context);
+        }
     }
 
     void OnNextButtonClicked(Button nextButton)
