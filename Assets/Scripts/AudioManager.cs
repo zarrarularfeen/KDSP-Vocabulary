@@ -9,6 +9,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip winningSound;
     [SerializeField] private AudioClip correctSound;
     [SerializeField] private AudioClip wrongSound;
+    [SerializeField] private AudioClip matchSound;
+    [SerializeField] private AudioClip withSound;
+    [SerializeField] private AudioClip showMeSound;
     [SerializeField] private AudioClip[] positiveReinforcementSound;
 
     void Awake()
@@ -94,6 +97,29 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.clip = audio;
             audioSource.PlayDelayed(delay);
+        }
+    }
+
+    public void ShowMeFunction(AudioClip audio)
+    {
+        if (audio != null)
+        {
+            audioSource.PlayOneShot(showMeSound);
+            audioSource.clip = audio;
+            audioSource.PlayDelayed(0.3f);
+        }
+    }
+
+    public void MatchWithFunction(AudioClip audio)
+    {
+        if (audio != null)
+        {
+            audioSource.PlayOneShot(matchSound);
+            audioSource.clip = audio;
+            audioSource.PlayDelayed(0.3f);
+            audioSource.PlayOneShot(withSound);
+            audioSource.clip = audio;
+            audioSource.PlayDelayed(0.3f);
         }
     }
 
