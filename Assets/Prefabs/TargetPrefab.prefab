@@ -147,8 +147,8 @@ GameObject:
   - component: {fileID: 6087227924775441760}
   - component: {fileID: 602455409101339376}
   - component: {fileID: 6017133325515186902}
-  - component: {fileID: 5226282663138914621}
   - component: {fileID: 7301127474395499352}
+  - component: {fileID: 3407072571052912913}
   m_Layer: 5
   m_Name: TargetPrefab
   m_TagString: Untagged
@@ -174,7 +174,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 16, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &602455409101339376
 CanvasRenderer:
@@ -197,21 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   word: 
---- !u!114 &5226282663138914621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7684589979136511581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.39551443, g: 0.39551443, b: 0.8301887, a: 1}
-  m_EffectDistance: {x: 10, y: 10}
-  m_UseGraphicAlpha: 1
 --- !u!114 &7301127474395499352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +218,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -242,3 +227,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 0.38
+--- !u!114 &3407072571052912913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7684589979136511581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6d0a12346dd964781f3c6f3e0bedbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceImage: {fileID: 7684589979136511581}
+  outlineImagePrefab: {fileID: 8003874415518915210, guid: 2a150da53678b9a439f91ef9383812fe, type: 3}

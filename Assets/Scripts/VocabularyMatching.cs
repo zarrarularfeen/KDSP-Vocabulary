@@ -22,13 +22,15 @@ public class VocabularyMatching : MonoBehaviour
     [SerializeField] private GameObject targetPrefab;
     [SerializeField] private GameObject dragPrefab;
     [SerializeField] private Button selectButton;
-    
+
     private int currentIndex = 0;
     private int batchSize = 4; // can be 1 to 4
 
     public static VocabularyMatching Instance { get; private set; }
 
     public static VocabularyMode currentMode = VocabularyMode.Match;
+
+    private GameObject currentCard;
 
     void Awake()
     {
@@ -56,13 +58,41 @@ public class VocabularyMatching : MonoBehaviour
         SetContent(currentMode);
     }
 
+    private Coroutine activeCoroutine;
+    private OutlineGenerator outlineGenerator;
+
+    public void CreateOutline(Color color)
+    {
+        Debug.Log("CreateOutline called");
+
+        if (activeCoroutine != null)
+        {
+            StopCoroutine(activeCoroutine);
+        }
+
+        activeCoroutine = StartCoroutine(ShowBorderCoroutine(color));
+    }
+
+    private IEnumerator ShowBorderCoroutine(Color color)
+    {
+        Debug.Log("ShowBorderCoroutine called");
+
+        if (outlineGenerator == null)
+        {
+            Debug.LogError("OutlineGenerator component not found!");
+            yield break;
+        }
+
+        outlineGenerator.GenerateBorder(color);
+        yield return new WaitForSeconds(3f);
+        outlineGenerator.DisableBorder();
+    }
+
     public static void SetVocabularyMode(VocabularyMode mode)
     {
         currentMode = mode;
 
     }
-
-
 
     void SetContent(VocabularyMode mode)
     {
@@ -87,9 +117,10 @@ public class VocabularyMatching : MonoBehaviour
     void SetContentMatch()
     {
         ClearGrids();
-        
+
         SpawnNextBatch();
     }
+
     //Set up content for Select mode and Calls relevant methods
     void SetContentSelect()
     {
@@ -103,6 +134,7 @@ public class VocabularyMatching : MonoBehaviour
         SpawnSelectButtons(batchStart, batchEnd);
 
     }
+
     // Set up content for Name mode and Calls relevant methods
     void SetContentName()
     {
@@ -111,6 +143,7 @@ public class VocabularyMatching : MonoBehaviour
         SetNameCard(0);
 
     }
+
     // Spawn next batch of 4 words in questions grid for Matching mode
     void SpawnNextBatch()
     {
@@ -134,6 +167,7 @@ public class VocabularyMatching : MonoBehaviour
 
         SpawnNextDraggable();
     }
+
     // Spawn next draggable card in answers grid for Matching mode
     void SpawnNextDraggable()
     {
@@ -141,8 +175,6 @@ public class VocabularyMatching : MonoBehaviour
         {
             return;
         }
-        
-
 
         GameObject dragCard = Instantiate(dragPrefab, answersGrid.transform);
         string word = selectedContent[currentIndex].content;
@@ -152,10 +184,16 @@ public class VocabularyMatching : MonoBehaviour
         draggable.word = word;
         Debug.Log("Spawned draggable for word: " + word);
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
+
+        currentCard = dragCard;
+        outlineGenerator = currentCard.GetComponent<OutlineGenerator>();
+        CreateOutline(Color.green);
     }
+
     // Called when a correct match is made
     public void OnCorrectMatch()
     {
+
         currentIndex++;
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
@@ -182,6 +220,7 @@ public class VocabularyMatching : MonoBehaviour
             SpawnNextDraggable();
         }
     }
+
     void SetNameCard(int index)
     {
         ClearGrids();
@@ -190,7 +229,6 @@ public class VocabularyMatching : MonoBehaviour
         selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
         // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         selectCard.onClick.AddListener(() => OnNameCardClicked(index));
-
     }
 
     void OnNameCardClicked(int index)
@@ -221,7 +259,7 @@ public class VocabularyMatching : MonoBehaviour
             selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
             selectCardData.word = selectedContent[i].content;
-             // Capture the current value of i
+            // Capture the current value of i
             selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word));
         }
     }
