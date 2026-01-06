@@ -21,7 +21,7 @@ public struct SBEntry
 {
     public string sightWord;
     public AudioClip sightWordAudio;
-    public ContentPictureAudioTrio cpat;
+    public ContentPictureAudioTrio CPAT;
 }
 
 public class SentencesManager : MonoBehaviour
@@ -62,7 +62,7 @@ public class SentencesManager : MonoBehaviour
             {
                 foreach (SBEntry b in book.contentList)
                 {
-                    sbList.Add(b.cpat);
+                    sbList.Add(b.CPAT);
                 }
             }
         }
@@ -83,7 +83,7 @@ public class SentencesManager : MonoBehaviour
                     ContentPictureAudioTrio entry = new ContentPictureAudioTrio
                     {
                         content = b.sightWord,
-                        image = b.cpat.image,
+                        image = b.CPAT.image,
                         audio = b.sightWordAudio
                     };
                     sightWords.Add(entry);
@@ -104,7 +104,7 @@ public class SentencesManager : MonoBehaviour
             {
                 foreach (SBEntry b in book.contentList)
                 {
-                    displayBook.Add(b.cpat);
+                    displayBook.Add(b.CPAT);
                 }
                 return displayBook;
             }
@@ -126,7 +126,7 @@ public class SentencesManager : MonoBehaviour
                     ContentPictureAudioTrio entry = new ContentPictureAudioTrio
                     {
                         content = b.sightWord,
-                        image = b.cpat.image,
+                        image = b.CPAT.image,
                         audio = b.sightWordAudio
                     };
                     displayBook.Add(entry);
