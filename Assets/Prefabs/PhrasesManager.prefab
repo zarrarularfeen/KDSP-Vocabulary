@@ -101,141 +101,141 @@ MonoBehaviour:
       contentList:
       - content: doll is eating
         image: {fileID: 6436128442983113582, guid: be221d9f59eadcd429d83f5beae5cbf0, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 3506f3c872db1c94fb03e9a22f7ab160, type: 3}
       - content: bear is eating
         image: {fileID: -8450721035343749491, guid: fdd936ff2c9c4ea43b9b6fc00e9998b3, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: e6f47fcf45de98747b6656a18cb4bb19, type: 3}
       - content: baby is eating
         image: {fileID: 8193188451649374720, guid: 1b25ef88ebb4ccf4e934339dc7760a4d, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 1470becb45d3fce4a9a419457e7cc346, type: 3}
       - content: cat is eating
         image: {fileID: -6863605546657424857, guid: 6377c1027a91f804da1a42c91d04dcdb, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: ac2a83ea29dc691428a65807a6849f21, type: 3}
       - content: dog is eating
         image: {fileID: 2632810389975326689, guid: da2e6bd73bde5b240bee0b6eaff08f09, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 0e94eb404aa5de247886a5b6d84edbc5, type: 3}
     - phraseContext: sleeping
       contentList:
       - content: 'doll is sleeping '
         image: {fileID: -8021097588880438103, guid: d323b1ca486004649bad28a9e4c98c63, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 9a85a1ff271b0454b9dcdc7bcef22a57, type: 3}
       - content: 'bear is sleeping '
         image: {fileID: 3744929592061320095, guid: 210c34e23ba799d479d0b1e0e88b2808, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 07c85e284d36bb84b9daaf618c55c215, type: 3}
       - content: baby is sleeping
         image: {fileID: -7264422034960362625, guid: 65e9c97206cb90b48b880ee31b50bb0b, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: cf5bc0f66606aff4b94e2d27170f66c0, type: 3}
       - content: 'cat is sleeping '
         image: {fileID: 2866169562271360373, guid: 02e09c8ad0254ec4cb6edf2388760816, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 31dd45afa49d11c4a98d18c40a838289, type: 3}
       - content: 'dog is sleeping '
         image: {fileID: -3033428214829410695, guid: fa5bf64aad1b76c46ba1f3367ecb25db, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 20fcc52ef5feadf429a5dbf16d29ed05, type: 3}
     - phraseContext: drinking
       contentList:
       - content: 'doll is drinking '
         image: {fileID: -4644172154013257989, guid: cd45a1d29bd993441b729a94f8d8ee02, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 9c5756ac9460c9545bb00ff99a3dcd77, type: 3}
       - content: bear is drinking
         image: {fileID: -3687430085420322835, guid: 4b6669caf2ccfe44c863a094cecaed5e, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 349f5577328e33045b9ad848d8c68912, type: 3}
       - content: baby is drinking
         image: {fileID: -3687430085420322835, guid: 4b6669caf2ccfe44c863a094cecaed5e, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: af8191363b717db4aa99f7f000c4fec7, type: 3}
       - content: 'cat is drinking '
         image: {fileID: 4993673959923823671, guid: e62c673ad3829c042a0aed6c0bbd7a27, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 55c5e17e9125fe548a11403842d6de53, type: 3}
       - content: 'dog is drinking '
         image: {fileID: -7942678795253803079, guid: 8fc037b434d40054e9bf39efcc43b5c1, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 3e63145ab43eb2648b0a956f21fe2c88, type: 3}
     - phraseContext: sitting
       contentList:
       - content: 'doll is sitting '
         image: {fileID: -1101930195102574422, guid: ea4b46147f6bf684cb2fb12f1826ed53, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: d5bfeff129ab0484aa85d25f7525554d, type: 3}
       - content: bear is sitting
         image: {fileID: 4960922111207562555, guid: 63fd9144ad30e6e408ed22c74200c762, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: d41591b7ca5c23a44b8334d2a9429e62, type: 3}
       - content: baby is sitting
         image: {fileID: 7600359562541985779, guid: 9feea11b37a5bbb4b9ece55fbfdbda6a, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 04eb830d26f430944afd6e4b7c327e61, type: 3}
       - content: cat is sitting
         image: {fileID: 4789758200569738604, guid: 48fca60de47e606498fb13b524ba5c8e, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 1f0dcc8e8cc11a141a343d8175101f61, type: 3}
       - content: 'dog is sitting '
         image: {fileID: -4740725357610661289, guid: 4efeb9f10e531204eb0a3e4055bead59, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 67b2ea2d5d929bd4885686e95322c634, type: 3}
     - phraseContext: washing
       contentList:
       - content: washing doll
         image: {fileID: 1658032992297997292, guid: 6f5cb55d23604684d85dca911ddad4fc, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: cde6fd9acf9981e4192b90ff50a6fcc3, type: 3}
       - content: washing bear
         image: {fileID: -2668656573235375515, guid: ef3b74deecfe08d449103da268377ce2, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 58667f7702d64c64d8aa2691eccd593f, type: 3}
       - content: washing baby
         image: {fileID: -8776527097829290007, guid: 2a3258684972f36428e508668303abac, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 31e27689486433646bfd71ec5641b37a, type: 3}
       - content: washing cat
         image: {fileID: -667905541165458472, guid: b2fe676a959b62f41a66f06e39e0f841, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 0a0fbeead501b244390d4ceba11547f8, type: 3}
       - content: washing dog
         image: {fileID: -7532751855418448291, guid: 1fe9302fd3cd7dc4da641b7959aea549, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 7807a07ea6e18d74c8e8c587c77fa4e3, type: 3}
     - phraseContext: brushing
       contentList:
       - content: brushing doll
         image: {fileID: -4219044097523531501, guid: b6c32db8df690e4418f9003b87ad126a, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 8433044736d68b541acecef43c668ba5, type: 3}
       - content: brushing bear
         image: {fileID: 8117097438881283221, guid: 23018149e26c2b84ca1fe0b95c9af9af, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: dc85e3605de8950468e0659780c4429a, type: 3}
       - content: brushing baby
         image: {fileID: 3880247338761158712, guid: d96260b8c9cba864ab73af1e40a18aa3, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: de2498f454e0f2f4fbe04d9f259aca20, type: 3}
       - content: brushing cat
         image: {fileID: -4585034371796470846, guid: c83e1e9edae63564781ae0d2065dc9b4, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 94887bbd5d1ae04429ed649bd628b35c, type: 3}
       - content: brushing dog
         image: {fileID: -3575900964074549957, guid: ff3c6eafcda06004bb2f266045feffbd, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: df10567a01ff274408c7e504153a3043, type: 3}
     - phraseContext: who's ball
       contentList:
       - content: doll's ball
         image: {fileID: 7861307003892990898, guid: e45954e889e3c0648966f2bdceddd536, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: dce66a65dc5ba4443a792d64719bcdfc, type: 3}
       - content: bear's ball
         image: {fileID: -8574317989820673322, guid: 93838e1c4701eb3499a27918a1dccd0a, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 099256a5979aec942919dbb9331dc024, type: 3}
       - content: baby's ball
         image: {fileID: -1380248133469866017, guid: 231f18ec004daa042a3fd868dc2eab18, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 8e8256b934cb4b541ae051b772023f10, type: 3}
       - content: cat's ball
         image: {fileID: -1936714539158647651, guid: 15b833d6f0e1a3b4badc82aa7b76525f, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: ac661eadf8644874b8d0d815d82a0d0f, type: 3}
       - content: dog's ball
         image: {fileID: 2138217616421312680, guid: 6e0c4cc97c798ca47b490edfd39eb8df, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: dce66a65dc5ba4443a792d64719bcdfc, type: 3}
     - phraseContext: on
       contentList:
       - content: doll is on chair
         image: {fileID: 4984149185817607193, guid: b14da852dcc98cf4abc3b3251c17b92f, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: b5de92bcf38c42b49b3a3aa3e953bdc4, type: 3}
       - content: doll is on bed
         image: {fileID: 7316458219881545386, guid: 7adf40ed343c1ad4ead8854a2bd0cd77, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 1cd8bde66c8de6c4faa14f9b0989bfd5, type: 3}
       - content: doll is on table
         image: {fileID: 6542384957068851861, guid: 4b075b944a5863d49a7a8e75023df498, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 2161ec997f96c5b45ad495eb6b4b73af, type: 3}
       - content: bear is on chair
         image: {fileID: 6215565401345854106, guid: 85569047e6846784c905d08d361325b7, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: c5a4dfef734a84244aa594a66fdf1eb4, type: 3}
       - content: bear is on bed
         image: {fileID: -5800157114693724673, guid: 17cad5f3eb15b7741ae99969668cb5af, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 198a0a81303863d4d874cc535c6373ed, type: 3}
       - content: bear is on table
         image: {fileID: -655440065973200078, guid: a8b83a7ffd19d1540bddf763d4574f00, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 972534a4c45d12e4d91159b3799b76e5, type: 3}
   - book: 4
     enabled: 0
     sightWordList:
