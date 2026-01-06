@@ -50,40 +50,40 @@ MonoBehaviour:
     sightWordList:
     - content: baby
       image: {fileID: 5328332788402992666, guid: 9a20f0c79b0ca6b41a3070d43f73c3a8, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 86472444efbcc4648ae3dff058b150b7, type: 3}
     - content: ball
       image: {fileID: -3603556060819865620, guid: 334374f5a68dc6842b210e3d403006c6, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 40691cb9f12e3b548aff441721303ec9, type: 3}
     - content: bear
       image: {fileID: 7935234321397735378, guid: 41f399848fd987b499f2c9093889c9f0, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 1963515b22e70914d8011a89464c9383, type: 3}
     - content: bed
       image: {fileID: 2122107185238573207, guid: 7ab97d0fc13d9a1428e691659551022c, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 3c73bff7031fa26448be2bffcb504792, type: 3}
     - content: brushing
       image: {fileID: -8434802967142093911, guid: 65a3174dd5741064192a30b65395acbf, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 01c15a5add3e4dd408fb5e213d74515c, type: 3}
     - content: cat
       image: {fileID: 1075993247170539406, guid: 0d703613add797a41ae9fe24d3fac760, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 6ccb00473b7d3994c951746ef8c839a6, type: 3}
     - content: chair
       image: {fileID: 357585243727820222, guid: cc1c535a4c66de54296a71d85850a44b, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 390c97d85bea00241bc6e83dfefd0484, type: 3}
     - content: dog
       image: {fileID: 1480917699468073914, guid: 828558f0d08797942bb2ed9943bc6003, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: dd2866e165d502544a04fb0dd43abff5, type: 3}
     - content: doll
       image: {fileID: 6768139323804525417, guid: ea2621932bdf39349860cd2f02d964e3, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 1f429db222da32047b35e194d4ef806d, type: 3}
     - content: drinking
       image: {fileID: -6655495120264001638, guid: a8a0c0f5a1973ea4cbc7696d5cd09f6e, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 96e36458e02ed064b93443cf4e054b0e, type: 3}
     - content: eating
       image: {fileID: 4954959605258028193, guid: 6a093106e536a9842a340a16319a5e69, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 5d9e785dd8907c8438a182c78f6253a0, type: 3}
     - content: on
       image: {fileID: 5175489880400350850, guid: b2352424f35676f428bf0a4362291a22, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 65f77f59cfd1f694f8c0d5205426d125, type: 3}
     - content: sitting
       image: {fileID: 8043024992781190867, guid: 7ccdd0a1b9a101440a9fbfefe55c945f, type: 3}
       audio: {fileID: 0}
@@ -241,94 +241,94 @@ MonoBehaviour:
     sightWordList:
     - content: apple
       image: {fileID: -7832214784768987486, guid: 5f69e6b4a64bca6489bf1985fb168c62, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 27aa8b04eeca1b542b1bd491228eff31, type: 3}
     - content: ball
       image: {fileID: -3603556060819865620, guid: 334374f5a68dc6842b210e3d403006c6, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 40691cb9f12e3b548aff441721303ec9, type: 3}
     - content: banana
       image: {fileID: -9182177788924653191, guid: 68a6816342a7a1a49823f1f1f21da4dd, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 275bb9951ab28f347919d1fe129781cc, type: 3}
     - content: bed
       image: {fileID: 2122107185238573207, guid: 7ab97d0fc13d9a1428e691659551022c, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 3c73bff7031fa26448be2bffcb504792, type: 3}
     - content: biscuit/cookie
       image: {fileID: -8768244776371164980, guid: ccd96dd1949a77245940851bf4829f1a, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: a1e5cea3bdbb33448ac17a8e1523b6c0, type: 3}
     - content: big
       image: {fileID: -3850679877105380084, guid: c905714ef9b87234e9f3772a2a40f560, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 5386fdd92b48f134ea564af89852e029, type: 3}
     - content: boat
       image: {fileID: -4032481707582436298, guid: bc61e2fa1e23f7a47899fa321aa0c804, type: 3}
       audio: {fileID: 0}
     - content: bread
       image: {fileID: -4431494890709657585, guid: 43807c72b6cb5ec43a74b6ff5a59af78, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 215929923fb1e6841adc20a7fd39f0f3, type: 3}
     - content: bubbles
       image: {fileID: 1649192393020575799, guid: 64b370ed58b207744b93c20fd5646329, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 78b1e0f2376e0a448b73d508a647a2bb, type: 3}
     - content: bus
       image: {fileID: 1223958431475000254, guid: acfe159aeb7b0124fb1a774527dfdcba, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: b4a5556c9d9f18a42b361e868e425184, type: 3}
     - content: car
       image: {fileID: -8030835215644163416, guid: 3df1a802e98080a4f8da9673babf641f, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: cb9827f903266714eac14338231eb8e7, type: 3}
     - content: cat
       image: {fileID: 1075993247170539406, guid: 0d703613add797a41ae9fe24d3fac760, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 6ccb00473b7d3994c951746ef8c839a6, type: 3}
     - content: chair
       image: {fileID: 357585243727820222, guid: cc1c535a4c66de54296a71d85850a44b, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 390c97d85bea00241bc6e83dfefd0484, type: 3}
     - content: coat
       image: {fileID: 4940574556573517943, guid: 99a7b129116ef4d4abb603a158336e48, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: aefd87b65a7cc8b44adc9747eccd4052, type: 3}
     - content: cutting
       image: {fileID: -5778116367789922503, guid: 5decbae99f582a24089f07fa23debf2a, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 16c528c5a132c6e4ea06922abedb13b7, type: 3}
     - content: dinner
       image: {fileID: 4999434966199677835, guid: fd709530fdfdf1242948bed6e7557970, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 832acfe8e9a491f42bbd8a40551640a6, type: 3}
     - content: dirty
       image: {fileID: -3617867708823093519, guid: 8bd16dec477528e44a248d0fd908c11c, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: adc9d7ebe1b5f4749893ede836355dbe, type: 3}
     - content: dog
       image: {fileID: 1480917699468073914, guid: 828558f0d08797942bb2ed9943bc6003, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: dd2866e165d502544a04fb0dd43abff5, type: 3}
     - content: eating
       image: {fileID: 4954959605258028193, guid: 6a093106e536a9842a340a16319a5e69, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 5d9e785dd8907c8438a182c78f6253a0, type: 3}
     - content: fish
       image: {fileID: 8966945178157639174, guid: e23539e31a756644e9b82a2ebdf25a71, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 3caaa40bc5648a241a6cb20d1bd0b798, type: 3}
     - content: flower
       image: {fileID: 7366617892383084551, guid: 466d0701f27f1c14295847e0fb3580c7, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 17c5bdc3b5dd7da4cb7cf7a0576bb6ca, type: 3}
     - content: hair
       image: {fileID: -3033253052430608597, guid: c55c2a4dab62bfd43877c8bb2aa50719, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 74d293a711250fe4fa72847580594495, type: 3}
     - content: horse
       image: {fileID: -7501201644240826356, guid: f92601a67c2eb4942b4393276c8b4dda, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: f455915d4ff31a045b4883d7227c7358, type: 3}
     - content: jumping
       image: {fileID: -1981418222017897944, guid: 05549a1cc2b6fff4ca9099019038ba01, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 5924aa7f8031f524f95a674432c2d34e, type: 3}
     - content: little
       image: {fileID: -5247957579525393831, guid: e157be4f0f2019b4c8c6d261b0b399d9, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 9373bda2a2c979745bc2d408ead3b18e, type: 3}
     - content: monkey
       image: {fileID: -4798825762170945512, guid: a93b45cbd8ac4574290d374ca133ae16, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 2ad403205fe3ba3479f3ca6379d377cb, type: 3}
     - content: on
       image: {fileID: 5175489880400350850, guid: b2352424f35676f428bf0a4362291a22, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 65f77f59cfd1f694f8c0d5205426d125, type: 3}
     - content: playing
       image: {fileID: 544483606009788143, guid: 59dc15a922f0e54418e4b019a058644c, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 08d8183008571ad448e730ef4b013762, type: 3}
     - content: rabbit
       image: {fileID: -5362292703166988329, guid: 2aff4e3aefd72cc4f9fa4ae40fa94507, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: c1bbbff40eb02b74b86c0f2e8ec6171d, type: 3}
     - content: shoe
       image: {fileID: 2371641743025836735, guid: c69a72c635f93e64b98cb5eb6495861a, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 07be95dfa427ca64ba38e720c89b6bb6, type: 3}
     - content: train
       image: {fileID: 7114885465217784225, guid: 477a5a5c23ef7a843b4d7bed0e1c143c, type: 3}
       audio: {fileID: 0}
@@ -504,139 +504,139 @@ MonoBehaviour:
     sightWordList:
     - content: baby
       image: {fileID: 5328332788402992666, guid: d7eee1b86740a6c4ca0dfef5d4074b30, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 86472444efbcc4648ae3dff058b150b7, type: 3}
     - content: bath
       image: {fileID: -557185414492787049, guid: 226bc722e89f2ca438f578cba47a171a, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: f85ca046f4715cf4ea4db1a9abdff123, type: 3}
     - content: bike
       image: {fileID: 5371294221566652503, guid: 6f003af0c22f1464583ae2ca75b090c1, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 14017d019a63c264eb4bf2734c9c69b9, type: 3}
     - content: bird
       image: {fileID: -5064401156898091283, guid: bf1211899cb9814409db87081d2d8b8e, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: acf97b9b9546fe040a6239926298a49b, type: 3}
     - content: bowl
       image: {fileID: 270867796513690207, guid: d04d4265963cfe6478628b0ab1492d22, type: 3}
       audio: {fileID: 0}
     - content: box
       image: {fileID: 7499154508442906066, guid: a2b395500c5fc944c8a1127e51fdffd5, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 17aef28f2af8d8e468706204846b75a0, type: 3}
     - content: boy
       image: {fileID: -6157779062412324289, guid: 8f706a19553e0c14ea3de8d2a7a2feb0, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 02bf5e28381ca384e9ce1d57570bbde2, type: 3}
     - content: car
       image: {fileID: -8030835215644163416, guid: 3df1a802e98080a4f8da9673babf641f, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: cb9827f903266714eac14338231eb8e7, type: 3}
     - content: cat
       image: {fileID: 1075993247170539406, guid: 0d703613add797a41ae9fe24d3fac760, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 6ccb00473b7d3994c951746ef8c839a6, type: 3}
     - content: chairs
       image: {fileID: 357585243727820222, guid: cc1c535a4c66de54296a71d85850a44b, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: db8fa8976ebaf5043b5f6c1fe85e850c, type: 3}
     - content: climbing
       image: {fileID: -1706597085940364427, guid: 4a2e70b7bf20e5a4f80230385f49edcc, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 261ff8383e3aa8c408a188640c6796f5, type: 3}
     - content: dog
       image: {fileID: 1480917699468073914, guid: 828558f0d08797942bb2ed9943bc6003, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: dd2866e165d502544a04fb0dd43abff5, type: 3}
     - content: down
       image: {fileID: 357006442158401228, guid: b6c47354724d5c24cbfd17fb41bbc0d8, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: b395a6c3ac7011442a0e869f5dd744ee, type: 3}
     - content: duck
       image: {fileID: 8868729072188591806, guid: edb882904ace6da44b81c2a2d915a1c4, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 7a17f3e07561b3b458c0853e98f3d571, type: 3}
     - content: ducks
       image: {fileID: 8868729072188591806, guid: edb882904ace6da44b81c2a2d915a1c4, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 481069da78a415d4abcbfcfdda3b052b, type: 3}
     - content: feeding
       image: {fileID: 5550863492004155591, guid: 4403fb71be356034bae123cc6c4e86c9, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: b924431414da19d40956fc44bd660cd0, type: 3}
     - content: fish
       image: {fileID: 8966945178157639174, guid: e23539e31a756644e9b82a2ebdf25a71, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 3caaa40bc5648a241a6cb20d1bd0b798, type: 3}
     - content: fork
       image: {fileID: 4422662579018926940, guid: a35d5371558a385478a2c03771fa9e9e, type: 3}
       audio: {fileID: 0}
     - content: garden
       image: {fileID: 5435936245034971430, guid: b9303f033cc380b449c28c705bd436ac, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: c62ad90b4eede864bb26e4b53e46f4ad, type: 3}
     - content: girl
       image: {fileID: 9101278813714116849, guid: 85796708e68ad6c439baedc7b083bba5, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: d7bd3a2ac6b373b4da7017ed33050329, type: 3}
     - content: hat
       image: {fileID: 3063841963128474276, guid: e80d203879a003e4b833d35faf8f38fa, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 70b170f9621393d47aa02a208c3ece66, type: 3}
     - content: horse
       image: {fileID: -7501201644240826356, guid: f92601a67c2eb4942b4393276c8b4dda, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: f455915d4ff31a045b4883d7227c7358, type: 3}
     - content: house
       image: {fileID: -1923994175756728024, guid: 258255cbde708d643921721c233dffae, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 2bbebcfdf4b8b94439f750be342b0231, type: 3}
     - content: in
       image: {fileID: -8254932462476682504, guid: 374650b2f083af84a8a6b434481319e7, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 352ed6af20d42ca49bccfe45c8ef71eb, type: 3}
     - content: monkey
       image: {fileID: -4798825762170945512, guid: a93b45cbd8ac4574290d374ca133ae16, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 2ad403205fe3ba3479f3ca6379d377cb, type: 3}
     - content: on
       image: {fileID: 5175489880400350850, guid: b2352424f35676f428bf0a4362291a22, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 65f77f59cfd1f694f8c0d5205426d125, type: 3}
     - content: plate
       image: {fileID: -4795573259988461060, guid: c101469ccafd81e4b9dbb1dc121bf57c, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 2aa6478a12b5eb34a8c356adb7996e45, type: 3}
     - content: potty
       image: {fileID: 216510009038366504, guid: 92f0d10392800424c9ceeea06b3527c1, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: dc6a6738728e3b84a986cc80402e51b1, type: 3}
     - content: rabbit
       image: {fileID: -5362292703166988329, guid: 2aff4e3aefd72cc4f9fa4ae40fa94507, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: c1bbbff40eb02b74b86c0f2e8ec6171d, type: 3}
     - content: running
       image: {fileID: -1274967292748549190, guid: d6db169e28df5a04c942a9f0dce09ba2, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 44e077fbaf116b44f8d37b454ab8b7d5, type: 3}
     - content: sand
       image: {fileID: 4360390788417139489, guid: d6b722adbff890546887887e65eab00b, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 900951be2d1241444b009b55b66dcba9, type: 3}
     - content: scarf
       image: {fileID: 2174045244123681815, guid: cbbfbdc1f86bed24b990d75508731e28, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 27dfd1d957e85a642863a1eb8483d1f8, type: 3}
     - content: shoes
       image: {fileID: 2371641743025836735, guid: c69a72c635f93e64b98cb5eb6495861a, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 3bab43f5c4cf9a54c8e6baa0ec91e3bb, type: 3}
     - content: socks
       image: {fileID: 6749276748630484902, guid: 59039a70096c251439a0bd23bcd4edc8, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 4cbb2ac6e27b80f468f86af493520cf4, type: 3}
     - content: spoon
       image: {fileID: -3411414237561161789, guid: 14f78d17fa2747a4c9dfa9a0e19cf231, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: a5d3aab86abc15649b848d3da7bd1803, type: 3}
     - content: stairs
       image: {fileID: -3821777026937811026, guid: 361fde8e993f69b469c4254a441d8a95, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: a3ed599ad567d2a438c71feb2dec468c, type: 3}
     - content: swimming
       image: {fileID: -3091465334030352917, guid: d479540d45aed714da08893cfa286e5f, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 52318080ea2ce2f4087b398fafbf3161, type: 3}
     - content: swing
       image: {fileID: 657289779235973496, guid: 6472924389692ea4abd86ec0c2a526c3, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: a3b44dab288baf84bb6401e2b3f897ba, type: 3}
     - content: swings
       image: {fileID: 657289779235973496, guid: 6472924389692ea4abd86ec0c2a526c3, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 34e0bcd19a00a8d41beed94d9ab2baeb, type: 3}
     - content: table
       image: {fileID: -8841490917199087839, guid: 76c3dd7a9856e194c9a9234e4cdd69e1, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 266555ec2d39f5f4f98f330d108f9c95, type: 3}
     - content: tiger
       image: {fileID: 9085329464345055985, guid: e5cbdcd2d0479cf4fa117f4322609a17, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 08a5e2313c514744a8114ab779c55c34, type: 3}
     - content: towel
       image: {fileID: 1011511256227955051, guid: 76c7c99982b58bf468a889c05eb3adce, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 4d28992473a0af2439263f8ea885bccf, type: 3}
     - content: tractor
       image: {fileID: 6124448547508259807, guid: e6c4bbda46afe8444b808b3f966743b2, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: cd0c5328f424027468baf6d795b4cfd4, type: 3}
     - content: tree
       image: {fileID: -8667466294985060184, guid: a73e7315de5c2b1449a8f566ec502176, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: cce8ef9786ea4264993e88bba1eedbe9, type: 3}
     - content: up
       image: {fileID: 5655321678828108626, guid: ac3e19820c304ce448a7a1b397450cb0, type: 3}
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 098af18a3efb9b546b373928a01b57f8, type: 3}
     PBIList:
     - phraseContext: feeding
       contentList:
