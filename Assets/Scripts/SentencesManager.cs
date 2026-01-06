@@ -12,10 +12,15 @@
 // {
 //     public Books book;
 //     public bool enabled;
-//     public List<ContentPictureAudioTrio> sightWordList;
 //     public string sentenceContext;
-//     public List<ContentPictureAudioTrio> contentList;
+//     public List<SBEntry> contentList;
+// }
 
+// public struct SBEntry
+// {
+//     public string sightWord;
+//     public int sightWordIndex;
+//     ContentPictureAudioTrio cpat;
 // }
 
 // public class SentencesManager : MonoBehaviour
@@ -23,7 +28,7 @@
 //     public static SentencesManager Instance { get; private set; }
 //     [SerializeField] private List<SentencesBookInformation> booksList = new List<SentencesBookInformation>();
 //     private List<ContentPictureAudioTrio> sightWords = new List<ContentPictureAudioTrio>();
-//     private List<ContextListEntry> contextList = new() { new ContextListEntry { context = "", list = new List<ContentPictureAudioTrio>() } };
+//     private List<ContentPictureAudioTrio> sbList;
 
 //     void Awake()
 //     {
@@ -45,27 +50,9 @@
 
 //     }
 
-//     public List<ContextListEntry> GetCurrentEnabledDictionaryPhrases()
+//     public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySentences()
 //     {
-//         contextList.Clear();
 
-//         foreach (PhrasesBookInformation book in booksList)
-//         {
-//             if (book.enabled)
-//             {
-//                 foreach (PBI b in book.PBIList)
-//                 {
-//                     ContextListEntry entry = new ContextListEntry
-//                     {
-//                         context = b.phraseContext,
-//                         list = new List<ContentPictureAudioTrio>(b.contentList)
-//                     };
-//                     contextList.Add(entry);
-//                 }
-//             }
-//         }
-
-//         return contextList;
 //     }
 
 //     public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySightWords()
