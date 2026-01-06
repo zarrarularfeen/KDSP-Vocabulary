@@ -343,162 +343,162 @@ MonoBehaviour:
       contentList:
       - content: cat is eating
         image: {fileID: -6863605546657424857, guid: 6377c1027a91f804da1a42c91d04dcdb, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: ac2a83ea29dc691428a65807a6849f21, type: 3}
       - content: dog is eating
         image: {fileID: 2632810389975326689, guid: da2e6bd73bde5b240bee0b6eaff08f09, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 0e94eb404aa5de247886a5b6d84edbc5, type: 3}
       - content: horse is eating
         image: {fileID: -2269085294881840942, guid: 276c0beaabae0014bb565d14b3a7a3fa, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 40fb45d395be76b4d86472aecafa6917, type: 3}
       - content: rabbit is eating
         image: {fileID: 4002140903770126769, guid: a2353f7813ff58c4da63421f68e2a36c, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 2ffca662f20c3e54f8151bc0a35b816f, type: 3}
       - content: monkey is eating
         image: {fileID: 2531478401069675778, guid: bba4333040996b14f90f5d8be4e84189, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 081c072ede9b7664a91a5a0f435c23c3, type: 3}
       - content: fish is eating
         image: {fileID: 5339419409705448049, guid: f3e4460540b4f414a87e5a36bd36d176, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: c9baf545c2c13f44ab74c1c9d53ec780, type: 3}
     - phraseContext: Who is jumping
       contentList:
       - content: cat is jumping
         image: {fileID: 6299088500903896229, guid: 5bd52a6e82b71b840a932ce5b9cb12c9, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 7b96a89245b73e344b2014551739e21e, type: 3}
       - content: dog is jumping
         image: {fileID: -2880799585737670100, guid: 41aa6d1a48a807c438806bf9948ac874, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: cc33c31ea3637dd43a4099222da09f04, type: 3}
       - content: horse is jumping
         image: {fileID: -2269085294881840942, guid: 276c0beaabae0014bb565d14b3a7a3fa, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 6267c3b557435e54e9b98ff5d868080e, type: 3}
       - content: rabbit is jumping
         image: {fileID: 3146533446373008031, guid: 03e81b9fe2342db409eedd03d3bfccca, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 6d0a313f85f35a747b14da60ed5347cf, type: 3}
       - content: monkey is jumping
         image: {fileID: -3384547146715376465, guid: 7897611434d5efb408f91edb29a2c4e3, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 5baa4b11298dd5d4b8fef487b7a06a6a, type: 3}
       - content: fish is jumping
         image: {fileID: -5760032664868670696, guid: c05b357ce00f3f3489a5f6ffa849be72, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: fa2ea3334575fde49a0b592831ea469f, type: 3}
     - phraseContext: Big and little
       contentList:
       - content: big dog
         image: {fileID: 7459642043674629661, guid: 3dca8b3d7ee867a45adc376e61a861e7, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 5b0143641cc2ef649af82bd474182163, type: 3}
       - content: little dog
         image: {fileID: 1829676683045966760, guid: 9485225141704c44b85a057794275e45, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 72718a90cba9b394ebeb22dba0cd7d52, type: 3}
       - content: big monkey
         image: {fileID: -6201273807141296656, guid: 614c9b4d3949892438019b22263b697f, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: e8871ab503b06704d9f9bd9f63a85bf9, type: 3}
       - content: little monkey
         image: {fileID: 7899564658853524967, guid: cbab73b849f1e4643858c1d6c098f798, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: e54a0f7848a6032408e5a02db7a1e855, type: 3}
       - content: big ball
         image: {fileID: 1988176676097322799, guid: 8305a3d3d1019844b80a582c53e668b1, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 001cae60841304f40bcb816c45857db6, type: 3}
       - content: little ball
         image: {fileID: -7231120062118243196, guid: a217e198154df614087ebc03cf4dee73, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 1b6fa0955cba61c43b9159f955447cb5, type: 3}
     - phraseContext: on
       contentList:
       - content: on the chair
         image: {fileID: -9138313736779080560, guid: 546af5c04507f6748ba55ebcaa2ca8e4, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 5d3f84586c187d94d9ad2f9f18665176, type: 3}
       - content: on the bus
         image: {fileID: 606152313050750562, guid: 0f07276f356f73046b2594a58951b6d5, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 27d4e41646a9a38458c8b99c5d79f4aa, type: 3}
       - content: on the train
         image: {fileID: 1794331060027083240, guid: 21f745b26f2a989419d02c1ea4710c27, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 97aec155b8e29b24f85523e81106b35a, type: 3}
       - content: on the horse
         image: {fileID: -6729732726564290300, guid: 4d2b257822b57634b89acfeb1226b962, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: fd8f1cca55489c6409f65eaa4f083be0, type: 3}
       - content: on the boat
         image: {fileID: -6008284069143300536, guid: bcc8ec50d6280ac4eb368c4a35280486, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 77cc0bced41de2f4087b97405c59db45, type: 3}
       - content: on the bed
         image: {fileID: 4249704861438746044, guid: cb93e3a0330f9e447bebdf85c586ed26, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: f4c9210981eb8554dbb070bf647a09e6, type: 3}
     - phraseContext: Eating
       contentList:
       - content: eating apple
         image: {fileID: 7623229601005140726, guid: 32d713f738797624e826b6c4a5c1bd5b, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 1f38e99bdc486034992caede2c312e25, type: 3}
       - content: eating bread
         image: {fileID: 7104405415229899341, guid: 5be06b459eb390247bc4283016889f04, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 43b32f89613959042bca9e070764c03f, type: 3}
       - content: eating banana
         image: {fileID: -7254542301550924427, guid: 2000a255618261d489821cd9bcac9e73, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: e7a6dca0b9cae1a4bbc0385f506e7232, type: 3}
       - content: eating yoghurt/yogurt
         image: {fileID: 2092819081063931484, guid: 883bb8bd7f231b74ba6078bce1fea09a, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 7f6fc21d6a94c034ab9e26e1275e61a0, type: 3}
       - content: eating biscuit/cookie
         image: {fileID: -2428372079772436026, guid: 1f7d4388ea53ed9458db70271e0bc254, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 6bbd8bc7e22d9c6439e776b0c4935bec, type: 3}
       - content: eating dinner
         image: {fileID: 5871588580560866992, guid: d693436abf068e941a31caf8e1b4902b, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 0289db5e8be809040a81a9d2575eb953, type: 3}
     - phraseContext: cutting
       contentList:
       - content: cutting banana
         image: {fileID: -1646452714408608857, guid: 7577ac828ac07a6488bd98ac165a9e74, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 600bd8126487015459564255e549bb4e, type: 3}
       - content: cutting apple
         image: {fileID: -2154214765902345066, guid: cf07b6cf82a46564da6a3ecd7051775b, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 38bc6a0cd1f47ff4c8609fd9f13c8a3f, type: 3}
       - content: cutting bread
         image: {fileID: -7057329431768721432, guid: 25a84330d45211549bd4bd23ade6ea28, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: d6c431d9070e3a54b9a1e7d9b273d4bd, type: 3}
       - content: cutting dinner
         image: {fileID: -6994145260943956144, guid: 94757140fce12c84a8e586113ff024eb, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 145586fb846dc194db4d79cfa59bcbe7, type: 3}
       - content: cutting flower
         image: {fileID: -8572784797646895252, guid: 53f3eeb127ed0a644bfedb173c5bb060, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 33be8751ef903ab488797c1b25470869, type: 3}
       - content: cutting hair
         image: {fileID: -8612283142115389722, guid: 42a22e7398e42c449ba4afdf1f664a00, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 609f91e569b8c5d4b9cde1285a812b39, type: 3}
     - phraseContext: playing
       contentList:
       - content: playing with bus
         image: {fileID: 8819372068711407549, guid: ec0a5aac0a79d2044b5d33b3ac6f6d02, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: cce23cca5916a594db5adac0639146a0, type: 3}
       - content: playing with boat
         image: {fileID: 8357146028720030141, guid: bdf3bd285799d8d4d9caacfd31c56983, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: fc59f6d327e3ffc4f9b4f24f2f29475d, type: 3}
       - content: playing with car
         image: {fileID: 6424468465751125570, guid: 830db1942c312a94b9a29b321768bb96, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 0aee332c5bac33146846bb8e9f7af23b, type: 3}
       - content: playing with train
         image: {fileID: 3747506742232743128, guid: 8590b3e97fc9b5e4c9cf04063211cdfb, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: ee41725f516d3564c9fa99f9d59eb72e, type: 3}
       - content: playing with doll
         image: {fileID: -646919008662978879, guid: 73a82aec7cb0a15418ebf1a804bb9576, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: a49cb768fd46b554ab08ad60343c8bca, type: 3}
       - content: playing with bubbles
         image: {fileID: -1181841775210277097, guid: bf4ece65aee2a2d4d8b6a236aa9abfac, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: bc2cdac8b4b80324aac8684db01a87bc, type: 3}
     - phraseContext: Wet and dirty
       contentList:
       - content: wet dog
         image: {fileID: 7086978818277223865, guid: 655b77e2f5ec19c4ab35aca0190790cf, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: d6b049b9e7d7cec4b9d0401bae4c82fe, type: 3}
       - content: wet coat
         image: {fileID: -3558126292285402265, guid: 5e355051d89b7fe4cb46654d8e76c1f3, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 9dae27151131ca74c9ad1572135e31b2, type: 3}
       - content: dirty car
         image: {fileID: 5398254975377230716, guid: 3bf2e0afb94bd5e4fb77a576e1a52c66, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: f8ece52b935c3474d8d2cb61fe9a7f54, type: 3}
       - content: dirty shoe
         image: {fileID: 8768230781267341811, guid: 023c677b9300f4d49891f65d9d8564e1, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: 639e1bb136e4c9846991131bb9580f57, type: 3}
       - content: wet hair
         image: {fileID: 1697651668078084127, guid: 133f21e4b95e10446ab7ca22ff48d313, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: ae13b90c3dfd5674db1e9cdee9e6b585, type: 3}
       - content: dirty bus
         image: {fileID: 2730738375044621455, guid: 9bc12de054570574da4ca8e4c9d3749c, type: 3}
-        audio: {fileID: 0}
+        audio: {fileID: 8300000, guid: e983085f008c8c941b79d8f687bb577d, type: 3}
   - book: 5
     enabled: 0
     sightWordList:
