@@ -45,7 +45,131 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   booksList:
-  - book: 0
+  - book: 6
     enabled: 0
-    sentenceContext: 
-    contentList: []
+    sentenceContext: 1. Outside
+    contentList:
+    - sightWord: sun
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is the sun
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: moon
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is the  moon
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: sky
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is the sky
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: park
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is a park
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: rock
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is a rock
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: leaf
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is a leaf
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: rain
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is rain
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: snow
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is snow
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: water
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is water
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: pool
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: this is pool
+        image: {fileID: 0}
+        audio: {fileID: 0}
+  - book: 7
+    enabled: 0
+    sentenceContext: 2. How do you feel
+    contentList:
+    - sightWord: happy
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am happy
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: sad
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am sad
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: tired
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am tired
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: hurt
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am hurt
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: hungry
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am hungry
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: thirsty
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am thirsty
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: hot
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am hot
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: cold
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am cold
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: wet
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am wet
+        image: {fileID: 0}
+        audio: {fileID: 0}
+    - sightWord: dry
+      sightWordAudio: {fileID: 0}
+      cpat:
+        content: I am dry
+        image: {fileID: 0}
+        audio: {fileID: 0}
