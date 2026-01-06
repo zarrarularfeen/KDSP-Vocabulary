@@ -19,7 +19,29 @@ public enum Books
 
     Sentences1,
     Sentences2,
-    Sentences3
+    Sentences3,
+    Sentences4,
+    Sentences5,
+    Sentences6,
+    Sentences7,
+    Sentences8,
+    Sentences9,
+    Sentences10,
+    Sentences11,
+    Sentences12,
+    Sentences13,
+    Sentences14,
+    Sentences15,
+    Sentences16,
+    Sentences17,
+    Sentences18,
+    Sentences19,
+    Sentences20,
+    Sentences21,
+    Sentences22,
+    Sentences23,
+    Sentences24,
+    Sentences25
 }
 
 [System.Serializable]
@@ -27,7 +49,7 @@ public struct ContentPictureAudioTrio
 {
     public string content;
     public Sprite image;
-    public AudioClip audio;
+    public AudioClip[] audio;
 }
 
 [System.Serializable]
