@@ -52,6 +52,9 @@ MonoBehaviour:
   winningSound: {fileID: 0}
   correctSound: {fileID: 0}
   wrongSound: {fileID: 0}
+  matchSound: {fileID: 8300000, guid: 275bb9951ab28f347919d1fe129781cc, type: 3}
+  withSound: {fileID: 8300000, guid: 275bb9951ab28f347919d1fe129781cc, type: 3}
+  showMeSound: {fileID: 8300000, guid: 275bb9951ab28f347919d1fe129781cc, type: 3}
   positiveReinforcementSound: []
 --- !u!82 &6085539781166950112
 AudioSource:

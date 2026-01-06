@@ -1,4 +1,8 @@
 using UnityEngine;
+using System.Collections;
+using Unity.VisualScripting;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 public class AudioManager : MonoBehaviour
 {
@@ -13,6 +17,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip withSound;
     [SerializeField] private AudioClip showMeSound;
     [SerializeField] private AudioClip[] positiveReinforcementSound;
+    private List<AudioClip> seqPlayAudioClips = new List<AudioClip>();
+    private float seqDelay = 0.1f;
 
     void Awake()
     {
@@ -102,29 +108,45 @@ public class AudioManager : MonoBehaviour
 
     public void ShowMeFunction(AudioClip audio)
     {
+        seqPlayAudioClips.Clear();
         if (audio != null)
         {
-            audioSource.PlayOneShot(showMeSound);
-            audioSource.clip = audio;
-            audioSource.PlayDelayed(0.3f);
+            seqPlayAudioClips.Add(showMeSound);
+            seqPlayAudioClips.Add(audio);
+            StartCoroutine(PlayAudioSequentially());
         }
     }
 
     public void MatchWithFunction(AudioClip audio)
     {
+        seqPlayAudioClips.Clear();
         if (audio != null)
         {
-            audioSource.PlayOneShot(matchSound);
-            audioSource.clip = audio;
-            audioSource.PlayDelayed(0.3f);
-            audioSource.PlayOneShot(withSound);
-            audioSource.clip = audio;
-            audioSource.PlayDelayed(0.3f);
+            seqPlayAudioClips.Add(matchSound);
+            seqPlayAudioClips.Add(audio);
+            seqPlayAudioClips.Add(withSound);
+            seqPlayAudioClips.Add(audio);
+            StartCoroutine(PlayAudioSequentially());
         }
     }
 
     public void StopAllSFX()
     {
         audioSource.Stop();
+    }
+
+    IEnumerator PlayAudioSequentially()
+    {
+        for (int i = 0; i < seqPlayAudioClips.Count; i++)
+        {
+            audioSource.clip = seqPlayAudioClips[i];
+            audioSource.Play();
+
+            while (audioSource.isPlaying)
+            {
+                yield return new WaitForSeconds(seqDelay);
+                // yield return null;
+            }
+        }
     }
 }
