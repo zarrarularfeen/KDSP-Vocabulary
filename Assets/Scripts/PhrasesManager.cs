@@ -12,7 +12,6 @@ using System;
 public struct PBI
 {
     public string phraseContext;
-    public int index;
     public List<ContentPictureAudioTrio> contentList;
 }
 
