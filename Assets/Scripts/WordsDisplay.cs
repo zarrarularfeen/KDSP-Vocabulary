@@ -54,6 +54,8 @@ public class WordsDisplay : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        VocabularyMatching.selectedContent.Clear();
+        PhrasesLevelManager.selectedContextList.Clear();
 
         if (currentMode == WordsDisplayMode.Vocabulary)
         {
@@ -185,14 +187,10 @@ public class WordsDisplay : MonoBehaviour
     {
         if (currentGameMode == GameMode.Vocabulary)
         {
-            VocabularyMatching.selectedContent.Clear();
-            PhrasesLevelManager.selectedContextList.Clear();
             nextButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("VocabularyMatching"));
         }
         else if (currentGameMode == GameMode.Phrases)
         {
-            VocabularyMatching.selectedContent.Clear();
-            PhrasesLevelManager.selectedContextList.Clear();
             nextButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("PhrasesLevel"));
         }
     }
@@ -202,14 +200,10 @@ public class WordsDisplay : MonoBehaviour
     {
         if (currentGameMode == GameMode.Vocabulary)
         {
-            VocabularyMatching.selectedContent.Clear();
-            PhrasesLevelManager.selectedContextList.Clear();
             backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("EnableBooksVocabulary"));
         }
         else if (currentGameMode == GameMode.Phrases)
         {
-            VocabularyMatching.selectedContent.Clear();
-            PhrasesLevelManager.selectedContextList.Clear();
             backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("EnableBooksPhrases"));
         }
 
