@@ -50,126 +50,126 @@ MonoBehaviour:
     sentenceContext: 1. Outside
     contentList:
     - sightWord: sun
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: 28ac8fbd6e41d3944b4762d4f87b54af, type: 3}
+      CPAT:
         content: this is the sun
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: 1952609883052105016, guid: 3d771ac49434c1e488f7ef2edd53343a, type: 3}
+        audio: {fileID: 8300000, guid: 1c9a2adae22db4543992ded5ba85aa70, type: 3}
     - sightWord: moon
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: this is the  moon
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: 5d2aadad6400d394d85dc968d647fd00, type: 3}
+      CPAT:
+        content: this is the sun
+        image: {fileID: 2988485029202720038, guid: 83eee2859490eff448b642cdff272bfe, type: 3}
+        audio: {fileID: 8300000, guid: db6938e0b4789fe47b91375656f47121, type: 3}
     - sightWord: sky
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: 6d0bba70b26e925448bc071e06e3c253, type: 3}
+      CPAT:
         content: this is the sky
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: 8804171877533587304, guid: 79820ad47c969c44c8133a4a386e8e56, type: 3}
+        audio: {fileID: 8300000, guid: 7c9097ecdc084b64f90c0dc7d141dcd9, type: 3}
     - sightWord: park
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: 7675426d46d98ed41975ecc287494e6f, type: 3}
+      CPAT:
         content: this is a park
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: 5262155881326691846, guid: 31a478c6d13e34f40bdbb803b2953955, type: 3}
+        audio: {fileID: 8300000, guid: ccd2b6b9f6b8e4d44ad85dfa0f71763e, type: 3}
     - sightWord: rock
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: d1f66f4953f336d4f9fec412b10c1651, type: 3}
+      CPAT:
         content: this is a rock
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: 1141506657604193970, guid: ea5783a76999d86449fabe9fb5606d55, type: 3}
+        audio: {fileID: 8300000, guid: bccf6dfc39bb129498b6942a20c52adb, type: 3}
     - sightWord: leaf
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: e98fd60c1acd258459eedb0bf589dcc2, type: 3}
+      CPAT:
         content: this is a leaf
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: 1839147245991081855, guid: c2a5c98adf18a0847bace9c1a38a3e84, type: 3}
+        audio: {fileID: 8300000, guid: 3415ade27d88cd24b8444b63e38d4d86, type: 3}
     - sightWord: rain
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: 29355d02c23efb24e88037b0fa55242d, type: 3}
+      CPAT:
         content: this is rain
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: 2537554188198490771, guid: e5936649fe9cf944f9173d45f84c67d6, type: 3}
+        audio: {fileID: 8300000, guid: 96ecb530a99c7eb4b978eb745fe65bba, type: 3}
     - sightWord: snow
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: 5e7e6cfd47c07f64a9d66848a44f8d25, type: 3}
+      CPAT:
         content: this is snow
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: 4943082081994826073, guid: 2af6763aa0bc0c247903ae085414d2c3, type: 3}
+        audio: {fileID: 8300000, guid: 44a9fa8f393e45d4eb4f8bbaf54e4d0a, type: 3}
     - sightWord: water
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: dc56a55e0a041a84c91cc68738406bee, type: 3}
+      CPAT:
         content: this is water
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: -246359338560770521, guid: ebf9867a1faab3f439e4a1f4226f6a85, type: 3}
+        audio: {fileID: 8300000, guid: 388b23dbbe77d4043851f732b777b5a0, type: 3}
     - sightWord: pool
-      sightWordAudio: {fileID: 0}
-      cpat:
+      sightWordAudio: {fileID: 8300000, guid: a9889eefd5447d24cb6a6578b8fde5d7, type: 3}
+      CPAT:
         content: this is pool
-        image: {fileID: 0}
-        audio: {fileID: 0}
+        image: {fileID: -5869536924820833752, guid: a91a80c992ac80f418434c0d4cbeb580, type: 3}
+        audio: {fileID: 8300000, guid: cd3148942257d194994279c527bce4b2, type: 3}
   - book: 7
     enabled: 0
     sentenceContext: 2. How do you feel
     contentList:
     - sightWord: happy
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am happy
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: 0bba93e83114a234aae0ee83bf27eb88, type: 3}
+      CPAT:
+        content: i am happy
+        image: {fileID: -7960805851347689874, guid: 47e770d1c2483384ba3ff93d6ad936c6, type: 3}
+        audio: {fileID: 8300000, guid: 5f8cfec5392236945a7daf49c7d02e35, type: 3}
     - sightWord: sad
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am sad
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: 242217ece975159488f281928c26e377, type: 3}
+      CPAT:
+        content: i am sad
+        image: {fileID: -5106620459757611227, guid: ef9fea8eea2568e45a3dab1a5c499379, type: 3}
+        audio: {fileID: 8300000, guid: 5303e486649297d48b34faf0541b1669, type: 3}
     - sightWord: tired
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am tired
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: 07ec442e41ebde146a11930bb3088855, type: 3}
+      CPAT:
+        content: i am tired
+        image: {fileID: 6329244949932203230, guid: c1a7b9dba3ad4664691b8cd27337af9a, type: 3}
+        audio: {fileID: 8300000, guid: 319647e6270ccb64a8c34b981e0f3273, type: 3}
     - sightWord: hurt
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am hurt
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: 1766e12da01768e4eb9e0b8042f1587d, type: 3}
+      CPAT:
+        content: i am hurt
+        image: {fileID: 3803286442047560129, guid: 576db97bfe8fd3343b338eb791fb6b28, type: 3}
+        audio: {fileID: 8300000, guid: d0c040d9e21f54b4a9ef6fc35df6537f, type: 3}
     - sightWord: hungry
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am hungry
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: cf2b46284079f494ca024425ebbbbb69, type: 3}
+      CPAT:
+        content: i am hungry
+        image: {fileID: -5838772964027175573, guid: cc6da23df6297cd42948690e90241c47, type: 3}
+        audio: {fileID: 8300000, guid: 2f344746fba762f478ead0cc289435e5, type: 3}
     - sightWord: thirsty
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am thirsty
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: 846b314574420b24f988f7fc03954093, type: 3}
+      CPAT:
+        content: i am thirsty
+        image: {fileID: 2978677259966401120, guid: 74ef54992c3780f4a9840182a8e9a650, type: 3}
+        audio: {fileID: 8300000, guid: 85eaf4d622cb3b24eae60c0e15901670, type: 3}
     - sightWord: hot
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am hot
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: dd8607470403f6b4da3ee58e9485ae37, type: 3}
+      CPAT:
+        content: i am hot
+        image: {fileID: 1896950341582242292, guid: 35723046bc65e2346851002a91fec7c4, type: 3}
+        audio: {fileID: 8300000, guid: 33d74f48a21567e4d9a963d8bf8647e6, type: 3}
     - sightWord: cold
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am cold
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: 427ada8154cc86b429cb0817194e1d84, type: 3}
+      CPAT:
+        content: i am cold
+        image: {fileID: 4054037174294470948, guid: d138f0d681991924db7d1532813203b6, type: 3}
+        audio: {fileID: 8300000, guid: a637342126266c64ea2f27c6f21700d8, type: 3}
     - sightWord: wet
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am wet
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: a40de6f4ca729f944a287957560f1c86, type: 3}
+      CPAT:
+        content: i am wet
+        image: {fileID: 5655401177346010066, guid: 77fb5592ba0d2c44ba15802d6503fefc, type: 3}
+        audio: {fileID: 8300000, guid: 9481b56fa77fef54faa027ef02be49c8, type: 3}
     - sightWord: dry
-      sightWordAudio: {fileID: 0}
-      cpat:
-        content: I am dry
-        image: {fileID: 0}
-        audio: {fileID: 0}
+      sightWordAudio: {fileID: 8300000, guid: 2970d38b5c4e75f43ad374f0f88e27b4, type: 3}
+      CPAT:
+        content: i am dry
+        image: {fileID: 4202752866963721109, guid: 09d4f4ec967b469478704f3874a0fff9, type: 3}
+        audio: {fileID: 8300000, guid: a92b606a713f78146bd1e65d4dd29c56, type: 3}
