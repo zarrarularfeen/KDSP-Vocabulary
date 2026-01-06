@@ -239,7 +239,7 @@ public class VocabularyMatching : MonoBehaviour
         outlineGenerator.GenerateBorder(Color.black);
         // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         selectCard.onClick.AddListener(() => OnNameCardClicked(index));
-        AudioManager.Instance.PlayGivenAudioNonDelayed(selectedContent[index].audio);
+        AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
     }
 
     void OnNameCardClicked(int index)
