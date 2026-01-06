@@ -54,6 +54,7 @@ public class WordsDisplay : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        entryDict.Clear();
         VocabularyMatching.selectedContent.Clear();
         PhrasesLevelManager.selectedContextList.Clear();
 
@@ -68,11 +69,6 @@ public class WordsDisplay : MonoBehaviour
         else if (currentMode == WordsDisplayMode.SightWords)
         {
             content = PhrasesManager.Instance.GetCurrentEnabledDictionarySightWords();
-        }
-
-        foreach (ContentPictureAudioTrio pair in content)
-        {
-            Debug.Log(pair.content);
         }
 
         DisplayWords();

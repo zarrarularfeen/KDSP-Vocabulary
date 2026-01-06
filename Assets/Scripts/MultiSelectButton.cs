@@ -26,8 +26,7 @@ public struct MSBButton
 
 public class MultiSelectButton : MonoBehaviour
 {
-    [SerializeField]
-    private List<MSBButton> buttonsList = new List<MSBButton>();
+    [SerializeField] private List<MSBButton> buttonsList = new List<MSBButton>();
     [SerializeField] private Sprite deselectedImage;
     [SerializeField] private Sprite selectedImage;
     [SerializeField] private Managers selectedManager;
@@ -35,7 +34,7 @@ public class MultiSelectButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        SetAllDisabled();
     }
 
     // Update is called once per frame
@@ -85,6 +84,25 @@ public class MultiSelectButton : MonoBehaviour
         else
         {
             buttonsList[i].gameObj.GetComponent<Image>().sprite = deselectedImage;
+        }
+    }
+
+    public void SetAllDisabled()
+    {
+        Debug.Log("SetAllDisabled called");
+
+        for (int i = 0; i < buttonsList.Count; i++)
+        {
+            SetEnable(buttonsList[i].book, false);
+
+            MSBButton entry = new MSBButton
+            {
+                enabled = false,
+                book = buttonsList[i].book,
+                gameObj = buttonsList[i].gameObj
+            };
+
+            buttonsList[i] = entry;
         }
     }
 }
