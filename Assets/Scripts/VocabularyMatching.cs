@@ -116,7 +116,6 @@ public class VocabularyMatching : MonoBehaviour
                 break;
             case VocabularyMode.Name:
                 // Set content for Name mode
-                Debug.Log("Setting content for Name mode");
                 SetContentName();
                 break;
         }
@@ -136,7 +135,6 @@ public class VocabularyMatching : MonoBehaviour
         // Implement Select mode content setup
         ClearGrids();
         currentIndex = 0; // start from the first word
-
         int batchStart = 0;
         int batchEnd = Mathf.Min(batchSize, selectedContent.Count);
 
@@ -200,6 +198,7 @@ public class VocabularyMatching : MonoBehaviour
         outlineGenerator = currentCard.GetComponent<OutlineGenerator>();
         // CreateOutline(Color.green);
         outlineGenerator.GenerateBorder(Color.black);
+        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
     }
 
     // Called when a correct match is made
@@ -240,6 +239,7 @@ public class VocabularyMatching : MonoBehaviour
         outlineGenerator.GenerateBorder(Color.black);
         // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         selectCard.onClick.AddListener(() => OnNameCardClicked(index));
+        AudioManager.Instance.PlayGivenAudioNonDelayed(selectedContent[index].audio);
     }
 
     void OnNameCardClicked(int index)
