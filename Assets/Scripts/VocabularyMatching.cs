@@ -58,44 +58,44 @@ public class VocabularyMatching : MonoBehaviour
         SetContent(currentMode);
     }
 
-    private Coroutine activeCoroutine;
-    private OutlineGenerator outlineGenerator;
+    // private Coroutine activeCoroutine;
+    // private OutlineGenerator outlineGenerator;
     // private OutlineGenerator outlineGeneratorTarget;
     // private OutlineGenerator outlineGeneratorButton;
 
-    public void CreateOutline(Color color)
-    {
-        Debug.Log("CreateOutline called");
+    // public void CreateOutline(Color color)
+    // {
+    //     Debug.Log("CreateOutline called");
 
-        if (activeCoroutine != null)
-        {
-            StopCoroutine(activeCoroutine);
-        }
+    //     if (activeCoroutine != null)
+    //     {
+    //         StopCoroutine(activeCoroutine);
+    //     }
 
-        activeCoroutine = StartCoroutine(ShowBorderCoroutine(color));
-    }
+    //     activeCoroutine = StartCoroutine(ShowBorderCoroutine(color));
+    // }
 
-    private IEnumerator ShowBorderCoroutine(Color color)
-    {
-        Debug.Log("ShowBorderCoroutine called");
+    // private IEnumerator ShowBorderCoroutine(Color color)
+    // {
+    //     Debug.Log("ShowBorderCoroutine called");
 
-        if (outlineGenerator == null)
-        {
-            Debug.LogError("OutlineGenerator component not found!");
-            yield break;
-        }
+    //     if (outlineGenerator == null)
+    //     {
+    //         Debug.LogError("OutlineGenerator component not found!");
+    //         yield break;
+    //     }
 
-        outlineGenerator.GenerateBorder(color);
-        yield return new WaitForSeconds(1f);
-        outlineGenerator.DisableBorder();
-        outlineGenerator.GenerateBorder(color);
-        yield return new WaitForSeconds(1f);
-        outlineGenerator.DisableBorder();
-        outlineGenerator.GenerateBorder(color);
-        yield return new WaitForSeconds(1f);
-        outlineGenerator.DisableBorder();
+    //     outlineGenerator.GenerateBorder(color);
+    //     yield return new WaitForSeconds(1f);
+    //     outlineGenerator.DisableBorder();
+    //     outlineGenerator.GenerateBorder(color);
+    //     yield return new WaitForSeconds(1f);
+    //     outlineGenerator.DisableBorder();
+    //     outlineGenerator.GenerateBorder(color);
+    //     yield return new WaitForSeconds(1f);
+    //     outlineGenerator.DisableBorder();
 
-    }
+    // }
 
     public static void SetVocabularyMode(VocabularyMode mode)
     {
@@ -169,8 +169,8 @@ public class VocabularyMatching : MonoBehaviour
             target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
-            outlineGenerator = target.GetComponent<OutlineGenerator>();
-            outlineGenerator.GenerateBorder(Color.black);
+            // outlineGenerator = target.GetComponent<OutlineGenerator>();
+            // outlineGenerator.GenerateBorder(Color.black);
             // target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         }
 
@@ -195,16 +195,16 @@ public class VocabularyMatching : MonoBehaviour
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
 
         currentCard = dragCard;
-        outlineGenerator = currentCard.GetComponent<OutlineGenerator>();
+        // outlineGenerator = currentCard.GetComponent<OutlineGenerator>();
         // CreateOutline(Color.green);
-        outlineGenerator.GenerateBorder(Color.black);
+        // outlineGenerator.GenerateBorder(Color.black);
         AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
     }
 
     // Called when a correct match is made
     public void OnCorrectMatch()
     {
-        CreateOutline(Color.green);
+        // CreateOutline(Color.green);
         currentIndex++;
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
@@ -235,8 +235,8 @@ public class VocabularyMatching : MonoBehaviour
         Button selectCard = Instantiate(selectButton, questionsGrid.transform);
         selectCard.gameObject.SetActive(true);
         selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
-        outlineGenerator = selectCard.GetComponent<OutlineGenerator>();
-        outlineGenerator.GenerateBorder(Color.black);
+        // outlineGenerator = selectCard.GetComponent<OutlineGenerator>();
+        // outlineGenerator.GenerateBorder(Color.black);
         // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         selectCard.onClick.AddListener(() => OnNameCardClicked(index));
         AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
@@ -271,8 +271,8 @@ public class VocabularyMatching : MonoBehaviour
             selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
             selectCardData.word = selectedContent[i].content;
-            outlineGenerator = selectCard.GetComponent<OutlineGenerator>();
-            outlineGenerator.GenerateBorder(Color.black);
+            // outlineGenerator = selectCard.GetComponent<OutlineGenerator>();
+            // outlineGenerator.GenerateBorder(Color.black);
             // Capture the current value of i
             selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word));
         }
