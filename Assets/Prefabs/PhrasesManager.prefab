@@ -49,7 +49,7 @@ MonoBehaviour:
     enabled: 0
     sightWordList:
     - content: baby
-      image: {fileID: 5328332788402992666, guid: 18a05a0498f2be948be90af9a44112f9, type: 3}
+      image: {fileID: 5328332788402992666, guid: d7eee1b86740a6c4ca0dfef5d4074b30, type: 3}
       audio: {fileID: 0}
     - content: ball
       image: {fileID: -3603556060819865620, guid: 334374f5a68dc6842b210e3d403006c6, type: 3}
@@ -158,7 +158,7 @@ MonoBehaviour:
         image: {fileID: -1101930195102574422, guid: ea4b46147f6bf684cb2fb12f1826ed53, type: 3}
         audio: {fileID: 0}
       - content: bear is sitting
-        image: {fileID: 7600359562541985779, guid: 9feea11b37a5bbb4b9ece55fbfdbda6a, type: 3}
+        image: {fileID: 4960922111207562555, guid: 63fd9144ad30e6e408ed22c74200c762, type: 3}
         audio: {fileID: 0}
       - content: baby is sitting
         image: {fileID: 7600359562541985779, guid: 9feea11b37a5bbb4b9ece55fbfdbda6a, type: 3}
@@ -320,31 +320,31 @@ MonoBehaviour:
       image: {fileID: -1981418222017897944, guid: 05549a1cc2b6fff4ca9099019038ba01, type: 3}
       audio: {fileID: 0}
     - content: little
-      image: {fileID: 0}
+      image: {fileID: -5247957579525393831, guid: e157be4f0f2019b4c8c6d261b0b399d9, type: 3}
       audio: {fileID: 0}
     - content: monkey
-      image: {fileID: 0}
+      image: {fileID: -4798825762170945512, guid: a93b45cbd8ac4574290d374ca133ae16, type: 3}
       audio: {fileID: 0}
     - content: on
-      image: {fileID: 0}
+      image: {fileID: 5175489880400350850, guid: b2352424f35676f428bf0a4362291a22, type: 3}
       audio: {fileID: 0}
     - content: playing
-      image: {fileID: 0}
+      image: {fileID: 544483606009788143, guid: 59dc15a922f0e54418e4b019a058644c, type: 3}
       audio: {fileID: 0}
     - content: rabbit
-      image: {fileID: 0}
+      image: {fileID: -5362292703166988329, guid: 2aff4e3aefd72cc4f9fa4ae40fa94507, type: 3}
       audio: {fileID: 0}
     - content: shoe
-      image: {fileID: 0}
+      image: {fileID: 2371641743025836735, guid: c69a72c635f93e64b98cb5eb6495861a, type: 3}
       audio: {fileID: 0}
     - content: train
-      image: {fileID: 0}
+      image: {fileID: 7114885465217784225, guid: 477a5a5c23ef7a843b4d7bed0e1c143c, type: 3}
       audio: {fileID: 0}
     - content: wet
-      image: {fileID: 0}
+      image: {fileID: -2403919275376931074, guid: fb67818a4735b7d4cb0fbf363b7d6337, type: 3}
       audio: {fileID: 0}
     - content: yogurt
-      image: {fileID: 0}
+      image: {fileID: 2247589129681168816, guid: f1dca67c22bf40d488fb17bb4a70c903, type: 3}
       audio: {fileID: 0}
     PBIList:
     - phraseContext: Who is eating
@@ -591,67 +591,67 @@ MonoBehaviour:
       image: {fileID: -8254932462476682504, guid: 374650b2f083af84a8a6b434481319e7, type: 3}
       audio: {fileID: 0}
     - content: monkey
-      image: {fileID: 0}
+      image: {fileID: -4798825762170945512, guid: a93b45cbd8ac4574290d374ca133ae16, type: 3}
       audio: {fileID: 0}
     - content: on
-      image: {fileID: 0}
+      image: {fileID: 5175489880400350850, guid: b2352424f35676f428bf0a4362291a22, type: 3}
       audio: {fileID: 0}
     - content: plate
-      image: {fileID: 0}
+      image: {fileID: -4795573259988461060, guid: c101469ccafd81e4b9dbb1dc121bf57c, type: 3}
       audio: {fileID: 0}
     - content: potty
-      image: {fileID: 0}
+      image: {fileID: 216510009038366504, guid: 92f0d10392800424c9ceeea06b3527c1, type: 3}
       audio: {fileID: 0}
     - content: rabbit
-      image: {fileID: 0}
+      image: {fileID: -5362292703166988329, guid: 2aff4e3aefd72cc4f9fa4ae40fa94507, type: 3}
       audio: {fileID: 0}
     - content: running
-      image: {fileID: 0}
+      image: {fileID: -1274967292748549190, guid: d6db169e28df5a04c942a9f0dce09ba2, type: 3}
       audio: {fileID: 0}
     - content: sand
-      image: {fileID: 0}
+      image: {fileID: 4360390788417139489, guid: d6b722adbff890546887887e65eab00b, type: 3}
       audio: {fileID: 0}
     - content: scarf
-      image: {fileID: 0}
+      image: {fileID: 2174045244123681815, guid: cbbfbdc1f86bed24b990d75508731e28, type: 3}
       audio: {fileID: 0}
     - content: shoes
-      image: {fileID: 0}
+      image: {fileID: 2371641743025836735, guid: c69a72c635f93e64b98cb5eb6495861a, type: 3}
       audio: {fileID: 0}
     - content: socks
-      image: {fileID: 0}
+      image: {fileID: 6749276748630484902, guid: 59039a70096c251439a0bd23bcd4edc8, type: 3}
       audio: {fileID: 0}
     - content: spoon
-      image: {fileID: 0}
+      image: {fileID: -3411414237561161789, guid: 14f78d17fa2747a4c9dfa9a0e19cf231, type: 3}
       audio: {fileID: 0}
     - content: stairs
-      image: {fileID: 0}
+      image: {fileID: -3821777026937811026, guid: 361fde8e993f69b469c4254a441d8a95, type: 3}
       audio: {fileID: 0}
     - content: swimming
-      image: {fileID: 0}
+      image: {fileID: -3091465334030352917, guid: d479540d45aed714da08893cfa286e5f, type: 3}
       audio: {fileID: 0}
     - content: swing
-      image: {fileID: 0}
+      image: {fileID: 657289779235973496, guid: 6472924389692ea4abd86ec0c2a526c3, type: 3}
       audio: {fileID: 0}
     - content: swings
-      image: {fileID: 0}
+      image: {fileID: 657289779235973496, guid: 6472924389692ea4abd86ec0c2a526c3, type: 3}
       audio: {fileID: 0}
     - content: table
-      image: {fileID: 0}
+      image: {fileID: -8841490917199087839, guid: 76c3dd7a9856e194c9a9234e4cdd69e1, type: 3}
       audio: {fileID: 0}
     - content: tiger
-      image: {fileID: 0}
+      image: {fileID: 9085329464345055985, guid: e5cbdcd2d0479cf4fa117f4322609a17, type: 3}
       audio: {fileID: 0}
     - content: towel
-      image: {fileID: 0}
+      image: {fileID: 1011511256227955051, guid: 76c7c99982b58bf468a889c05eb3adce, type: 3}
       audio: {fileID: 0}
     - content: tractor
-      image: {fileID: 0}
+      image: {fileID: 6124448547508259807, guid: e6c4bbda46afe8444b808b3f966743b2, type: 3}
       audio: {fileID: 0}
     - content: tree
-      image: {fileID: 0}
+      image: {fileID: -8667466294985060184, guid: a73e7315de5c2b1449a8f566ec502176, type: 3}
       audio: {fileID: 0}
     - content: up
-      image: {fileID: 0}
+      image: {fileID: 5655321678828108626, guid: ac3e19820c304ce448a7a1b397450cb0, type: 3}
       audio: {fileID: 0}
     PBIList:
     - phraseContext: feeding

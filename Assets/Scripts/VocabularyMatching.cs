@@ -60,6 +60,8 @@ public class VocabularyMatching : MonoBehaviour
 
     private Coroutine activeCoroutine;
     private OutlineGenerator outlineGenerator;
+    // private OutlineGenerator outlineGeneratorTarget;
+    // private OutlineGenerator outlineGeneratorButton;
 
     public void CreateOutline(Color color)
     {
@@ -84,8 +86,15 @@ public class VocabularyMatching : MonoBehaviour
         }
 
         outlineGenerator.GenerateBorder(color);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         outlineGenerator.DisableBorder();
+        outlineGenerator.GenerateBorder(color);
+        yield return new WaitForSeconds(1f);
+        outlineGenerator.DisableBorder();
+        outlineGenerator.GenerateBorder(color);
+        yield return new WaitForSeconds(1f);
+        outlineGenerator.DisableBorder();
+
     }
 
     public static void SetVocabularyMode(VocabularyMode mode)
@@ -162,6 +171,8 @@ public class VocabularyMatching : MonoBehaviour
             target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
+            outlineGenerator = target.GetComponent<OutlineGenerator>();
+            outlineGenerator.GenerateBorder(Color.black);
             // target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         }
 
@@ -187,13 +198,14 @@ public class VocabularyMatching : MonoBehaviour
 
         currentCard = dragCard;
         outlineGenerator = currentCard.GetComponent<OutlineGenerator>();
-        CreateOutline(Color.green);
+        // CreateOutline(Color.green);
+        outlineGenerator.GenerateBorder(Color.black);
     }
 
     // Called when a correct match is made
     public void OnCorrectMatch()
     {
-
+        CreateOutline(Color.green);
         currentIndex++;
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
@@ -204,10 +216,7 @@ public class VocabularyMatching : MonoBehaviour
             return;
         }
 
-        // Compute current batch
-        // int currentBatch = currentIndex / batchSize;
-        // int batchStart = currentBatch * batchSize;
-        // int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
+        
 
         // If currentIndex has passed the current batch, spawn next batch
         if (currentIndex % batchSize == 0)
@@ -227,6 +236,8 @@ public class VocabularyMatching : MonoBehaviour
         Button selectCard = Instantiate(selectButton, questionsGrid.transform);
         selectCard.gameObject.SetActive(true);
         selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
+        outlineGenerator = selectCard.GetComponent<OutlineGenerator>();
+        outlineGenerator.GenerateBorder(Color.black);
         // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
         selectCard.onClick.AddListener(() => OnNameCardClicked(index));
     }
@@ -234,6 +245,7 @@ public class VocabularyMatching : MonoBehaviour
     void OnNameCardClicked(int index)
     {
         Debug.Log("Name card clicked: " + selectedContent[index].content);
+        
         if (index + 1 < selectedContent.Count)
         {
             SetNameCard(index + 1);
@@ -259,6 +271,8 @@ public class VocabularyMatching : MonoBehaviour
             selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
             selectCardData.word = selectedContent[i].content;
+            outlineGenerator = selectCard.GetComponent<OutlineGenerator>();
+            outlineGenerator.GenerateBorder(Color.black);
             // Capture the current value of i
             selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word));
         }
@@ -270,6 +284,7 @@ public class VocabularyMatching : MonoBehaviour
         if (selectedWord == correctWord)
         {
             Debug.Log("Correct selection for word: " + selectedWord);
+            
             currentIndex++;
             if (currentIndex >= selectedContent.Count)
             {
