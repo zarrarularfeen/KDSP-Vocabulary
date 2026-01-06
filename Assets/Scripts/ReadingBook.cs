@@ -49,7 +49,7 @@ public struct ContentPictureAudioTrio
 {
     public string content;
     public Sprite image;
-    public AudioClip[] audio;
+    public AudioClip audio;
 }
 
 [System.Serializable]
