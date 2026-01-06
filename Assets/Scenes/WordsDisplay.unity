@@ -1395,6 +1395,8 @@ MonoBehaviour:
   NextButton: {fileID: 909983351}
   BackButton: {fileID: 348895264}
   wordsGrid: {fileID: 1585225709}
+  deselectedImage: {fileID: 4331653738330640125, guid: 07166c647ae058640919e19e42feac78, type: 3}
+  selectedImage: {fileID: 5417624725361458834, guid: 9bfff420076db9b47aa3c0f8478dca62, type: 3}
 --- !u!4 &1151774096
 Transform:
   m_ObjectHideFlags: 0
@@ -1566,8 +1568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -125}
-  m_SizeDelta: {x: 0, y: -250}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416181733
 MonoBehaviour:
@@ -1671,7 +1673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1100, y: 516.9995}
+  m_AnchoredPosition: {x: 0, y: 768}
   m_SizeDelta: {x: 183, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1585225709
@@ -1691,13 +1693,13 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 831, y: 200}
   m_Spacing: {x: -275, y: -50}
   m_Constraint: 1
-  m_ConstraintCount: 4
+  m_ConstraintCount: 2
 --- !u!114 &1585225710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,7 +1933,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 489396667}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9999915
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
