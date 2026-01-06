@@ -645,8 +645,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 224, y: -168}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 280, y: -140}
+  m_SizeDelta: {x: 179, y: 198}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348895264
 MonoBehaviour:
@@ -724,7 +724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5679454715668604542, guid: 142835812a7a42d42b4506c0970ba2d0, type: 3}
+  m_Sprite: {fileID: 3649108509029339350, guid: 884d1bda5435a35448f45d09a2dbe046, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1257,7 +1257,7 @@ RectTransform:
   m_GameObject: {fileID: 909983349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 186485566}
@@ -1265,8 +1265,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -224, y: -168}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: -230, y: -140}
+  m_SizeDelta: {x: 179, y: 198}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909983351
 MonoBehaviour:
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6467627684441958642, guid: 9ffb7d036bc487f48bd297dfaefde192, type: 3}
+  m_Sprite: {fileID: 3649108509029339350, guid: 884d1bda5435a35448f45d09a2dbe046, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1671,7 +1671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: 642.99915}
+  m_AnchoredPosition: {x: -750, y: 517}
   m_SizeDelta: {x: 183, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1585225709
@@ -1930,8 +1930,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 489396668}
   m_HandleRect: {fileID: 489396667}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.97677076
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
