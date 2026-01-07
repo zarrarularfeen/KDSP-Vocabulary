@@ -30,7 +30,8 @@ public class VocabularyMatching : MonoBehaviour
 
     public static VocabularyMode currentMode = VocabularyMode.Match;
 
-    private GameObject currentCard;
+    [SerializeField] private Sprite correctSprite;
+    [SerializeField] private Sprite wrongSprite;
     private bool isNameAudioPlaying = false;
 
     void Awake()
@@ -172,6 +173,7 @@ public class VocabularyMatching : MonoBehaviour
             target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
+            dropTarget.targetPrefab = target;
             // outlineGenerator = target.GetComponent<OutlineGenerator>();
             // outlineGenerator.GenerateBorder(Color.black);
             // target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
@@ -202,8 +204,9 @@ public class VocabularyMatching : MonoBehaviour
     }
 
     // Called when a correct match is made
-    public void OnCorrectMatch()
+    public void OnCorrectMatch(GameObject targetPrefab)
     {
+        StartCoroutine(FeedBackFlicker(targetPrefab.transform.GetChild(1).GetComponent<Image>(), correctSprite, 0.2f, 3));
         AudioManager.Instance.PlayCorrectSound();   
         // CreateOutline(Color.green);
         currentIndex++;
@@ -283,17 +286,18 @@ public class VocabularyMatching : MonoBehaviour
             selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
             selectCardData.word = selectedContent[i].content;
-            selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word));
+            selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word, selectCard));
         }
         AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
     }
 
-    void OnSelectCardClicked(string selectedWord)
+    void OnSelectCardClicked(string selectedWord, Button sourceButton)
     {
         string correctWord = selectedContent[currentIndex].content;
         if (selectedWord == correctWord)
         {
             Debug.Log("Correct selection for word: " + selectedWord);
+            StartCoroutine(FeedBackFlicker(sourceButton.GetComponentInChildren<Image>(), correctSprite, 0.2f, 3));
             AudioManager.Instance.PlayCorrectSound();
             
             currentIndex++;
@@ -313,7 +317,20 @@ public class VocabularyMatching : MonoBehaviour
         else
         {
             Debug.Log("Incorrect selection for word: " + selectedWord);
+            StartCoroutine(FeedBackFlicker(sourceButton.transform.GetChild(1).GetComponent<Image>(), wrongSprite, 0.2f, 3));
             AudioManager.Instance.PlayWrongSound();
+        }
+    }
+
+    IEnumerator FeedBackFlicker(Image image, Sprite feedbackSprite, float interval, int count) 
+    {
+        Sprite originalSprite = image.sprite;
+        for (int i = 0; i < count; i++) 
+        {
+            image.sprite = feedbackSprite;
+            yield return new WaitForSeconds(interval);
+            image.sprite = originalSprite;
+            yield return new WaitForSeconds(interval);
         }
     }
     void ClearGrids()

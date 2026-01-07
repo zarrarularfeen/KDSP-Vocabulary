@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DropTarget : MonoBehaviour, IDropHandler
 {
     [HideInInspector]public string word;
+    public GameObject targetPrefab;
    
 
     public void OnDrop(PointerEventData eventData)
@@ -23,7 +24,7 @@ public class DropTarget : MonoBehaviour, IDropHandler
             if (WordsDisplay.currentGameMode == GameMode.Vocabulary)
             {
                 Debug.Log("Calling VocabularyMatching OnCorrectMatch");
-                VocabularyMatching.Instance.OnCorrectMatch();
+                VocabularyMatching.Instance.OnCorrectMatch(targetPrefab);
             }    
             else if (WordsDisplay.currentGameMode == GameMode.Phrases)
             {
