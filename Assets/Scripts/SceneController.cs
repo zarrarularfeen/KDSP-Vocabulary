@@ -10,12 +10,14 @@ public enum Scenes
     ReadingBookDisplaySelection,
     EnableBooksVocabulary,
     EnableBooksPhrases,
+    EnableBooksSentences,
     Vocabulary,
     Phrases,
     Sentences,
     VocabularyMatching,
     PhrasesLevel,
-    WordsDisplay
+    WordsDisplay,
+    SentencesLevel
 
 }
 
@@ -192,6 +194,14 @@ public class SceneController : MonoBehaviour
     public void SetPhrasesModeUnderstandPhrase()
     {
         SetPhrasesMode(PhrasesLevelMode.UnderstandPhrase);
+    }
+    public void SetSentencesMode(SentencesLevelMode mode)
+    {
+        SentencesLevelManager.SetSentencesLevelMode(mode);
+    }
+    public void SetSentencesModeBuild()
+    {
+        SetSentencesMode(SentencesLevelMode.BuildSentences);
     }
     public void ExitApplication()
     {

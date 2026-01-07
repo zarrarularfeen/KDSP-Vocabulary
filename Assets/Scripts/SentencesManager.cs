@@ -17,11 +17,18 @@ public struct SentencesBookInformation
 }
 
 [System.Serializable]
+public struct BlankPositionGroup
+{
+    public List<int> positions;
+}
+
+[System.Serializable]
 public struct SBEntry
 {
     public string sightWord;
     public AudioClip sightWordAudio;
     public ContentPictureAudioTrio CPAT;
+    public List<BlankPositionGroup> blankPositions;
 }
 
 public class SentencesManager : MonoBehaviour
@@ -29,7 +36,7 @@ public class SentencesManager : MonoBehaviour
     public static SentencesManager Instance { get; private set; }
     [SerializeField] private List<SentencesBookInformation> booksList = new List<SentencesBookInformation>();
     private List<ContentPictureAudioTrio> sightWords = new List<ContentPictureAudioTrio>();
-    private List<ContentPictureAudioTrio> sbList = new List<ContentPictureAudioTrio>();
+    private List<SBEntry> sbList = new List<SBEntry>();
     private List<ContentPictureAudioTrio> displayBook = new List<ContentPictureAudioTrio>();
 
     void Awake()
@@ -52,7 +59,7 @@ public class SentencesManager : MonoBehaviour
 
     }
 
-    public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySentences()
+    public List<SBEntry> GetCurrentEnabledDictionarySentences()
     {
         sbList.Clear();
 
@@ -60,10 +67,11 @@ public class SentencesManager : MonoBehaviour
         {
             if (book.enabled)
             {
-                foreach (SBEntry b in book.contentList)
-                {
-                    sbList.Add(b.CPAT);
-                }
+                sbList.AddRange(book.contentList);
+                // foreach (SBEntry b in book.contentList)
+                // {
+                //     sbList.Add(b);
+                // }
             }
         }
 
@@ -150,5 +158,30 @@ public class SentencesManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public List<List<string>> GenerateFillInTheBlankList(SBEntry entry)
+    {
+        List<List<string>> output = new List<List<string>>();
+        string[] contentList = entry.CPAT.content.Split();
+
+        foreach (BlankPositionGroup lst in entry.blankPositions)
+        {
+            List<string> fitb = new List<string>();
+            for (int i = 0; i < contentList.Length; i++)
+            {
+                if (lst.positions[i] == i)
+                {
+                    fitb.Add("_");
+                }
+                else
+                {
+                    fitb.Add(contentList[i]);
+                }
+            }
+            output.Add(fitb);
+        }
+
+        return output;
     }
 }

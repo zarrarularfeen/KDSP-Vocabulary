@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 using System;
+using JetBrains.Annotations;
 
 public enum SentencesLevelMode
 {
@@ -17,17 +18,21 @@ public enum SentencesLevelMode
     ReadSightWord,
     MatchSightWordPicture,
     MatchSentencesPicture,
+    BuildSentences
 }
 
 public class SentencesLevelManager : MonoBehaviour
 {
-    public static List<ContentPictureAudioTrio> selectedSentences = new List<ContentPictureAudioTrio>();
+    public static List<SBEntry> selectedSentences = new List<SBEntry>();
     public static List<ContentPictureAudioTrio> selectedContent = new List<ContentPictureAudioTrio>();
     [SerializeField] private GridLayoutGroup questionsGrid;
     [SerializeField] private GridLayoutGroup answersGrid;
     [SerializeField] private GameObject targetPrefab;
     [SerializeField] private GameObject dragPrefab;
     [SerializeField] private Button selectButton;
+    [SerializeField] private GameObject FITBAnswerButton;
+    [SerializeField] private GridLayoutGroup FITBAnswersGrid;
+    [SerializeField] private TextMeshProUGUI FITBQuestionText;
 
     private int currentIndex = 0;
     private int batchSize = 4; // can be 1 to 4
@@ -43,47 +48,31 @@ public class SentencesLevelManager : MonoBehaviour
         }
         Instance = this;
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("PhrasesLevel started with selectedContent: " + selectedContent.Count);
+        Debug.Log("SentencesLevel started with selectedContent: " + selectedContent.Count);
 
         foreach (ContentPictureAudioTrio pair in selectedContent)
         {
             Debug.Log(pair.content);
         }
 
-        Debug.Log("PhrasesLevel started with selectedContextList: " + selectedContent.Count);
+        Debug.Log("SentencesLevel started with selectedSentences: " + selectedSentences.Count);
 
-        // foreach (ContextListEntry entry in selectedContextList)
-        // {
-        //     Debug.Log(entry.context);
-        //     foreach (ContentPictureAudioTrio pair in entry.list)
-        //     {
-        //         Debug.Log(" - " + pair.content);
-        //     }
-        // }
+        foreach (SBEntry pair in selectedSentences)
+        {
+            Debug.Log(pair.CPAT.content);
+        }
 
-        // foreach (ContextListEntry entry in selectedContextList)
-        // {
-        //     foreach (ContentPictureAudioTrio pair in entry.list)
-        //     {
-        //         if (!selectedContent.Contains(pair))
-        //         {
-        //             selectedContent.Add(pair);
-        //         }
-        //     }
-        // }
-        SetContent(currentMode);   
+        SetContent(currentMode);
     }
 
     public static void SetSentencesLevelMode(SentencesLevelMode mode)
     {
         currentMode = mode;
-
     }
-
-
 
     void SetContent(SentencesLevelMode mode)
     {
@@ -117,6 +106,9 @@ public class SentencesLevelManager : MonoBehaviour
             case SentencesLevelMode.MatchSentencesPicture:
                 SetContentMatch();
                 break;
+            case SentencesLevelMode.BuildSentences:
+                StartCoroutine(SetContentBuild());
+                break;
         }
     }
 
@@ -124,9 +116,10 @@ public class SentencesLevelManager : MonoBehaviour
     void SetContentMatch()
     {
         ClearGrids();
-        
+
         SpawnNextBatch();
     }
+
     //Set up content for Select mode and Calls relevant methods
     void SetContentSelect()
     {
@@ -138,16 +131,16 @@ public class SentencesLevelManager : MonoBehaviour
         int batchEnd = Mathf.Min(batchSize, selectedContent.Count);
 
         SpawnSelectButtons(batchStart, batchEnd);
-
     }
+
     // Set up content for Name mode and Calls relevant methods
     void SetContentName()
     {
         // Implement Select mode content setup
         ClearGrids();
         SetNameCard(0);
-
     }
+
     // Spawn next batch of 4 words in questions grid for Matching mode
     void SpawnNextBatch()
     {
@@ -164,13 +157,13 @@ public class SentencesLevelManager : MonoBehaviour
             string word = selectedContent[i].content;
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
-            switch(currentMode)
+            switch (currentMode)
             {
                 case SentencesLevelMode.MatchPicture:
                     target.GetComponentInChildren<TextMeshProUGUI>().text = "";
                     target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
                     break;
-            
+
                 case SentencesLevelMode.MatchSightWord:
                     target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
                     // target.GetComponentInChildren<Image>().sprite = null;
@@ -187,11 +180,12 @@ public class SentencesLevelManager : MonoBehaviour
                     target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
                     break;
             }
-            
+
         }
 
         SpawnNextDraggable();
     }
+
     // Spawn next draggable card in answers grid for Matching mode
     void SpawnNextDraggable()
     {
@@ -199,21 +193,19 @@ public class SentencesLevelManager : MonoBehaviour
         {
             return;
         }
-        
-
 
         GameObject dragCard = Instantiate(dragPrefab, answersGrid.transform);
         string word = selectedContent[currentIndex].content;
         DraggableCard draggable = dragCard.GetComponent<DraggableCard>();
         draggable.word = word;
-        
-        switch(currentMode)
+
+        switch (currentMode)
         {
             case SentencesLevelMode.MatchPicture:
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().text = "";
                 dragCard.GetComponentInChildren<Image>().sprite = selectedContent[currentIndex].image;
                 break;
-    
+
             case SentencesLevelMode.MatchSightWord:
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
                 // dragCard.GetComponentInChildren<Image>().sprite = null;
@@ -229,10 +221,11 @@ public class SentencesLevelManager : MonoBehaviour
             case SentencesLevelMode.MatchSentencesPicture:
                 break;
         }
-    
+
         Debug.Log("Spawned draggable for word: " + word);
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
     }
+
     // Called when a correct match is made
     public void OnCorrectMatch()
     {
@@ -262,13 +255,14 @@ public class SentencesLevelManager : MonoBehaviour
             SpawnNextDraggable();
         }
     }
+
     void SetNameCard(int index)
     {
         ClearGrids();
         Button selectCard = Instantiate(selectButton, questionsGrid.transform);
         selectCard.gameObject.SetActive(true);
-        switch(currentMode)
-        {       
+        switch (currentMode)
+        {
             case SentencesLevelMode.NamePicture:
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().text = "";
                 selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
@@ -280,7 +274,6 @@ public class SentencesLevelManager : MonoBehaviour
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
         }
-
     }
 
     void OnNameCardClicked(int index)
@@ -311,7 +304,7 @@ public class SentencesLevelManager : MonoBehaviour
             SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
             selectCardData.word = selectedContent[i].content;
             selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word));
-            switch(currentMode)
+            switch (currentMode)
             {
                 case SentencesLevelMode.SelectPicture:
                     selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
@@ -319,7 +312,7 @@ public class SentencesLevelManager : MonoBehaviour
                     selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                     selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                     break;
-                    
+
             }
         }
     }
@@ -358,6 +351,127 @@ public class SentencesLevelManager : MonoBehaviour
         foreach (Transform child in answersGrid.transform)
         {
             Destroy(child.gameObject);
+        }
+    }
+
+    private List<List<string>> FITBoutput = new List<List<string>>();
+    private string[] FITBcontentList;
+    private int currIndex = 0;
+    private int currFITBOutputListIndex = 0;
+    private bool FITBCheck = false;
+
+    public IEnumerator SetContentBuild()
+    {
+        ClearGrids();
+
+        selectedSentences = SentencesManager.Instance.GetCurrentEnabledDictionarySentences();
+
+        Debug.Log("SentencesLevel started with selectedSentences: " + selectedSentences.Count);
+
+        foreach (SBEntry pair in selectedSentences)
+        {
+            Debug.Log(pair.CPAT.content);
+        }
+
+        foreach (SBEntry entry in selectedSentences)
+        {
+            Debug.Log("Current Sentence: " + entry.CPAT.content);
+
+            FITBoutput.Clear();
+            FITBcontentList = entry.CPAT.content.Split(' ');
+            currFITBOutputListIndex = 0;
+
+            foreach (BlankPositionGroup group in entry.blankPositions)
+            {
+                List<string> fitb = new List<string>();
+
+                for (int i = 0; i < FITBcontentList.Length; i++)
+                {
+                    fitb.Add(group.positions.Contains(i) ? "_" : FITBcontentList[i]);
+                }
+
+                FITBoutput.Add(fitb);
+            }
+
+            foreach (List<string> lst in FITBoutput)
+            {
+                FITBCheck = false;
+                SetFITBCards(lst, entry, FITBcontentList);
+                currIndex = 0;
+                // ✅ Proper wait
+                yield return new WaitUntil(() => FITBCheck);
+                AudioManager.Instance.PlayGivenAudioNonDelayed(entry.CPAT.audio);
+                yield return new WaitForSeconds(3f);
+            }
+        }
+    }
+
+    public void SetFITBCards(List<string> lst, SBEntry entry, string[] contentList)
+    {
+        List<string> answers = new List<string>();
+        for (int i = 0; i < contentList.Length; i++)
+        {
+            if (lst[i] == "_")
+            {
+                answers.Add(contentList[i]);
+            }
+        }
+
+        SetFITBQuestion(lst);
+        SetFITBAnswerGrid(answers, entry);
+    }
+
+    void SetFITBQuestion(List<string> lst)
+    {
+        FITBQuestionText.text = lst[0];
+        for (int i = 1; i < lst.Count; i++)
+        {
+            FITBQuestionText.text = FITBQuestionText.text + " " + lst[i];
+        }
+    }
+
+    void SetFITBAnswerGrid(List<string> answers, SBEntry entry)
+    {
+        int count = answers.Count;
+        for (int i = 0; i < count - 1; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(i, count);
+            string temp = answers[i];
+            answers[i] = answers[randomIndex];
+            answers[randomIndex] = temp;
+        }
+
+        foreach (string ans in answers)
+        {
+            GameObject button = Instantiate(FITBAnswerButton, FITBAnswersGrid.transform);
+            button.SetActive(true);
+            button.GetComponentInChildren<TextMeshProUGUI>().text = ans;
+            button.GetComponent<Button>().onClick.AddListener(() => OnFITBButtonClicked(ans, button, entry));
+        }
+    }
+
+    public void OnFITBButtonClicked(string ans, GameObject button, SBEntry entry)
+    {
+        if (FITBcontentList[entry.blankPositions[currFITBOutputListIndex].positions[currIndex]] == ans)
+        {
+            FITBoutput[currFITBOutputListIndex][entry.blankPositions[currFITBOutputListIndex].positions[currIndex]] = ans;
+            currIndex += 1;
+            SetFITBQuestion(FITBoutput[currFITBOutputListIndex]);
+            Destroy(button);
+        }
+
+        FITBCheck = true;
+        foreach (string s in FITBoutput[currFITBOutputListIndex])
+        {
+            if (s == "_")
+            {
+                FITBCheck = false;
+            }
+        }
+
+        if (FITBCheck)
+        {
+            currFITBOutputListIndex += 1;
         }
     }
 

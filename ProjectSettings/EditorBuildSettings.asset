@@ -28,13 +28,16 @@ EditorBuildSettings:
     guid: 9f9c2d8d4e4f1b64b9dc5bf51829e480
   - enabled: 1
     path: Assets/Scenes/Sentences.unity
-    guid: dfcbee4b89ecdd147871f713c4b35924
+    guid: 17dc282366d80484cb743c6e82b6af06
   - enabled: 1
     path: Assets/Scenes/EnableBooksVocabulary.unity
     guid: 438dfb924dc73744a8fe889136607a34
   - enabled: 1
     path: Assets/Scenes/EnableBooksPhrases.unity
     guid: 2d6a57f7e498eec4ab8d3cd56524ea8d
+  - enabled: 1
+    path: Assets/Scenes/EnableBooksSentences.unity
+    guid: af5e39f9139befd4b83a533487a4283e
   - enabled: 1
     path: Assets/Scenes/WordsDisplay.unity
     guid: f16c6ec3e5a29c54fa3424cc690032f1
@@ -44,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VocabularyMatching.unity
     guid: a002367230bc2ea46897a0c51b97abc4
+  - enabled: 1
+    path: Assets/Scenes/SentencesLevel.unity
+    guid: 95f93f2e2feb42940bcbb73710d24e66
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
