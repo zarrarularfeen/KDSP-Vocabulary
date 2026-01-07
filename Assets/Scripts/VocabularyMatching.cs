@@ -31,6 +31,7 @@ public class VocabularyMatching : MonoBehaviour
     public static VocabularyMode currentMode = VocabularyMode.Match;
 
     private GameObject currentCard;
+    private bool isNameAudioPlaying = false;
 
     void Awake()
     {
@@ -96,6 +97,8 @@ public class VocabularyMatching : MonoBehaviour
     //     outlineGenerator.DisableBorder();
 
     // }
+
+    
 
     public static void SetVocabularyMode(VocabularyMode mode)
     {
@@ -194,16 +197,14 @@ public class VocabularyMatching : MonoBehaviour
         Debug.Log("Spawned draggable for word: " + word);
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
 
-        currentCard = dragCard;
-        // outlineGenerator = currentCard.GetComponent<OutlineGenerator>();
-        // CreateOutline(Color.green);
-        // outlineGenerator.GenerateBorder(Color.black);
+        
         AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
     }
 
     // Called when a correct match is made
     public void OnCorrectMatch()
     {
+        AudioManager.Instance.PlayCorrectSound();   
         // CreateOutline(Color.green);
         currentIndex++;
         // Check if all words are done
@@ -235,17 +236,28 @@ public class VocabularyMatching : MonoBehaviour
         Button selectCard = Instantiate(selectButton, questionsGrid.transform);
         selectCard.gameObject.SetActive(true);
         selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
-        // outlineGenerator = selectCard.GetComponent<OutlineGenerator>();
-        // outlineGenerator.GenerateBorder(Color.black);
-        // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
-        selectCard.onClick.AddListener(() => OnNameCardClicked(index));
-        AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
+        selectCard.onClick.AddListener(() => OnNameCardClicked(index, selectCard));
     }
 
-    void OnNameCardClicked(int index)
+    void OnNameCardClicked(int index, Button sourceButton)
     {
+        if (isNameAudioPlaying) return;
         Debug.Log("Name card clicked: " + selectedContent[index].content);
+        StartCoroutine(PlayNameThenAdvance(index, sourceButton));
+    }
+
+    IEnumerator PlayNameThenAdvance(int index, Button sourceButton)
+    {
+        isNameAudioPlaying = true;
+        if (sourceButton != null) sourceButton.interactable = false;
+
         
+        AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
+
+        float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
+        yield return new WaitForSeconds(waitTime);
+
+        isNameAudioPlaying = false;
         if (index + 1 < selectedContent.Count)
         {
             SetNameCard(index + 1);
@@ -271,11 +283,9 @@ public class VocabularyMatching : MonoBehaviour
             selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
             SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
             selectCardData.word = selectedContent[i].content;
-            // outlineGenerator = selectCard.GetComponent<OutlineGenerator>();
-            // outlineGenerator.GenerateBorder(Color.black);
-            // Capture the current value of i
             selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word));
         }
+        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
     }
 
     void OnSelectCardClicked(string selectedWord)
@@ -284,6 +294,7 @@ public class VocabularyMatching : MonoBehaviour
         if (selectedWord == correctWord)
         {
             Debug.Log("Correct selection for word: " + selectedWord);
+            AudioManager.Instance.PlayCorrectSound();
             
             currentIndex++;
             if (currentIndex >= selectedContent.Count)
@@ -302,6 +313,7 @@ public class VocabularyMatching : MonoBehaviour
         else
         {
             Debug.Log("Incorrect selection for word: " + selectedWord);
+            AudioManager.Instance.PlayWrongSound();
         }
     }
     void ClearGrids()

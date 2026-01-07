@@ -35,6 +35,7 @@ public class DropTarget : MonoBehaviour, IDropHandler
         else
         {
             Debug.Log("Incorrect match for word: " + word);
+            AudioManager.Instance.PlayWrongSound();
             dragged.ResetPosition();
         }
     }

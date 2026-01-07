@@ -193,11 +193,13 @@ public class PhrasesLevelManager : MonoBehaviour
         dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
     
         Debug.Log("Spawned draggable for word: " + word);
+        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);    
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
     }
     // Called when a correct match is made
     public void OnCorrectMatch()
     {
+        AudioManager.Instance.PlayCorrectSound();
         currentIndex++;
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
@@ -207,11 +209,6 @@ public class PhrasesLevelManager : MonoBehaviour
             SceneController.Instance.OpenLevelSelect("Home");
             return;
         }
-
-        // Compute current batch
-        // int currentBatch = currentIndex / batchSize;
-        // int batchStart = currentBatch * batchSize;
-        // int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
 
         // If currentIndex has passed the current batch, spawn next batch
         if (currentIndex % batchSize == 0)
@@ -242,6 +239,7 @@ public class PhrasesLevelManager : MonoBehaviour
     void OnNameCardClicked(int index)
     {
         Debug.Log("Name card clicked: " + selectedContent[index].content);
+        AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
         if (index + 1 < selectedContent.Count)
         {
             SetNameCard(index + 1);
@@ -267,12 +265,15 @@ public class PhrasesLevelManager : MonoBehaviour
             SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
             selectCardData.word = selectedContent[i].content;
             
+            
             selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
             // selectCard.GetComponentInChildren<Image>().sprite = null;
             selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
             selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
             selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word));
+            
         }
+        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
     }
 
     void OnSelectCardClicked(string selectedWord)
@@ -281,7 +282,10 @@ public class PhrasesLevelManager : MonoBehaviour
         if (selectedWord == correctWord)
         {
             Debug.Log("Correct selection for word: " + selectedWord);
+            AudioManager.Instance.PlayCorrectSound();
+            questionsGrid.transform.GetChild(currentIndex % batchSize).GetComponent<Button>().interactable = false;
             currentIndex++;
+             
             if (currentIndex >= selectedContent.Count)
             {
                 Debug.Log("All words selected!");
@@ -298,6 +302,7 @@ public class PhrasesLevelManager : MonoBehaviour
         else
         {
             Debug.Log("Incorrect selection for word: " + selectedWord);
+            AudioManager.Instance.PlayWrongSound();
         }
     }
     void ClearGrids()
