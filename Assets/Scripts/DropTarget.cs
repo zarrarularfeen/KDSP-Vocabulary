@@ -29,7 +29,7 @@ public class DropTarget : MonoBehaviour, IDropHandler
             else if (WordsDisplay.currentGameMode == GameMode.Phrases)
             {
                 Debug.Log("Calling PhrasesLevelManager OnCorrectMatch");
-                PhrasesLevelManager.Instance.OnCorrectMatch();
+                PhrasesLevelManager.Instance.OnCorrectMatch(targetPrefab);
             }
                 
         }
@@ -43,8 +43,8 @@ public class DropTarget : MonoBehaviour, IDropHandler
             }    
             else if (WordsDisplay.currentGameMode == GameMode.Phrases)
             {
-                // Debug.Log("Calling PhrasesLevelManager OnIncorrectMatch");
-                // PhrasesLevelManager.Instance.OnIncorrectMatch();
+                Debug.Log("Calling PhrasesLevelManager OnIncorrectMatch");
+                PhrasesLevelManager.Instance.OnIncorrectMatch(targetPrefab);
             }
             dragged.ResetPosition();
         }
