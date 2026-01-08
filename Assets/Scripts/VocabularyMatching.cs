@@ -45,12 +45,6 @@ public class VocabularyMatching : MonoBehaviour
     }
     void Start()
     {
-        // content = ReadingBook.Instance.GetCurrentEnabledDictionary();
-        // foreach (ContentPictureAudioTrio pair in content)
-        // {
-        //     Debug.Log(pair.content);
-        // }
-
         Debug.Log("VocabularyMatching started with selectedContent: " + selectedContent.Count);
 
         foreach (ContentPictureAudioTrio pair in selectedContent)
@@ -59,47 +53,6 @@ public class VocabularyMatching : MonoBehaviour
         }
         SetContent(currentMode);
     }
-
-    // private Coroutine activeCoroutine;
-    // private OutlineGenerator outlineGenerator;
-    // private OutlineGenerator outlineGeneratorTarget;
-    // private OutlineGenerator outlineGeneratorButton;
-
-    // public void CreateOutline(Color color)
-    // {
-    //     Debug.Log("CreateOutline called");
-
-    //     if (activeCoroutine != null)
-    //     {
-    //         StopCoroutine(activeCoroutine);
-    //     }
-
-    //     activeCoroutine = StartCoroutine(ShowBorderCoroutine(color));
-    // }
-
-    // private IEnumerator ShowBorderCoroutine(Color color)
-    // {
-    //     Debug.Log("ShowBorderCoroutine called");
-
-    //     if (outlineGenerator == null)
-    //     {
-    //         Debug.LogError("OutlineGenerator component not found!");
-    //         yield break;
-    //     }
-
-    //     outlineGenerator.GenerateBorder(color);
-    //     yield return new WaitForSeconds(1f);
-    //     outlineGenerator.DisableBorder();
-    //     outlineGenerator.GenerateBorder(color);
-    //     yield return new WaitForSeconds(1f);
-    //     outlineGenerator.DisableBorder();
-    //     outlineGenerator.GenerateBorder(color);
-    //     yield return new WaitForSeconds(1f);
-    //     outlineGenerator.DisableBorder();
-
-    // }
-
-    
 
     public static void SetVocabularyMode(VocabularyMode mode)
     {
@@ -115,11 +68,9 @@ public class VocabularyMatching : MonoBehaviour
                 SetContentMatch();
                 break;
             case VocabularyMode.Select:
-                // Set content for Select mode
                 SetContentSelect();
                 break;
             case VocabularyMode.Name:
-                // Set content for Name mode
                 SetContentName();
                 break;
         }
@@ -142,7 +93,7 @@ public class VocabularyMatching : MonoBehaviour
         int batchStart = 0;
         int batchEnd = Mathf.Min(batchSize, selectedContent.Count);
 
-        SpawnSelectButtons(batchStart, batchEnd);
+        SpawnSelectButtons(batchStart, batchEnd, -1, 0);
 
     }
 
@@ -174,9 +125,7 @@ public class VocabularyMatching : MonoBehaviour
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
             dropTarget.targetPrefab = target;
-            // outlineGenerator = target.GetComponent<OutlineGenerator>();
-            // outlineGenerator.GenerateBorder(Color.black);
-            // target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
+            
         }
 
         SpawnNextDraggable();
@@ -197,9 +146,7 @@ public class VocabularyMatching : MonoBehaviour
         DraggableCard draggable = dragCard.GetComponent<DraggableCard>();
         draggable.word = word;
         Debug.Log("Spawned draggable for word: " + word);
-        // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
 
-        
         AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
     }
 
@@ -215,11 +162,9 @@ public class VocabularyMatching : MonoBehaviour
         {
             Debug.Log("All words matched!");
             selectedContent.Clear();
-            SceneController.Instance.OpenLevelSelect("Home");
+            StartCoroutine(SceneDelayLoad("Home", 4.0f));
             return;
         }
-
-        
 
         // If currentIndex has passed the current batch, spawn next batch
         if (currentIndex % batchSize == 0)
@@ -231,6 +176,12 @@ public class VocabularyMatching : MonoBehaviour
             // Spawn next draggable in current batch
             SpawnNextDraggable();
         }
+    }
+
+    public void OnIncorrectMatch(GameObject targetPrefab)
+    {
+        StartCoroutine(FeedBackFlicker(targetPrefab.transform.GetChild(1).GetComponent<Image>(), wrongSprite, 0.2f, 3));
+        AudioManager.Instance.PlayWrongSound();
     }
 
     void SetNameCard(int index)
@@ -269,24 +220,27 @@ public class VocabularyMatching : MonoBehaviour
         {
             Debug.Log("All Name cards shown!");
             selectedContent.Clear();
-            SceneController.Instance.OpenLevelSelect("Home");
+            StartCoroutine(SceneDelayLoad("Home", 4.0f));
         }
     }
 
-    void SpawnSelectButtons(int batchStart, int batchEnd)
+    void SpawnSelectButtons(int batchStart, int batchEnd, int previousBatch, int currentBatch)
     {
-        ClearGrids();
+        
 
         // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
-
-        for (int i = batchStart; i < batchEnd; i++)
+        if (previousBatch != currentBatch)
         {
-            Button selectCard = Instantiate(selectButton, questionsGrid.transform);
-            selectCard.gameObject.SetActive(true);
-            selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
-            SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
-            selectCardData.word = selectedContent[i].content;
-            selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word, selectCard));
+            ClearGrids();
+            for (int i = batchStart; i < batchEnd; i++)
+            {
+                Button selectCard = Instantiate(selectButton, questionsGrid.transform);
+                selectCard.gameObject.SetActive(true);
+                selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
+                SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
+                selectCardData.word = selectedContent[i].content;
+                selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word, selectCard));
+            }
         }
         AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
     }
@@ -297,34 +251,47 @@ public class VocabularyMatching : MonoBehaviour
         if (selectedWord == correctWord)
         {
             Debug.Log("Correct selection for word: " + selectedWord);
-            StartCoroutine(FeedBackFlicker(sourceButton.GetComponentInChildren<Image>(), correctSprite, 0.2f, 3));
+            Debug.Log("Going to flicker correct sprite");
+            StartCoroutine(FeedBackFlicker(sourceButton.transform.GetChild(1).GetComponent<Image>(), correctSprite, 0.2f, 3, sourceButton));
+            Debug.Log("Played correct sound");
             AudioManager.Instance.PlayCorrectSound();
             
+            
+            int previousBatch = currentIndex / batchSize;
+
             currentIndex++;
             if (currentIndex >= selectedContent.Count)
             {
                 Debug.Log("All words selected!");
                 selectedContent.Clear();
-                SceneController.Instance.OpenLevelSelect("Home");
+                StartCoroutine(SceneDelayLoad("Home", 4.0f));
                 return;
             }
             int currentBatch = currentIndex / batchSize;
             int batchStart = currentBatch * batchSize;
             int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
             //if we have finished current batch of 4, move to next batch
-            SpawnSelectButtons(batchStart, batchEnd);
+            SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
+            
         }
         else
         {
             Debug.Log("Incorrect selection for word: " + selectedWord);
-            StartCoroutine(FeedBackFlicker(sourceButton.transform.GetChild(1).GetComponent<Image>(), wrongSprite, 0.2f, 3));
+            
+            StartCoroutine(FeedBackFlicker(sourceButton.transform.GetChild(1).GetComponent<Image>(), wrongSprite, 0.2f, 3, sourceButton));
             AudioManager.Instance.PlayWrongSound();
+            
         }
     }
 
-    IEnumerator FeedBackFlicker(Image image, Sprite feedbackSprite, float interval, int count) 
+    IEnumerator FeedBackFlicker(Image image, Sprite feedbackSprite, float interval, int count, Button sourceButton = null) 
     {
         Sprite originalSprite = image.sprite;
+        
+        if (sourceButton != null)
+        {
+            sourceButton.interactable = false;
+        }
         for (int i = 0; i < count; i++) 
         {
             image.sprite = feedbackSprite;
@@ -332,6 +299,18 @@ public class VocabularyMatching : MonoBehaviour
             image.sprite = originalSprite;
             yield return new WaitForSeconds(interval);
         }
+        if (sourceButton != null)
+        {
+            sourceButton.interactable = true;
+        }
+        
+            
+    }
+
+    IEnumerator SceneDelayLoad(string sceneName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneController.Instance.OpenLevelSelect(sceneName);
     }
     void ClearGrids()
     {

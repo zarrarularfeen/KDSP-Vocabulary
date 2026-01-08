@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DropTarget : MonoBehaviour, IDropHandler
 {
     [HideInInspector]public string word;
-    public GameObject targetPrefab;
+    [HideInInspector]public GameObject targetPrefab;
    
 
     public void OnDrop(PointerEventData eventData)
@@ -36,7 +36,16 @@ public class DropTarget : MonoBehaviour, IDropHandler
         else
         {
             Debug.Log("Incorrect match for word: " + word);
-            AudioManager.Instance.PlayWrongSound();
+            if (WordsDisplay.currentGameMode == GameMode.Vocabulary)
+            {
+                Debug.Log("Calling VocabularyMatching OnIncorrectMatch");
+                VocabularyMatching.Instance.OnIncorrectMatch(targetPrefab);
+            }    
+            else if (WordsDisplay.currentGameMode == GameMode.Phrases)
+            {
+                // Debug.Log("Calling PhrasesLevelManager OnIncorrectMatch");
+                // PhrasesLevelManager.Instance.OnIncorrectMatch();
+            }
             dragged.ResetPosition();
         }
     }
