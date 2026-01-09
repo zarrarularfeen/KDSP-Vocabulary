@@ -195,6 +195,7 @@ public class SceneController : MonoBehaviour
     {
         SetPhrasesMode(PhrasesLevelMode.UnderstandPhrase);
     }
+    //Sentences Level Mode selection
     public void SetSentencesMode(SentencesLevelMode mode)
     {
         SentencesLevelManager.SetSentencesLevelMode(mode);
@@ -202,6 +203,42 @@ public class SceneController : MonoBehaviour
     public void SetSentencesModeBuild()
     {
         SetSentencesMode(SentencesLevelMode.BuildSentences);
+    }
+    public void SetSentencesModeMatchPicture()
+    {
+        SetSentencesMode(SentencesLevelMode.MatchPicture);
+    }
+    public void SetSentencesModeSelectPicture()
+    {
+        SetSentencesMode(SentencesLevelMode.SelectPicture);
+    }
+    public void SetSentencesModeNamePicture()
+    {
+        SetSentencesMode(SentencesLevelMode.NamePicture);
+    }
+    public void SetSentencesModeMatchSightWord()
+    {
+        SetSentencesMode(SentencesLevelMode.MatchSightWord);
+    }
+    public void SetSentencesModeSelectSightWord()
+    {
+        SetSentencesMode(SentencesLevelMode.SelectSightWord);
+    }
+    public void SetSentencesModeReadSightWord()
+    {
+        SetSentencesMode(SentencesLevelMode.ReadSightWord);
+    }
+    public void SetSentencesModeMatchSightWordPicture()
+    {
+        SetSentencesMode(SentencesLevelMode.MatchSightWordPicture);
+    }
+    public void SetSentencesModeMatchSentencesPicture()
+    {
+        SetSentencesMode(SentencesLevelMode.MatchSentencesPicture);
+    }
+    public void SetSentencesModeReadSentences()
+    {
+        SetSentencesMode(SentencesLevelMode.ReadSentences);
     }
     public void ExitApplication()
     {

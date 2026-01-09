@@ -202,7 +202,20 @@ public class PhrasesLevelManager : MonoBehaviour
     // Called when a correct match is made
     public void OnCorrectMatch(GameObject targetPrefab)
     {
-        StartCoroutine(FeedBackFlicker(targetPrefab.transform.GetChild(1).GetComponent<Image>(), correctSprite, 0.2f, 3));
+        StartCoroutine(HandleCorrectMatch(targetPrefab));
+    }
+
+    private IEnumerator HandleCorrectMatch(GameObject targetPrefab)
+    {
+        Image img = null;
+        if (targetPrefab != null && targetPrefab.transform != null && targetPrefab.transform.childCount > 1)
+        {
+            img = targetPrefab.transform.GetChild(1).GetComponent<Image>();
+        }
+        if (img != null)
+        {
+            yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
+        }
         AudioManager.Instance.PlayCorrectSound();
         currentIndex++;
         // Check if all words are done
@@ -211,7 +224,7 @@ public class PhrasesLevelManager : MonoBehaviour
             Debug.Log("All words matched!");
             selectedContent.Clear();
             StartCoroutine(SceneDelayLoad("Home", 4.0f));
-            return;
+            yield break;
         }
 
         // If currentIndex has passed the current batch, spawn next batch
@@ -228,7 +241,15 @@ public class PhrasesLevelManager : MonoBehaviour
 
     public void OnIncorrectMatch(GameObject targetPrefab)
     {
-        StartCoroutine(FeedBackFlicker(targetPrefab.transform.GetChild(1).GetComponent<Image>(), wrongSprite, 0.2f, 3));
+        Image img = null;
+        if (targetPrefab != null && targetPrefab.transform != null && targetPrefab.transform.childCount > 1)
+        {
+            img = targetPrefab.transform.GetChild(1).GetComponent<Image>();
+        }
+        if (img != null)
+        {
+            StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3));
+        }
         AudioManager.Instance.PlayWrongSound();
     }
 
@@ -311,55 +332,100 @@ public class PhrasesLevelManager : MonoBehaviour
         string correctWord = selectedContent[currentIndex].content;
         if (selectedWord == correctWord)
         {
-            Debug.Log("Correct selection for word: " + selectedWord);
-            StartCoroutine(FeedBackFlicker(sourceButton.transform.GetChild(1).GetComponent<Image>(), correctSprite, 0.2f, 3, sourceButton));
-            AudioManager.Instance.PlayCorrectSound();
-            questionsGrid.transform.GetChild(currentIndex % batchSize).GetComponent<Button>().interactable = false;
-            int previousBatch = currentIndex / batchSize;
-            currentIndex++;
-             
-            if (currentIndex >= selectedContent.Count)
-            {
-                Debug.Log("All words selected!");
-                selectedContent.Clear();
-                StartCoroutine(SceneDelayLoad("Home", 4.0f));
-                return;
-            }
-            int currentBatch = currentIndex / batchSize;
-            int batchStart = currentBatch * batchSize;
-            int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
-            //if we have finished current batch of 4, move to next batch
-            SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
+            StartCoroutine(HandleCorrectSelection(selectedWord, sourceButton));
         }
         else
         {
             Debug.Log("Incorrect selection for word: " + selectedWord);
-            StartCoroutine(FeedBackFlicker(sourceButton.transform.GetChild(1).GetComponent<Image>(), wrongSprite, 0.2f, 3, sourceButton));
+            Image img = null;
+            if (sourceButton != null && sourceButton.transform != null && sourceButton.transform.childCount > 1)
+            {
+                img = sourceButton.transform.GetChild(1).GetComponent<Image>();
+            }
+            if (img != null)
+            {
+                StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3, sourceButton));
+            }
             AudioManager.Instance.PlayWrongSound();
         }
     }
 
+    private IEnumerator HandleCorrectSelection(string selectedWord, Button sourceButton)
+    {
+        Debug.Log("Correct selection for word: " + selectedWord);
+        Image img = null;
+        if (sourceButton != null && sourceButton.transform != null && sourceButton.transform.childCount > 1)
+        {
+            img = sourceButton.transform.GetChild(1).GetComponent<Image>();
+        }
+        if (img != null)
+        {
+            yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3, sourceButton));
+        }
+        AudioManager.Instance.PlayCorrectSound();
+        questionsGrid.transform.GetChild(currentIndex % batchSize).GetComponent<Button>().interactable = false;
+        int previousBatch = currentIndex / batchSize;
+        currentIndex++;
+         
+        if (currentIndex >= selectedContent.Count)
+        {
+            Debug.Log("All words selected!");
+            selectedContent.Clear();
+            StartCoroutine(SceneDelayLoad("Home", 4.0f));
+            yield break;
+        }
+        int currentBatch = currentIndex / batchSize;
+        int batchStart = currentBatch * batchSize;
+        int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
+        //if we have finished current batch of 4, move to next batch
+        SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
+    }
+
     IEnumerator FeedBackFlicker(Image image, Sprite feedbackSprite, float interval, int count, Button sourceButton = null) 
     {
+        if (image == null)
+        {
+            yield break;
+        }
+
         Sprite originalSprite = image.sprite;
-        
-        if (sourceButton != null)
+
+        bool buttonWasDisabled = false;
+        if (sourceButton)
         {
             sourceButton.interactable = false;
+            buttonWasDisabled = true;
         }
+
+        bool aborted = false;
         for (int i = 0; i < count; i++) 
         {
+            if (!image)
+            {
+                aborted = true;
+                break;
+            }
             image.sprite = feedbackSprite;
             yield return new WaitForSeconds(interval);
+
+            if (!image)
+            {
+                aborted = true;
+                break;
+            }
             image.sprite = originalSprite;
             yield return new WaitForSeconds(interval);
         }
-        if (sourceButton != null)
+
+        if (buttonWasDisabled && sourceButton)
         {
             sourceButton.interactable = true;
         }
-        
-            
+
+        if (aborted)
+        {
+            yield break;
+        }
     }
 
     IEnumerator SceneDelayLoad(string sceneName, float delay)

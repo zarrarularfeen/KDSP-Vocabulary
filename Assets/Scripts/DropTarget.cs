@@ -31,6 +31,11 @@ public class DropTarget : MonoBehaviour, IDropHandler
                 Debug.Log("Calling PhrasesLevelManager OnCorrectMatch");
                 PhrasesLevelManager.Instance.OnCorrectMatch(targetPrefab);
             }
+            else if (WordsDisplay.currentGameMode == GameMode.Sentences)
+            {
+                Debug.Log("Calling SentencesLevelManager OnCorrectMatch");
+                SentencesLevelManager.Instance.OnCorrectMatch();
+            }
                 
         }
         else

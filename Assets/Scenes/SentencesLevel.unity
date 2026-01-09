@@ -867,7 +867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1422817803
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1032,9 +1032,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionsGrid: {fileID: 1148364305}
   answersGrid: {fileID: 1851443993}
-  targetPrefab: {fileID: 0}
-  dragPrefab: {fileID: 0}
-  selectButton: {fileID: 0}
+  targetPrefab: {fileID: 7684589979136511581, guid: 42eec109d2bfc34429a91ea91baf0224, type: 3}
+  dragPrefab: {fileID: 5604409699959600468, guid: a36b7c19d06c97444b2f9badd2578b70, type: 3}
+  selectButton: {fileID: 8054830844424793572, guid: 576f3c69d00944a4ebf5a758c4be3155, type: 3}
   FITBAnswerButton: {fileID: 942932125}
   FITBAnswersGrid: {fileID: 1758287625}
   FITBQuestionText: {fileID: 1422817804}
@@ -1301,7 +1301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1758287624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1422,7 +1422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2033933460
 RectTransform:
   m_ObjectHideFlags: 0

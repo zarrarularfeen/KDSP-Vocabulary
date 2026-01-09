@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 11297547}
   - component: {fileID: 11297546}
   m_Layer: 5
-  m_Name: Sentences (10)
+  m_Name: 10.What do you like doing?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,9 +446,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 19.Look at the lady and the man
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -809,7 +807,7 @@ GameObject:
   - component: {fileID: 189221747}
   - component: {fileID: 189221746}
   m_Layer: 5
-  m_Name: Sentences (24)
+  m_Name: 24.At lunch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +940,7 @@ GameObject:
   - component: {fileID: 208792848}
   - component: {fileID: 208792847}
   m_Layer: 5
-  m_Name: Sentences (14)
+  m_Name: 14.At breakfast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,7 +1073,7 @@ GameObject:
   - component: {fileID: 213129709}
   - component: {fileID: 213129708}
   m_Layer: 5
-  m_Name: Sentences (17)
+  m_Name: 17.The animals are eating and drinking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1252,9 +1250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 25..Good Morning Emma
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -1390,9 +1386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 7.Here is
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -1528,9 +1522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 3. The body
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -1666,9 +1658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 6.At home
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -1835,7 +1825,7 @@ GameObject:
   - component: {fileID: 433288694}
   - component: {fileID: 433288693}
   m_Layer: 5
-  m_Name: Sentences (13)
+  m_Name: 13.What is different?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,9 +2002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 18.Look at the girl and the boy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -2106,7 +2094,7 @@ GameObject:
   - component: {fileID: 579635477}
   - component: {fileID: 579635476}
   m_Layer: 5
-  m_Name: Sentences (23)
+  m_Name: 23.They are eating and drinking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2239,7 +2227,7 @@ GameObject:
   - component: {fileID: 595264560}
   - component: {fileID: 595264559}
   m_Layer: 5
-  m_Name: Sentences (1)
+  m_Name: 1.Outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2416,9 +2404,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 21.Hello Tom
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -2554,9 +2540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 24.At lunch
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -2727,7 +2711,7 @@ GameObject:
   - component: {fileID: 705868621}
   - component: {fileID: 705868620}
   m_Layer: 5
-  m_Name: Sentences (7)
+  m_Name: 7.Here is
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2904,9 +2888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 8.Girls and Boys
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -2998,7 +2980,7 @@ GameObject:
   - component: {fileID: 789310377}
   - component: {fileID: 789310376}
   m_Layer: 5
-  m_Name: Sentences (16)
+  m_Name: 16.What are the animals doing?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3250,9 +3232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 23.They are eating and drinking
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -3388,9 +3368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 16.What are the animals doing?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -3482,7 +3460,7 @@ GameObject:
   - component: {fileID: 976957461}
   - component: {fileID: 976957460}
   m_Layer: 5
-  m_Name: Sentences (20)
+  m_Name: 20.Look at the girls and the boys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3729,7 +3707,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 850871700}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.16797842
+  m_Size: 0.16797943
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3785,7 +3763,7 @@ GameObject:
   - component: {fileID: 1152003952}
   - component: {fileID: 1152003951}
   m_Layer: 5
-  m_Name: Sentences (25)
+  m_Name: 25.Good Morning Emma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3918,7 +3896,7 @@ GameObject:
   - component: {fileID: 1236329457}
   - component: {fileID: 1236329456}
   m_Layer: 5
-  m_Name: Sentences (5)
+  m_Name: 5.Look at the animals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4051,7 +4029,7 @@ GameObject:
   - component: {fileID: 1325761826}
   - component: {fileID: 1325761825}
   m_Layer: 5
-  m_Name: Sentences (8)
+  m_Name: 8.Girls and Boys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4228,9 +4206,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 4.What do you like?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -4322,7 +4298,7 @@ GameObject:
   - component: {fileID: 1424148809}
   - component: {fileID: 1424148808}
   m_Layer: 5
-  m_Name: Sentences (22)
+  m_Name: 22.Goodnight Emma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4632,9 +4608,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 11.What are they?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -4770,9 +4744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 13.What is different?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -4864,7 +4836,7 @@ GameObject:
   - component: {fileID: 1465596700}
   - component: {fileID: 1465596699}
   m_Layer: 5
-  m_Name: Sentences (11)
+  m_Name: 11.What are they?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5103,7 +5075,7 @@ GameObject:
   - component: {fileID: 1492793782}
   - component: {fileID: 1492793781}
   m_Layer: 5
-  m_Name: Sentences (4)
+  m_Name: 4.What do you like?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5236,7 +5208,7 @@ GameObject:
   - component: {fileID: 1506991787}
   - component: {fileID: 1506991786}
   m_Layer: 5
-  m_Name: Sentences (15)
+  m_Name: 15.What are they doing?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5405,7 +5377,7 @@ GameObject:
   - component: {fileID: 1549926699}
   - component: {fileID: 1549926698}
   m_Layer: 5
-  m_Name: Sentences (3)
+  m_Name: 3. The body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5538,7 +5510,7 @@ GameObject:
   - component: {fileID: 1571186246}
   - component: {fileID: 1571186245}
   m_Layer: 5
-  m_Name: Sentences (12)
+  m_Name: 12.I like eating and drinking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5715,9 +5687,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 12.I like eating and drinking
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -6044,7 +6014,7 @@ GameObject:
   - component: {fileID: 1689043883}
   - component: {fileID: 1689043882}
   m_Layer: 5
-  m_Name: Sentences (2)
+  m_Name: 2.How do you feel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6177,7 +6147,7 @@ GameObject:
   - component: {fileID: 1695649126}
   - component: {fileID: 1695649125}
   m_Layer: 5
-  m_Name: Sentences (21)
+  m_Name: 21.Hello Tom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6354,9 +6324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 22.Goodnight Emma
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -6538,7 +6506,7 @@ GameObject:
   - component: {fileID: 1780645710}
   - component: {fileID: 1780645709}
   m_Layer: 5
-  m_Name: Sentences (19)
+  m_Name: 19.Look at the lady and the man
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6715,9 +6683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 2.How do you feel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -6853,9 +6819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: What do you like doing?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -6991,9 +6955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 1.Outside
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -7131,7 +7093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 489.65982}
+  m_AnchoredPosition: {x: 0, y: 489.6599}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1870301399
@@ -7229,9 +7191,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 17.The animals are eating and drinking
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -7503,9 +7463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 15.What are they doing?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -7597,7 +7555,7 @@ GameObject:
   - component: {fileID: 1972370558}
   - component: {fileID: 1972370557}
   m_Layer: 5
-  m_Name: Sentences (6)
+  m_Name: 6.At home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7774,9 +7732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 5.Look at the animals
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -7868,7 +7824,7 @@ GameObject:
   - component: {fileID: 1996063861}
   - component: {fileID: 1996063860}
   m_Layer: 5
-  m_Name: Sentences (9)
+  m_Name: 9.What are you doing?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8045,9 +8001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 20.Look at the girls and the boys
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -8183,9 +8137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 9.What are you doing?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -8277,7 +8229,7 @@ GameObject:
   - component: {fileID: 2058192997}
   - component: {fileID: 2058192996}
   m_Layer: 5
-  m_Name: Sentences (18)
+  m_Name: 18.Look at the girl and the boy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8454,9 +8406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sentences
-
-'
+  m_text: 14.At breakfast
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}

@@ -13,7 +13,8 @@ public enum WordsDisplayMode
 {
     Vocabulary,
     SightWords,
-    Phrases
+    Phrases,
+    Sentences
 }
 
 public enum GameMode

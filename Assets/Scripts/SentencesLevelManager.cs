@@ -18,6 +18,7 @@ public enum SentencesLevelMode
     ReadSightWord,
     MatchSightWordPicture,
     MatchSentencesPicture,
+    ReadSentences,
     BuildSentences
 }
 
@@ -52,6 +53,23 @@ public class SentencesLevelManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+         
+        
+        selectedSentences = SentencesManager.Instance.GetCurrentEnabledDictionarySentences();
+
+        if (currentMode == SentencesLevelMode.MatchSentencesPicture || currentMode == SentencesLevelMode.ReadSentences)
+        {
+            selectedContent.Clear();
+            foreach (SBEntry entry in selectedSentences)
+            {
+                selectedContent.Add(entry.CPAT);
+            }
+        }
+        else
+        {
+            selectedContent = SentencesManager.Instance.GetCurrentEnabledDictionarySightWords();
+        }
+
         Debug.Log("SentencesLevel started with selectedContent: " + selectedContent.Count);
 
         foreach (ContentPictureAudioTrio pair in selectedContent)
@@ -109,6 +127,9 @@ public class SentencesLevelManager : MonoBehaviour
             case SentencesLevelMode.BuildSentences:
                 StartCoroutine(SetContentBuild());
                 break;
+            case SentencesLevelMode.ReadSentences:
+                SetContentName();
+                break;
         }
     }
 
@@ -157,6 +178,7 @@ public class SentencesLevelManager : MonoBehaviour
             string word = selectedContent[i].content;
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
+            dropTarget.targetPrefab = target;
             switch (currentMode)
             {
                 case SentencesLevelMode.MatchPicture:
@@ -165,18 +187,17 @@ public class SentencesLevelManager : MonoBehaviour
                     break;
 
                 case SentencesLevelMode.MatchSightWord:
-                    target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
-                    // target.GetComponentInChildren<Image>().sprite = null;
+                    target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;                    
                     target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                     target.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                     break;
 
                 case SentencesLevelMode.MatchSightWordPicture:
-                    target.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                    target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
                     target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
                     break;
                 case SentencesLevelMode.MatchSentencesPicture:
-                    target.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                    target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
                     target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
                     break;
             }
@@ -207,8 +228,7 @@ public class SentencesLevelManager : MonoBehaviour
                 break;
 
             case SentencesLevelMode.MatchSightWord:
-                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
-                // dragCard.GetComponentInChildren<Image>().sprite = null;
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;               
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
@@ -219,6 +239,10 @@ public class SentencesLevelManager : MonoBehaviour
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
             case SentencesLevelMode.MatchSentencesPicture:
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
+                // dragCard.GetComponentInChildren<Image>().sprite = null;
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 60;
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
         }
 
@@ -239,11 +263,6 @@ public class SentencesLevelManager : MonoBehaviour
             return;
         }
 
-        // Compute current batch
-        // int currentBatch = currentIndex / batchSize;
-        // int batchStart = currentBatch * batchSize;
-        // int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
-
         // If currentIndex has passed the current batch, spawn next batch
         if (currentIndex % batchSize == 0)
         {
@@ -261,16 +280,21 @@ public class SentencesLevelManager : MonoBehaviour
         ClearGrids();
         Button selectCard = Instantiate(selectButton, questionsGrid.transform);
         selectCard.gameObject.SetActive(true);
+        selectCard.onClick.AddListener(() => OnNameCardClicked(index));
         switch (currentMode)
         {
             case SentencesLevelMode.NamePicture:
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().text = "";
                 selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
-                selectCard.onClick.AddListener(() => OnNameCardClicked(index));
                 break;
             case SentencesLevelMode.ReadSightWord:
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[index].content;
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+                break;
+            case SentencesLevelMode.ReadSentences:
+                selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[index].content;
+                selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 60;
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
         }
@@ -295,8 +319,6 @@ public class SentencesLevelManager : MonoBehaviour
     {
         ClearGrids();
 
-        // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
-
         for (int i = batchStart; i < batchEnd; i++)
         {
             Button selectCard = Instantiate(selectButton, questionsGrid.transform);
@@ -307,11 +329,17 @@ public class SentencesLevelManager : MonoBehaviour
             switch (currentMode)
             {
                 case SentencesLevelMode.SelectPicture:
-                    selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
-                    // selectCard.GetComponentInChildren<Image>().sprite = null;
+                    selectCard.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                    selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
                     selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                     selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                     break;
+                case SentencesLevelMode.SelectSightWord:
+                    selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
+                    selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                    selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+                    break;
+                
 
             }
         }
@@ -363,8 +391,6 @@ public class SentencesLevelManager : MonoBehaviour
     public IEnumerator SetContentBuild()
     {
         ClearGrids();
-
-        selectedSentences = SentencesManager.Instance.GetCurrentEnabledDictionarySentences();
 
         Debug.Log("SentencesLevel started with selectedSentences: " + selectedSentences.Count);
 
