@@ -44,7 +44,7 @@ public class SentencesLevelManager : MonoBehaviour
 
     //Settings
     private static bool prs = true;
-    private static int batchSize = 2;
+    public static int batchSize = 2;
 
     void Awake()
     {
@@ -60,7 +60,6 @@ public class SentencesLevelManager : MonoBehaviour
     void Start()
     {
         prs = SettingsMenu.GetBool("SentencesLevelPRS", true);
-        batchSize = PlayerPrefs.GetInt("SentencesLevelBS", 1);
 
         selectedSentences = SentencesManager.Instance.GetCurrentEnabledDictionarySentences();
 
@@ -98,12 +97,6 @@ public class SentencesLevelManager : MonoBehaviour
     {
         get { return prs; }
         set { prs = value; }
-    }
-
-    public static int Condition
-    {
-        get { return batchSize; }
-        set { batchSize = value; }
     }
 
     public static void SetSentencesLevelMode(SentencesLevelMode mode)

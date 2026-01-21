@@ -1,7 +1,9 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
 public enum Scenes
 {
     Home,
@@ -17,7 +19,8 @@ public enum Scenes
     VocabularyMatching,
     PhrasesLevel,
     WordsDisplay,
-    SentencesLevel
+    SentencesLevel,
+    BatchSizeSet
 
 }
 
@@ -73,6 +76,14 @@ public class SceneController : MonoBehaviour
     public void OpenLevelSelect(string gameName)
     {
         currentScene = (Scenes)System.Enum.Parse(typeof(Scenes), gameName);
+        // isFirstLaunch = false;
+        // StartCoroutine(LoadlevelTransition());
+        SceneManager.LoadScene(currentScene.ToString());
+    }
+
+    public void OpenLevelSelect(Scenes sceneName)
+    {
+        currentScene = sceneName;
         // isFirstLaunch = false;
         // StartCoroutine(LoadlevelTransition());
         SceneManager.LoadScene(currentScene.ToString());
@@ -240,6 +251,26 @@ public class SceneController : MonoBehaviour
     {
         SetSentencesMode(SentencesLevelMode.ReadSentences);
     }
+
+    public void SetNextSceneBatchSizeSettingVocabulary()
+    {
+        BatchSizeSetting.nextScene = Scenes.VocabularyMatching;
+    }
+    public void SetNextSceneBatchSizeSettingPhrases()
+    {
+        BatchSizeSetting.nextScene = Scenes.PhrasesLevel;
+    }
+    public void SetNextSceneBatchSizeSettingSentences()
+    {
+        BatchSizeSetting.nextScene = Scenes.SentencesLevel;
+    }
+    public void OpenBatchSizeSetting(Scenes sceneName)
+    {
+        BatchSizeSetting.nextScene = sceneName;
+        currentScene = Scenes.BatchSizeSet;
+        SceneManager.LoadScene(currentScene.ToString());
+    }
+
     public void ExitApplication()
     {
         Application.Quit();

@@ -184,11 +184,11 @@ public class WordsDisplay : MonoBehaviour
     {
         if (currentGameMode == GameMode.Vocabulary)
         {
-            nextButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("VocabularyMatching"));
+            nextButton.onClick.AddListener(() => SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching));
         }
         else if (currentGameMode == GameMode.Phrases)
         {
-            nextButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("PhrasesLevel"));
+            nextButton.onClick.AddListener(() => SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel));
         }
     }
 

@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SentencesLevel.unity
     guid: 95f93f2e2feb42940bcbb73710d24e66
+  - enabled: 1
+    path: Assets/Scenes/BatchSizeSet.unity
+    guid: 7e0bb2b12bc52fc46ac669082c40b06e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

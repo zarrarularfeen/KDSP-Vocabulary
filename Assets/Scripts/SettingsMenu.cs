@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     public static SettingsMenu Instance { get; private set; }
+
     [Header("Volume Sliders")]
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider sfxVolumeSlider;
+
     [Header("Audio Mixer")]
     [SerializeField] private AudioMixer audioMixer;
 
@@ -221,7 +223,7 @@ public class SettingsMenu : MonoBehaviour
         switch (currentConditionSliderKey)
         {
             case "SentencesLevel":
-                SentencesLevelManager.Condition = PlayerPrefs.GetInt(currentConditionSliderKey, 2);
+                // SentencesLevelManager.BatchSize = PlayerPrefs.GetInt(currentConditionSliderKey, 2);
                 break;
 
             default:

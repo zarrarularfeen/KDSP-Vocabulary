@@ -24,7 +24,7 @@ public class VocabularyMatching : MonoBehaviour
     [SerializeField] private Button selectButton;
 
     private int currentIndex = 0;
-    private int batchSize = 4; // can be 1 to 4
+    public static int batchSize = 4; // can be 1 to 4
 
     public static VocabularyMatching Instance { get; private set; }
 
@@ -125,7 +125,7 @@ public class VocabularyMatching : MonoBehaviour
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
             dropTarget.targetPrefab = target;
-            
+
         }
 
         SpawnNextDraggable();
@@ -167,7 +167,7 @@ public class VocabularyMatching : MonoBehaviour
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
-        AudioManager.Instance.PlayCorrectSound();   
+        AudioManager.Instance.PlayCorrectSound();
         // CreateOutline(Color.green);
         currentIndex++;
         // Check if all words are done
@@ -226,7 +226,7 @@ public class VocabularyMatching : MonoBehaviour
         isNameAudioPlaying = true;
         if (sourceButton != null) sourceButton.interactable = false;
 
-        
+
         AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
 
         float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
@@ -247,7 +247,7 @@ public class VocabularyMatching : MonoBehaviour
 
     void SpawnSelectButtons(int batchStart, int batchEnd, int previousBatch, int currentBatch)
     {
-        
+
 
         // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
         if (previousBatch != currentBatch)
@@ -286,7 +286,7 @@ public class VocabularyMatching : MonoBehaviour
                 StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3, sourceButton));
             }
             AudioManager.Instance.PlayWrongSound();
-            
+
         }
     }
 
@@ -305,8 +305,8 @@ public class VocabularyMatching : MonoBehaviour
         }
         Debug.Log("Played correct sound");
         AudioManager.Instance.PlayCorrectSound();
-        
-        
+
+
         int previousBatch = currentIndex / batchSize;
 
         currentIndex++;
@@ -324,7 +324,7 @@ public class VocabularyMatching : MonoBehaviour
         SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
     }
 
-    IEnumerator FeedBackFlicker(Image image, Sprite feedbackSprite, float interval, int count, Button sourceButton = null) 
+    IEnumerator FeedBackFlicker(Image image, Sprite feedbackSprite, float interval, int count, Button sourceButton = null)
     {
         if (image == null)
         {
@@ -341,7 +341,7 @@ public class VocabularyMatching : MonoBehaviour
         }
 
         bool aborted = false;
-        for (int i = 0; i < count; i++) 
+        for (int i = 0; i < count; i++)
         {
             if (!image)
             {
