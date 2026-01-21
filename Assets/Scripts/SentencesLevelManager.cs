@@ -36,9 +36,15 @@ public class SentencesLevelManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI FITBQuestionText;
 
     private int currentIndex = 0;
-    private int batchSize = 4; // can be 1 to 4
+
+    // private int batchSize = 4; // can be 1 to 4
+
     public static SentencesLevelManager Instance { get; private set; }
     public static SentencesLevelMode currentMode = SentencesLevelMode.MatchPicture;
+
+    //Settings
+    private static bool prs = true;
+    private static int batchSize = 2;
 
     void Awake()
     {
@@ -53,8 +59,9 @@ public class SentencesLevelManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-         
-        
+        prs = SettingsMenu.GetBool("SentencesLevelPRS", true);
+        batchSize = PlayerPrefs.GetInt("SentencesLevelBS", 1);
+
         selectedSentences = SentencesManager.Instance.GetCurrentEnabledDictionarySentences();
 
         if (currentMode == SentencesLevelMode.MatchSentencesPicture || currentMode == SentencesLevelMode.ReadSentences)
@@ -85,6 +92,18 @@ public class SentencesLevelManager : MonoBehaviour
         }
 
         SetContent(currentMode);
+    }
+
+    public static bool PRS
+    {
+        get { return prs; }
+        set { prs = value; }
+    }
+
+    public static int Condition
+    {
+        get { return batchSize; }
+        set { batchSize = value; }
     }
 
     public static void SetSentencesLevelMode(SentencesLevelMode mode)
@@ -187,7 +206,7 @@ public class SentencesLevelManager : MonoBehaviour
                     break;
 
                 case SentencesLevelMode.MatchSightWord:
-                    target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;                    
+                    target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
                     target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                     target.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                     break;
@@ -228,7 +247,7 @@ public class SentencesLevelManager : MonoBehaviour
                 break;
 
             case SentencesLevelMode.MatchSightWord:
-                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;               
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
@@ -339,7 +358,7 @@ public class SentencesLevelManager : MonoBehaviour
                     selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                     selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                     break;
-                
+
 
             }
         }

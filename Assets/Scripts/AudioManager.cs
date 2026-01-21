@@ -33,12 +33,12 @@ public class AudioManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // if (!backgroundMusicSource.isPlaying)
-        // {
-        //     backgroundMusicSource.loop = true; // Loop the background music
-        //     backgroundMusicSource.clip = backgroundMusic;
-        //     backgroundMusicSource.Play();
-        // }
+        if (!backgroundMusicSource.isPlaying)
+        {
+            backgroundMusicSource.loop = true; // Loop the background music
+            backgroundMusicSource.clip = backgroundMusic;
+            backgroundMusicSource.Play();
+        }
     }
 
     // Update is called once per frame
