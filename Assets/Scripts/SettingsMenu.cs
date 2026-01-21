@@ -140,44 +140,8 @@ public class SettingsMenu : MonoBehaviour
 
     public void InitializeConditionSlider()
     {
-        Debug.Log("InitializeConditionSlider Called");
-        switch (currentConditionSliderKey)
-        {
-            case "AddSubCondition":
-                conditionSlider.GetComponentInChildren<Slider>().value = PlayerPrefs.GetInt(currentConditionSliderKey, 5);
-                conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = "WITHIN " + PlayerPrefs.GetInt(currentConditionSliderKey, 5).ToString();
-                break;
-
-            case "CountingConditionForward":
-                conditionSlider.GetComponentInChildren<Slider>().value = PlayerPrefs.GetInt(currentConditionSliderKey, 1);
-                switch (PlayerPrefs.GetInt(currentConditionSliderKey, 1))
-                {
-                    case 1:
-                        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 1).ToString() + " BLANK";
-                        break;
-                    case > 1:
-                        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 1).ToString() + " BLANKS";
-                        break;
-                }
-                break;
-
-            case "CountingConditionBackward":
-                conditionSlider.GetComponentInChildren<Slider>().value = PlayerPrefs.GetInt(currentConditionSliderKey, 1);
-                switch (PlayerPrefs.GetInt(currentConditionSliderKey, 1))
-                {
-                    case 1:
-                        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 1).ToString() + " BLANK";
-                        break;
-                    case > 1:
-                        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 1).ToString() + " BLANKS";
-                        break;
-                }
-                break;
-
-            default:
-                Debug.Log("Unknown Order state");
-                break;
-        }
+        conditionSlider.GetComponentInChildren<Slider>().value = PlayerPrefs.GetInt(currentConditionSliderKey, 2);
+        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 2).ToString();
         conditionSlider.GetComponentInChildren<Slider>().onValueChanged.AddListener(ConditionSliderValueChanged);
     }
 
@@ -224,36 +188,12 @@ public class SettingsMenu : MonoBehaviour
         SetConditionSliderStaticVariable();
         switch (currentConditionSliderKey)
         {
-            case "AddSubCondition":
-                conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = "WITHIN " + PlayerPrefs.GetInt(currentConditionSliderKey, 5).ToString();
-                break;
-
-            case "CountingConditionForward":
-                switch (PlayerPrefs.GetInt(currentConditionSliderKey, 1))
-                {
-                    case 1:
-                        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 1).ToString() + " BLANK";
-                        break;
-                    case > 1:
-                        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 1).ToString() + " BLANKS";
-                        break;
-                }
-                break;
-
-            case "CountingConditionBackward":
-                switch (PlayerPrefs.GetInt(currentConditionSliderKey, 1))
-                {
-                    case 1:
-                        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 1).ToString() + " BLANK";
-                        break;
-                    case > 1:
-                        conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 1).ToString() + " BLANKS";
-                        break;
-                }
+            case "SentencesLevel":
+                conditionSlider.GetComponentInChildren<TextMeshProUGUI>().text = PlayerPrefs.GetInt(currentConditionSliderKey, 2).ToString();
                 break;
 
             default:
-                Debug.Log("Unknown Order state");
+                Debug.Log("Unknown Condition Slider state");
                 break;
         }
     }
@@ -280,12 +220,12 @@ public class SettingsMenu : MonoBehaviour
     {
         switch (currentConditionSliderKey)
         {
-            case "AddSubCondition":
+            case "SentencesLevel":
                 SentencesLevelManager.Condition = PlayerPrefs.GetInt(currentConditionSliderKey, 2);
                 break;
 
             default:
-                Debug.Log("Unknown Order state");
+                Debug.Log("Unknown Condition Slider state");
                 break;
         }
     }
