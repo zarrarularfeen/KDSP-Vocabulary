@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Matching
+  m_text: 'Match
 
 '
   m_isRightToLeft: 0
@@ -1396,7 +1396,7 @@ GameObject:
   - component: {fileID: 1628486739}
   - component: {fileID: 1628486738}
   m_Layer: 5
-  m_Name: Matching
+  m_Name: Match
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

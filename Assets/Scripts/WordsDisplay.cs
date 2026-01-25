@@ -14,7 +14,7 @@ public enum WordsDisplayMode
     Vocabulary,
     SightWords,
     Phrases,
-    Sentences
+    SentencesWords
 }
 
 public enum GameMode
@@ -71,6 +71,10 @@ public class WordsDisplay : MonoBehaviour
         {
             content = PhrasesManager.Instance.GetCurrentEnabledDictionarySightWords();
         }
+        else if (currentMode == WordsDisplayMode.SentencesWords)
+        {
+            content = SentencesManager.Instance.GetCurrentEnabledDictionarySightWords();
+        }
 
         DisplayWords();
         OnNextButtonClicked(NextButton);
@@ -89,7 +93,7 @@ public class WordsDisplay : MonoBehaviour
 
     void DisplayWords()
     {
-        if (currentMode == WordsDisplayMode.SightWords || currentMode == WordsDisplayMode.Vocabulary)
+        if (currentMode == WordsDisplayMode.SightWords || currentMode == WordsDisplayMode.Vocabulary || currentMode == WordsDisplayMode.SentencesWords)
         {
             foreach (ContentPictureAudioTrio pair in content)
             {
@@ -189,6 +193,10 @@ public class WordsDisplay : MonoBehaviour
         else if (currentGameMode == GameMode.Phrases)
         {
             nextButton.onClick.AddListener(() => SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel));
+        }
+        else if (currentGameMode == GameMode.Sentences)
+        {
+            nextButton.onClick.AddListener(() => SceneController.Instance.OpenBatchSizeSetting(Scenes.SentencesLevel));
         }
     }
 

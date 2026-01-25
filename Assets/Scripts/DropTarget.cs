@@ -34,7 +34,7 @@ public class DropTarget : MonoBehaviour, IDropHandler
             else if (WordsDisplay.currentGameMode == GameMode.Sentences)
             {
                 Debug.Log("Calling SentencesLevelManager OnCorrectMatch");
-                SentencesLevelManager.Instance.OnCorrectMatch();
+                SentencesLevelManager.Instance.OnCorrectMatch(targetPrefab);
             }
                 
         }
@@ -50,6 +50,11 @@ public class DropTarget : MonoBehaviour, IDropHandler
             {
                 Debug.Log("Calling PhrasesLevelManager OnIncorrectMatch");
                 PhrasesLevelManager.Instance.OnIncorrectMatch(targetPrefab);
+            }
+            else if (WordsDisplay.currentGameMode == GameMode.Sentences)
+            {
+                Debug.Log("Calling SentencesLevelManager OnIncorrectMatch");
+                SentencesLevelManager.Instance.OnIncorrectMatch(targetPrefab);
             }
             dragged.ResetPosition();
         }

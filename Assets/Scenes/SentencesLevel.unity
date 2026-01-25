@@ -1038,6 +1038,8 @@ MonoBehaviour:
   FITBAnswerButton: {fileID: 942932125}
   FITBAnswersGrid: {fileID: 1758287625}
   FITBQuestionText: {fileID: 1422817804}
+  correctSprite: {fileID: 1434800865959014251, guid: 1ba7dc5060c0acb4ba2d8c3cfb97ba00, type: 3}
+  wrongSprite: {fileID: 4098532786609081593, guid: 2f07ed2a18d15f54da6fb32c3d6c6931, type: 3}
 --- !u!1 &1466750081
 GameObject:
   m_ObjectHideFlags: 0

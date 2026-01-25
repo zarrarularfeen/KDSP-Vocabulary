@@ -163,6 +163,10 @@ public class SceneController : MonoBehaviour
     {
         SetWordsDisplayMode(WordsDisplayMode.Phrases);
     }
+    public void SetWordsDisplayModeSentencesWords()
+    {
+        SetWordsDisplayMode(WordsDisplayMode.SentencesWords);
+    }
     //Words Display Game Mode selection
     public void SetWordsDisplayGameMode(GameMode mode)
     {
