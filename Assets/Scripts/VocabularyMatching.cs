@@ -163,6 +163,12 @@ public class VocabularyMatching : MonoBehaviour
         {
             img = targetPrefab.transform.GetChild(1).GetComponent<Image>();
         }
+
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(10.0f);
+        }
+
         if (img != null)
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
