@@ -194,10 +194,6 @@ public class WordsDisplay : MonoBehaviour
         {
             nextButton.onClick.AddListener(() => SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel));
         }
-        else if (currentGameMode == GameMode.Sentences)
-        {
-            nextButton.onClick.AddListener(() => SceneController.Instance.OpenBatchSizeSetting(Scenes.SentencesLevel));
-        }
     }
 
 

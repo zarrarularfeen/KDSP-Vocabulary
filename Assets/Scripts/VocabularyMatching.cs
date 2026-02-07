@@ -52,6 +52,22 @@ public class VocabularyMatching : MonoBehaviour
             Debug.Log(pair.content);
         }
         SetContent(currentMode);
+
+        switch (batchSize)
+        {
+            case 2:
+                questionsGrid.cellSize = new Vector2(550, 550);
+                questionsGrid.spacing = new Vector2(100, 0);
+                break;
+            case 3:
+                questionsGrid.cellSize = new Vector2(550, 550);
+                questionsGrid.spacing = new Vector2(100, 0);
+                break;
+            case 4:
+                Debug.Log("Batch size set to: " + batchSize);
+                break;
+           
+        }
     }
 
     public static void SetVocabularyMode(VocabularyMode mode)
@@ -125,6 +141,19 @@ public class VocabularyMatching : MonoBehaviour
             DropTarget dropTarget = target.GetComponent<DropTarget>();
             dropTarget.word = word;
             dropTarget.targetPrefab = target;
+            RectTransform childRect = target.transform.GetChild(1).GetComponent<RectTransform>();
+            switch(batchSize)
+            {
+                case 2:
+                    childRect.sizeDelta = new Vector2(1000, 1000);
+                    break;
+                case 3:
+                    childRect.sizeDelta = new Vector2(1000, 1000);
+                    break;
+                case 4:
+                    childRect.sizeDelta = new Vector2(840, 800);
+                    break;
+            }
 
         }
 

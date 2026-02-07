@@ -753,7 +753,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SentencesLevel
+          m_StringArgument: BatchSizeSet
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1024637645}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: SetNextSceneBatchSizeSettingSentences
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &185757225
@@ -3839,8 +3851,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 850871701}
   m_HandleRect: {fileID: 850871700}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.16583572
+  m_Value: 1
+  m_Size: 0.17086259
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7471,7 +7483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 499.99905}
+  m_AnchoredPosition: {x: 0, y: 500.00012}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1870301399
