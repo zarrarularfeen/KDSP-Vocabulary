@@ -195,7 +195,7 @@ public class VocabularyMatching : MonoBehaviour
 
         if (BlockerManager.Instance != null)
         {
-            BlockerManager.Instance.ActivateBlocker(10.0f);
+            BlockerManager.Instance.ActivateBlocker(5.0f);
         }
 
         if (img != null)
@@ -233,6 +233,11 @@ public class VocabularyMatching : MonoBehaviour
         {
             img = targetPrefab.transform.GetChild(1).GetComponent<Image>();
         }
+
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(5.0f);
+        }
         if (img != null)
         {
             StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3));
@@ -246,6 +251,20 @@ public class VocabularyMatching : MonoBehaviour
         Button selectCard = Instantiate(selectButton, questionsGrid.transform);
         selectCard.gameObject.SetActive(true);
         selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
+
+        RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
+            switch(batchSize)
+            {
+                case 2:
+                    childRect.sizeDelta = new Vector2(1000, 1000);
+                    break;
+                case 3:
+                    childRect.sizeDelta = new Vector2(1000, 1000);
+                    break;
+                case 4:
+                    childRect.sizeDelta = new Vector2(840, 800);
+                    break;
+            }
         selectCard.onClick.AddListener(() => OnNameCardClicked(index, selectCard));
     }
 
@@ -296,6 +315,19 @@ public class VocabularyMatching : MonoBehaviour
                 SelectCard selectCardData = selectCard.GetComponent<SelectCard>();
                 selectCardData.word = selectedContent[i].content;
                 selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word, selectCard));
+                RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
+                switch(batchSize)
+                {
+                    case 2:
+                        childRect.sizeDelta = new Vector2(1000, 1000);
+                        break;
+                    case 3:
+                        childRect.sizeDelta = new Vector2(1000, 1000);
+                        break;
+                    case 4:
+                        childRect.sizeDelta = new Vector2(840, 800);
+                        break;
+                }
             }
         }
         AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);

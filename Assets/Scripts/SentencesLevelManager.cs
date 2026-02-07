@@ -94,6 +94,21 @@ public class SentencesLevelManager : MonoBehaviour
         }
 
         SetContent(currentMode);
+        switch (batchSize)
+        {
+            case 2:
+                questionsGrid.cellSize = new Vector2(550, 550);
+                questionsGrid.spacing = new Vector2(100, 0);
+                break;
+            case 3:
+                questionsGrid.cellSize = new Vector2(550, 550);
+                questionsGrid.spacing = new Vector2(100, 0);
+                break;
+            case 4:
+                Debug.Log("Batch size set to: " + batchSize);
+                break;
+           
+        }
     }
 
     public static bool PRS
@@ -216,6 +231,19 @@ public class SentencesLevelManager : MonoBehaviour
                     target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
                     break;
             }
+            RectTransform childRect = target.transform.GetChild(1).GetComponent<RectTransform>();
+            switch(batchSize)
+            {
+                case 2:
+                    childRect.sizeDelta = new Vector2(1000, 1000);
+                    break;
+                case 3:
+                    childRect.sizeDelta = new Vector2(1000, 1000);
+                    break;
+                case 4:
+                    childRect.sizeDelta = new Vector2(840, 800);
+                    break;
+            }
 
         }
 
@@ -279,6 +307,12 @@ public class SentencesLevelManager : MonoBehaviour
         {
             img = targetPrefab.transform.GetChild(1).GetComponent<Image>();
         }
+
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(5.0f);
+        }
+
         if (img != null)
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
@@ -314,6 +348,12 @@ public class SentencesLevelManager : MonoBehaviour
         {
             img = targetPrefab.transform.GetChild(1).GetComponent<Image>();
         }
+
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(5.0f);
+        }
+
         if (img != null)
         {
             StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3));
@@ -344,6 +384,20 @@ public class SentencesLevelManager : MonoBehaviour
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
         }
+
+        RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
+            switch(batchSize)
+            {
+                case 2:
+                    childRect.sizeDelta = new Vector2(1000, 1000);
+                    break;
+                case 3:
+                    childRect.sizeDelta = new Vector2(1000, 1000);
+                    break;
+                case 4:
+                    childRect.sizeDelta = new Vector2(840, 800);
+                    break;
+            }
     }
 
 
@@ -406,6 +460,20 @@ public class SentencesLevelManager : MonoBehaviour
                         break;
 
 
+                }
+
+                RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
+                switch(batchSize)
+                {
+                    case 2:
+                        childRect.sizeDelta = new Vector2(1000, 1000);
+                        break;
+                    case 3:
+                        childRect.sizeDelta = new Vector2(1000, 1000);
+                        break;
+                    case 4:
+                        childRect.sizeDelta = new Vector2(840, 800);
+                        break;
                 }
             }
         }
