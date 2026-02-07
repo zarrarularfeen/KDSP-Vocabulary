@@ -16,7 +16,7 @@ public class BatchSizeSetting : MonoBehaviour
 
     void Awake()
     {
-        // Ensure only one instance of SceneController exists
+        // Ensure only one instance of exists
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject); // Destroy duplicate instances

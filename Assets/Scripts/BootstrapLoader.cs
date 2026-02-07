@@ -32,6 +32,7 @@ public class BootstrapLoader : MonoBehaviour
             GameObject sentencesManagerInstance = Instantiate(sentencesManagerPrefab);
             DontDestroyOnLoad(sentencesManagerInstance); // Ensure it persists across scenes
         }
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
