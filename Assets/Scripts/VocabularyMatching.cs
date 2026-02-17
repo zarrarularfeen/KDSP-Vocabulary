@@ -66,7 +66,7 @@ public class VocabularyMatching : MonoBehaviour
             case 4:
                 Debug.Log("Batch size set to: " + batchSize);
                 break;
-           
+
         }
     }
 
@@ -142,7 +142,7 @@ public class VocabularyMatching : MonoBehaviour
             dropTarget.word = word;
             dropTarget.targetPrefab = target;
             RectTransform childRect = target.transform.GetChild(1).GetComponent<RectTransform>();
-            switch(batchSize)
+            switch (batchSize)
             {
                 case 2:
                     childRect.sizeDelta = new Vector2(1000, 1000);
@@ -176,7 +176,8 @@ public class VocabularyMatching : MonoBehaviour
         draggable.word = word;
         Debug.Log("Spawned draggable for word: " + word);
 
-        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
+        // AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
+        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].content);
     }
 
     // Called when a correct match is made
@@ -253,18 +254,18 @@ public class VocabularyMatching : MonoBehaviour
         selectCard.GetComponentInChildren<Image>().sprite = selectedContent[index].image;
 
         RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
-            switch(batchSize)
-            {
-                case 2:
-                    childRect.sizeDelta = new Vector2(1000, 1000);
-                    break;
-                case 3:
-                    childRect.sizeDelta = new Vector2(1000, 1000);
-                    break;
-                case 4:
-                    childRect.sizeDelta = new Vector2(840, 800);
-                    break;
-            }
+        switch (batchSize)
+        {
+            case 2:
+                childRect.sizeDelta = new Vector2(1000, 1000);
+                break;
+            case 3:
+                childRect.sizeDelta = new Vector2(1000, 1000);
+                break;
+            case 4:
+                childRect.sizeDelta = new Vector2(840, 800);
+                break;
+        }
         selectCard.onClick.AddListener(() => OnNameCardClicked(index, selectCard));
     }
 
@@ -281,7 +282,8 @@ public class VocabularyMatching : MonoBehaviour
         if (sourceButton != null) sourceButton.interactable = false;
 
 
-        AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
+        // AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
+        AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
 
         float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
         yield return new WaitForSeconds(waitTime);
@@ -316,7 +318,7 @@ public class VocabularyMatching : MonoBehaviour
                 selectCardData.word = selectedContent[i].content;
                 selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word, selectCard));
                 RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
-                switch(batchSize)
+                switch (batchSize)
                 {
                     case 2:
                         childRect.sizeDelta = new Vector2(1000, 1000);
@@ -330,7 +332,8 @@ public class VocabularyMatching : MonoBehaviour
                 }
             }
         }
-        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
+        // AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
+        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].content);
     }
 
     void OnSelectCardClicked(string selectedWord, Button sourceButton)

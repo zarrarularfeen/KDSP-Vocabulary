@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
@@ -117,6 +118,16 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void ShowMeFunction(string content)
+    {
+        if (content != null)
+        {
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/show_me/{content}");
+            audioSource.clip = audio;
+            audioSource.Play();
+        }
+    }
+
     public void MatchWithFunction(AudioClip audio)
     {
         seqPlayAudioClips.Clear();
@@ -127,6 +138,27 @@ public class AudioManager : MonoBehaviour
             seqPlayAudioClips.Add(withSound);
             seqPlayAudioClips.Add(audio);
             StartCoroutine(PlayAudioSequentially());
+        }
+    }
+
+    public void MatchWithFunction(string content)
+    {
+        Debug.Log("content = " + content);
+        if (content != null)
+        {
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/match_words/{content}");
+            audioSource.clip = audio;
+            audioSource.Play();
+        }
+    }
+
+    public void WordAudioFunction(string content)
+    {
+        if (content != null)
+        {
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/words/{content}");
+            audioSource.clip = audio;
+            audioSource.Play();
         }
     }
 
