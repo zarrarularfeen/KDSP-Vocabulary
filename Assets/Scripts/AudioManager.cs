@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System;
+using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
@@ -157,6 +158,16 @@ public class AudioManager : MonoBehaviour
         if (content != null)
         {
             AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/words/{content}");
+            audioSource.clip = audio;
+            audioSource.Play();
+        }
+    }
+
+    public void SentencesAudioFunction(string context, string content)
+    {
+        if (content != null)
+        {
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/sentences/{context}/{content}");
             audioSource.clip = audio;
             audioSource.Play();
         }

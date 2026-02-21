@@ -107,7 +107,7 @@ public class SentencesLevelManager : MonoBehaviour
             case 4:
                 Debug.Log("Batch size set to: " + batchSize);
                 break;
-           
+
         }
     }
 
@@ -232,7 +232,7 @@ public class SentencesLevelManager : MonoBehaviour
                     break;
             }
             RectTransform childRect = target.transform.GetChild(1).GetComponent<RectTransform>();
-            switch(batchSize)
+            switch (batchSize)
             {
                 case 2:
                     childRect.sizeDelta = new Vector2(1000, 1000);
@@ -288,7 +288,8 @@ public class SentencesLevelManager : MonoBehaviour
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
         }
-        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
+        // AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
+        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].content);
 
         Debug.Log("Spawned draggable for word: " + word);
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
@@ -386,18 +387,18 @@ public class SentencesLevelManager : MonoBehaviour
         }
 
         RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
-            switch(batchSize)
-            {
-                case 2:
-                    childRect.sizeDelta = new Vector2(1000, 1000);
-                    break;
-                case 3:
-                    childRect.sizeDelta = new Vector2(1000, 1000);
-                    break;
-                case 4:
-                    childRect.sizeDelta = new Vector2(840, 800);
-                    break;
-            }
+        switch (batchSize)
+        {
+            case 2:
+                childRect.sizeDelta = new Vector2(1000, 1000);
+                break;
+            case 3:
+                childRect.sizeDelta = new Vector2(1000, 1000);
+                break;
+            case 4:
+                childRect.sizeDelta = new Vector2(840, 800);
+                break;
+        }
     }
 
 
@@ -413,9 +414,11 @@ public class SentencesLevelManager : MonoBehaviour
         isNameAudioPlaying = true;
         if (sourceButton != null) sourceButton.interactable = false;
 
-        AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
+        // AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
+        AudioManager.Instance.WordAudioFunction(selectedContent[currentIndex].content);
 
-        float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
+        // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
+        float waitTime = 4.0f;
         yield return new WaitForSeconds(waitTime);
 
         isNameAudioPlaying = false;
@@ -433,7 +436,7 @@ public class SentencesLevelManager : MonoBehaviour
 
     void SpawnSelectButtons(int batchStart, int batchEnd, int previousBatch, int currentBatch)
     {
-        
+
         if (previousBatch != currentBatch)
         {
             ClearGrids();
@@ -463,7 +466,7 @@ public class SentencesLevelManager : MonoBehaviour
                 }
 
                 RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
-                switch(batchSize)
+                switch (batchSize)
                 {
                     case 2:
                         childRect.sizeDelta = new Vector2(1000, 1000);
@@ -477,7 +480,8 @@ public class SentencesLevelManager : MonoBehaviour
                 }
             }
         }
-        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
+        // AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
+        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].content);
     }
 
 
@@ -643,8 +647,9 @@ public class SentencesLevelManager : MonoBehaviour
                 currIndex = 0;
                 // ✅ Proper wait
                 yield return new WaitUntil(() => FITBCheck);
-                AudioManager.Instance.PlayGivenAudioNonDelayed(entry.CPAT.audio);
-                yield return new WaitForSeconds(3f);
+                // AudioManager.Instance.PlayGivenAudioNonDelayed(entry.CPAT.audio);
+                AudioManager.Instance.SentencesAudioFunction(entry.CPAT.content, entry.CPAT.content);
+                yield return new WaitForSeconds(4f);
             }
         }
     }

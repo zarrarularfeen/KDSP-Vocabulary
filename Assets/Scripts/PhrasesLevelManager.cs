@@ -91,7 +91,7 @@ public class PhrasesLevelManager : MonoBehaviour
             case 4:
                 Debug.Log("Batch size set to: " + batchSize);
                 break;
-           
+
         }
     }
 
@@ -188,7 +188,7 @@ public class PhrasesLevelManager : MonoBehaviour
             }
 
             RectTransform childRect = target.transform.GetChild(1).GetComponent<RectTransform>();
-            switch(batchSize)
+            switch (batchSize)
             {
                 case 2:
                     childRect.sizeDelta = new Vector2(1000, 1000);
@@ -227,7 +227,8 @@ public class PhrasesLevelManager : MonoBehaviour
         dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
 
         Debug.Log("Spawned draggable for word: " + word);
-        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
+        // AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
+        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].content);
     }
     // Called when a correct match is made
     public void OnCorrectMatch(GameObject targetPrefab)
@@ -309,18 +310,18 @@ public class PhrasesLevelManager : MonoBehaviour
         selectCard.onClick.AddListener(() => OnNameCardClicked(index, selectCard));
 
         RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
-            switch(batchSize)
-            {
-                case 2:
-                    childRect.sizeDelta = new Vector2(1000, 1000);
-                    break;
-                case 3:
-                    childRect.sizeDelta = new Vector2(1000, 1000);
-                    break;
-                case 4:
-                    childRect.sizeDelta = new Vector2(840, 800);
-                    break;
-            }
+        switch (batchSize)
+        {
+            case 2:
+                childRect.sizeDelta = new Vector2(1000, 1000);
+                break;
+            case 3:
+                childRect.sizeDelta = new Vector2(1000, 1000);
+                break;
+            case 4:
+                childRect.sizeDelta = new Vector2(840, 800);
+                break;
+        }
 
     }
 
@@ -337,9 +338,11 @@ public class PhrasesLevelManager : MonoBehaviour
         if (sourceButton != null) sourceButton.interactable = false;
 
 
-        AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
+        // AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
+        AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
 
-        float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
+        // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
+        float waitTime = 4.0f;
         yield return new WaitForSeconds(waitTime);
 
         isNameAudioPlaying = false;
@@ -379,7 +382,7 @@ public class PhrasesLevelManager : MonoBehaviour
                 selectCard.onClick.AddListener(() => OnSelectCardClicked(selectCardData.word, selectCard));
 
                 RectTransform childRect = selectCard.transform.GetChild(1).GetComponent<RectTransform>();
-                switch(batchSize)
+                switch (batchSize)
                 {
                     case 2:
                         childRect.sizeDelta = new Vector2(1000, 1000);
@@ -394,7 +397,8 @@ public class PhrasesLevelManager : MonoBehaviour
 
             }
         }
-        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
+        // AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
+        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].content);
     }
 
     void OnSelectCardClicked(string selectedWord, Button sourceButton)
