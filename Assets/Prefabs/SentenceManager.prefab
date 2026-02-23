@@ -717,3 +717,77 @@ MonoBehaviour:
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
+  - book: 14
+    enabled: 0
+    sentenceContext: 10. What do you like doing?
+    contentList:
+    - sightWord: playing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like playing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: painting
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like painting
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drawing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like drawing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: writing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like writing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cooking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like cooking
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: splashing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like splashing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: building
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like building
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: walking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like walking
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: dancing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like dancing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: singing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like singing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
