@@ -791,3 +791,151 @@ MonoBehaviour:
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
+  - book: 16
+    enabled: 0
+    sentenceContext: 11. Where are they?
+    contentList:
+    - sightWord: playing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like playing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: painting
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like painting
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drawing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like drawing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: writing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like writing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cooking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like cooking
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: splashing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like splashing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: building
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like building
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: walking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like walking
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: dancing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like dancing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: singing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like singing
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 17
+    enabled: 0
+    sentenceContext: 12. I like eating and drinking
+    contentList:
+    - sightWord: pizza
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like eating pizza
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: grapes
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like eating grapes
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: milk
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like drinking milk
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: chocolate
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like eating chocolate
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: water
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like drinking water
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: muffins
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like eating muffins
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: juice
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like drinking juice
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: peas
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like eating peas
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: carrots
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like eating carrots
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: pancakes
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like eating pancakes
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
