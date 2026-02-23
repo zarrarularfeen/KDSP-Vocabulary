@@ -939,3 +939,77 @@ MonoBehaviour:
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
+  - book: 18
+    enabled: 0
+    sentenceContext: 13. What is different?
+    contentList:
+    - sightWord: full
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The bucket is full.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: empty
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The bucket is empty.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: dry
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The leaf is dry.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: wet
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The leaf is wet.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: asleep
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The tiger is asleep.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: awake
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The tiger is awake.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: big
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The elephant is big.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: little
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The mouse is little.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: dirty
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The shirt is dirty.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: clean
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The shirt is clean.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
