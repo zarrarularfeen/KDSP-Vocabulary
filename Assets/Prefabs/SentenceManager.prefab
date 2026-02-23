@@ -1457,3 +1457,447 @@ MonoBehaviour:
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
+  - book: 25
+    enabled: 0
+    sentenceContext: 20. Look at the girls and the boys
+    contentList:
+    - sightWord: climbing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girl. She is climbing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: climbing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girls. They are climbing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: climbing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boy. He is climbing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: climbing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boys. They are climbing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: riding
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girl. She is riding.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: riding
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girls. They are riding.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drawing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boy. He is drawing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drawing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boys. They are drawing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: playing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girl. She is playing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: playing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girls. They are playing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 26
+    enabled: 0
+    sentenceContext: 21. Hello Tom
+    contentList:
+    - sightWord: outside
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is at school. He is outside.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: inside
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is at school. He is inside.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: painting
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is at school. He is painting.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: writing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is at school. He is writing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: eating lunch
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is at school. He is eating lunch.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: running
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom and the girl are running.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drinking milk
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is at home. He is drinking milk.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: playing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is at home. He is playing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: in bed
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is in the bedroom. He is in bed.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: asleep
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Tom is asleep.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 27
+    enabled: 0
+    sentenceContext: 22. Good night Esha
+    contentList:
+    - sightWord: playing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha is outside. She is playing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: running
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha is outside. She is running.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: jumping
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha is outside. She is jumping.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: splashing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha is outside. She is splashing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: inside
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha and bear are inside.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: home
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha is inside. She is at home.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: milk
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha is at home. She is drinking milk.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: reading
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha and bear are at home. Esha is reading.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: moon
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha and bear are inside. Look at the moon.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: bed
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Esha and bear are in bed. 'Good night, Esha.'
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 28
+    enabled: 0
+    sentenceContext: 23. They are eating and drinking
+    contentList:
+    - sightWord: pizza
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating lunch. She is eating pizza.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: pizza
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating lunch. He is eating pizza.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: pizza
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl and the boy are eating. They are eating pizza.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cake
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The man is eating. He is eating cake.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cake
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The lady is eating. She is eating cake.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cakes
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl and the lady are eating. They are eating cakes.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: juice
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The man is drinking. He is drinking juice.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: juice
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The lady is drinking. She is drinking juice.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: juice
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The lady and the girl are drinking. They are drinking juice.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: milk
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boys and the man are drinking. They are drinking milk.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 29
+    enabled: 0
+    sentenceContext: 24. At Lunch
+    contentList:
+    - sightWord: soup
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating lunch. She is eating soup.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: soup
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating lunch. He is eating soup.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: soup
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl and the boy are eating. They are eating soup.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sausage
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating lunch. He is eating sausage.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sausage
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating lunch. She is eating sausage.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sausages
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl and the boy are eating. They are eating sausages.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sandwich
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating lunch. He is eating a sandwich.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sandwich
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating lunch. She is eating a sandwich.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sandwiches
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl and the boy are eating. They are eating sandwiches.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: lunch
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boys and girls are eating. They are eating lunch.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 30
+    enabled: 0
+    sentenceContext: 25. Good Morning Emma
+    contentList:
+    - sightWord: bed
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Emma is at home. She is in bed.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: asleep
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Emma is asleep. She is hugging the bear.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: bear
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Good morning Emma. 'Good morning bear.'
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: awake
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Emma is awake. 'Hello bear.'
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: kitchen
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Emma is inside. She is in the kitchen.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cereal
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Emma is eating breakfast. She is eating cereal.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: outside
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Emma is outside. She is hot.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: ice-cream
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Emma is eating ice-cream. The ice-cream is cold.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: water
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Emma is in the water. The water is cold and wet.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sand
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: She is on the sand. The sand is hot and dry.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
