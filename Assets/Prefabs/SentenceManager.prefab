@@ -1087,3 +1087,151 @@ MonoBehaviour:
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
+  - book: 20
+    enabled: 0
+    sentenceContext: 15. What are they doing?
+    contentList:
+    - sightWord: cereal
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating cereal.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cereal
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating cereal.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: orange
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating an orange.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: orange
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating an orange.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: juice
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is drinking juice.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: juice
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is drinking juice.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: egg
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating an egg.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: egg
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating an egg.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: toast
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating toast.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: toast
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating toast.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 21
+    enabled: 0
+    sentenceContext: 16. What are the animals doing?
+    contentList:
+    - sightWord: running
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The dog is running.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: running
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The dogs are running.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sleeping
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The lion is sleeping.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sleeping
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The lions are sleeping.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: eating
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The rabbit is eating.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: eating
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The rabbits are eating.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: swimming
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The tiger is swimming.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: swimming
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The tigers are swimming.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drinking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The horse is drinking.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drinking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The horses are drinking.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
