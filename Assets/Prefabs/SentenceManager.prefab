@@ -1235,3 +1235,225 @@ MonoBehaviour:
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
+  - book: 22
+    enabled: 0
+    sentenceContext: 17. The animals are eating and drinking
+    contentList:
+    - sightWord: cow
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The cow is eating grass.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cows
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The cows are eating grass.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sheep
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The sheep is eating grass.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: animals
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The animals are eating grass.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: elephant
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The elephant is drinking water.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: elephants
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The elephants are drinking water.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: lion
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The lion is drinking water.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: lions
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The lions are drinking water.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: sheep
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The sheep is drinking water.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: animals
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The animals are drinking water.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 23
+    enabled: 0
+    sentenceContext: 18. Look at the girl and the boy
+    contentList:
+    - sightWord: reading
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boy. He is reading.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: reading
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girl. She is reading.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: running
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boy. He is running.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: running
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girl. She is running.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: jumping
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boy. He is jumping.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: jumping
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girl. She is jumping.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: swimming
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boy. He is swimming.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: swimming
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girl. She is swimming.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: climbing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the boy. He is climbing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: climbing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the girl. She is climbing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+  - book: 24
+    enabled: 0
+    sentenceContext: 19. Look at the lady and the man
+    contentList:
+    - sightWord: reading
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the lady. She is reading.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: running
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the man. He is running.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cooking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the lady. She is cooking.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cooking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the man. He is cooking.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: painting
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the lady. She is painting.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: painting
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the man. He is painting.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: throwing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the lady. She is throwing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: throwing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the man. He is throwing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: blowing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the lady. She is blowing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: blowing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: Look at the man. He is blowing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
