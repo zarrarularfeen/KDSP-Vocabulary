@@ -1013,3 +1013,77 @@ MonoBehaviour:
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
+  - book: 19
+    enabled: 0
+    sentenceContext: 14. At breakfast
+    contentList:
+    - sightWord: cereal
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating cereal.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: cereal
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating cereal.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: orange
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating an orange.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: orange
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating an orange.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: juice
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is drinking juice.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: juice
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is drinking juice.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: egg
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating an egg.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: egg
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating an egg.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: toast
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is eating toast.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: toast
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is eating toast.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
