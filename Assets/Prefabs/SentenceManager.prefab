@@ -573,73 +573,73 @@ MonoBehaviour:
     enabled: 0
     sentenceContext: 8. Girls and Boys
     contentList:
-    - sightWord: eyes
-      sightWordAudio: {fileID: 8300000, guid: 55d2b59e048612d48bb94cfd3f3c807d, type: 3}
-      CPAT:
-        content: look at the eyes
-        image: {fileID: -8817426130257391540, guid: ddbd62f9beb006444a6dfe28646a98a4, type: 3}
-        audio: {fileID: 8300000, guid: b78811f8f4581ce42ad7c80efaee11b5, type: 3}
-      blankPositions: []
-    - sightWord: nose
-      sightWordAudio: {fileID: 8300000, guid: 7488f8d27d760b9408378e40de8fb43c, type: 3}
-      CPAT:
-        content: look at the nose
-        image: {fileID: -7643109652412921367, guid: ee9843e0a4461f544ad0038dd320910a, type: 3}
-        audio: {fileID: 8300000, guid: 27763827ca480d443a86f36a51648169, type: 3}
-      blankPositions: []
-    - sightWord: mouth
-      sightWordAudio: {fileID: 8300000, guid: 4143152d9853a354e95940044f159d77, type: 3}
-      CPAT:
-        content: look at the mouth
-        image: {fileID: 1653849967530367779, guid: 2608996a35d13a94ebde35f272307ef4, type: 3}
-        audio: {fileID: 8300000, guid: 0d8a49c9af3476d4ea01db0ac4e2f3c5, type: 3}
-      blankPositions: []
-    - sightWord: teeth
-      sightWordAudio: {fileID: 8300000, guid: dada4f33f4128e949a079caba78c8aac, type: 3}
-      CPAT:
-        content: look at the teeth
-        image: {fileID: -4935590493208185935, guid: 98e9caa6ca24b88479d46165e622670a, type: 3}
-        audio: {fileID: 8300000, guid: 1e969257fd92c174fb8a02637a0c10dd, type: 3}
-      blankPositions: []
-    - sightWord: arm
-      sightWordAudio: {fileID: 8300000, guid: 70be2434b19b8ff49af54c88686b506d, type: 3}
-      CPAT:
-        content: look at the arm
-        image: {fileID: 861105081771728581, guid: 63893299316e67444bee464178b9ec71, type: 3}
-        audio: {fileID: 8300000, guid: e33c10c611a262b44919eb282eb3d0f5, type: 3}
-      blankPositions: []
-    - sightWord: leg
-      sightWordAudio: {fileID: 8300000, guid: e1a4bbf25cee8eb449340421955ea9ee, type: 3}
-      CPAT:
-        content: look at the leg
-        image: {fileID: -179638677954501327, guid: 083dbbf8eef0c9843be01ce27a3e7eac, type: 3}
-        audio: {fileID: 8300000, guid: 20c193597bfff15468486e6bcbc6f076, type: 3}
-      blankPositions: []
-    - sightWord: head
+    - sightWord: reading
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: look at the head
+        content: The girl is reading.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: face
+    - sightWord: reading
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: look at the face
+        content: The girls are reading.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: hand
+    - sightWord: reading
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: look at the hand
+        content: The boy is reading.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: foot
+    - sightWord: reading
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: look at the foot
+        content: The boys are reading.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: walking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is walking.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: walking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girls are walking.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: building
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boy is building.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: building
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The boys are building.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drawing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girl is drawing.
+        image: {fileID: 0}
+        audio: {fileID: 0}
+      blankPositions: []
+    - sightWord: drawing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: The girls are drawing.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
@@ -795,73 +795,73 @@ MonoBehaviour:
     enabled: 0
     sentenceContext: 11. Where are they?
     contentList:
-    - sightWord: playing
+    - sightWord: bus
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like playing
+        content: The boy is on the bus.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: painting
+    - sightWord: bus
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like painting
+        content: The girl is on the bus.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: drawing
+    - sightWord: bus
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like drawing
+        content: The man is on the bus.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: writing
+    - sightWord: bus
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like writing
+        content: The lady is on the bus.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: cooking
+    - sightWord: garden
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like cooking
+        content: The boy is in the garden.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: splashing
+    - sightWord: garden
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like splashing
+        content: The man is in the garden.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: building
+    - sightWord: garden
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like building
+        content: The girl is in the garden.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: walking
+    - sightWord: garden
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like walking
+        content: The lady is in the garden.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: dancing
+    - sightWord: bike
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like dancing
+        content: The man is on the bike.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: singing
+    - sightWord: car
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: I like singing
+        content: The lady is in the car.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
@@ -1091,73 +1091,73 @@ MonoBehaviour:
     enabled: 0
     sentenceContext: 15. What are they doing?
     contentList:
-    - sightWord: cereal
+    - sightWord: book
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The boy is eating cereal.
+        content: The girl is reading a book.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: cereal
+    - sightWord: book
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The girl is eating cereal.
+        content: The boy is reading a book.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: orange
+    - sightWord: book
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The boy is eating an orange.
+        content: The lady is reading a book.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: orange
+    - sightWord: book
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The girl is eating an orange.
+        content: The man is reading a book.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: juice
+    - sightWord: horse
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The boy is drinking juice.
+        content: The girl is brushing a horse.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: juice
+    - sightWord: horse
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The girl is drinking juice.
+        content: The lady is brushing a horse.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: egg
+    - sightWord: horse
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The boy is eating an egg.
+        content: The boy is brushing a horse.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: egg
+    - sightWord: horse
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The girl is eating an egg.
+        content: The man is brushing a horse.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: toast
+    - sightWord: car
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The boy is eating toast.
+        content: The lady is washing the car.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
-    - sightWord: toast
+    - sightWord: car
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: The girl is eating toast.
+        content: The lady is washing the car.
         image: {fileID: 0}
         audio: {fileID: 0}
       blankPositions: []
