@@ -966,7 +966,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like playing
-        image: {fileID: 0}
+        image: {fileID: 8846346469183968631, guid: 30c103ff4b3d8c84392563d680114bc9, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000002000000
@@ -975,7 +975,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like painting
-        image: {fileID: 0}
+        image: {fileID: 8100483622361625846, guid: c7347e3ab681d994c946ae16ed59311e, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000002000000
@@ -984,7 +984,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like drawing
-        image: {fileID: 0}
+        image: {fileID: -1283068231547454972, guid: e1c14043c24f8304a9880d2503b446fb, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000002000000
@@ -993,7 +993,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like writing
-        image: {fileID: 0}
+        image: {fileID: 4390960404607850056, guid: 90c3d7e168948d0418b899950e1e4623, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1002,7 +1002,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like cooking
-        image: {fileID: 0}
+        image: {fileID: 8046028249274725093, guid: b0399928e097aca41817722c26e19da3, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1011,7 +1011,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like splashing
-        image: {fileID: 0}
+        image: {fileID: -7918911663575771870, guid: 72be31cff5791924e8986efec39fb739, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1020,7 +1020,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like building
-        image: {fileID: 0}
+        image: {fileID: -1899666132796268396, guid: 4725018f75bed454889135737682797e, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1029,7 +1029,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like walking
-        image: {fileID: 0}
+        image: {fileID: 6059224892489504050, guid: 0cdfcd990d439f745938b3d972095ecc, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1038,7 +1038,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like dancing
-        image: {fileID: 0}
+        image: {fileID: 381395297151655283, guid: 9ad5012eec9886941b3f82d8e7341bf8, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1047,7 +1047,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like singing
-        image: {fileID: 0}
+        image: {fileID: 369695522211660735, guid: 1bba2b78ecf88ec4482fcf7a694849ad, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
