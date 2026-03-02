@@ -1259,7 +1259,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The bucket is full.
-        image: {fileID: 0}
+        image: {fileID: -8337411797536821879, guid: eff59f6ce6d111d4394252fee73b2ffc, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1269,7 +1269,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The bucket is empty.
-        image: {fileID: 0}
+        image: {fileID: 1642203636071381995, guid: fee98ccc8b299f642820a0fab61040f2, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1279,7 +1279,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The leaf is dry.
-        image: {fileID: 0}
+        image: {fileID: -8760590170219986680, guid: 5c298545500e1ad49ac04b8a43b4dfe4, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1289,7 +1289,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The leaf is wet.
-        image: {fileID: 0}
+        image: {fileID: -157046764546228754, guid: ee40a3082ce81bd4cb6bed62bdd541f8, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1299,7 +1299,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The tiger is asleep.
-        image: {fileID: 0}
+        image: {fileID: -1750596024021537617, guid: 778279f2a2a73dc43aebeaaa15d81daa, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1309,7 +1309,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The tiger is awake.
-        image: {fileID: 0}
+        image: {fileID: -1694129920586665217, guid: 0571416446c76b5478529c1945f6fe61, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1319,7 +1319,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The elephant is big.
-        image: {fileID: 0}
+        image: {fileID: -7623137378641687349, guid: 0f3446dd27940d8428b5481a7c2acee9, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1329,7 +1329,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The mouse is little.
-        image: {fileID: 0}
+        image: {fileID: 8957322399810511644, guid: 9fc2b1dc4fbe4ea48aaf74d53f9b4e5b, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1339,7 +1339,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The shirt is dirty.
-        image: {fileID: 0}
+        image: {fileID: -5587611125439987130, guid: 1f0b06370a31c1d43a7d73fd6da9eef7, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1349,7 +1349,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The shirt is clean.
-        image: {fileID: 0}
+        image: {fileID: 2850121625043512895, guid: 7f03b56782e0cf746ac7207895e76f4a, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
