@@ -2248,70 +2248,70 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating lunch. She is eating pizza.
-        image: {fileID: 0}
+        image: {fileID: 3913091318717885437, guid: 5eccdc3be063abb4c8092bfb719cbf62, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: pizza
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating lunch. He is eating pizza.
-        image: {fileID: 0}
+        image: {fileID: 3765258345365655892, guid: 1b1b49eb1cfd3ea4ebf3244f224856b4, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: pizza
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the boy are eating. They are eating pizza.
-        image: {fileID: 0}
+        image: {fileID: 8307487113130087374, guid: 60f5e2d6ab4727e42b2fb269b2c1cc43, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: cake
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is eating. He is eating cake.
-        image: {fileID: 0}
+        image: {fileID: 8679929958680593398, guid: f790529bdc2be8145962a9f533bd4d35, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: cake
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is eating. She is eating cake.
-        image: {fileID: 0}
+        image: {fileID: -5889750611558982370, guid: 648cd755b1868cb4395aa81436cae10b, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: cakes
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the lady are eating. They are eating cakes.
-        image: {fileID: 0}
+        image: {fileID: 7510523827489170957, guid: bb8dec38d0bcae540b8a0d7ca86a3170, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: juice
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is drinking. He is drinking juice.
-        image: {fileID: 0}
+        image: {fileID: -3006154831078008820, guid: 60f38ab2956cf5c439972d60dfc28385, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: juice
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is drinking. She is drinking juice.
-        image: {fileID: 0}
+        image: {fileID: -8382652131418477574, guid: d6716e4a186db414e8bacbeacfeb6c60, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: juice
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady and the girl are drinking. They are drinking juice.
-        image: {fileID: 0}
+        image: {fileID: 1252539622247232647, guid: 456c8c6537f81b741878ca74e6bf97db, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: milk
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boys and the man are drinking. They are drinking milk.
-        image: {fileID: 0}
+        image: {fileID: -1854416876843290040, guid: 066a1f43681e661489f2464fe86d8a8a, type: 3}
         audio: {fileID: 0}
       blankPositions: []
   - book: 29
