@@ -316,7 +316,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: look at the head
-        image: {fileID: 0}
+        image: {fileID: -6205358259752014198, guid: d1a2025319b2e634b85bd00f2168f0ce, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -325,7 +325,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: look at the face
-        image: {fileID: 0}
+        image: {fileID: 5711191058825747961, guid: eb00347672d38d744b4417b966b8c720, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -334,7 +334,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: look at the hand
-        image: {fileID: 0}
+        image: {fileID: 8602920533100216527, guid: 9f38afc735ccd424aa55f5033799cad0, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -343,7 +343,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: look at the foot
-        image: {fileID: 0}
+        image: {fileID: 8820545597643371090, guid: 23befeb0de6f666458e51b55165943d6, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -644,7 +644,7 @@ MonoBehaviour:
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
-      - positions:
+      - positions: 
       - positions: 000000000100000002000000
     - sightWord: kitchen
       sightWordAudio: {fileID: 0}
@@ -1178,7 +1178,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0000000001000000
       - positions: 0200000003000000
-      - positions: 0000000002000000030000
+      - positions: 0000000002000000
     - sightWord: milk
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1492,7 +1492,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0000000001000000
       - positions: 00000000010000000200000003000000
-      - positions: 0100000003000000040000
+      - positions: 0100000003000000
     - sightWord: book
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1502,7 +1502,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0000000001000000
       - positions: 00000000010000000200000003000000
-      - positions: 0100000003000000040000
+      - positions: 0100000003000000
     - sightWord: horse
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1532,7 +1532,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0100000002000000
       - positions: 00000000010000000200000003000000
-      - positions: 0100000003000000040000
+      - positions: 0100000003000000
     - sightWord: horse
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1542,7 +1542,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0100000002000000
       - positions: 00000000010000000200000003000000
-      - positions: 0100000003000000040000
+      - positions: 0100000003000000
     - sightWord: car
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1764,7 +1764,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0200000003000000
       - positions: 0400000005000000
-      - positions: 020000000300000004000000050000000600000
+      - positions: 02000000030000000400000005000000
     - sightWord: reading
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1774,7 +1774,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0200000003000000
       - positions: 0400000005000000
-      - positions: 020000000300000004000000050000000600000
+      - positions: 02000000030000000400000005000000
     - sightWord: running
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1784,7 +1784,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 000000000200000003000000
       - positions: 010000000400000005000000
-      - positions: 010000000300000004000000050000000600000
+      - positions: 01000000030000000400000005000000
     - sightWord: running
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1794,7 +1794,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 000000000200000003000000
       - positions: 010000000400000005000000
-      - positions: 010000000300000004000000050000000600000
+      - positions: 01000000030000000400000005000000
     - sightWord: jumping
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1823,8 +1823,8 @@ MonoBehaviour:
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000200000003000000
-      - positions: 020000000300000004000000050000
-      - positions: 010000000200000004000000050000000600000
+      - positions: 020000000300000004000000
+      - positions: 01000000020000000400000005000000
     - sightWord: swimming
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1834,7 +1834,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 020000000300000004000000
       - positions: 00000000040000000500000006000000
-      - positions: 010000000300000004000000050000000600000
+      - positions: 01000000030000000400000005000000
     - sightWord: climbing
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1843,7 +1843,7 @@ MonoBehaviour:
         audio: {fileID: 0}
       blankPositions:
       - positions: 03000000040000000500000006000000
-      - positions: 010000000200000005000000060000
+      - positions: 010000000200000005000000
       - positions: 0100000002000000030000000400000005000000
     - sightWord: climbing
       sightWordAudio: {fileID: 0}
@@ -1854,7 +1854,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 020000000300000004000000
       - positions: 00000000040000000500000006000000
-      - positions: 010000000300000004000000050000000600000
+      - positions: 01000000030000000400000005000000
   - book: 24
     enabled: 0
     sentenceContext: 19. Look at the lady and the man
@@ -1928,7 +1928,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 000000000100000002000000
       - positions: 03000000040000000500000006000000
-      - positions: 010000000200000004000000050000
+      - positions: 010000000200000004000000
     - sightWord: throwing
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1948,7 +1948,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 02000000030000000400000005000000
       - positions: 00000000010000000200000005000000
-      - positions: 010000000300000004000000050000000600000
+      - positions: 01000000030000000400000005000000
     - sightWord: blowing
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -1957,8 +1957,8 @@ MonoBehaviour:
         audio: {fileID: 0}
       blankPositions:
       - positions: 00000000020000000300000006000000
-      - positions: 010000000300000004000000050000000600000
-      - positions: 000000000100000002000000050000000600000
+      - positions: 01000000030000000400000005000000
+      - positions: 00000000010000000200000005000000
   - book: 25
     enabled: 0
     sentenceContext: 20. Look at the girls and the boys
@@ -2116,7 +2116,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 020000000300000007000000
       - positions: 00000000040000000500000007000000
-      - positions: 000000000100000002000000040000000600000
+      - positions: 00000000010000000200000004000000
     - sightWord: running
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -2136,7 +2136,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 020000000300000007000000
       - positions: 00000000040000000500000007000000
-      - positions: 000000000100000002000000040000000600000
+      - positions: 00000000010000000200000004000000
     - sightWord: playing
       sightWordAudio: {fileID: 0}
       CPAT:
@@ -2155,8 +2155,8 @@ MonoBehaviour:
         audio: {fileID: 0}
       blankPositions:
       - positions: 0400000007000000
-      - positions: 04000000050000000600000007000000080000
-      - positions: 010000000200000003000000040000000800000
+      - positions: 04000000050000000600000007000000
+      - positions: 01000000020000000300000004000000
     - sightWord: asleep
       sightWordAudio: {fileID: 0}
       CPAT:
