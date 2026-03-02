@@ -1363,7 +1363,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating cereal.
-        image: {fileID: 0}
+        image: {fileID: 5231697567064308620, guid: 6da1aa25fd77fd74199caeb0868dee35, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1373,7 +1373,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating cereal.
-        image: {fileID: 0}
+        image: {fileID: 2375726713189476486, guid: 916d0107d7c7c914787ae853c745bad6, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1383,7 +1383,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating an orange.
-        image: {fileID: 0}
+        image: {fileID: 6883113124005860629, guid: 912c807b67687f547abc30b530258bde, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000004000000
@@ -1393,7 +1393,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating an orange.
-        image: {fileID: 0}
+        image: {fileID: -2685741544650513419, guid: bc7da4128757ca941a4e65e77e73f0bc, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000004000000
@@ -1403,7 +1403,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is drinking juice.
-        image: {fileID: 0}
+        image: {fileID: 2947774524970961709, guid: 58ce037a16b88b54184831cb9a2d5a41, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1413,7 +1413,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is drinking juice.
-        image: {fileID: 0}
+        image: {fileID: 2090441863041255353, guid: c315dd41141a3ba4393041e7ef5f3bdc, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1423,7 +1423,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating an egg.
-        image: {fileID: 0}
+        image: {fileID: -5085137049659438748, guid: a989f69c11a0c464ba264d97453cefc3, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000200000004000000
@@ -1433,7 +1433,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating an egg.
-        image: {fileID: 0}
+        image: {fileID: 2009797927990513433, guid: 7d1fa0ec6cd598e4db470491a62901ab, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000200000004000000
@@ -1443,7 +1443,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating toast.
-        image: {fileID: 0}
+        image: {fileID: 3641870069697670097, guid: 84058c04b757d7f4bae691eeaee5a563, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -1453,7 +1453,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating toast.
-        image: {fileID: 0}
+        image: {fileID: 6898227219493360893, guid: 030e308e00fe5384a811eb36ade80ddb, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
