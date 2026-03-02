@@ -1163,7 +1163,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like eating pizza
-        image: {fileID: 0}
+        image: {fileID: -2883662519903502591, guid: cfc3bcb747595294990d20c1c297e269, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000003000000
@@ -1173,7 +1173,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like eating grapes
-        image: {fileID: 0}
+        image: {fileID: -3330098836797102839, guid: 7f85c91c4edc45045b3af79b9d22bc3b, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1183,7 +1183,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like drinking milk
-        image: {fileID: 0}
+        image: {fileID: -5604039314081557598, guid: 53e13081e7a105647a6abc4db34fde9e, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000003000000
@@ -1192,7 +1192,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like eating chocolate
-        image: {fileID: 0}
+        image: {fileID: -8715212398898104058, guid: a62e1323d44d65249bf79278b057133a, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1201,7 +1201,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like drinking water
-        image: {fileID: 0}
+        image: {fileID: 8100454035150289781, guid: 714ea12b22fb7354f89ea61af88350d8, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1210,7 +1210,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like eating muffins
-        image: {fileID: 0}
+        image: {fileID: -3247018963296381538, guid: cf66d307f5a5f3e498283ff12fd991ad, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1219,7 +1219,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like drinking juice
-        image: {fileID: 0}
+        image: {fileID: 922459777018904166, guid: bf2b22e886b7b944ca1eafd86b8819ea, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1228,7 +1228,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like eating peas
-        image: {fileID: 0}
+        image: {fileID: -432286274556781265, guid: c53fb9df63dc74e44a9a6f1a6518e31b, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1237,7 +1237,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like eating carrots
-        image: {fileID: 0}
+        image: {fileID: -8156549837384004362, guid: 8f3bc5a1bd278934cb60cd192749aef2, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1246,7 +1246,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I like eating pancakes
-        image: {fileID: 0}
+        image: {fileID: -3037641129968660042, guid: 7dbc6fa6895e0d2489ab127e5db21d49, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
