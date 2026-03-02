@@ -2174,70 +2174,70 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is outside. She is playing.
-        image: {fileID: 0}
+        image: {fileID: -5470732879844087032, guid: c7c75b0f2fc04a145bcd3f35f0db9416, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: running
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is outside. She is running.
-        image: {fileID: 0}
+        image: {fileID: -4538989703435988490, guid: b09f390e14ceab041b3653e38647669a, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: jumping
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is outside. She is jumping.
-        image: {fileID: 0}
+        image: {fileID: -672586908778577604, guid: 0efc6ede850dd9249b6d1986671fbe9b, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: splashing
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is outside. She is splashing.
-        image: {fileID: 0}
+        image: {fileID: -8059335683821454559, guid: 27ad9f4c026929348a2288b4e0841cbd, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: inside
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha and bear are inside.
-        image: {fileID: 0}
+        image: {fileID: 1649695985863779913, guid: b8af19dfb60a14f499bacc6a3590e1c4, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: home
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is inside. She is at home.
-        image: {fileID: 0}
+        image: {fileID: -6932022476144803376, guid: d747d2f79739d8a4fa3ac088052238b2, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: milk
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is at home. She is drinking milk.
-        image: {fileID: 0}
+        image: {fileID: 1264718874125996433, guid: e2fc0b719391108438103deed6a21837, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: reading
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha and bear are at home. Esha is reading.
-        image: {fileID: 0}
+        image: {fileID: -1818275045437679707, guid: 5be3b995ec63715408be68c693bb2457, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: moon
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha and bear are inside. Look at the moon.
-        image: {fileID: 0}
+        image: {fileID: 9028925559205696554, guid: 0751413f2272a034daaa97163c34f89e, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: bed
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha and bear are in bed. 'Good night, Esha.'
-        image: {fileID: 0}
+        image: {fileID: -1773796890312478828, guid: f36744b4b85a0074396299da0a90becb, type: 3}
         audio: {fileID: 0}
       blankPositions: []
   - book: 28
