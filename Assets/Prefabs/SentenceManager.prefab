@@ -1665,7 +1665,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The cow is eating grass.
-        image: {fileID: 0}
+        image: {fileID: -6112721092957476294, guid: 9f83a5c14af57824585b17a405dcc781, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1674,7 +1674,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The cows are eating grass.
-        image: {fileID: 0}
+        image: {fileID: 5552896340580737512, guid: 65897b254e6b4d14990a12bd517b3bf3, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1683,7 +1683,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The sheep is eating grass.
-        image: {fileID: 0}
+        image: {fileID: -8614907834338747511, guid: 0ac8c4d82d51cb143a1dce5c2193b5d1, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1692,7 +1692,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The animals are eating grass.
-        image: {fileID: 0}
+        image: {fileID: 2197734327473098717, guid: 2d1882bc52000db46a082d24b037f443, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1701,7 +1701,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The elephant is drinking water.
-        image: {fileID: 0}
+        image: {fileID: 1437208652631247296, guid: 3fa0eb9fc19b3e8439aa47e5aa33fa4e, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1710,7 +1710,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The elephants are drinking water.
-        image: {fileID: 0}
+        image: {fileID: 4963704667736175647, guid: 0d550d1b76e388448a97e7a8037f86d5, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1719,7 +1719,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lion is drinking water.
-        image: {fileID: 0}
+        image: {fileID: 3368273306537100321, guid: 5d4726ac3403956488beeabb1656a37c, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1728,7 +1728,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lions are drinking water.
-        image: {fileID: 0}
+        image: {fileID: 3300783651141965107, guid: 3a36d3e23c283d8448a58efb1218cc3a, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1737,7 +1737,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The sheep is drinking water.
-        image: {fileID: 0}
+        image: {fileID: 6971256050188130134, guid: ef2c474324850cb4898b2cf0d798b7be, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1746,7 +1746,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The animals are drinking water.
-        image: {fileID: 0}
+        image: {fileID: 1412602153213148556, guid: 27d373c377d93304f883aee256df6865, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
