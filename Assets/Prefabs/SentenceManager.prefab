@@ -2322,70 +2322,70 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating lunch. She is eating soup.
-        image: {fileID: 0}
+        image: {fileID: 359644560569983831, guid: 3983f18ad940a4345abded622f553f28, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: soup
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating lunch. He is eating soup.
-        image: {fileID: 0}
+        image: {fileID: 4585709035156327181, guid: 4190bbf5001790c408a156729d1cfa8e, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: soup
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the boy are eating. They are eating soup.
-        image: {fileID: 0}
+        image: {fileID: 2472002796619964261, guid: 713083fadcc346f45bef102b02e9b0d2, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: sausage
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating lunch. He is eating sausage.
-        image: {fileID: 0}
+        image: {fileID: 367547935202061387, guid: 77de6f57e78b9f44fa1b4443c1709418, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: sausage
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating lunch. She is eating sausage.
-        image: {fileID: 0}
+        image: {fileID: 6943080839667788653, guid: f7765e5c05370b244bdb4168a5fcef99, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: sausages
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the boy are eating. They are eating sausages.
-        image: {fileID: 0}
+        image: {fileID: -4225612180157429572, guid: 4bc772472177e944088307696a3c440b, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: sandwich
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating lunch. He is eating a sandwich.
-        image: {fileID: 0}
+        image: {fileID: 8500669021609793264, guid: 9fa276438f300574fa3b5e85b4f1cf3f, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: sandwich
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating lunch. She is eating a sandwich.
-        image: {fileID: 0}
+        image: {fileID: 8071007067209660013, guid: d51227b9091c8b148a42057fd78f53b8, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: sandwiches
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the boy are eating. They are eating sandwiches.
-        image: {fileID: 0}
+        image: {fileID: 8570754839726429836, guid: 144bbd83103f58c4fbb8c564e6bf7ed1, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: lunch
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boys and girls are eating. They are eating lunch.
-        image: {fileID: 0}
+        image: {fileID: -7878190554104319955, guid: 8c85ab323990f9b4ca5291000996e41b, type: 3}
         audio: {fileID: 0}
       blankPositions: []
   - book: 30
