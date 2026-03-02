@@ -1059,7 +1059,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is on the bus.
-        image: {fileID: 0}
+        image: {fileID: -5583041658954835762, guid: 906fec37a810d8d47984a8a89ec5a2d9, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1069,7 +1069,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is on the bus.
-        image: {fileID: 0}
+        image: {fileID: 2915919736916213560, guid: 10a56a71df4452740b22f7b0c610ebb9, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1079,7 +1079,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is on the bus.
-        image: {fileID: 0}
+        image: {fileID: 4413594383708237328, guid: e50db3305d0f9824cb0a73cd08cf5027, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1089,7 +1089,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is on the bus.
-        image: {fileID: 0}
+        image: {fileID: 4363505574116597318, guid: 6c9ec79a3b31abd4289e1f165c8d598b, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1099,7 +1099,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is in the garden.
-        image: {fileID: 0}
+        image: {fileID: -7564749216216932190, guid: e00189c3dd74666409b8c1f8ce6712d2, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000004000000
@@ -1109,7 +1109,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is in the garden.
-        image: {fileID: 0}
+        image: {fileID: 5701196379397080636, guid: 97feb0604aa882647af146a4b99c7f18, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000004000000
@@ -1119,7 +1119,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is in the garden.
-        image: {fileID: 0}
+        image: {fileID: 4556024652338485916, guid: d708eec548990d44481de2714bebee80, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1129,7 +1129,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is in the garden.
-        image: {fileID: 0}
+        image: {fileID: 3861688510430515648, guid: 3d53cbb92fdd49944aaf1ba5153f8650, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1139,7 +1139,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is on the bike.
-        image: {fileID: 0}
+        image: {fileID: 6567692914457543052, guid: ba5f8e446d189924699131a6d30d6b85, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1149,7 +1149,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is in the car.
-        image: {fileID: 0}
+        image: {fileID: -3890661262131454290, guid: d09a9c90c672b63469f06c9c85a1064c, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
