@@ -456,7 +456,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 55d2b59e048612d48bb94cfd3f3c807d, type: 3}
       CPAT:
         content: look at the bee
-        image: {fileID: -8817426130257391540, guid: ddbd62f9beb006444a6dfe28646a98a4, type: 3}
+        image: {fileID: 1115314896153980677, guid: 9af89b08fc3fd404cbe72bf1bfd81dc3, type: 3}
         audio: {fileID: 8300000, guid: b78811f8f4581ce42ad7c80efaee11b5, type: 3}
       blankPositions:
       - positions: 0000000001000000
@@ -466,7 +466,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 7488f8d27d760b9408378e40de8fb43c, type: 3}
       CPAT:
         content: look at the bird
-        image: {fileID: -7643109652412921367, guid: ee9843e0a4461f544ad0038dd320910a, type: 3}
+        image: {fileID: 4974863000122242284, guid: bb67c5269d546ce4c8fd04fe8f70c1b9, type: 3}
         audio: {fileID: 8300000, guid: 27763827ca480d443a86f36a51648169, type: 3}
       blankPositions:
       - positions: 0000000001000000
@@ -476,7 +476,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 4143152d9853a354e95940044f159d77, type: 3}
       CPAT:
         content: look at the elephant
-        image: {fileID: 1653849967530367779, guid: 2608996a35d13a94ebde35f272307ef4, type: 3}
+        image: {fileID: -6110151660552423713, guid: c589481427da5c145b90fe57bf261c6d, type: 3}
         audio: {fileID: 8300000, guid: 0d8a49c9af3476d4ea01db0ac4e2f3c5, type: 3}
       blankPositions:
       - positions: 0000000001000000
@@ -486,7 +486,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: dada4f33f4128e949a079caba78c8aac, type: 3}
       CPAT:
         content: look at the fish
-        image: {fileID: -4935590493208185935, guid: 98e9caa6ca24b88479d46165e622670a, type: 3}
+        image: {fileID: -2752137535412585390, guid: a86930d21e73631438376f7398e84e0d, type: 3}
         audio: {fileID: 8300000, guid: 1e969257fd92c174fb8a02637a0c10dd, type: 3}
       blankPositions:
       - positions: 0000000001000000
@@ -496,7 +496,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 70be2434b19b8ff49af54c88686b506d, type: 3}
       CPAT:
         content: look at the frog
-        image: {fileID: 861105081771728581, guid: 63893299316e67444bee464178b9ec71, type: 3}
+        image: {fileID: 2772805886936844223, guid: b78ac8ed4e14eed4b9ecd2f88fe7efc6, type: 3}
         audio: {fileID: 8300000, guid: e33c10c611a262b44919eb282eb3d0f5, type: 3}
       blankPositions:
       - positions: 0000000001000000
@@ -506,7 +506,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: e1a4bbf25cee8eb449340421955ea9ee, type: 3}
       CPAT:
         content: look at the lion
-        image: {fileID: -179638677954501327, guid: 083dbbf8eef0c9843be01ce27a3e7eac, type: 3}
+        image: {fileID: 1622456738424437880, guid: 8999cf979dbc58743b35c93ef676e8d0, type: 3}
         audio: {fileID: 8300000, guid: 20c193597bfff15468486e6bcbc6f076, type: 3}
       blankPositions:
       - positions: 0000000001000000
@@ -516,7 +516,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: look at the mouse
-        image: {fileID: 0}
+        image: {fileID: -6482631135112572162, guid: bea701632107ea04b8292fdf04ddfa70, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -526,7 +526,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: look at the owl
-        image: {fileID: 0}
+        image: {fileID: -3473491007291279384, guid: 83cf35c86e68ff941b810a909b9b35b1, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -536,7 +536,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: look at the spider
-        image: {fileID: 0}
+        image: {fileID: -1946758887023152347, guid: 8ee4778f491e1fb4fb513551307e5113, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -546,7 +546,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: look at the tiger
-        image: {fileID: 0}
+        image: {fileID: 8378589813202125987, guid: e5577d09ac15152449478dcff5f0b913, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
