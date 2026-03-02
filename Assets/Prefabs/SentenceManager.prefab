@@ -1759,7 +1759,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the boy. He is reading.
-        image: {fileID: 0}
+        image: {fileID: 8871462025407110280, guid: f7d915b082a16864ca4b767bbdc2f052, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1769,7 +1769,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the girl. She is reading.
-        image: {fileID: 0}
+        image: {fileID: 2576838060090005871, guid: 394169975860bda4087d40adcabaa292, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1779,7 +1779,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the boy. He is running.
-        image: {fileID: 0}
+        image: {fileID: -5443254629432108723, guid: fa40af41e41dc6a459a9a573c76f17dc, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000200000003000000
@@ -1789,7 +1789,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the girl. She is running.
-        image: {fileID: 0}
+        image: {fileID: 3591928981734241671, guid: 1e2acc02f0fbc454eb1b8d8d88df2b38, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000200000003000000
@@ -1799,7 +1799,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the boy. He is jumping.
-        image: {fileID: 0}
+        image: {fileID: 1098315340548491389, guid: b255fcd2df02460418919763f7b72a47, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 030000000400000005000000
@@ -1809,7 +1809,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the girl. She is jumping.
-        image: {fileID: 0}
+        image: {fileID: -8366586009252966489, guid: 1ab41c87949f71a40a89e2ab4ab62074, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 030000000400000005000000
@@ -1819,7 +1819,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the boy. He is swimming.
-        image: {fileID: 0}
+        image: {fileID: 5247183040158443831, guid: 5871a8e7b8169b44fb078d7b8b253e16, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000200000003000000
@@ -1829,7 +1829,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the girl. She is swimming.
-        image: {fileID: 0}
+        image: {fileID: -936748673596750400, guid: 4e3ed67e7df3f6948a94f2250e73789d, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000004000000
@@ -1839,7 +1839,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the boy. He is climbing.
-        image: {fileID: 0}
+        image: {fileID: -3664602549485658449, guid: aeb26fe7cbd738745ac11d361e9fb1c2, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 03000000040000000500000006000000
@@ -1849,7 +1849,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the girl. She is climbing.
-        image: {fileID: 0}
+        image: {fileID: -8216355386056784060, guid: 824f9c1a040ce8a408cbb7e47ed2ff67, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000004000000
