@@ -1467,7 +1467,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is reading a book.
-        image: {fileID: 0}
+        image: {fileID: -6437945038076688834, guid: eca209839283f9346bb8fb5ee09668ae, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -1477,7 +1477,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is reading a book.
-        image: {fileID: 0}
+        image: {fileID: -6167089679296515610, guid: a503edc98410b764b8d0ab27f4261bf9, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -1487,7 +1487,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is reading a book.
-        image: {fileID: 0}
+        image: {fileID: -6874683651960000265, guid: 60f21f06c5a252c49867a4858d69fb76, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1497,7 +1497,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is reading a book.
-        image: {fileID: 0}
+        image: {fileID: -6075541279401260236, guid: 1efbde342662ded4290ac51a1b019e27, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1507,7 +1507,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is brushing a horse.
-        image: {fileID: 0}
+        image: {fileID: 4629058361598081670, guid: 9ae95e4775ef3eb4ba0f0bede6f61726, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -1517,7 +1517,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is brushing a horse.
-        image: {fileID: 0}
+        image: {fileID: 8640668047677905819, guid: 5af2cb20eb5a83b4c9497efbd6b17aff, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -1527,7 +1527,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is brushing a horse.
-        image: {fileID: 0}
+        image: {fileID: 7864042434823022133, guid: f4402806bf29c524c9e3702193035d32, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1537,7 +1537,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is brushing a horse.
-        image: {fileID: 0}
+        image: {fileID: 6375756526183838660, guid: aa8e0f8994db91a4da373a755fa86069, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1547,7 +1547,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is washing the car.
-        image: {fileID: 0}
+        image: {fileID: -2627040181990411419, guid: dd492f6c772bef746876dc04b5888dbf, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000004000000
@@ -1557,7 +1557,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is washing the car.
-        image: {fileID: 0}
+        image: {fileID: -6872653425315048983, guid: c3f9015239effce438b391e2cbea9ea2, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000004000000
@@ -1571,7 +1571,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The dog is running.
-        image: {fileID: 0}
+        image: {fileID: 8120624132651511199, guid: 0289e3a3668dcf64ca3d24cfeb7662ae, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1580,7 +1580,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The dogs are running.
-        image: {fileID: 0}
+        image: {fileID: 7394943823673039889, guid: b8de6c94d65798740a4d8831369dc6c7, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1589,7 +1589,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lion is sleeping.
-        image: {fileID: 0}
+        image: {fileID: -8217283958123299292, guid: 05c7066993512d647a8808408fce3b75, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1598,7 +1598,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lions are sleeping.
-        image: {fileID: 0}
+        image: {fileID: -394677269077901602, guid: 482a0c5faccc73343b4937ae041d3f26, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -1607,7 +1607,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The rabbit is eating.
-        image: {fileID: 0}
+        image: {fileID: -3496836311983997111, guid: e0ed4472c4d398245aefdd50c67ef4c4, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1616,7 +1616,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The rabbits are eating.
-        image: {fileID: 0}
+        image: {fileID: 9100523618753587646, guid: ed07141eb546e9446a10ef32cb191e18, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1625,7 +1625,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The tiger is swimming.
-        image: {fileID: 0}
+        image: {fileID: 9176760769995654128, guid: 61c0a7ccdb9098a47ac3d71d4c3a6683, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1634,7 +1634,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The tigers are swimming.
-        image: {fileID: 0}
+        image: {fileID: -7910501891929630989, guid: c1a6225ce6fdaa34ba516dfb8ff8587e, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1643,7 +1643,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The horse is drinking.
-        image: {fileID: 0}
+        image: {fileID: -4469133536531387760, guid: 783f2206e2c857f49b15cc6ad5fd231c, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
@@ -1652,7 +1652,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The horses are drinking.
-        image: {fileID: 0}
+        image: {fileID: 6727827671839897913, guid: d79fb8c1d1febee41a0e47fa97a0cfce, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 010000000200000003000000
