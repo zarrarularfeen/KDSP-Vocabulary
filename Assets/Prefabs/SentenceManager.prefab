@@ -2396,69 +2396,69 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is at home. She is in bed.
-        image: {fileID: 0}
+        image: {fileID: 6415088434198814980, guid: 2ae8e76560d59aa478e7e53711a93ea0, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: asleep
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is asleep. She is hugging the bear.
-        image: {fileID: 0}
+        image: {fileID: -7231628475098137896, guid: 9d277e2ee596c4c4983df3160b78b43e, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: bear
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Good morning Emma. 'Good morning bear.'
-        image: {fileID: 0}
+        image: {fileID: -6381100977662086358, guid: 8f02579db29b68f4a9475be5016b8cee, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: awake
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is awake. 'Hello bear.'
-        image: {fileID: 0}
+        image: {fileID: 3425339734105496695, guid: 2d5ef3f486bc9554ca526cf3dc2b0b3b, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: kitchen
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is inside. She is in the kitchen.
-        image: {fileID: 0}
+        image: {fileID: 3716098884757439955, guid: e6e507871599c1b4aa604c75204d5c38, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: cereal
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is eating breakfast. She is eating cereal.
-        image: {fileID: 0}
+        image: {fileID: -5351117972384225178, guid: 9cb4f84693ec9ab46af6d0cea91bbc0a, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: outside
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is outside. She is hot.
-        image: {fileID: 0}
+        image: {fileID: -8319579086345647821, guid: 24434062ebe45ac418eec6dc3598f0ec, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: ice-cream
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is eating ice-cream. The ice-cream is cold.
-        image: {fileID: 0}
+        image: {fileID: 3109666522616040552, guid: 3c2ffda6164ff7c4aac289ce28887b1f, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: water
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is in the water. The water is cold and wet.
-        image: {fileID: 0}
+        image: {fileID: 5389141928646542843, guid: fd07be5799f6a154fa5135c4ec2d0194, type: 3}
         audio: {fileID: 0}
       blankPositions: []
     - sightWord: sand
       sightWordAudio: {fileID: 0}
       CPAT:
         content: She is on the sand. The sand is hot and dry.
-        image: {fileID: 0}
+        image: {fileID: 1590962593442882893, guid: a209fa28f2be41b48a5f3d889c5edfed, type: 3}
         audio: {fileID: 0}
       blankPositions: []
