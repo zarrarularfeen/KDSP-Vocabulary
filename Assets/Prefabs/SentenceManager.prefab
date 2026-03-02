@@ -590,7 +590,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: dada4f33f4128e949a079caba78c8aac, type: 3}
       CPAT:
         content: this is a bedroom
-        image: {fileID: -4935590493208185935, guid: 98e9caa6ca24b88479d46165e622670a, type: 3}
+        image: {fileID: 8482835198044871069, guid: 55d68eba7e272684eafb626d0b4bfe07, type: 3}
         audio: {fileID: 8300000, guid: 1e969257fd92c174fb8a02637a0c10dd, type: 3}
       blankPositions:
       - positions: 0200000003000000
@@ -600,7 +600,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 70be2434b19b8ff49af54c88686b506d, type: 3}
       CPAT:
         content: this is a door
-        image: {fileID: 861105081771728581, guid: 63893299316e67444bee464178b9ec71, type: 3}
+        image: {fileID: -6252509495722780267, guid: bf9e30b1e623b5348b9bf5f477f37eca, type: 3}
         audio: {fileID: 8300000, guid: e33c10c611a262b44919eb282eb3d0f5, type: 3}
       blankPositions:
       - positions: 0200000003000000
@@ -610,7 +610,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: e1a4bbf25cee8eb449340421955ea9ee, type: 3}
       CPAT:
         content: this is a floor
-        image: {fileID: -179638677954501327, guid: 083dbbf8eef0c9843be01ce27a3e7eac, type: 3}
+        image: {fileID: -3197658200511187495, guid: c3753d63af8b3824da87112850e1b19b, type: 3}
         audio: {fileID: 8300000, guid: 20c193597bfff15468486e6bcbc6f076, type: 3}
       blankPositions:
       - positions: 0200000003000000
@@ -620,7 +620,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: this is a garden
-        image: {fileID: 0}
+        image: {fileID: -3363107272752092999, guid: 8899e00155dcb3e43b5893938d8d7193, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -630,7 +630,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: this is a gate
-        image: {fileID: 0}
+        image: {fileID: -4556317551054239343, guid: 5da5a02b06cd783429efa3737f0b85d2, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -640,7 +640,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: this is a house
-        image: {fileID: 0}
+        image: {fileID: -2653860789323284919, guid: 3d310466bf2aa1846a2e56a2ef1f5203, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -650,7 +650,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: this is a kitchen
-        image: {fileID: 0}
+        image: {fileID: 8380972445613915416, guid: fb5bf7bd005abf046a96c2ad635bb2c3, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000004000000
