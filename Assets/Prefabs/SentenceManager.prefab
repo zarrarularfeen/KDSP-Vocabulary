@@ -768,7 +768,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is reading.
-        image: {fileID: 0}
+        image: {fileID: -8480961055509312160, guid: 594090747ee42f94bab5af942d132336, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -778,7 +778,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girls are reading.
-        image: {fileID: 0}
+        image: {fileID: 1024072353639181018, guid: 6d9224495c05a0b47a71152894fa6930, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -788,7 +788,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is reading.
-        image: {fileID: 0}
+        image: {fileID: 6338810017342951805, guid: 4bf7f183b32caff459152138732d2a79, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -798,7 +798,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boys are reading.
-        image: {fileID: 0}
+        image: {fileID: 6467100525957590282, guid: 16d694a72b5c75d42bfec6d58952d449, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -808,7 +808,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is walking.
-        image: {fileID: 0}
+        image: {fileID: 2006223770084941570, guid: 49855dd6eb28eef489a845e560667f0d, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000002000000
@@ -818,7 +818,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girls are walking.
-        image: {fileID: 0}
+        image: {fileID: 895135689928555994, guid: 8abc52af02ff0d9479cf332696614c77, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000002000000
@@ -828,7 +828,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is building.
-        image: {fileID: 0}
+        image: {fileID: -89629082430577512, guid: 1796b6bdeb6982c4ebcfb5bec310898a, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -838,7 +838,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boys are building.
-        image: {fileID: 0}
+        image: {fileID: -8237719072293680696, guid: 6b0e40a7c4ad1d44f9a1a9a020c6e1cf, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -848,7 +848,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is drawing.
-        image: {fileID: 0}
+        image: {fileID: -87096101547957251, guid: e5155c60120f770409c767ddca20e6af, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000003000000
@@ -858,7 +858,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girls are drawing.
-        image: {fileID: 0}
+        image: {fileID: 3051419943989707543, guid: d0ec0f8d9abe9d840a7bd6a192c100fc, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
