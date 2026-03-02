@@ -2071,7 +2071,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is at school. He is outside.
-        image: {fileID: 0}
+        image: {fileID: 100726975343265298, guid: 39ff343d5ec49bc4e91d2660c7d934e1, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000006000000
@@ -2081,7 +2081,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is at school. He is inside.
-        image: {fileID: 0}
+        image: {fileID: -2453796139120774943, guid: d4dd1dc885c24f244b06d545df369427, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000006000000
@@ -2091,7 +2091,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is at school. He is painting.
-        image: {fileID: 0}
+        image: {fileID: 3603676725027211897, guid: 2b5383d78d1635241a82e04b1f7a3a40, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000006000000
@@ -2101,7 +2101,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is at school. He is writing.
-        image: {fileID: 0}
+        image: {fileID: -1474552573136601238, guid: 937ca1ae70c58a84ab19fbb643d33427, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000006000000
@@ -2111,7 +2111,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is at school. He is eating lunch.
-        image: {fileID: 0}
+        image: {fileID: 1186159096732696850, guid: b2f7c9f267d72194eb84bef12b71b74a, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000007000000
@@ -2121,7 +2121,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom and the girl are running.
-        image: {fileID: 0}
+        image: {fileID: 2226079179616701301, guid: 5bd32c3b93c0ffb41abeabe9bae585d2, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000300000004000000
@@ -2131,7 +2131,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is at home. He is drinking milk.
-        image: {fileID: 0}
+        image: {fileID: 5232043170037912280, guid: c31ae99b304e86b4297b64e33012b11c, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000007000000
@@ -2141,7 +2141,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is at home. He is playing.
-        image: {fileID: 0}
+        image: {fileID: -4880264612138520274, guid: 7fc6c3f9610d187489ece588bae8a1ce, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000006000000
@@ -2151,7 +2151,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is in the bedroom. He is in bed.
-        image: {fileID: 0}
+        image: {fileID: 8790222858186469368, guid: f7e1c29b1c37a6d4891c2863c6b5fba0, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0400000007000000
@@ -2161,7 +2161,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Tom is asleep.
-        image: {fileID: 0}
+        image: {fileID: 5122739904397012711, guid: a3c6c82ddd411db4a9af5e2c08942a3f, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
