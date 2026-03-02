@@ -1863,7 +1863,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the lady. She is reading.
-        image: {fileID: 0}
+        image: {fileID: 7692346528655490635, guid: 9cbdb2a2db97e7242ad13eb61f481fbd, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1873,7 +1873,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the man. He is running.
-        image: {fileID: 0}
+        image: {fileID: 4012376034370289184, guid: 7a6361c18ebbb30459fd03b2511d8aad, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1883,7 +1883,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the lady. She is cooking.
-        image: {fileID: 0}
+        image: {fileID: 7817412359473177097, guid: f29eb65281c9bbd4ca04d171b56b46d4, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1893,7 +1893,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the man. He is cooking.
-        image: {fileID: 0}
+        image: {fileID: -6082107979800205588, guid: c7c7a0cdaab1424439d80799e1135038, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0400000005000000
@@ -1903,7 +1903,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the lady. She is painting.
-        image: {fileID: 0}
+        image: {fileID: -3293858770169870245, guid: 0a46bf8cb2ac9f543943b19e438d8ebc, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0200000003000000
@@ -1913,7 +1913,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the man. He is painting.
-        image: {fileID: 0}
+        image: {fileID: -5257475953268112778, guid: 033e5e63f2e4f9e479a13d2340a1dfd4, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0400000005000000
@@ -1923,7 +1923,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the lady. She is throwing.
-        image: {fileID: 0}
+        image: {fileID: 7589685103892863482, guid: 8b6ccbf463406da4baab44ab56e13433, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -1933,7 +1933,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the man. He is throwing.
-        image: {fileID: 0}
+        image: {fileID: -7561588144144490109, guid: 7b688562db9ef164cbae28dc5febc7bb, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 00000000020000000300000005000000
@@ -1943,7 +1943,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the lady. She is blowing.
-        image: {fileID: 0}
+        image: {fileID: 2443135643097398033, guid: 574c341486af49b458f72fbe4c74a994, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 02000000030000000400000005000000
@@ -1953,7 +1953,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Look at the man. He is blowing.
-        image: {fileID: 0}
+        image: {fileID: -3323320786572870758, guid: ea2df6cafd4919a43af70301e8ee4277, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 00000000020000000300000006000000
