@@ -872,7 +872,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am playing
-        image: {fileID: 0}
+        image: {fileID: 4028152746480152376, guid: 15a50795b46a427499587a2824ca9ba1, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -881,7 +881,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am painting
-        image: {fileID: 0}
+        image: {fileID: -6775716290790040411, guid: 420e60c08de25f34b8d962c527e73244, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -890,7 +890,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am drawing
-        image: {fileID: 0}
+        image: {fileID: 8655270102569356440, guid: 481c600176fe75f4086de6ec3dcf7f98, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -899,7 +899,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am writing
-        image: {fileID: 0}
+        image: {fileID: 6232468424002005183, guid: 67b76aa2ec4916447baa6ec142cf3db6, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -908,7 +908,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am cooking
-        image: {fileID: 0}
+        image: {fileID: 2495472710208157568, guid: 8d5e72fb1d5b33543b82b623f7a7aaf8, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -917,7 +917,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am washing
-        image: {fileID: 0}
+        image: {fileID: 7326035126730207525, guid: a3429c8725463ee4fb7478b8504860a0, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -926,7 +926,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am hugging
-        image: {fileID: 0}
+        image: {fileID: 7273663970441274472, guid: 5b9533bec9c441d498cfe15e0a48b28e, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -935,7 +935,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am kicking
-        image: {fileID: 0}
+        image: {fileID: 3558167813112629684, guid: acc81400c14402441803a27915c6a13d, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -944,7 +944,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am dancing
-        image: {fileID: 0}
+        image: {fileID: -5914968469893997977, guid: 1a246a31e2b5ec842bf1a495b637fedd, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -953,7 +953,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: I am singing
-        image: {fileID: 0}
+        image: {fileID: -151352640482870961, guid: a10eaa4780c82e04b9b39a9641525ef5, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
