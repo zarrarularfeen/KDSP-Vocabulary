@@ -34,6 +34,7 @@ public class SentencesLevelManager : MonoBehaviour
     [SerializeField] private GameObject FITBAnswerButton;
     [SerializeField] private GridLayoutGroup FITBAnswersGrid;
     [SerializeField] private TextMeshProUGUI FITBQuestionText;
+    [SerializeField] private GameObject QuestionsBG;
     [SerializeField] private Sprite correctSprite;
     [SerializeField] private Sprite wrongSprite;
     private bool isNameAudioPlaying = false;
@@ -155,6 +156,9 @@ public class SentencesLevelManager : MonoBehaviour
                 SetContentMatch();
                 break;
             case SentencesLevelMode.BuildSentences:
+                FITBAnswersGrid.gameObject.SetActive(true);
+                FITBQuestionText.gameObject.SetActive(true);
+                QuestionsBG.gameObject.SetActive(true);
                 StartCoroutine(SetContentBuild());
                 break;
             case SentencesLevelMode.ReadSentences:

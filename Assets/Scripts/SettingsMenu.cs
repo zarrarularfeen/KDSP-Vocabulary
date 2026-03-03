@@ -1,5 +1,6 @@
 using TMPro;
 using Unity.Properties;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class SettingsMenu : MonoBehaviour
     [Header("Toggles and Sliders")]
     [SerializeField] private GameObject prsToggle;
     [SerializeField] private GameObject conditionSlider;
+    [SerializeField] private GameObject SettingsGameObject;
 
     private static string currentPRSKey; //positive reinforcement sound
     private static string currentConditionSliderKey; //require an action
@@ -31,7 +33,9 @@ public class SettingsMenu : MonoBehaviour
             Destroy(gameObject); // Destroy duplicate instances
         }
         Instance = this;
-        InitializePlayerPrefs();
+        // InitializePlayerPrefs();
+        // InitializeVolume();
+        // InitializeVolumeSliders();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,6 +44,11 @@ public class SettingsMenu : MonoBehaviour
         InitializePlayerPrefs();
         InitializeVolume();
         InitializeVolumeSliders();
+
+        if (SettingsGameObject != null)
+        {
+            SettingsGameObject.SetActive(false);
+        }
 
         SetupKeysAndInitialize();
     }
