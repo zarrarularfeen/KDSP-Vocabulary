@@ -2176,70 +2176,100 @@ MonoBehaviour:
         content: Esha is outside. She is playing.
         image: {fileID: -5470732879844087032, guid: c7c75b0f2fc04a145bcd3f35f0db9416, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: running
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is outside. She is running.
         image: {fileID: -4538989703435988490, guid: b09f390e14ceab041b3653e38647669a, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: jumping
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is outside. She is jumping.
         image: {fileID: -672586908778577604, guid: 0efc6ede850dd9249b6d1986671fbe9b, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: splashing
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is outside. She is splashing.
         image: {fileID: -8059335683821454559, guid: 27ad9f4c026929348a2288b4e0841cbd, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: inside
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha and bear are inside.
         image: {fileID: 1649695985863779913, guid: b8af19dfb60a14f499bacc6a3590e1c4, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: home
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is inside. She is at home.
         image: {fileID: -6932022476144803376, guid: d747d2f79739d8a4fa3ac088052238b2, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: milk
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha is at home. She is drinking milk.
         image: {fileID: 1264718874125996433, guid: e2fc0b719391108438103deed6a21837, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: reading
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha and bear are at home. Esha is reading.
         image: {fileID: -1818275045437679707, guid: 5be3b995ec63715408be68c693bb2457, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: moon
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha and bear are inside. Look at the moon.
         image: {fileID: 9028925559205696554, guid: 0751413f2272a034daaa97163c34f89e, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: bed
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Esha and bear are in bed. 'Good night, Esha.'
         image: {fileID: -1773796890312478828, guid: f36744b4b85a0074396299da0a90becb, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
   - book: 28
     enabled: 0
     sentenceContext: 23. They are eating and drinking
@@ -2250,70 +2280,100 @@ MonoBehaviour:
         content: The girl is eating lunch. She is eating pizza.
         image: {fileID: 3913091318717885437, guid: 5eccdc3be063abb4c8092bfb719cbf62, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: pizza
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating lunch. He is eating pizza.
         image: {fileID: 3765258345365655892, guid: 1b1b49eb1cfd3ea4ebf3244f224856b4, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: pizza
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the boy are eating. They are eating pizza.
         image: {fileID: 8307487113130087374, guid: 60f5e2d6ab4727e42b2fb269b2c1cc43, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: cake
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is eating. He is eating cake.
         image: {fileID: 8679929958680593398, guid: f790529bdc2be8145962a9f533bd4d35, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: cake
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is eating. She is eating cake.
         image: {fileID: -5889750611558982370, guid: 648cd755b1868cb4395aa81436cae10b, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: cakes
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the lady are eating. They are eating cakes.
         image: {fileID: 7510523827489170957, guid: bb8dec38d0bcae540b8a0d7ca86a3170, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: juice
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is drinking. He is drinking juice.
         image: {fileID: -3006154831078008820, guid: 60f38ab2956cf5c439972d60dfc28385, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: juice
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is drinking. She is drinking juice.
         image: {fileID: -8382652131418477574, guid: d6716e4a186db414e8bacbeacfeb6c60, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: juice
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady and the girl are drinking. They are drinking juice.
         image: {fileID: 1252539622247232647, guid: 456c8c6537f81b741878ca74e6bf97db, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: milk
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boys and the man are drinking. They are drinking milk.
         image: {fileID: -1854416876843290040, guid: 066a1f43681e661489f2464fe86d8a8a, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
   - book: 29
     enabled: 0
     sentenceContext: 24. At Lunch
@@ -2324,70 +2384,100 @@ MonoBehaviour:
         content: The girl is eating lunch. She is eating soup.
         image: {fileID: 359644560569983831, guid: 3983f18ad940a4345abded622f553f28, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: soup
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating lunch. He is eating soup.
         image: {fileID: 4585709035156327181, guid: 4190bbf5001790c408a156729d1cfa8e, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: soup
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the boy are eating. They are eating soup.
         image: {fileID: 2472002796619964261, guid: 713083fadcc346f45bef102b02e9b0d2, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: sausage
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating lunch. He is eating sausage.
         image: {fileID: 367547935202061387, guid: 77de6f57e78b9f44fa1b4443c1709418, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: sausage
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating lunch. She is eating sausage.
         image: {fileID: 6943080839667788653, guid: f7765e5c05370b244bdb4168a5fcef99, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: sausages
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the boy are eating. They are eating sausages.
         image: {fileID: -4225612180157429572, guid: 4bc772472177e944088307696a3c440b, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: sandwich
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is eating lunch. He is eating a sandwich.
         image: {fileID: 8500669021609793264, guid: 9fa276438f300574fa3b5e85b4f1cf3f, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: sandwich
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is eating lunch. She is eating a sandwich.
         image: {fileID: 8071007067209660013, guid: d51227b9091c8b148a42057fd78f53b8, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: sandwiches
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl and the boy are eating. They are eating sandwiches.
         image: {fileID: 8570754839726429836, guid: 144bbd83103f58c4fbb8c564e6bf7ed1, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: lunch
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boys and girls are eating. They are eating lunch.
         image: {fileID: -7878190554104319955, guid: 8c85ab323990f9b4ca5291000996e41b, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
   - book: 30
     enabled: 0
     sentenceContext: 25. Good Morning Emma
@@ -2398,67 +2488,97 @@ MonoBehaviour:
         content: Emma is at home. She is in bed.
         image: {fileID: 6415088434198814980, guid: 2ae8e76560d59aa478e7e53711a93ea0, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: asleep
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is asleep. She is hugging the bear.
         image: {fileID: -7231628475098137896, guid: 9d277e2ee596c4c4983df3160b78b43e, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: bear
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Good morning Emma. 'Good morning bear.'
         image: {fileID: -6381100977662086358, guid: 8f02579db29b68f4a9475be5016b8cee, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: awake
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is awake. 'Hello bear.'
         image: {fileID: 3425339734105496695, guid: 2d5ef3f486bc9554ca526cf3dc2b0b3b, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: kitchen
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is inside. She is in the kitchen.
         image: {fileID: 3716098884757439955, guid: e6e507871599c1b4aa604c75204d5c38, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: cereal
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is eating breakfast. She is eating cereal.
         image: {fileID: -5351117972384225178, guid: 9cb4f84693ec9ab46af6d0cea91bbc0a, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: outside
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is outside. She is hot.
         image: {fileID: -8319579086345647821, guid: 24434062ebe45ac418eec6dc3598f0ec, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: ice-cream
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is eating ice-cream. The ice-cream is cold.
         image: {fileID: 3109666522616040552, guid: 3c2ffda6164ff7c4aac289ce28887b1f, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: water
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is in the water. The water is cold and wet.
         image: {fileID: 5389141928646542843, guid: fd07be5799f6a154fa5135c4ec2d0194, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000
     - sightWord: sand
       sightWordAudio: {fileID: 0}
       CPAT:
         content: She is on the sand. The sand is hot and dry.
         image: {fileID: 1590962593442882893, guid: a209fa28f2be41b48a5f3d889c5edfed, type: 3}
         audio: {fileID: 0}
-      blankPositions: []
+      blankPositions:
+      - positions: 020000000300000006000000
+      - positions: 00000000040000000500000006000000
+      - positions: 00000000010000000200000004000000

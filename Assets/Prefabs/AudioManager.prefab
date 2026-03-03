@@ -49,13 +49,54 @@ MonoBehaviour:
   audioSource: {fileID: 1657131107162878445}
   backgroundMusicSource: {fileID: 6085539781166950112}
   backgroundMusic: {fileID: 8300000, guid: d4fcb2d9e7bb6014fa881032ce561bbe, type: 3}
-  winningSound: {fileID: 0}
-  correctSound: {fileID: 0}
-  wrongSound: {fileID: 0}
+  winningSound: {fileID: 8300000, guid: 365f3cdcef8aba74099d91d7c96a3c01, type: 3}
+  correctSound: {fileID: 8300000, guid: 79464bca685be7d43b92691f759dc33a, type: 3}
+  wrongSound: {fileID: 8300000, guid: 76b0fe094d50ea046a3168ea5d9604cb, type: 3}
   matchSound: {fileID: 8300000, guid: 0d6467f428543fe428ed11047e36a115, type: 3}
   withSound: {fileID: 8300000, guid: 90ad12b28e7dcec449c5eafe44902998, type: 3}
-  showMeSound: {fileID: 8300000, guid: fa4aa4d8c36d64f4bae953c76d576223, type: 3}
-  positiveReinforcementSound: []
+  showMeSound: {fileID: 8300000, guid: 76b0fe094d50ea046a3168ea5d9604cb, type: 3}
+  positiveReinforcementSound:
+  - {fileID: 8300000, guid: 24fa5cb299021464db2474f947bfbd2b, type: 3}
+  - {fileID: 8300000, guid: 1afb2f81c0ff859498dd53f8e505b126, type: 3}
+  - {fileID: 8300000, guid: ba5095c3b1c4c8342847119c01a532be, type: 3}
+  - {fileID: 8300000, guid: ad51e79cfabdd5245b4f7d556e6631b9, type: 3}
+  - {fileID: 8300000, guid: 6750e94a1b6c74445b6bc7f7b597cdef, type: 3}
+  - {fileID: 8300000, guid: 464d2f59dd0a1a240a6dee44ba626466, type: 3}
+  - {fileID: 8300000, guid: b3a80ab78eadd1e40a156de48aef4b59, type: 3}
+  - {fileID: 8300000, guid: edf1b778cefbd5a45985b2d3f86d4bb5, type: 3}
+  - {fileID: 8300000, guid: d60e10469e9025b43b07169abaf5b273, type: 3}
+  - {fileID: 8300000, guid: 91b38ea6f6806cd4abadc88e3f2c02bc, type: 3}
+  - {fileID: 8300000, guid: a5293213e73040a479aaa5207e40df91, type: 3}
+  - {fileID: 8300000, guid: 08c9c6b3f268bc543bde226e561a874c, type: 3}
+  - {fileID: 8300000, guid: 483baba698ce1cc428e8bdcc452fa3f0, type: 3}
+  - {fileID: 8300000, guid: c33470b34205b2b46ad44f9d58a57db2, type: 3}
+  - {fileID: 8300000, guid: 1248d95c6c9fa6a4db63a43b99eaaa02, type: 3}
+  - {fileID: 8300000, guid: 135f2cca02789544485b2dd9675a7ac1, type: 3}
+  - {fileID: 8300000, guid: f3999375634301c4aa2d296ed1e82eb3, type: 3}
+  - {fileID: 8300000, guid: 413197f4d8ed7a746b4bc45bd44de53f, type: 3}
+  - {fileID: 8300000, guid: a68fcf51b5260e348bfcf4504fcc0d84, type: 3}
+  - {fileID: 8300000, guid: 34f36582b5bf18749aa1487e6c456d61, type: 3}
+  - {fileID: 8300000, guid: 3ec8084386624c743a64ce3f03371741, type: 3}
+  - {fileID: 8300000, guid: 5832f3450a5c1124c8a3601726bfdf4f, type: 3}
+  - {fileID: 8300000, guid: bffa213115b1653459f27c896b55ac3d, type: 3}
+  - {fileID: 8300000, guid: 9066f7a80d2659c4b9fd96094834c730, type: 3}
+  - {fileID: 8300000, guid: 8d808f44b74b5a741a5285e727ff7c1a, type: 3}
+  - {fileID: 8300000, guid: 9633e74bcffb5994ab21dd55f278b866, type: 3}
+  - {fileID: 8300000, guid: 22853bacf079d3a4fa9ffc45a1ba98f0, type: 3}
+  - {fileID: 8300000, guid: a6a92f4037ab0454f91ee8aac5dbe390, type: 3}
+  - {fileID: 8300000, guid: 9309c3533b1474949b962eb5b5b31a9a, type: 3}
+  - {fileID: 8300000, guid: 0805bbfbf2f83c64bb58a7343a4de31e, type: 3}
+  - {fileID: 8300000, guid: 99d658f203927cf4b90a5d0a8ac1f734, type: 3}
+  - {fileID: 8300000, guid: 733e75b6cb8eba342974d4f1a41329a5, type: 3}
+  - {fileID: 8300000, guid: 9e6655e36f5ffa345824b46ad25e97d6, type: 3}
+  - {fileID: 8300000, guid: 78ca79656bbf900428c040f4bfe6f52f, type: 3}
+  - {fileID: 8300000, guid: 5c07a61ff188df84b9ca7a966a3ac0b1, type: 3}
+  - {fileID: 8300000, guid: 6227e94d547c9b64a9d5b9efac740b97, type: 3}
+  - {fileID: 8300000, guid: 2f41a2a253db0c940a32528881d0a38c, type: 3}
+  - {fileID: 8300000, guid: 8daf82fa79a41ca4288c245a5f082261, type: 3}
+  - {fileID: 8300000, guid: 47679a5202c601a47bdb0750ba3425f2, type: 3}
+  - {fileID: 8300000, guid: caa3f2622ec344c479bdd820407f080f, type: 3}
+  - {fileID: 8300000, guid: 88bd422347cc8db4d96094f4e9724752, type: 3}
 --- !u!82 &6085539781166950112
 AudioSource:
   m_ObjectHideFlags: 0
