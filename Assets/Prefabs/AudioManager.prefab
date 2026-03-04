@@ -50,7 +50,7 @@ MonoBehaviour:
   backgroundMusicSource: {fileID: 6085539781166950112}
   backgroundMusic: {fileID: 8300000, guid: d4fcb2d9e7bb6014fa881032ce561bbe, type: 3}
   winningSound: {fileID: 8300000, guid: 365f3cdcef8aba74099d91d7c96a3c01, type: 3}
-  correctSound: {fileID: 8300000, guid: 79464bca685be7d43b92691f759dc33a, type: 3}
+  correctSound: {fileID: 0}
   wrongSound: {fileID: 8300000, guid: 76b0fe094d50ea046a3168ea5d9604cb, type: 3}
   matchSound: {fileID: 8300000, guid: 0d6467f428543fe428ed11047e36a115, type: 3}
   withSound: {fileID: 8300000, guid: 90ad12b28e7dcec449c5eafe44902998, type: 3}
