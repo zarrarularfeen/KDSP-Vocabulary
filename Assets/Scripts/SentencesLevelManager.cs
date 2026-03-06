@@ -227,11 +227,11 @@ public class SentencesLevelManager : MonoBehaviour
                     break;
 
                 case SentencesLevelMode.MatchSightWordPicture:
-                    target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
+                    target.GetComponentInChildren<TextMeshProUGUI>().text = "";
                     target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
                     break;
                 case SentencesLevelMode.MatchSentencesPicture:
-                    target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
+                    target.GetComponentInChildren<TextMeshProUGUI>().text = "";
                     target.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
                     break;
             }
@@ -315,7 +315,7 @@ public class SentencesLevelManager : MonoBehaviour
 
         if (BlockerManager.Instance != null)
         {
-            BlockerManager.Instance.ActivateBlocker(5.0f);
+            BlockerManager.Instance.ActivateBlocker(1.0f);
         }
 
         if (img != null)
@@ -323,6 +323,7 @@ public class SentencesLevelManager : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayCorrectSound();
+        AudioManager.Instance.PlayPositiveReinforcementSound();
 
         currentIndex++;
         // Check if all words are done
@@ -330,7 +331,7 @@ public class SentencesLevelManager : MonoBehaviour
         {
             Debug.Log("All words matched!");
             selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Home", 4.0f));
+            StartCoroutine(SceneDelayLoad("Sentences", 1.5f));
             yield break;
         }
 
@@ -356,7 +357,7 @@ public class SentencesLevelManager : MonoBehaviour
 
         if (BlockerManager.Instance != null)
         {
-            BlockerManager.Instance.ActivateBlocker(5.0f);
+            BlockerManager.Instance.ActivateBlocker(1.0f);
         }
 
         if (img != null)
@@ -380,7 +381,7 @@ public class SentencesLevelManager : MonoBehaviour
                 break;
             case SentencesLevelMode.ReadSightWord:
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[index].content;
-                selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 70;
                 selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
             case SentencesLevelMode.ReadSentences:
@@ -422,7 +423,7 @@ public class SentencesLevelManager : MonoBehaviour
         AudioManager.Instance.WordAudioFunction(selectedContent[currentIndex].content);
 
         // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
-        float waitTime = 4.0f;
+        float waitTime = 1.5f;
         yield return new WaitForSeconds(waitTime);
 
         isNameAudioPlaying = false;
@@ -434,7 +435,7 @@ public class SentencesLevelManager : MonoBehaviour
         {
             Debug.Log("All Name cards shown!");
             selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Home", 4.0f));
+            StartCoroutine(SceneDelayLoad("Sentences", 1.5f));
         }
     }
 
@@ -457,12 +458,12 @@ public class SentencesLevelManager : MonoBehaviour
                     case SentencesLevelMode.SelectPicture:
                         selectCard.GetComponentInChildren<TextMeshProUGUI>().text = "";
                         selectCard.GetComponentInChildren<Image>().sprite = selectedContent[i].image;
-                        selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                        // selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                         selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                         break;
                     case SentencesLevelMode.SelectSightWord:
                         selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
-                        selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                        selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 60;
                         selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                         break;
 
@@ -525,6 +526,7 @@ public class SentencesLevelManager : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3, sourceButton));
         }
         AudioManager.Instance.PlayCorrectSound();
+        AudioManager.Instance.PlayPositiveReinforcementSound();
         questionsGrid.transform.GetChild(currentIndex % batchSize).GetComponent<Button>().interactable = false;
         int previousBatch = currentIndex / batchSize;
         currentIndex++;
@@ -532,13 +534,14 @@ public class SentencesLevelManager : MonoBehaviour
         {
             Debug.Log("All words selected!");
             selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Home", 4.0f));
+            StartCoroutine(SceneDelayLoad("sentences", 1.5f));
             yield break;
         }
         int currentBatch = currentIndex / batchSize;
         int batchStart = currentBatch * batchSize;
         int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
         //if we have finished current batch of 4, move to next batch
+        yield return new WaitForSeconds(2.5f);
         SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
     }
 

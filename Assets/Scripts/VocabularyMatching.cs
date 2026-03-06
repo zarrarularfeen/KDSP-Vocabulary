@@ -24,7 +24,7 @@ public class VocabularyMatching : MonoBehaviour
     [SerializeField] private Button selectButton;
 
     private int currentIndex = 0;
-    public static int batchSize = 4; // can be 1 to 4
+    public static int batchSize = 2; // can be 1 to 4
 
     public static VocabularyMatching Instance { get; private set; }
 
@@ -66,7 +66,16 @@ public class VocabularyMatching : MonoBehaviour
             case 4:
                 Debug.Log("Batch size set to: " + batchSize);
                 break;
-
+        }
+        if (currentMode == VocabularyMode.Select)
+        {
+            questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 270);
+            answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -140);
+        }
+        else if (currentMode == VocabularyMode.Name)
+        {
+            questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 190);
+            answersGrid.gameObject.SetActive(false);
         }
     }
 
@@ -196,7 +205,7 @@ public class VocabularyMatching : MonoBehaviour
 
         if (BlockerManager.Instance != null)
         {
-            BlockerManager.Instance.ActivateBlocker(5.0f);
+            BlockerManager.Instance.ActivateBlocker(1.0f);
         }
 
         if (img != null)
@@ -204,6 +213,7 @@ public class VocabularyMatching : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayCorrectSound();
+        AudioManager.Instance.PlayPositiveReinforcementSound();
         // CreateOutline(Color.green);
         currentIndex++;
         // Check if all words are done
@@ -211,7 +221,7 @@ public class VocabularyMatching : MonoBehaviour
         {
             Debug.Log("All words matched!");
             selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Home", 4.0f));
+            StartCoroutine(SceneDelayLoad("Vocabulary", 1.5f));
             yield break;
         }
 
@@ -237,7 +247,7 @@ public class VocabularyMatching : MonoBehaviour
 
         if (BlockerManager.Instance != null)
         {
-            BlockerManager.Instance.ActivateBlocker(5.0f);
+            BlockerManager.Instance.ActivateBlocker(1.0f);
         }
         if (img != null)
         {
@@ -286,7 +296,7 @@ public class VocabularyMatching : MonoBehaviour
         AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
 
         // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
-        float waitTime = 4.0f;
+        float waitTime = 1.5f;
         yield return new WaitForSeconds(waitTime);
 
         isNameAudioPlaying = false;
@@ -298,7 +308,7 @@ public class VocabularyMatching : MonoBehaviour
         {
             Debug.Log("All Name cards shown!");
             selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Home", 4.0f));
+            StartCoroutine(SceneDelayLoad("Vocabulary", 1.5f));
         }
     }
 
@@ -376,6 +386,7 @@ public class VocabularyMatching : MonoBehaviour
         }
         Debug.Log("Played correct sound");
         AudioManager.Instance.PlayCorrectSound();
+        AudioManager.Instance.PlayPositiveReinforcementSound();
 
 
         int previousBatch = currentIndex / batchSize;
@@ -385,13 +396,14 @@ public class VocabularyMatching : MonoBehaviour
         {
             Debug.Log("All words selected!");
             selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Home", 4.0f));
+            StartCoroutine(SceneDelayLoad("Vocabulary", 1.5f));
             yield break;
         }
         int currentBatch = currentIndex / batchSize;
         int batchStart = currentBatch * batchSize;
         int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
         //if we have finished current batch of 4, move to next batch
+        yield return new WaitForSeconds(2.5f);
         SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
     }
 
