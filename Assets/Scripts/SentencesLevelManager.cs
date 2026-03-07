@@ -110,6 +110,7 @@ public class SentencesLevelManager : MonoBehaviour
                 break;
 
         }
+        answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -200);
     }
 
     public static bool PRS
