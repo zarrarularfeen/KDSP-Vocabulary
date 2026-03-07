@@ -420,7 +420,7 @@ public class SentencesLevelManager : MonoBehaviour
         if (sourceButton != null) sourceButton.interactable = false;
 
         // AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
-        AudioManager.Instance.WordAudioFunction(selectedContent[currentIndex].content);
+        AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
 
         // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
         float waitTime = 1.5f;
