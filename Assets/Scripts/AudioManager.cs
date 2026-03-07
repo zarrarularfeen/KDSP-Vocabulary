@@ -123,7 +123,8 @@ public class AudioManager : MonoBehaviour
     {
         if (content != null)
         {
-            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/show_me/{content}");
+            string modifiedContent = content.Replace("/", " or ");
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/show_me/{modifiedContent}");
             audioSource.clip = audio;
             audioSource.Play();
         }
@@ -147,7 +148,8 @@ public class AudioManager : MonoBehaviour
         Debug.Log("content = " + content);
         if (content != null)
         {
-            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/match_words/{content}");
+            string modifiedContent = content.Replace("/", " or ");
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/match_words/{modifiedContent}");
             audioSource.clip = audio;
             audioSource.Play();
         }
@@ -157,7 +159,8 @@ public class AudioManager : MonoBehaviour
     {
         if (content != null)
         {
-            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/words/{content}");
+            string modifiedContent = content.Replace("/", " or ");
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/words/{modifiedContent}");
             audioSource.clip = audio;
             audioSource.Play();
         }

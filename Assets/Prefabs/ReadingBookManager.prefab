@@ -643,7 +643,7 @@ MonoBehaviour:
       image: {fileID: 3895373182742473504, guid: 876c276704ae8324ea4d4c5821df86ae, type: 3}
       audio: {fileID: 8300000, guid: 40963bd48898680458020d0e4678adf5, type: 3}
     - content: grandpa
-      image: {fileID: -2739511634412878451, guid: 3a7b64d2f93a7cf41a2fe17f4e3f114b, type: 3}
+      image: {fileID: -708783025850468930, guid: c22b3f6abbe56d140925f0a41dda2916, type: 3}
       audio: {fileID: 8300000, guid: 7085580190e4ebd4e9da721ec114700d, type: 3}
     - content: grass
       image: {fileID: 7932798033344189819, guid: dd513265adc65dd44b63fc10a8b086f4, type: 3}
