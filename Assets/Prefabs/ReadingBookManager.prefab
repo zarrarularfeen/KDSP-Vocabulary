@@ -429,7 +429,7 @@ MonoBehaviour:
   - book: 1
     enabled: 0
     contentList:
-    - content: aeroplane/airplane
+    - content: airplane
       image: {fileID: -7881999521483897370, guid: 92f218eba4e31fd40844653c7ddc4f8a, type: 3}
       audio: {fileID: 8300000, guid: 59bb2f284a2fdfb44a93f331efbe2ed4, type: 3}
     - content: balloon
