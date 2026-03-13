@@ -195,4 +195,19 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+
+    public void WaitForCurrentAudio()
+    {
+        StartCoroutine(WaitForCurrentAudioCoroutine());
+    }
+
+
+    IEnumerator WaitForCurrentAudioCoroutine()
+    {
+        while (audioSource.isPlaying)
+        {
+            yield return new WaitForSeconds(audioSource.clip.length);
+            // yield return null;
+        }
+    }
 }

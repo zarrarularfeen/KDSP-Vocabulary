@@ -93,7 +93,7 @@ public class PhrasesLevelManager : MonoBehaviour
                 break;
 
         }
-        if (currentMode == PhrasesLevelMode.SelectSightWord  || currentMode == PhrasesLevelMode.UnderstandSightWord || currentMode == PhrasesLevelMode.UnderstandPhrase)
+        if (currentMode == PhrasesLevelMode.SelectSightWord || currentMode == PhrasesLevelMode.UnderstandSightWord || currentMode == PhrasesLevelMode.UnderstandPhrase)
         {
             questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 270);
             answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -140);
@@ -222,8 +222,6 @@ public class PhrasesLevelManager : MonoBehaviour
         {
             return;
         }
-
-
 
         GameObject dragCard = Instantiate(dragPrefab, answersGrid.transform);
         string word = selectedContent[currentIndex].content;
