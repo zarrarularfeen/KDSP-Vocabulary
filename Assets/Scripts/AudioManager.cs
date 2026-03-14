@@ -204,10 +204,9 @@ public class AudioManager : MonoBehaviour
 
     IEnumerator WaitForCurrentAudioCoroutine()
     {
-        while (audioSource.isPlaying)
+        if (audioSource.isPlaying)
         {
             yield return new WaitForSeconds(audioSource.clip.length);
-            // yield return null;
         }
     }
 }
