@@ -262,9 +262,9 @@ public class PhrasesLevelManager : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayCorrectSound();
-        AudioManager.Instance.WaitForCurrentAudio();
+        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
         AudioManager.Instance.PlayPositiveReinforcementSound();
-        AudioManager.Instance.WaitForCurrentAudio();
+        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
         currentIndex++;
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
@@ -305,7 +305,7 @@ public class PhrasesLevelManager : MonoBehaviour
             StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayWrongSound();
-        AudioManager.Instance.WaitForCurrentAudio();
+        // AudioManager.Instance.WaitForCurrentAudio();
     }
 
     void SetNameCard(int index)
@@ -411,7 +411,7 @@ public class PhrasesLevelManager : MonoBehaviour
         }
         // AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
         AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].content);
-        AudioManager.Instance.WaitForCurrentAudio();
+        // AudioManager.Instance.WaitForCurrentAudio();
     }
 
     void OnSelectCardClicked(string selectedWord, Button sourceButton)
@@ -434,7 +434,7 @@ public class PhrasesLevelManager : MonoBehaviour
                 StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3, sourceButton));
             }
             AudioManager.Instance.PlayWrongSound();
-            AudioManager.Instance.WaitForCurrentAudio();
+            // AudioManager.Instance.WaitForCurrentAudio();
         }
     }
 
@@ -451,9 +451,9 @@ public class PhrasesLevelManager : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3, sourceButton));
         }
         AudioManager.Instance.PlayCorrectSound();
-        AudioManager.Instance.WaitForCurrentAudio();
+        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
         AudioManager.Instance.PlayPositiveReinforcementSound();
-        AudioManager.Instance.WaitForCurrentAudio();
+        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
         questionsGrid.transform.GetChild(currentIndex % batchSize).GetComponent<Button>().interactable = false;
         int previousBatch = currentIndex / batchSize;
         currentIndex++;

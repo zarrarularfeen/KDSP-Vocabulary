@@ -200,9 +200,9 @@ public class WordsDisplay : MonoBehaviour
 
                 SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching);
             }
-            else if (currentGameMode == GameMode.Phrases)
+            if (currentGameMode == GameMode.Phrases)
             {
-                if (PhrasesLevelManager.selectedContent.Count == 0 || PhrasesLevelManager.selectedContextList.Count == 0)
+                if (PhrasesLevelManager.selectedContent.Count == 0 && PhrasesLevelManager.selectedContextList.Count == 0)
                 {
                     Debug.Log("No content selected.");
                     return;

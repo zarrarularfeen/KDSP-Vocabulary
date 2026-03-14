@@ -216,10 +216,11 @@ public class VocabularyMatching : MonoBehaviour
         }
         AudioManager.Instance.PlayCorrectSound();
         // AudioManager.Instance.WaitForCurrentAudio();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+
         AudioManager.Instance.PlayPositiveReinforcementSound();
         // AudioManager.Instance.WaitForCurrentAudio();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
         // CreateOutline(Color.green);
         currentIndex++;
         // Check if all words are done
