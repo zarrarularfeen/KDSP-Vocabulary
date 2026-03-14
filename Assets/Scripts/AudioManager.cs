@@ -9,7 +9,7 @@ using UnityEngine.Rendering;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] public AudioSource audioSource;
     [SerializeField] private AudioSource backgroundMusicSource;
     [SerializeField] private AudioClip backgroundMusic;
     [SerializeField] private AudioClip winningSound;
