@@ -187,6 +187,8 @@ public class VocabularyMatching : MonoBehaviour
 
         // AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
         AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].content);
+        AudioManager.Instance.WaitForCurrentAudio();
+        
     }
 
     // Called when a correct match is made
@@ -213,7 +215,11 @@ public class VocabularyMatching : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayCorrectSound();
+        // AudioManager.Instance.WaitForCurrentAudio();
+        yield return new WaitForSeconds(2.5f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
+        // AudioManager.Instance.WaitForCurrentAudio();
+        yield return new WaitForSeconds(2.5f);
         // CreateOutline(Color.green);
         currentIndex++;
         // Check if all words are done
@@ -254,6 +260,7 @@ public class VocabularyMatching : MonoBehaviour
             StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayWrongSound();
+        // AudioManager.Instance.WaitForCurrentAudio();
     }
 
     void SetNameCard(int index)
@@ -345,6 +352,7 @@ public class VocabularyMatching : MonoBehaviour
         }
         // AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
         AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].content);
+        // AudioManager.Instance.WaitForCurrentAudio();
     }
 
     void OnSelectCardClicked(string selectedWord, Button sourceButton)
@@ -367,6 +375,7 @@ public class VocabularyMatching : MonoBehaviour
                 StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3, sourceButton));
             }
             AudioManager.Instance.PlayWrongSound();
+            // AudioManager.Instance.WaitForCurrentAudio();
 
         }
     }
@@ -386,8 +395,11 @@ public class VocabularyMatching : MonoBehaviour
         }
         Debug.Log("Played correct sound");
         AudioManager.Instance.PlayCorrectSound();
+        yield return new WaitForSeconds(2.5f);
+        // AudioManager.Instance.WaitForCurrentAudio();
         AudioManager.Instance.PlayPositiveReinforcementSound();
-
+        yield return new WaitForSeconds(2.5f);
+        // AudioManager.Instance.WaitForCurrentAudio();
 
         int previousBatch = currentIndex / batchSize;
 

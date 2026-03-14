@@ -186,14 +186,31 @@ public class WordsDisplay : MonoBehaviour
 
     void OnNextButtonClicked(Button nextButton)
     {
-        if (currentGameMode == GameMode.Vocabulary)
+        nextButton.onClick.RemoveAllListeners();
+        nextButton.onClick.AddListener(() =>
         {
-            nextButton.onClick.AddListener(() => SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching));
-        }
-        else if (currentGameMode == GameMode.Phrases)
-        {
-            nextButton.onClick.AddListener(() => SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel));
-        }
+            if (currentGameMode == GameMode.Vocabulary)
+            {
+                if (VocabularyMatching.selectedContent.Count == 0)
+                {
+                    Debug.Log("No content selected.");
+                    Debug.Log("VocabularyMatching.selectedContent.Count = " + VocabularyMatching.selectedContent.Count);
+                    return;
+                }
+
+                SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching);
+            }
+            else if (currentGameMode == GameMode.Phrases)
+            {
+                if (PhrasesLevelManager.selectedContent.Count == 0 || PhrasesLevelManager.selectedContextList.Count == 0)
+                {
+                    Debug.Log("No content selected.");
+                    return;
+                }
+
+                SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel);
+            }
+        });
     }
 
 
