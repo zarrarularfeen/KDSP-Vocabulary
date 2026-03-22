@@ -927,7 +927,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1183463608}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: SetPhrasesModeUnderstandSightWord
+        m_MethodName: SetWordsDisplayModeSightWords
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

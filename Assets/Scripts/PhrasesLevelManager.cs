@@ -96,7 +96,7 @@ public class PhrasesLevelManager : MonoBehaviour
         if (currentMode == PhrasesLevelMode.SelectSightWord || currentMode == PhrasesLevelMode.UnderstandSightWord || currentMode == PhrasesLevelMode.UnderstandPhrase)
         {
             questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 270);
-            answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -140);
+            answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -200);
         }
         else if (currentMode == PhrasesLevelMode.ReadSightWord)
         {
@@ -262,9 +262,12 @@ public class PhrasesLevelManager : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayCorrectSound();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+
+        //nullreference error over here using audioSource.clip.length because audioSource.clip is null
+
+        yield return new WaitForSeconds(1.5f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.5f);
         currentIndex++;
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
