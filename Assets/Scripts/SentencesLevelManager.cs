@@ -106,7 +106,8 @@ public class SentencesLevelManager : MonoBehaviour
                 questionsGrid.spacing = new Vector2(100, 0);
                 break;
             case 4:
-                Debug.Log("Batch size set to: " + batchSize);
+                questionsGrid.cellSize = new Vector2(440, 440);
+                questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 280);
                 break;
 
         }

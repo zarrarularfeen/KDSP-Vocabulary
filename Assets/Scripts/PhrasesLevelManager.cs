@@ -27,6 +27,7 @@ public class PhrasesLevelManager : MonoBehaviour
     [SerializeField] private GameObject targetPrefab;
     [SerializeField] private GameObject dragPrefab;
     [SerializeField] private Button selectButton;
+    [SerializeField] private Button backButton;
 
 
     private int currentIndex = 0;
@@ -89,13 +90,15 @@ public class PhrasesLevelManager : MonoBehaviour
                 questionsGrid.spacing = new Vector2(100, 0);
                 break;
             case 4:
-                Debug.Log("Batch size set to: " + batchSize);
+                questionsGrid.cellSize = new Vector2(440, 440);
+                questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 280);
+
                 break;
 
         }
         if (currentMode == PhrasesLevelMode.SelectSightWord || currentMode == PhrasesLevelMode.UnderstandSightWord || currentMode == PhrasesLevelMode.UnderstandPhrase)
         {
-            questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 270);
+            questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 280);
             answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -200);
         }
         else if (currentMode == PhrasesLevelMode.ReadSightWord)
@@ -103,6 +106,8 @@ public class PhrasesLevelManager : MonoBehaviour
             questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 190);
             answersGrid.gameObject.SetActive(false);
         }
+
+        backButton.onClick.AddListener(() => OnBackButtonClicked(backButton));
     }
 
     public static void SetPhrasesLevelMode(PhrasesLevelMode mode)
@@ -272,6 +277,8 @@ public class PhrasesLevelManager : MonoBehaviour
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
         {
+            Debug.Log(currentIndex);
+            Debug.Log(selectedContent.Count);
             Debug.Log("All words matched!");
             selectedContent.Clear();
             StartCoroutine(SceneDelayLoad("Phrases", 1.5f));
@@ -529,6 +536,12 @@ public class PhrasesLevelManager : MonoBehaviour
         SceneController.Instance.OpenLevelSelect(sceneName);
     }
 
+    void OnBackButtonClicked(Button backButton)
+    {
+        selectedContent.Clear();
+        selectedContextList.Clear();
+        backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("Phrases"));
+    }
     void ClearGrids()
     {
         foreach (Transform child in questionsGrid.transform)

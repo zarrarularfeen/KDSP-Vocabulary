@@ -22,6 +22,7 @@ public class VocabularyMatching : MonoBehaviour
     [SerializeField] private GameObject targetPrefab;
     [SerializeField] private GameObject dragPrefab;
     [SerializeField] private Button selectButton;
+    [SerializeField] private Button backButton;
 
     private int currentIndex = 0;
     public static int batchSize = 2; // can be 1 to 4
@@ -64,12 +65,13 @@ public class VocabularyMatching : MonoBehaviour
                 questionsGrid.spacing = new Vector2(100, 0);
                 break;
             case 4:
-                Debug.Log("Batch size set to: " + batchSize);
+                questionsGrid.cellSize = new Vector2(450, 450);
+                questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 280);
                 break;
         }
         if (currentMode == VocabularyMode.Select)
         {
-            questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 270);
+            questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 280);
             answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -140);
         }
         else if (currentMode == VocabularyMode.Name)
@@ -77,6 +79,12 @@ public class VocabularyMatching : MonoBehaviour
             questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 190);
             answersGrid.gameObject.SetActive(false);
         }
+        else if (currentMode == VocabularyMode.Match)
+        {
+            answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -140);
+        }
+        
+        backButton.onClick.AddListener(() => OnBackButtonClicked(backButton));
     }
 
     public static void SetVocabularyMode(VocabularyMode mode)
@@ -470,6 +478,12 @@ public class VocabularyMatching : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneController.Instance.OpenLevelSelect(sceneName);
     }
+    void OnBackButtonClicked(Button backButton)
+    {
+        
+        selectedContent.Clear();
+    }
+
     void ClearGrids()
     {
         foreach (Transform child in questionsGrid.transform)

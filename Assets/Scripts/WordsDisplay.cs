@@ -218,10 +218,13 @@ public class WordsDisplay : MonoBehaviour
     {
         if (currentGameMode == GameMode.Vocabulary)
         {
+            VocabularyMatching.selectedContent.Clear();
             backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("EnableBooksVocabulary"));
         }
         else if (currentGameMode == GameMode.Phrases)
         {
+            PhrasesLevelManager.selectedContent.Clear();
+            PhrasesLevelManager.selectedContextList.Clear();
             backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("EnableBooksPhrases"));
         }
 
