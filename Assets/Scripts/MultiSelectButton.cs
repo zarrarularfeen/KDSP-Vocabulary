@@ -13,7 +13,7 @@ public enum Managers
 {
     ReadingBook,
     PhrasesManager,
-    SentencesManager
+    SentencesManager,
 }
 
 [System.Serializable]

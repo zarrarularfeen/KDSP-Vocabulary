@@ -83,6 +83,24 @@ public class PhrasesManager : MonoBehaviour
         return contextList;
     }
 
+    public List<ContentPictureAudioTrio> GetCurrentEnabledDictionaryPhrasesForReadingBook()
+    {
+        sightWords.Clear();
+
+        foreach (PhrasesBookInformation book in booksList)
+        {
+            if (book.enabled)
+            {
+                foreach (PBI b in book.PBIList)
+                {
+                    sightWords.AddRange(b.contentList);
+                }
+            }
+        }
+
+        return sightWords;
+    }
+
     public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySightWords()
     {
         sightWords.Clear();

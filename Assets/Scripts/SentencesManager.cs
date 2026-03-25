@@ -78,6 +78,30 @@ public class SentencesManager : MonoBehaviour
         return sbList;
     }
 
+    public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySentencesForReadingBook()
+    {
+        sightWords.Clear();
+
+        foreach (SentencesBookInformation book in booksList)
+        {
+            if (book.enabled)
+            {
+                foreach (SBEntry b in book.contentList)
+                {
+                    ContentPictureAudioTrio entry = new ContentPictureAudioTrio
+                    {
+                        content = b.CPAT.content + "*" + book.sentenceContext,
+                        image = b.CPAT.image,
+                        audio = b.CPAT.audio
+                    };
+                    sightWords.Add(entry);
+                }
+            }
+        }
+
+        return sightWords;
+    }
+
     public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySightWords()
     {
         sightWords.Clear();

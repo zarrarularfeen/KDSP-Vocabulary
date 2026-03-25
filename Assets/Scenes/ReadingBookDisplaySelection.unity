@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vocabulary 1
+  m_text: Vocabulary
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f33155975ceac964f81ec01a52d93850, type: 2}
   m_sharedMaterial: {fileID: 2915670289696735149, guid: f33155975ceac964f81ec01a52d93850, type: 2}
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Vocabulary 3
+  m_text: 'Sentences
 
 '
   m_isRightToLeft: 0
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 785923987}
   - component: {fileID: 785923986}
   m_Layer: 5
-  m_Name: Vocabulary3
+  m_Name: Sentences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -832,14 +832,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1024637645}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: OpenReadingBookDisplay
+        m_MethodName: SelectReadingBookMode
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Vocabulary3
+          m_StringArgument: Sentences
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &785923987
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 1695880135}
   - component: {fileID: 1695880134}
   m_Layer: 5
-  m_Name: Vocabulary2
+  m_Name: Phrases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1112,14 +1112,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1024637645}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: OpenReadingBookDisplay
+        m_MethodName: SelectReadingBookMode
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Vocabulary2
+          m_StringArgument: Phrases
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1695880135
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 1732504769}
   - component: {fileID: 1732504768}
   m_Layer: 5
-  m_Name: Vocabulary1
+  m_Name: Vocabulary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,14 +1245,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1024637645}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: OpenReadingBookDisplay
+        m_MethodName: SelectReadingBookMode
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Vocabulary1
+          m_StringArgument: Vocabulary
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1732504769
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Vocabulary 2
+  m_text: 'Phrases
 
 '
   m_isRightToLeft: 0

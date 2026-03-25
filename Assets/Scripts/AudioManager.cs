@@ -160,7 +160,28 @@ public class AudioManager : MonoBehaviour
         if (content != null)
         {
             string modifiedContent = content.Replace("/", " or ");
+            Debug.Log(modifiedContent);
             AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/words/{modifiedContent}");
+            if (audio == null)
+            {
+                Debug.Log("Audio Not Found!");
+            }
+            audioSource.clip = audio;
+            audioSource.Play();
+        }
+    }
+
+    public void PhrasesAudioFunction(string content)
+    {
+        if (content != null)
+        {
+            string modifiedContent = content.Replace("/", " or ");
+            Debug.Log(modifiedContent);
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/phrases/{modifiedContent}");
+            if (audio == null)
+            {
+                Debug.Log("Audio Not Found!");
+            }
             audioSource.clip = audio;
             audioSource.Play();
         }
@@ -170,7 +191,14 @@ public class AudioManager : MonoBehaviour
     {
         if (content != null)
         {
-            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/sentences/{context}/{content}");
+            string modifiedContent = char.ToUpper(content[0]) + content.Substring(1) + ".";
+            Debug.Log(context);
+            Debug.Log(modifiedContent);
+            AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/sentences/{context}/{modifiedContent}");
+            if (audio == null)
+            {
+                Debug.Log("Audio Not Found!");
+            }
             audioSource.clip = audio;
             audioSource.Play();
         }
