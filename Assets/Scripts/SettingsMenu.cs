@@ -80,14 +80,14 @@ public class SettingsMenu : MonoBehaviour
                 SetPRSStaticVariable();
             }
 
-            if (currentConditionSliderKey != "SentencesLevelBS")
-            {
-                currentConditionSliderKey = "SentencesLevelBS";
-                SetConditionSliderStaticVariable();
-            }
+            // if (currentConditionSliderKey != "SentencesLevelBS")
+            // {
+            //     currentConditionSliderKey = "SentencesLevelBS";
+            //     SetConditionSliderStaticVariable();
+            // }
 
             InitializePRSToggle();
-            InitializeConditionSlider();
+            // InitializeConditionSlider();
         }
     }
 
