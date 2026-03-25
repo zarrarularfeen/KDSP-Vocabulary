@@ -264,10 +264,10 @@ public class PhrasesLevelManager : MonoBehaviour
         AudioManager.Instance.PlayCorrectSound();
 
         //nullreference error over here using audioSource.clip.length because audioSource.clip is null
-
-        yield return new WaitForSeconds(1.5f);
+        
+        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
         AudioManager.Instance.PlayPositiveReinforcementSound();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
         currentIndex++;
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
