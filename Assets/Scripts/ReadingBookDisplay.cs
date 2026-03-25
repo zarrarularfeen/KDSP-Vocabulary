@@ -6,16 +6,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 
+public enum ReadingBookMode
+{
+    Vocabulary,
+    Phrases,
+    Sentences
+}
+
 public class ReadingBookDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI displayText;
     [SerializeField] private Image displayImage;
+    [SerializeField] private Button displayButton;
     [SerializeField] private Button nextButton;
     [SerializeField] private Button previousButton;
 
     private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
     private int currentidx = 0;
     private static Books requestedBook;
+    private static ReadingBookMode currentBookMode;
 
     void Awake()
     {
@@ -75,6 +84,21 @@ public class ReadingBookDisplay : MonoBehaviour
         ContentPictureAudioTrio currentContent = content[currentidx];
         displayText.text = currentContent.content;
         displayImage.sprite = currentContent.image;
+        displayButton.onClick.AddListener(() =>
+        {
+            if (currentBookMode == ReadingBookMode.Vocabulary)
+            {
+                AudioManager.Instance.WordAudioFunction(currentContent.content);
+            }
+            else if (currentBookMode == ReadingBookMode.Phrases)
+            {
+                AudioManager.Instance.WordAudioFunction(currentContent.content);
+            }
+            else
+            {
+                AudioManager.Instance.SentencesAudioFunction(currentContent.content, currentContent.content);
+            }
+        });
         displayImage.SetNativeSize();
     }
 }
