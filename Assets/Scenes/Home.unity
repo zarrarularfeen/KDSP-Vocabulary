@@ -1291,8 +1291,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2047480366}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: OpenLevelSelect
-        m_Mode: 5
+        m_MethodName: ExitApplication
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
