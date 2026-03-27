@@ -203,6 +203,18 @@ public class ReadingBookDisplay : MonoBehaviour
             temp = currentContent.content.Split("*");
             displayText.text = temp[0];
             Debug.Log(temp[0] + " * " + temp[1]);
+            if (temp[0].Length > 30)
+            {
+                displayText.fontSize = 100;
+            }
+            if (temp[0].Length > 40)
+            {
+                displayText.fontSize = 80;
+            }
+            if (temp[0].Length > 50)
+            {
+                displayText.fontSize = 70;
+            }
             displayButton.onClick.AddListener(() => { AudioManager.Instance.SentencesAudioFunction(temp[1], temp[0]); });
         }
         else

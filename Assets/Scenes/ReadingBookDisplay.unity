@@ -546,6 +546,16 @@ MonoBehaviour:
   displayButton: {fileID: 1363868950}
   nextButton: {fileID: 1397960538}
   previousButton: {fileID: 479745819}
+  VocabularyGrid: {fileID: 0}
+  PhrasesGrid: {fileID: 0}
+  SentencesGrid: {fileID: 0}
+  VocabularyGridMSB: {fileID: 0}
+  PhrasesGridMSB: {fileID: 0}
+  SentencesGridMSB: {fileID: 0}
+  NextSceneButton: {fileID: 0}
+  SightWordsButton: {fileID: 0}
+  PhrasesButton: {fileID: 0}
+  SentencesButton: {fileID: 0}
 --- !u!114 &568854868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,14 +1520,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 462870383}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: OpenGameSelection
-        m_Mode: 1
+        m_MethodName: OpenLevelSelect
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GameSelection
+          m_StringArgument: ReadingBookDisplaySelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1962635844

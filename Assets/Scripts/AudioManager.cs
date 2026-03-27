@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements;
 
 public class AudioManager : MonoBehaviour
 {
@@ -191,7 +192,15 @@ public class AudioManager : MonoBehaviour
     {
         if (content != null)
         {
-            string modifiedContent = char.ToUpper(content[0]) + content.Substring(1) + ".";
+            string modifiedContent = char.ToUpper(content[0]) + content.Substring(1);
+            if (modifiedContent[modifiedContent.Length - 1] != '.')
+            {
+                modifiedContent = modifiedContent + '.';
+            }
+            if (context[context.Length - 1] == '?')
+            {
+                context = context.Remove(context.Length - 1);
+            }
             Debug.Log(context);
             Debug.Log(modifiedContent);
             AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/sentences/{context}/{modifiedContent}");

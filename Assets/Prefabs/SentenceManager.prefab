@@ -2505,7 +2505,7 @@ MonoBehaviour:
     - sightWord: bear
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: Good morning Emma. 'Good morning bear.'
+        content: Good morning Emma. Good morning bear.
         image: {fileID: -6381100977662086358, guid: 8f02579db29b68f4a9475be5016b8cee, type: 3}
         audio: {fileID: 0}
       blankPositions:
@@ -2515,7 +2515,7 @@ MonoBehaviour:
     - sightWord: awake
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: Emma is awake. 'Hello bear.'
+        content: Emma is awake. Hello bear.
         image: {fileID: 3425339734105496695, guid: 2d5ef3f486bc9554ca526cf3dc2b0b3b, type: 3}
         audio: {fileID: 0}
       blankPositions:
