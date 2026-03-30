@@ -177,6 +177,7 @@ public class AudioManager : MonoBehaviour
         if (content != null)
         {
             string modifiedContent = content.Replace("/", " or ");
+            modifiedContent = content.Trim();
             Debug.Log(modifiedContent);
             AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/phrases/{modifiedContent}");
             if (audio == null)

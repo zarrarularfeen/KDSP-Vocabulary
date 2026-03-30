@@ -218,22 +218,22 @@ MonoBehaviour:
         audio: {fileID: 8300000, guid: dce66a65dc5ba4443a792d64719bcdfc, type: 3}
     - phraseContext: on
       contentList:
-      - content: doll is on chair
+      - content: doll is on the chair
         image: {fileID: 4984149185817607193, guid: b14da852dcc98cf4abc3b3251c17b92f, type: 3}
         audio: {fileID: 8300000, guid: b5de92bcf38c42b49b3a3aa3e953bdc4, type: 3}
-      - content: doll is on bed
+      - content: doll is on the bed
         image: {fileID: 7316458219881545386, guid: 7adf40ed343c1ad4ead8854a2bd0cd77, type: 3}
         audio: {fileID: 8300000, guid: 1cd8bde66c8de6c4faa14f9b0989bfd5, type: 3}
-      - content: doll is on table
+      - content: doll is on the table
         image: {fileID: 6542384957068851861, guid: 4b075b944a5863d49a7a8e75023df498, type: 3}
         audio: {fileID: 8300000, guid: 2161ec997f96c5b45ad495eb6b4b73af, type: 3}
-      - content: bear is on chair
+      - content: bear is on the chair
         image: {fileID: 6215565401345854106, guid: 85569047e6846784c905d08d361325b7, type: 3}
         audio: {fileID: 8300000, guid: c5a4dfef734a84244aa594a66fdf1eb4, type: 3}
-      - content: bear is on bed
+      - content: bear is on the bed
         image: {fileID: -5800157114693724673, guid: 17cad5f3eb15b7741ae99969668cb5af, type: 3}
         audio: {fileID: 8300000, guid: 198a0a81303863d4d874cc535c6373ed, type: 3}
-      - content: bear is on table
+      - content: bear is on the table
         image: {fileID: -655440065973200078, guid: a8b83a7ffd19d1540bddf763d4574f00, type: 3}
         audio: {fileID: 8300000, guid: 972534a4c45d12e4d91159b3799b76e5, type: 3}
   - book: 4
