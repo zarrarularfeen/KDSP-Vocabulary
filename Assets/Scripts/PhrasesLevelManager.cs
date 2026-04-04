@@ -270,9 +270,9 @@ public class PhrasesLevelManager : MonoBehaviour
 
         //nullreference error over here using audioSource.clip.length because audioSource.clip is null
         
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.25f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.25f);
         currentIndex++;
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
@@ -364,7 +364,7 @@ public class PhrasesLevelManager : MonoBehaviour
         AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
 
         // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
-        float waitTime = 1.5f;
+        float waitTime = 2.5f;
         yield return new WaitForSeconds(waitTime);
 
         isNameAudioPlaying = false;
@@ -461,9 +461,9 @@ public class PhrasesLevelManager : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3, sourceButton));
         }
         AudioManager.Instance.PlayCorrectSound();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.25f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.25f);
         questionsGrid.transform.GetChild(currentIndex % batchSize).GetComponent<Button>().interactable = false;
         int previousBatch = currentIndex / batchSize;
         currentIndex++;

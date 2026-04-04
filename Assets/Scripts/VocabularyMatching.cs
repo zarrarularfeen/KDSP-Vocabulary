@@ -224,11 +224,11 @@ public class VocabularyMatching : MonoBehaviour
         }
         AudioManager.Instance.PlayCorrectSound();
         // AudioManager.Instance.WaitForCurrentAudio();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.25f);
 
         AudioManager.Instance.PlayPositiveReinforcementSound();
         // AudioManager.Instance.WaitForCurrentAudio();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.25f);
         // CreateOutline(Color.green);
         currentIndex++;
         // Check if all words are done
@@ -312,7 +312,7 @@ public class VocabularyMatching : MonoBehaviour
         AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
 
         // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
-        float waitTime = 1.5f;
+        float waitTime = 2.5f;
         yield return new WaitForSeconds(waitTime);
 
         isNameAudioPlaying = false;
@@ -404,9 +404,9 @@ public class VocabularyMatching : MonoBehaviour
         }
         Debug.Log("Played correct sound");
         AudioManager.Instance.PlayCorrectSound();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.25f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
-        yield return new WaitForSeconds(AudioManager.Instance.audioSource.clip.length);
+        yield return new WaitForSeconds(1.25f);
 
         int previousBatch = currentIndex / batchSize;
 
