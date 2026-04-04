@@ -486,7 +486,7 @@ MonoBehaviour:
     - content: juice
       image: {fileID: 2791105872119289076, guid: 784f866aaec80b84bb3e210aea68afea, type: 3}
       audio: {fileID: 8300000, guid: 4270e0c398153794293e7e22cc7a3bde, type: 3}
-    - content: jumper/sweater
+    - content: sweater
       image: {fileID: 9101363213075635468, guid: 3bf5b37321b8cf0459e8cd53ce70601c, type: 3}
       audio: {fileID: 8300000, guid: fae5cdac2d56a1446af3bf39421b8bc9, type: 3}
     - content: light
@@ -495,7 +495,7 @@ MonoBehaviour:
     - content: monkey
       image: {fileID: -4798825762170945512, guid: a93b45cbd8ac4574290d374ca133ae16, type: 3}
       audio: {fileID: 8300000, guid: 2ad403205fe3ba3479f3ca6379d377cb, type: 3}
-    - content: pants/trousers
+    - content: pants
       image: {fileID: 6676571036466851238, guid: 5e52391fef26c6946aa3996d0326a0c6, type: 3}
       audio: {fileID: 8300000, guid: 0787ee5dbd040e64daeabcf84515c379, type: 3}
     - content: rabbit
@@ -618,7 +618,7 @@ MonoBehaviour:
     - content: egg
       image: {fileID: -4072622106568590741, guid: 75c41c83ad802d64c89605eca3beea1b, type: 3}
       audio: {fileID: 8300000, guid: 488404e25fbe85f4db373d25c86078b4, type: 3}
-    - content: faucet/tap
+    - content: tap
       image: {fileID: -6136548977277601274, guid: 883a0e1b3c75fd5479b72fae7d2aff2f, type: 3}
       audio: {fileID: 8300000, guid: 4fa9f182ea3d44341b13c706081f03cf, type: 3}
     - content: finger
