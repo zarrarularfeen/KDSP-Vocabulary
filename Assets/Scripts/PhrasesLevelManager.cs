@@ -37,6 +37,7 @@ public class PhrasesLevelManager : MonoBehaviour
     [SerializeField] private Sprite correctSprite;
     [SerializeField] private Sprite wrongSprite;
     private bool isNameAudioPlaying = false;
+    private readonly List<int> currentBatchOrder = new List<int>();
 
     void Awake()
     {
@@ -182,6 +183,8 @@ public class PhrasesLevelManager : MonoBehaviour
         int batchStart = currentBatch * batchSize;
         int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
 
+        BuildCurrentBatchOrder(batchStart, batchEnd);
+
         for (int i = batchStart; i < batchEnd; i++)
         {
             GameObject target = Instantiate(targetPrefab, questionsGrid.transform);
@@ -228,20 +231,22 @@ public class PhrasesLevelManager : MonoBehaviour
             return;
         }
 
+        int contentIndex = GetCurrentBatchContentIndex();
+
         GameObject dragCard = Instantiate(dragPrefab, answersGrid.transform);
-        string word = selectedContent[currentIndex].content;
+        string word = selectedContent[contentIndex].content;
         DraggableCard draggable = dragCard.GetComponent<DraggableCard>();
         draggable.word = word;
 
 
-        dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
+        dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[contentIndex].content;
         // dragCard.GetComponentInChildren<Image>().sprite = null;
         dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
         dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
 
         Debug.Log("Spawned draggable for word: " + word);
-        // AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
-        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].content);
+        // AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].audio);
+        AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
     }
     // Called when a correct match is made
     public void OnCorrectMatch(GameObject targetPrefab)
@@ -387,6 +392,7 @@ public class PhrasesLevelManager : MonoBehaviour
         // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
         if (previousBatch != currentBatch)
         {
+            BuildCurrentBatchOrder(batchStart, batchEnd);
 
             ClearGrids();
             for (int i = batchStart; i < batchEnd; i++)
@@ -419,14 +425,47 @@ public class PhrasesLevelManager : MonoBehaviour
 
             }
         }
-        // AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
-        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].content);
+        int contentIndex = GetCurrentBatchContentIndex();
+        // AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].audio);
+        AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].content);
         // AudioManager.Instance.WaitForCurrentAudio();
+    }
+
+    void BuildCurrentBatchOrder(int batchStart, int batchEnd)
+    {
+        currentBatchOrder.Clear();
+        for (int i = batchStart; i < batchEnd; i++)
+        {
+            currentBatchOrder.Add(i);
+        }
+
+        // Fisher-Yates shuffle.
+        for (int i = currentBatchOrder.Count - 1; i > 0; i--)
+        {
+            int j = UnityEngine.Random.Range(0, i + 1);
+            int temp = currentBatchOrder[i];
+            currentBatchOrder[i] = currentBatchOrder[j];
+            currentBatchOrder[j] = temp;
+        }
+    }
+
+    int GetCurrentBatchContentIndex()
+    {
+        int batchStart = (currentIndex / batchSize) * batchSize;
+        int indexInBatch = currentIndex - batchStart;
+
+        if (indexInBatch >= 0 && indexInBatch < currentBatchOrder.Count)
+        {
+            return currentBatchOrder[indexInBatch];
+        }
+
+        return currentIndex;
     }
 
     void OnSelectCardClicked(string selectedWord, Button sourceButton)
     {
-        string correctWord = selectedContent[currentIndex].content;
+        int contentIndex = GetCurrentBatchContentIndex();
+        string correctWord = selectedContent[contentIndex].content;
         if (selectedWord == correctWord)
         {
             StartCoroutine(HandleCorrectSelection(selectedWord, sourceButton));
@@ -464,7 +503,10 @@ public class PhrasesLevelManager : MonoBehaviour
         yield return new WaitForSeconds(1.25f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
         yield return new WaitForSeconds(1.25f);
-        questionsGrid.transform.GetChild(currentIndex % batchSize).GetComponent<Button>().interactable = false;
+        if (sourceButton != null)
+        {
+            sourceButton.interactable = false;
+        }
         int previousBatch = currentIndex / batchSize;
         currentIndex++;
 

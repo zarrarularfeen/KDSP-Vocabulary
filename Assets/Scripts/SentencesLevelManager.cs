@@ -38,6 +38,7 @@ public class SentencesLevelManager : MonoBehaviour
     [SerializeField] private Sprite correctSprite;
     [SerializeField] private Sprite wrongSprite;
     private bool isNameAudioPlaying = false;
+    private readonly List<int> currentBatchOrder = new List<int>();
 
     private int currentIndex = 0;
 
@@ -208,6 +209,8 @@ public class SentencesLevelManager : MonoBehaviour
         int batchStart = currentBatch * batchSize;
         int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
 
+        BuildCurrentBatchOrder(batchStart, batchEnd);
+
         for (int i = batchStart; i < batchEnd; i++)
         {
             GameObject target = Instantiate(targetPrefab, questionsGrid.transform);
@@ -264,8 +267,10 @@ public class SentencesLevelManager : MonoBehaviour
             return;
         }
 
+        int contentIndex = GetCurrentBatchContentIndex();
+
         GameObject dragCard = Instantiate(dragPrefab, answersGrid.transform);
-        string word = selectedContent[currentIndex].content;
+        string word = selectedContent[contentIndex].content;
         DraggableCard draggable = dragCard.GetComponent<DraggableCard>();
         draggable.word = word;
 
@@ -273,29 +278,29 @@ public class SentencesLevelManager : MonoBehaviour
         {
             case SentencesLevelMode.MatchPicture:
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().text = "";
-                dragCard.GetComponentInChildren<Image>().sprite = selectedContent[currentIndex].image;
+                dragCard.GetComponentInChildren<Image>().sprite = selectedContent[contentIndex].image;
                 break;
 
             case SentencesLevelMode.MatchSightWord:
-                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[contentIndex].content;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
             case SentencesLevelMode.MatchSightWordPicture:
-                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[contentIndex].content;
                 // dragCard.GetComponentInChildren<Image>().sprite = null;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
             case SentencesLevelMode.MatchSentencesPicture:
-                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[currentIndex].content;
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[contentIndex].content;
                 // dragCard.GetComponentInChildren<Image>().sprite = null;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 60;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
         }
-        // AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].audio);
-        AudioManager.Instance.MatchWithFunction(selectedContent[currentIndex].content);
+        // AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].audio);
+        AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
         AudioManager.Instance.WaitForCurrentAudio();
         Debug.Log("Spawned draggable for word: " + word);
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
@@ -451,6 +456,7 @@ public class SentencesLevelManager : MonoBehaviour
 
         if (previousBatch != currentBatch)
         {
+            BuildCurrentBatchOrder(batchStart, batchEnd);
             ClearGrids();
 
             for (int i = batchStart; i < batchEnd; i++)
@@ -492,15 +498,47 @@ public class SentencesLevelManager : MonoBehaviour
                 }
             }
         }
-        // AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].audio);
-        AudioManager.Instance.ShowMeFunction(selectedContent[currentIndex].content);
+        int contentIndex = GetCurrentBatchContentIndex();
+        // AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].audio);
+        AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].content);
         // AudioManager.Instance.WaitForCurrentAudio();
+    }
+
+    void BuildCurrentBatchOrder(int batchStart, int batchEnd)
+    {
+        currentBatchOrder.Clear();
+        for (int i = batchStart; i < batchEnd; i++)
+        {
+            currentBatchOrder.Add(i);
+        }
+
+        for (int i = currentBatchOrder.Count - 1; i > 0; i--)
+        {
+            int j = UnityEngine.Random.Range(0, i + 1);
+            int temp = currentBatchOrder[i];
+            currentBatchOrder[i] = currentBatchOrder[j];
+            currentBatchOrder[j] = temp;
+        }
+    }
+
+    int GetCurrentBatchContentIndex()
+    {
+        int batchStart = (currentIndex / batchSize) * batchSize;
+        int indexInBatch = currentIndex - batchStart;
+
+        if (indexInBatch >= 0 && indexInBatch < currentBatchOrder.Count)
+        {
+            return currentBatchOrder[indexInBatch];
+        }
+
+        return currentIndex;
     }
 
 
     void OnSelectCardClicked(string selectedWord, Button sourceButton)
     {
-        string correctWord = selectedContent[currentIndex].content;
+        int contentIndex = GetCurrentBatchContentIndex();
+        string correctWord = selectedContent[contentIndex].content;
         if (selectedWord == correctWord)
         {
             StartCoroutine(HandleCorrectSelection(selectedWord, sourceButton));
@@ -538,7 +576,10 @@ public class SentencesLevelManager : MonoBehaviour
         yield return new WaitForSeconds(1.25f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
         yield return new WaitForSeconds(1.25f);
-        questionsGrid.transform.GetChild(currentIndex % batchSize).GetComponent<Button>().interactable = false;
+        if (sourceButton != null)
+        {
+            sourceButton.interactable = false;
+        }
         int previousBatch = currentIndex / batchSize;
         currentIndex++;
         if (currentIndex >= selectedContent.Count)
