@@ -28,6 +28,8 @@ public class PhrasesLevelManager : MonoBehaviour
     [SerializeField] private GameObject dragPrefab;
     [SerializeField] private Button selectButton;
     [SerializeField] private Button backButton;
+    [SerializeField] private Button NameNextButton;
+    [SerializeField] private Button NamePrevButton;
 
 
     private int currentIndex = 0;
@@ -168,9 +170,13 @@ public class PhrasesLevelManager : MonoBehaviour
     // Set up content for Name mode and Calls relevant methods
     void SetContentName()
     {
-        // Implement Select mode content setup
         ClearGrids();
-        SetNameCard(0);
+        currentIndex = 0;
+        NameNextButton.gameObject.SetActive(true);
+        NamePrevButton.gameObject.SetActive(true);
+        SetNameCard(currentIndex);
+        NameNextButton.onClick.AddListener(() => OnNameNextButtonClicked());
+        NamePrevButton.onClick.AddListener(() => OnNamePrevButtonClicked());
 
     }
     // Spawn next batch of 4 words in questions grid for Matching mode
@@ -354,35 +360,28 @@ public class PhrasesLevelManager : MonoBehaviour
 
     void OnNameCardClicked(int index, Button sourceButton)
     {
-        if (isNameAudioPlaying) return;
         Debug.Log("Name card clicked: " + selectedContent[index].content);
-        StartCoroutine(PlayNameThenAdvance(index, sourceButton));
+        AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
     }
 
-    IEnumerator PlayNameThenAdvance(int index, Button sourceButton)
+    void OnNameNextButtonClicked()
     {
-        isNameAudioPlaying = true;
-        if (sourceButton != null) sourceButton.interactable = false;
-
-
-        // AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
-        AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
-
-        // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
-        float waitTime = 2.5f;
-        yield return new WaitForSeconds(waitTime);
-
-        isNameAudioPlaying = false;
-        if (index + 1 < selectedContent.Count)
+        currentIndex++;
+        if (currentIndex >= selectedContent.Count)
         {
-            SetNameCard(index + 1);
+            currentIndex = 0; // wrap around to the first card
         }
-        else
+        SetNameCard(currentIndex);
+    }
+
+    void OnNamePrevButtonClicked()
+    {
+        currentIndex--;
+        if (currentIndex < 0)
         {
-            Debug.Log("All Name cards shown!");
-            selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Phrases", 1.5f));
+            currentIndex = selectedContent.Count - 1; // wrap around to the last card
         }
+        SetNameCard(currentIndex);
     }
 
     void SpawnSelectButtons(int batchStart, int batchEnd, int previousBatch, int currentBatch)

@@ -197,8 +197,14 @@ public class WordsDisplay : MonoBehaviour
                     Debug.Log("VocabularyMatching.selectedContent.Count = " + VocabularyMatching.selectedContent.Count);
                     return;
                 }
-
-                SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching);
+                if (VocabularyMatching.currentMode != VocabularyMode.Name)
+                {
+                    SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching);
+                }
+                else
+                {
+                    SceneController.Instance.OpenLevelSelect("VocabularyMatching");
+                }
             }
             if (currentGameMode == GameMode.Phrases)
             {
@@ -207,8 +213,14 @@ public class WordsDisplay : MonoBehaviour
                     Debug.Log("No content selected.");
                     return;
                 }
-
-                SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel);
+                if(PhrasesLevelManager.currentMode != PhrasesLevelMode.ReadSightWord)
+                {
+                    SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel);
+                }
+                else
+                {
+                    SceneController.Instance.OpenLevelSelect("PhrasesLevel");
+                }
             }
         });
     }
