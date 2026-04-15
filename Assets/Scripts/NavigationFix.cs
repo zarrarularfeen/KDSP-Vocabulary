@@ -14,19 +14,18 @@ public class NavigationFix : MonoBehaviour
 
     void Start()
     {
-        OnNextButtonClicked(NextButton);
+        NextButton.onClick.AddListener(() => OnNextButtonClicked(NextButton));
     }
 
     void OnNextButtonClicked(Button button)
     {
         if (SentencesLevelManager.currentMode == SentencesLevelMode.NamePicture || SentencesLevelManager.currentMode == SentencesLevelMode.ReadSightWord || SentencesLevelManager.currentMode == SentencesLevelMode.ReadSentences)
                 {
-                    SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching);
+                    SceneController.Instance.OpenLevelSelect("SentencesLevel");
                 }
                 else
                 {
-                    SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching);
-                    SceneController.Instance.OpenLevelSelect("VocabularyMatching");
+                    SceneController.Instance.OpenBatchSizeSetting(Scenes.SentencesLevel);   
                 }
     }
 }

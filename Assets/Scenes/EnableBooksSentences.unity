@@ -743,31 +743,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 185757225}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1024637645}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: OpenLevelSelect
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: BatchSizeSet
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1024637645}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: SetNextSceneBatchSizeSettingSentences
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &185757225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3852,7 +3828,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 850871700}
   m_Direction: 2
   m_Value: 1.0000001
-  m_Size: 0.14124295
+  m_Size: 0.14124273
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5611,6 +5587,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506991784}
   m_CullTransparentMesh: 1
+--- !u!1 &1523868444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1523868446}
+  - component: {fileID: 1523868445}
+  m_Layer: 0
+  m_Name: NavigationFix
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1523868445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523868444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94996cc48548cfb4097480dc167d4166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextButton: {fileID: 185757224}
+--- !u!4 &1523868446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523868444}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544289539
 GameObject:
   m_ObjectHideFlags: 0
@@ -7491,7 +7512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 499.9994}
+  m_AnchoredPosition: {x: 0, y: 499.99933}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1870301399
@@ -8891,3 +8912,4 @@ SceneRoots:
   - {fileID: 1466750085}
   - {fileID: 699405846}
   - {fileID: 1024637646}
+  - {fileID: 1523868446}
