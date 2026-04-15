@@ -93,7 +93,7 @@ public class PhrasesLevelManager : MonoBehaviour
                 questionsGrid.spacing = new Vector2(100, 0);
                 break;
             case 4:
-                questionsGrid.cellSize = new Vector2(440, 440);
+                questionsGrid.cellSize = new Vector2(410, 410);
                 questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 280);
 
                 break;
@@ -221,7 +221,7 @@ public class PhrasesLevelManager : MonoBehaviour
                     childRect.sizeDelta = new Vector2(1000, 1000);
                     break;
                 case 4:
-                    childRect.sizeDelta = new Vector2(840, 800);
+                    childRect.sizeDelta = new Vector2(800, 760);
                     break;
             }
 
@@ -337,7 +337,7 @@ public class PhrasesLevelManager : MonoBehaviour
 
         selectCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[index].content;
         // selectCard.GetComponentInChildren<Image>().sprite = null;
-        selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 70;
+        selectCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
         selectCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
 
         selectCard.onClick.AddListener(() => OnNameCardClicked(index, selectCard));
@@ -352,7 +352,7 @@ public class PhrasesLevelManager : MonoBehaviour
                 childRect.sizeDelta = new Vector2(1000, 1000);
                 break;
             case 4:
-                childRect.sizeDelta = new Vector2(840, 800);
+                childRect.sizeDelta = new Vector2(800, 760);
                 break;
         }
 
@@ -418,7 +418,7 @@ public class PhrasesLevelManager : MonoBehaviour
                         childRect.sizeDelta = new Vector2(1000, 1000);
                         break;
                     case 4:
-                        childRect.sizeDelta = new Vector2(840, 800);
+                        childRect.sizeDelta = new Vector2(800, 760);
                         break;
                 }
 

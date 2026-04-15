@@ -68,7 +68,7 @@ public class VocabularyMatching : MonoBehaviour
                 questionsGrid.spacing = new Vector2(100, 0);
                 break;
             case 4:
-                questionsGrid.cellSize = new Vector2(450, 450);
+                questionsGrid.cellSize = new Vector2(420, 420);
                 questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 280);
                 break;
         }
@@ -178,7 +178,7 @@ public class VocabularyMatching : MonoBehaviour
                     childRect.sizeDelta = new Vector2(1000, 1000);
                     break;
                 case 4:
-                    childRect.sizeDelta = new Vector2(840, 800);
+                    childRect.sizeDelta = new Vector2(800, 760);
                     break;
             }
 
@@ -304,7 +304,7 @@ public class VocabularyMatching : MonoBehaviour
                 childRect.sizeDelta = new Vector2(1000, 1000);
                 break;
             case 4:
-                childRect.sizeDelta = new Vector2(840, 800);
+                childRect.sizeDelta = new Vector2(800, 760);
                 break;
         }
         selectCard.onClick.AddListener(() => OnNameCardClicked(index, selectCard));
@@ -391,7 +391,7 @@ public class VocabularyMatching : MonoBehaviour
                         childRect.sizeDelta = new Vector2(1000, 1000);
                         break;
                     case 4:
-                        childRect.sizeDelta = new Vector2(840, 800);
+                        childRect.sizeDelta = new Vector2(800, 760);
                         break;
                 }
             }

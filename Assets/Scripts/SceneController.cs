@@ -89,6 +89,7 @@ public class SceneController : MonoBehaviour
     public void OpenLevelSelect(string gameName)
     {
         
+        
         currentScene = (Scenes)System.Enum.Parse(typeof(Scenes), gameName);
         // isFirstLaunch = false;
         // StartCoroutine(LoadlevelTransition());

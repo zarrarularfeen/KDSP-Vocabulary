@@ -109,7 +109,7 @@ public class SentencesLevelManager : MonoBehaviour
                 questionsGrid.spacing = new Vector2(100, 0);
                 break;
             case 4:
-                questionsGrid.cellSize = new Vector2(440, 440);
+                questionsGrid.cellSize = new Vector2(410, 410);
                 questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 280);
                 break;
 
@@ -200,6 +200,14 @@ public class SentencesLevelManager : MonoBehaviour
         currentIndex = 0;
         NameNextButton.gameObject.SetActive(true);
         NamePrevButton.gameObject.SetActive(true);
+
+        if (currentMode == SentencesLevelMode.NamePicture ||
+            currentMode == SentencesLevelMode.ReadSightWord ||
+            currentMode == SentencesLevelMode.ReadSentences)
+        {
+            questionsGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 150);
+        }
+
         SetNameCard(currentIndex);
         NameNextButton.onClick.AddListener(() => OnNameNextButtonClicked());
         NamePrevButton.onClick.AddListener(() => OnNamePrevButtonClicked());
@@ -256,7 +264,7 @@ public class SentencesLevelManager : MonoBehaviour
                     childRect.sizeDelta = new Vector2(1000, 1000);
                     break;
                 case 4:
-                    childRect.sizeDelta = new Vector2(840, 800);
+                    childRect.sizeDelta = new Vector2(800, 760);
                     break;
             }
 
@@ -419,7 +427,7 @@ public class SentencesLevelManager : MonoBehaviour
                 childRect.sizeDelta = new Vector2(1000, 1000);
                 break;
             case 4:
-                childRect.sizeDelta = new Vector2(840, 800);
+                childRect.sizeDelta = new Vector2(800, 760);
                 break;
         }
     }
@@ -493,7 +501,7 @@ public class SentencesLevelManager : MonoBehaviour
                         childRect.sizeDelta = new Vector2(1000, 1000);
                         break;
                     case 4:
-                        childRect.sizeDelta = new Vector2(840, 800);
+                        childRect.sizeDelta = new Vector2(800, 760);
                         break;
                 }
             }
