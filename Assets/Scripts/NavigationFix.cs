@@ -10,7 +10,7 @@ using Unity.VisualScripting;
 using UnityEngine.InputSystem.LowLevel;
 public class NavigationFix : MonoBehaviour
 {
-   [SerializeField] private Button NextButton;
+    [SerializeField] private Button NextButton;
 
     void Start()
     {
@@ -19,13 +19,14 @@ public class NavigationFix : MonoBehaviour
 
     void OnNextButtonClicked(Button button)
     {
-        if (SentencesLevelManager.currentMode == SentencesLevelMode.NamePicture || SentencesLevelManager.currentMode == SentencesLevelMode.ReadSightWord || SentencesLevelManager.currentMode == SentencesLevelMode.ReadSentences)
-                {
-                    SceneController.Instance.OpenLevelSelect("SentencesLevel");
-                }
-                else
-                {
-                    SceneController.Instance.OpenBatchSizeSetting(Scenes.SentencesLevel);   
-                }
+        if (SentencesLevelManager.currentMode == SentencesLevelMode.NamePicture || SentencesLevelManager.currentMode == SentencesLevelMode.ReadSightWord || SentencesLevelManager.currentMode == SentencesLevelMode.ReadSentences || SentencesLevelManager.currentMode == SentencesLevelMode.BuildSentences)
+        {
+            SceneController.Instance.OpenLevelSelect("SentencesLevel");
+        }
+        else
+        {
+            SceneController.Instance.OpenBatchSizeSetting(Scenes.SentencesLevel);
+        }
+
     }
 }

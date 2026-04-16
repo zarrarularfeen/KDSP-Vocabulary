@@ -42,7 +42,6 @@ public class WordsDisplay : MonoBehaviour
     [SerializeField] private Sprite deselectedImage;
     [SerializeField] private Sprite selectedImage;
 
-
     void Awake()
     {
         // Ensure only one instance exists
@@ -215,7 +214,7 @@ public class WordsDisplay : MonoBehaviour
                     Debug.Log("No content selected.");
                     return;
                 }
-                if(PhrasesLevelManager.currentMode != PhrasesLevelMode.ReadSightWord)
+                if (PhrasesLevelManager.currentMode != PhrasesLevelMode.ReadSightWord)
                 {
                     SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel);
                 }

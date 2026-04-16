@@ -115,10 +115,10 @@ public class SettingsMenu : MonoBehaviour
             SetBool("SentencesLevelPRS", true);
         }
 
-        if (!PlayerPrefs.HasKey("SentencesLevelBS"))
-        {
-            PlayerPrefs.SetInt("SentencesLevelBS", 2);
-        }
+        // if (!PlayerPrefs.HasKey("SentencesLevelBS"))
+        // {
+        //     PlayerPrefs.SetInt("SentencesLevelBS", 2);
+        // }
 
         PlayerPrefs.Save(); // Save all changes
     }

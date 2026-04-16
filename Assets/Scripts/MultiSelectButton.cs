@@ -30,11 +30,15 @@ public class MultiSelectButton : MonoBehaviour
     [SerializeField] private Sprite deselectedImage;
     [SerializeField] private Sprite selectedImage;
     [SerializeField] private Managers selectedManager;
+    [SerializeField] private Button nextButton;
+    private int enabledCount = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         SetAllDisabled();
+        nextButton.interactable = false;
+        enabledCount = 0;
     }
 
     // Update is called once per frame
@@ -55,10 +59,28 @@ public class MultiSelectButton : MonoBehaviour
             gameObj = buttonsList[i].gameObj
         };
         buttonsList[i] = entry;
+
+        if (enabledCount > 0)
+        {
+            nextButton.interactable = true;
+        }
+        else
+        {
+            nextButton.interactable = false;
+        }
     }
 
     public void SetEnable(Books book, bool enabled)
     {
+        if (enabled)
+        {
+            enabledCount++;
+        }
+        else
+        {
+            enabledCount--;
+        }
+
         switch (selectedManager)
         {
             case Managers.ReadingBook:

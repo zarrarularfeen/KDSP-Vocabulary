@@ -1876,6 +1876,7 @@ MonoBehaviour:
   deselectedImage: {fileID: 3987179522163380578, guid: 3d190e2a9fa879d44af144d1b5b6988b, type: 3}
   selectedImage: {fileID: -2726024650296408948, guid: 651093b945b6e854b95a93b775d4dd58, type: 3}
   selectedManager: 0
+  nextButton: {fileID: 185757224}
 --- !u!1 &1277428750
 GameObject:
   m_ObjectHideFlags: 0
