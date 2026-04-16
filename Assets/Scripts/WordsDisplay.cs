@@ -32,6 +32,7 @@ public class WordsDisplay : MonoBehaviour
     [SerializeField] private Button wordButton;
     [SerializeField] private Button NextButton;
     [SerializeField] private Button BackButton;
+    [SerializeField] private Button SelectAllButton;
     [SerializeField] private GridLayoutGroup wordsGrid;
     public static WordsDisplayMode currentMode;
     public static GameMode currentGameMode;
@@ -79,6 +80,7 @@ public class WordsDisplay : MonoBehaviour
         DisplayWords();
         OnNextButtonClicked(NextButton);
         OnBackButtonClicked(BackButton);
+        OnSelectAllButtonClicked(SelectAllButton);
     }
     // Update is called once per frame
     public static void SetWordsDisplayMode(WordsDisplayMode mode)
@@ -240,6 +242,133 @@ public class WordsDisplay : MonoBehaviour
             backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("EnableBooksPhrases"));
         }
 
+    }
+
+    void OnSelectAllButtonClicked(Button selectAllButton)
+    {
+        if (selectAllButton == null)
+        {
+            Debug.LogWarning("SelectAllButton is not assigned in WordsDisplay.");
+            return;
+        }
+
+        selectAllButton.onClick.RemoveAllListeners();
+        selectAllButton.onClick.AddListener(() =>
+        {
+            if (currentMode == WordsDisplayMode.Phrases)
+            {
+                bool allSelected = true;
+                foreach (ContextListEntry entry in contextList)
+                {
+                    if (!PhrasesLevelManager.selectedContextList.Contains(entry))
+                    {
+                        allSelected = false;
+                        break;
+                    }
+                }
+
+                if (allSelected)
+                {
+                    PhrasesLevelManager.selectedContextList.Clear();
+
+                    foreach (ContextListEntry entry in contextList)
+                    {
+                        SpriteSwap(entry.context, false);
+                    }
+
+                    Debug.Log("All phrase contexts unselected.");
+                    return;
+                }
+
+                foreach (ContextListEntry entry in contextList)
+                {
+                    if (!PhrasesLevelManager.selectedContextList.Contains(entry))
+                    {
+                        PhrasesLevelManager.selectedContextList.Add(entry);
+                    }
+
+                    SpriteSwap(entry.context, true);
+                }
+
+                Debug.Log("All phrase contexts selected.");
+                return;
+            }
+
+            if (currentGameMode == GameMode.Vocabulary)
+            {
+                bool allSelected = true;
+                foreach (ContentPictureAudioTrio pair in content)
+                {
+                    if (!VocabularyMatching.selectedContent.Contains(pair))
+                    {
+                        allSelected = false;
+                        break;
+                    }
+                }
+
+                if (allSelected)
+                {
+                    VocabularyMatching.selectedContent.Clear();
+
+                    foreach (ContentPictureAudioTrio pair in content)
+                    {
+                        SpriteSwap(pair.content, false);
+                    }
+
+                    Debug.Log("All vocabulary content unselected.");
+                    return;
+                }
+
+                foreach (ContentPictureAudioTrio pair in content)
+                {
+                    if (!VocabularyMatching.selectedContent.Contains(pair))
+                    {
+                        VocabularyMatching.selectedContent.Add(pair);
+                    }
+
+                    SpriteSwap(pair.content, true);
+                }
+
+                Debug.Log("All vocabulary content selected.");
+            }
+            else if (currentGameMode == GameMode.Phrases)
+            {
+                bool allSelected = true;
+                foreach (ContentPictureAudioTrio pair in content)
+                {
+                    if (!PhrasesLevelManager.selectedContent.Contains(pair))
+                    {
+                        allSelected = false;
+                        break;
+                    }
+                }
+
+                if (allSelected)
+                {
+                    PhrasesLevelManager.selectedContent.Clear();
+
+                    foreach (ContentPictureAudioTrio pair in content)
+                    {
+                        SpriteSwap(pair.content, false);
+                    }
+
+                    Debug.Log("All phrase content unselected.");
+                    return;
+                }
+
+                foreach (ContentPictureAudioTrio pair in content)
+                {
+                    if (!PhrasesLevelManager.selectedContent.Contains(pair))
+                    {
+                        PhrasesLevelManager.selectedContent.Add(pair);
+                    }
+
+                    SpriteSwap(pair.content, true);
+                }
+
+                Debug.Log("All phrase content selected.");
+            }
+        });
     }
 
     public void SpriteSwap(string name, bool enabled)
