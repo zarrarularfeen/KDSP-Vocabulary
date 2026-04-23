@@ -724,7 +724,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Here is a crayon.
-        image: {fileID: 0}
+        image: {fileID: -4653444019496961381, guid: ba84a97521aed8e47a4aa7dfc52fe672, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1473,7 +1473,7 @@ MonoBehaviour:
       - positions: 000000000100000002000000
       - positions: 020000000300000004000000
       - positions: 01000000020000000300000004000000
-    - sightWord: book
+    - sightWord: boy
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is reading a book.
@@ -1483,7 +1483,7 @@ MonoBehaviour:
       - positions: 000000000100000002000000
       - positions: 020000000300000004000000
       - positions: 01000000020000000300000004000000
-    - sightWord: book
+    - sightWord: lady
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is reading a book.
@@ -1493,7 +1493,7 @@ MonoBehaviour:
       - positions: 0000000001000000
       - positions: 00000000010000000200000003000000
       - positions: 0100000003000000
-    - sightWord: book
+    - sightWord: man
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is reading a book.
@@ -1513,7 +1513,7 @@ MonoBehaviour:
       - positions: 000000000100000002000000
       - positions: 020000000300000004000000
       - positions: 01000000020000000300000004000000
-    - sightWord: horse
+    - sightWord: girl
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The lady is brushing a horse.
@@ -1523,7 +1523,7 @@ MonoBehaviour:
       - positions: 000000000100000002000000
       - positions: 020000000300000004000000
       - positions: 01000000020000000300000004000000
-    - sightWord: horse
+    - sightWord: brushing
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is brushing a horse.
@@ -1533,7 +1533,7 @@ MonoBehaviour:
       - positions: 0100000002000000
       - positions: 00000000010000000200000003000000
       - positions: 0100000003000000
-    - sightWord: horse
+    - sightWord: reading
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is brushing a horse.
@@ -1553,7 +1553,7 @@ MonoBehaviour:
       - positions: 020000000300000004000000
       - positions: 00000000010000000200000003000000
       - positions: 00000000010000000200000003000000
-    - sightWord: car
+    - sightWord: washing
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The man is washing the car.
