@@ -363,11 +363,11 @@ MonoBehaviour:
       - positions: 02000000
       - positions: 000000000100000002000000
     - sightWord: milk
-      sightWordAudio: {fileID: 8300000, guid: 4143152d9853a354e95940044f159d77, type: 3}
+      sightWordAudio: {fileID: 8300000, guid: 6218afd66beb55949a5d9d5f41a409d8, type: 3}
       CPAT:
         content: I like milk
-        image: {fileID: 1653849967530367779, guid: 2608996a35d13a94ebde35f272307ef4, type: 3}
-        audio: {fileID: 8300000, guid: 0d8a49c9af3476d4ea01db0ac4e2f3c5, type: 3}
+        image: {fileID: 3685926789756936543, guid: 20e15ea3c6513384b8f625d60b1d3514, type: 3}
+        audio: {fileID: 8300000, guid: 0c3da8a18d8850a48a2f4c8dbbd0a36d, type: 3}
       blankPositions:
       - positions: 0000000001000000
       - positions: 02000000

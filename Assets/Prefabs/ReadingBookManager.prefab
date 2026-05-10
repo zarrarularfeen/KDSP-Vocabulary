@@ -78,7 +78,7 @@ MonoBehaviour:
     - content: biscuit/cookie
       image: {fileID: -8768244776371164980, guid: ccd96dd1949a77245940851bf4829f1a, type: 3}
       audio: {fileID: 8300000, guid: a1e5cea3bdbb33448ac17a8e1523b6c0, type: 3}
-    - content: block/bricks
+    - content: blocks/bricks
       image: {fileID: 5774514579076618161, guid: c1b4834bd2b58a94291d6923f8ba0f16, type: 3}
       audio: {fileID: 8300000, guid: 5f8e3cca8cedd5c4fb49af0d7d738832, type: 3}
     - content: book
