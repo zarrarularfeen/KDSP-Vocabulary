@@ -503,7 +503,7 @@ MonoBehaviour:
     enabled: 0
     sightWordList:
     - content: baby
-      image: {fileID: 5328332788402992666, guid: d7eee1b86740a6c4ca0dfef5d4074b30, type: 3}
+      image: {fileID: 5328332788402992666, guid: 9a20f0c79b0ca6b41a3070d43f73c3a8, type: 3}
       audio: {fileID: 8300000, guid: 86472444efbcc4648ae3dff058b150b7, type: 3}
     - content: bath
       image: {fileID: -557185414492787049, guid: 226bc722e89f2ca438f578cba47a171a, type: 3}

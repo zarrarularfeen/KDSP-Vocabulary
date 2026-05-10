@@ -560,7 +560,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 55d2b59e048612d48bb94cfd3f3c807d, type: 3}
       CPAT:
         content: this is a bath
-        image: {fileID: -8817426130257391540, guid: ddbd62f9beb006444a6dfe28646a98a4, type: 3}
+        image: {fileID: 8340626006219238224, guid: 78ce24589bdcadb45bdf9619ebb0a73f, type: 3}
         audio: {fileID: 8300000, guid: b78811f8f4581ce42ad7c80efaee11b5, type: 3}
       blankPositions:
       - positions: 0000000002000000
@@ -570,7 +570,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 7488f8d27d760b9408378e40de8fb43c, type: 3}
       CPAT:
         content: this is a bathroom
-        image: {fileID: -7643109652412921367, guid: ee9843e0a4461f544ad0038dd320910a, type: 3}
+        image: {fileID: 5526748263384793396, guid: 54465af43be052b46bae4993b10a290e, type: 3}
         audio: {fileID: 8300000, guid: 27763827ca480d443a86f36a51648169, type: 3}
       blankPositions:
       - positions: 0200000003000000
@@ -580,7 +580,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 4143152d9853a354e95940044f159d77, type: 3}
       CPAT:
         content: this is a bed
-        image: {fileID: 1653849967530367779, guid: 2608996a35d13a94ebde35f272307ef4, type: 3}
+        image: {fileID: -3095689889018695852, guid: 09fa428d890dc43488c1996ac56bcae6, type: 3}
         audio: {fileID: 8300000, guid: 0d8a49c9af3476d4ea01db0ac4e2f3c5, type: 3}
       blankPositions:
       - positions: 0200000003000000
@@ -774,7 +774,7 @@ MonoBehaviour:
       - positions: 0100000002000000
       - positions: 000000000100000002000000
       - positions: 010000000200000003000000
-    - sightWord: reading
+    - sightWord: girls
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girls are reading.
@@ -784,7 +784,7 @@ MonoBehaviour:
       - positions: 0100000002000000
       - positions: 0000000001000000
       - positions: 010000000200000003000000
-    - sightWord: reading
+    - sightWord: boy
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is reading.
@@ -794,7 +794,7 @@ MonoBehaviour:
       - positions: 0100000002000000
       - positions: 0000000001000000
       - positions: 00000000010000000200000003000000
-    - sightWord: reading
+    - sightWord: boys
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boys are reading.
@@ -814,7 +814,7 @@ MonoBehaviour:
       - positions: 0000000002000000
       - positions: 000000000200000003000000
       - positions: 010000000200000003000000
-    - sightWord: walking
+    - sightWord: girl
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girls are walking.
@@ -834,7 +834,7 @@ MonoBehaviour:
       - positions: 000000000100000002000000
       - positions: 0100000002000000
       - positions: 00000000010000000200000003000000
-    - sightWord: building
+    - sightWord: boys
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boys are building.
@@ -854,7 +854,7 @@ MonoBehaviour:
       - positions: 0100000003000000
       - positions: 0000000002000000
       - positions: 00000000010000000200000003000000
-    - sightWord: drawing
+    - sightWord: girls
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girls are drawing.
@@ -958,7 +958,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0000000001000000
       - positions: 000000000100000002000000
-  - book: 14
+  - book: 15
     enabled: 0
     sentenceContext: 10. What do you like doing?
     contentList:
@@ -2168,7 +2168,7 @@ MonoBehaviour:
       - positions: 000000000100000002000000
   - book: 27
     enabled: 0
-    sentenceContext: 22. Good night Esha
+    sentenceContext: 22. Good night Emma
     contentList:
     - sightWord: playing
       sightWordAudio: {fileID: 0}
