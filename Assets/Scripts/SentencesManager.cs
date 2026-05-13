@@ -31,12 +31,19 @@ public struct SBEntry
     public List<BlankPositionGroup> blankPositions;
 }
 
+public struct SentenceContextContentPair
+{
+    public string context;
+    public SBEntry content;
+}
+
 public class SentencesManager : MonoBehaviour
 {
     public static SentencesManager Instance { get; private set; }
     [SerializeField] private List<SentencesBookInformation> booksList = new List<SentencesBookInformation>();
     private List<ContentPictureAudioTrio> sightWords = new List<ContentPictureAudioTrio>();
     private List<SBEntry> sbList = new List<SBEntry>();
+    private List<SentenceContextContentPair> sbcList = new List<SentenceContextContentPair>();
     private List<ContentPictureAudioTrio> displayBook = new List<ContentPictureAudioTrio>();
 
     void Awake()
@@ -76,6 +83,27 @@ public class SentencesManager : MonoBehaviour
         }
 
         return sbList;
+    }
+
+    public List<SentenceContextContentPair> GetCurrentEnabledDictionarySentencesWithContext()
+    {
+        sbcList.Clear();
+
+        foreach (SentencesBookInformation book in booksList)
+        {
+            if (book.enabled)
+            {
+                foreach (SBEntry b in book.contentList)
+                {
+                    SentenceContextContentPair temp;
+                    temp.context = book.sentenceContext;
+                    temp.content = b;
+                    sbcList.Add(temp);
+                }
+            }
+        }
+
+        return sbcList;
     }
 
     public List<ContentPictureAudioTrio> GetCurrentEnabledDictionarySentencesForReadingBook()

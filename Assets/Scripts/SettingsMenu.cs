@@ -72,23 +72,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetupKeysAndInitialize()
     {
-        if (SceneController.currentScene == Scenes.SentencesLevel)
-        {
-            if (currentPRSKey != "SentencesLevelPRS")
-            {
-                currentPRSKey = "SentencesLevelPRS";
-                SetPRSStaticVariable();
-            }
 
-            // if (currentConditionSliderKey != "SentencesLevelBS")
-            // {
-            //     currentConditionSliderKey = "SentencesLevelBS";
-            //     SetConditionSliderStaticVariable();
-            // }
-
-            InitializePRSToggle();
-            // InitializeConditionSlider();
-        }
     }
 
     public void InitializePlayerPrefs()

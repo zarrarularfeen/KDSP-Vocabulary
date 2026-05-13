@@ -25,7 +25,9 @@ public enum SentencesLevelMode
 public class SentencesLevelManager : MonoBehaviour
 {
     public static List<SBEntry> selectedSentences = new List<SBEntry>();
+    public static List<SentenceContextContentPair> selectedSentencesWithContext = new List<SentenceContextContentPair>();
     public static List<ContentPictureAudioTrio> selectedContent = new List<ContentPictureAudioTrio>();
+    public static List<SentenceContextContentPair> selectedContentWithContext = new List<SentenceContextContentPair>();
     [SerializeField] private GridLayoutGroup questionsGrid;
     [SerializeField] private GridLayoutGroup answersGrid;
     [SerializeField] private GameObject targetPrefab;
@@ -66,16 +68,16 @@ public class SentencesLevelManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        prs = SettingsMenu.GetBool("SentencesLevelPRS", true);
-
         selectedSentences = SentencesManager.Instance.GetCurrentEnabledDictionarySentences();
+        selectedSentencesWithContext = SentencesManager.Instance.GetCurrentEnabledDictionarySentencesWithContext();
 
         if (currentMode == SentencesLevelMode.MatchSentencesPicture || currentMode == SentencesLevelMode.ReadSentences)
         {
             selectedContent.Clear();
-            foreach (SBEntry entry in selectedSentences)
+            foreach (SentenceContextContentPair entry in selectedSentencesWithContext)
             {
-                selectedContent.Add(entry.CPAT);
+                selectedContent.Add(entry.content.CPAT);
+                selectedContentWithContext.Add(entry);
             }
         }
         else
@@ -436,7 +438,7 @@ public class SentencesLevelManager : MonoBehaviour
     void OnNameCardClicked(int index, Button sourceButton)
     {
         Debug.Log("Name card clicked: " + selectedContent[index].content);
-        AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
+        AudioManager.Instance.SentencesAudioFunction(selectedContentWithContext[index].context, selectedContentWithContext[index].content.CPAT.content);
     }
 
     void OnNameNextButtonClicked()
@@ -687,15 +689,15 @@ public class SentencesLevelManager : MonoBehaviour
             Debug.Log(pair.CPAT.content);
         }
 
-        foreach (SBEntry entry in selectedSentences)
+        foreach (SentenceContextContentPair entry in selectedSentencesWithContext)
         {
-            Debug.Log("Current Sentence: " + entry.CPAT.content);
+            Debug.Log("Current Sentence: " + entry.content.CPAT.content);
 
             FITBoutput.Clear();
-            FITBcontentList = entry.CPAT.content.Split(' ');
+            FITBcontentList = entry.content.CPAT.content.Split(' ');
             currFITBOutputListIndex = 0;
 
-            foreach (BlankPositionGroup group in entry.blankPositions)
+            foreach (BlankPositionGroup group in entry.content.blankPositions)
             {
                 List<string> fitb = new List<string>();
 
@@ -710,12 +712,12 @@ public class SentencesLevelManager : MonoBehaviour
             foreach (List<string> lst in FITBoutput)
             {
                 FITBCheck = false;
-                SetFITBCards(lst, entry, FITBcontentList);
+                SetFITBCards(lst, entry.content, FITBcontentList);
                 currIndex = 0;
                 // ✅ Proper wait
                 yield return new WaitUntil(() => FITBCheck);
                 // AudioManager.Instance.PlayGivenAudioNonDelayed(entry.CPAT.audio);
-                AudioManager.Instance.SentencesAudioFunction(entry.CPAT.content, entry.CPAT.content);
+                AudioManager.Instance.SentencesAudioFunction(entry.context, entry.content.CPAT.content);
                 yield return new WaitForSeconds(4f);
             }
         }
