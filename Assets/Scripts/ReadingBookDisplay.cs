@@ -121,7 +121,7 @@ public class ReadingBookDisplay : MonoBehaviour
         switch (currentBookMode)
         {
             case ReadingBookMode.Vocabulary:
-                content = ReadingBook.Instance.GetRequestedBook(requestedBook);
+                content = ReadingBook.Instance.GetCurrentEnabledDictionary();
                 break;
 
             case ReadingBookMode.Phrases:
