@@ -822,8 +822,7 @@ MonoBehaviour:
   PhrasesGridMSB: {fileID: 0}
   SentencesGridMSB: {fileID: 0}
   NextSceneButton: {fileID: 0}
-  PreviousSceneButtonMultiSelect: {fileID: 0}
-  PreviousSceneButton: {fileID: 0}
+  PreviousSceneButton: {fileID: 1962635841}
   SightWordsButton: {fileID: 0}
   PhrasesButton: {fileID: 0}
   SentencesButton: {fileID: 0}
@@ -2069,19 +2068,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1962635844}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 462870383}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: OpenLevelSelect
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ReadingBookDisplayBookSelection
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1962635844
 MonoBehaviour:
   m_ObjectHideFlags: 0
