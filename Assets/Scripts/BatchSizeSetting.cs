@@ -28,6 +28,9 @@ public class BatchSizeSetting : MonoBehaviour
     {
         slider.GetComponentInChildren<Slider>().onValueChanged.AddListener(SliderValueChanged);
         nextButton.onClick.AddListener(NextButton);
+        VocabularyMatching.batchSize = 2;
+        PhrasesLevelManager.batchSize = 2;
+        SentencesLevelManager.batchSize = 2;
     }
 
     public void SetNextScene(Scenes scene)
