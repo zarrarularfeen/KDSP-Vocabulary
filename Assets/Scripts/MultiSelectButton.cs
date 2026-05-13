@@ -26,12 +26,15 @@ public struct MSBButton
 
 public class MultiSelectButton : MonoBehaviour
 {
+   
     [SerializeField] private List<MSBButton> buttonsList = new List<MSBButton>();
     [SerializeField] private Sprite deselectedImage;
     [SerializeField] private Sprite selectedImage;
     [SerializeField] private Managers selectedManager;
     [SerializeField] private Button nextButton;
     private int enabledCount = 0;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -116,7 +119,6 @@ public class MultiSelectButton : MonoBehaviour
         for (int i = 0; i < buttonsList.Count; i++)
         {
             SetEnable(buttonsList[i].book, false);
-
             MSBButton entry = new MSBButton
             {
                 enabled = false,

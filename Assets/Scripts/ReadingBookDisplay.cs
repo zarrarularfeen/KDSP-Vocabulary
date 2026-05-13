@@ -60,8 +60,8 @@ public class ReadingBookDisplay : MonoBehaviour
         if (SceneController.currentScene == Scenes.ReadingBookDisplayBookSelection)
         {
             
-            PreviousSceneButton.SetActive(true);
-            PreviousSceneButton.GetComponent<Button>().onClick.AddListener(() => { SceneController.Instance.OpenLevelSelect("ReadingBookDisplaySelection"); });
+            // PreviousSceneButton.SetActive(true);
+            // PreviousSceneButton.GetComponent<Button>().onClick.AddListener(() => { SceneController.Instance.OpenLevelSelect("ReadingBookDisplaySelection"); });
             if (currentBookMode == ReadingBookMode.Vocabulary)
             {
                 VocabularyGrid.SetActive(true);
@@ -74,7 +74,7 @@ public class ReadingBookDisplay : MonoBehaviour
                 
                 SightWordsButton.SetActive(true);
                 PhrasesButton.SetActive(true);
-                PreviousSceneButton.SetActive(true);
+                // PreviousSceneButton.SetActive(true);
                 SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
                 PhrasesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
             }
@@ -103,45 +103,46 @@ public class ReadingBookDisplay : MonoBehaviour
     {
 
     }
-    public void PreviousMultiSelectButtonClicked()
-    {
-        if(currentBookMode == ReadingBookMode.Phrases && (PhrasesGrid.activeSelf || PhrasesGridMSB.activeSelf))
-        {
-            PhrasesGrid.SetActive(false);
-            PhrasesGridMSB.SetActive(false);
-            NextSceneButton.SetActive(false);
-            PreviousSceneButtonMultiSelect.SetActive(false);
-            PreviousSceneButton.SetActive(true);
-            SightWordsButton.SetActive(true);
-            PhrasesButton.SetActive(true);
-            SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
-            PhrasesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
-
-        }
-        else if (currentBookMode == ReadingBookMode.Sentences && (SentencesGrid.activeSelf || SentencesGridMSB.activeSelf))
-        {
-            SentencesGrid.SetActive(false);
-            SentencesGridMSB.SetActive(false);
-            NextSceneButton.SetActive(false);
-            PreviousSceneButtonMultiSelect.SetActive(false);
-            PreviousSceneButton.SetActive(true);
-            SightWordsButton.SetActive(true);
-            SentencesButton.SetActive(true);
-
-            SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
-            SentencesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
-        }
+    // public void PreviousMultiSelectButtonClicked()
+    // {
         
-    }
+    //     if(currentBookMode == ReadingBookMode.Phrases && (PhrasesGrid.activeSelf || PhrasesGridMSB.activeSelf))
+    //     {
+    //         PhrasesGrid.SetActive(false);
+    //         PhrasesGridMSB.SetActive(false);
+    //         NextSceneButton.SetActive(false);
+    //         PreviousSceneButtonMultiSelect.SetActive(false);
+    //         PreviousSceneButton.SetActive(true);
+    //         SightWordsButton.SetActive(true);
+    //         PhrasesButton.SetActive(true);
+    //         SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
+    //         PhrasesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
+
+    //     }
+    //     else if (currentBookMode == ReadingBookMode.Sentences && (SentencesGrid.activeSelf || SentencesGridMSB.activeSelf))
+    //     {
+    //         SentencesGrid.SetActive(false);
+    //         SentencesGridMSB.SetActive(false);
+    //         NextSceneButton.SetActive(false);
+    //         PreviousSceneButtonMultiSelect.SetActive(false);
+    //         PreviousSceneButton.SetActive(true);
+    //         SightWordsButton.SetActive(true);
+    //         SentencesButton.SetActive(true);
+
+    //         SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
+    //         SentencesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
+    //     }
+        
+    // }
     public void OpenGrids(ReadingBookForm form)
     {
         SightWordsButton.SetActive(false);
         PhrasesButton.SetActive(false);
         SentencesButton.SetActive(false);
         NextSceneButton.SetActive(true);
-        PreviousSceneButtonMultiSelect.SetActive(true);
-        PreviousSceneButton.SetActive(false);
-        PreviousSceneButtonMultiSelect.GetComponent<Button>().onClick.AddListener(() => { PreviousMultiSelectButtonClicked(); });
+        // PreviousSceneButtonMultiSelect.SetActive(true);
+        // PreviousSceneButton.SetActive(false);
+        // PreviousSceneButtonMultiSelect.GetComponent<Button>().onClick.AddListener(() => { PreviousMultiSelectButtonClicked(); });
         if (currentBookMode == ReadingBookMode.Phrases)
         {
             PhrasesGrid.SetActive(true);

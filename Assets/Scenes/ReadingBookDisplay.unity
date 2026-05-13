@@ -822,6 +822,8 @@ MonoBehaviour:
   PhrasesGridMSB: {fileID: 0}
   SentencesGridMSB: {fileID: 0}
   NextSceneButton: {fileID: 0}
+  PreviousSceneButtonMultiSelect: {fileID: 0}
+  PreviousSceneButton: {fileID: 0}
   SightWordsButton: {fileID: 0}
   PhrasesButton: {fileID: 0}
   SentencesButton: {fileID: 0}
@@ -2077,7 +2079,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ReadingBookDisplaySelection
+          m_StringArgument: ReadingBookDisplayBookSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1962635844
