@@ -41,7 +41,6 @@ public class SentencesLevelManager : MonoBehaviour
     [SerializeField] private Button NamePrevButton;
     [SerializeField] private Sprite correctSprite;
     [SerializeField] private Sprite wrongSprite;
-    private bool isNameAudioPlaying = false;
     private readonly List<int> currentBatchOrder = new List<int>();
 
     private int currentIndex = 0;

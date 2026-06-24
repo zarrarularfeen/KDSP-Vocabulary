@@ -30,15 +30,16 @@ public class PhrasesLevelManager : MonoBehaviour
     [SerializeField] private Button backButton;
     [SerializeField] private Button NameNextButton;
     [SerializeField] private Button NamePrevButton;
+    [SerializeField] private Button TickButton;
 
 
     private int currentIndex = 0;
+    private int currentBatchStart = 0;
     public static int batchSize = 2; // can be 1 to 4
     public static PhrasesLevelManager Instance { get; private set; }
     public static PhrasesLevelMode currentMode = PhrasesLevelMode.MatchSghtWord;
     [SerializeField] private Sprite correctSprite;
     [SerializeField] private Sprite wrongSprite;
-    private bool isNameAudioPlaying = false;
     private readonly List<int> currentBatchOrder = new List<int>();
 
     void Awake()
@@ -111,6 +112,9 @@ public class PhrasesLevelManager : MonoBehaviour
         }
 
         backButton.onClick.AddListener(() => OnBackButtonClicked(backButton));
+        NameNextButton.onClick.AddListener(() => OnNextButtonClicked());
+        NamePrevButton.onClick.AddListener(() => OnPrevButtonClicked());
+        TickButton.onClick.AddListener(() => OnTickButtonClicked());
     }
 
     public static void SetPhrasesLevelMode(PhrasesLevelMode mode)
@@ -151,6 +155,9 @@ public class PhrasesLevelManager : MonoBehaviour
     void SetContentMatch()
     {
         ClearGrids();
+        currentIndex = 0;
+        currentBatchStart = 0;
+        TickButton.gameObject.SetActive(false);
 
         SpawnNextBatch();
     }
@@ -159,10 +166,12 @@ public class PhrasesLevelManager : MonoBehaviour
     {
         // Implement Select mode content setup
         ClearGrids();
-        currentIndex = 0; // start from the first word
+        currentIndex = 0;
+        currentBatchStart = 0;
+        TickButton.gameObject.SetActive(false);
 
-        int batchStart = 0;
-        int batchEnd = Mathf.Min(batchSize, selectedContent.Count);
+        int batchStart = currentBatchStart;
+        int batchEnd = GetBatchEnd(currentBatchStart);
 
         SpawnSelectButtons(batchStart, batchEnd, -1, 0);
 
@@ -172,11 +181,11 @@ public class PhrasesLevelManager : MonoBehaviour
     {
         ClearGrids();
         currentIndex = 0;
+        currentBatchStart = 0;
         NameNextButton.gameObject.SetActive(true);
         NamePrevButton.gameObject.SetActive(true);
         SetNameCard(currentIndex);
-        NameNextButton.onClick.AddListener(() => OnNameNextButtonClicked());
-        NamePrevButton.onClick.AddListener(() => OnNamePrevButtonClicked());
+        UpdateTickState();
 
     }
     // Spawn next batch of 4 words in questions grid for Matching mode
@@ -184,10 +193,9 @@ public class PhrasesLevelManager : MonoBehaviour
     {
         ClearGrids();
 
-        // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
-        int currentBatch = currentIndex / batchSize;
-        int batchStart = currentBatch * batchSize;
-        int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
+        currentBatchStart = (currentIndex / batchSize) * batchSize;
+        int batchStart = currentBatchStart;
+        int batchEnd = GetBatchEnd(batchStart);
 
         BuildCurrentBatchOrder(batchStart, batchEnd);
 
@@ -254,6 +262,11 @@ public class PhrasesLevelManager : MonoBehaviour
         // AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].audio);
         AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
     }
+
+    int GetBatchEnd(int batchStart)
+    {
+        return Mathf.Min(batchStart + batchSize, selectedContent.Count);
+    }
     // Called when a correct match is made
     public void OnCorrectMatch(GameObject targetPrefab)
     {
@@ -288,24 +301,19 @@ public class PhrasesLevelManager : MonoBehaviour
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
         {
-            Debug.Log(currentIndex);
-            Debug.Log(selectedContent.Count);
-            Debug.Log("All words matched!");
-            selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Phrases", 1.5f));
+            UpdateTickState();
             yield break;
         }
 
-        // If currentIndex has passed the current batch, spawn next batch
-        if (currentIndex % batchSize == 0)
+        if (currentIndex >= GetBatchEnd(currentBatchStart))
         {
-            SpawnNextBatch(); // This will automatically spawn the first draggable of the new batch
+            UpdateTickState();
+            yield break;
         }
-        else
-        {
-            // Spawn next draggable in current batch
-            SpawnNextDraggable();
-        }
+
+        // Spawn next draggable in current batch
+        SpawnNextDraggable();
+        UpdateTickState();
     }
 
     public void OnIncorrectMatch(GameObject targetPrefab)
@@ -369,9 +377,10 @@ public class PhrasesLevelManager : MonoBehaviour
         currentIndex++;
         if (currentIndex >= selectedContent.Count)
         {
-            currentIndex = 0; // wrap around to the first card
+            currentIndex = selectedContent.Count - 1;
         }
         SetNameCard(currentIndex);
+        UpdateTickState();
     }
 
     void OnNamePrevButtonClicked()
@@ -379,9 +388,10 @@ public class PhrasesLevelManager : MonoBehaviour
         currentIndex--;
         if (currentIndex < 0)
         {
-            currentIndex = selectedContent.Count - 1; // wrap around to the last card
+            currentIndex = 0;
         }
         SetNameCard(currentIndex);
+        UpdateTickState();
     }
 
     void SpawnSelectButtons(int batchStart, int batchEnd, int previousBatch, int currentBatch)
@@ -450,7 +460,11 @@ public class PhrasesLevelManager : MonoBehaviour
 
     int GetCurrentBatchContentIndex()
     {
-        int batchStart = (currentIndex / batchSize) * batchSize;
+        int batchStart = currentMode == PhrasesLevelMode.ReadSightWord ? 0 : currentBatchStart;
+        if (batchStart < 0 || batchStart >= selectedContent.Count)
+        {
+            batchStart = (currentIndex / batchSize) * batchSize;
+        }
         int indexInBatch = currentIndex - batchStart;
 
         if (indexInBatch >= 0 && indexInBatch < currentBatchOrder.Count)
@@ -512,16 +526,116 @@ public class PhrasesLevelManager : MonoBehaviour
         if (currentIndex >= selectedContent.Count)
         {
             Debug.Log("All words selected!");
-            selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Phrases", 1.5f));
+            UpdateTickState();
             yield break;
         }
         int currentBatch = currentIndex / batchSize;
+        currentBatchStart = currentBatch * batchSize;
         int batchStart = currentBatch * batchSize;
         int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
         //if we have finished current batch of 4, move to next batch
+        if (currentIndex >= batchEnd)
+        {
+            UpdateTickState();
+            yield break;
+        }
         yield return new WaitForSeconds(2.5f);
         SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
+    }
+
+    void OnNextButtonClicked()
+    {
+        switch (currentMode)
+        {
+            case PhrasesLevelMode.ReadSightWord:
+                OnNameNextButtonClicked();
+                break;
+            case PhrasesLevelMode.MatchSghtWord:
+            case PhrasesLevelMode.SelectSightWord:
+            case PhrasesLevelMode.UnderstandSightWord:
+            case PhrasesLevelMode.UnderstandPhrase:
+                MoveBatch(1);
+                break;
+        }
+    }
+
+    void OnPrevButtonClicked()
+    {
+        switch (currentMode)
+        {
+            case PhrasesLevelMode.ReadSightWord:
+                OnNamePrevButtonClicked();
+                break;
+            case PhrasesLevelMode.MatchSghtWord:
+            case PhrasesLevelMode.SelectSightWord:
+            case PhrasesLevelMode.UnderstandSightWord:
+            case PhrasesLevelMode.UnderstandPhrase:
+                MoveBatch(-1);
+                break;
+        }
+    }
+
+    void MoveBatch(int direction)
+    {
+        int nextBatchStart = currentBatchStart + (direction * batchSize);
+        int finalBatchStart = GetFinalBatchStart();
+
+        if (nextBatchStart < 0 || nextBatchStart > finalBatchStart)
+        {
+            return;
+        }
+
+        currentBatchStart = nextBatchStart;
+        currentIndex = currentBatchStart;
+
+        switch (currentMode)
+        {
+            case PhrasesLevelMode.MatchSghtWord:
+            case PhrasesLevelMode.UnderstandSightWord:
+            case PhrasesLevelMode.UnderstandPhrase:
+                SpawnNextBatch();
+                break;
+            case PhrasesLevelMode.SelectSightWord:
+                SpawnSelectButtons(currentBatchStart, GetBatchEnd(currentBatchStart), -1, currentBatchStart / batchSize);
+                break;
+        }
+
+        UpdateTickState();
+    }
+
+    int GetFinalBatchStart()
+    {
+        return selectedContent.Count == 0 ? 0 : ((selectedContent.Count - 1) / batchSize) * batchSize;
+    }
+
+    void UpdateTickState()
+    {
+        if (TickButton == null)
+        {
+            return;
+        }
+
+        bool showTick = false;
+        switch (currentMode)
+        {
+            case PhrasesLevelMode.ReadSightWord:
+                showTick = selectedContent.Count > 0 && currentIndex >= selectedContent.Count - 1;
+                break;
+            case PhrasesLevelMode.MatchSghtWord:
+            case PhrasesLevelMode.SelectSightWord:
+            case PhrasesLevelMode.UnderstandSightWord:
+            case PhrasesLevelMode.UnderstandPhrase:
+                showTick = selectedContent.Count > 0 && currentBatchStart >= GetFinalBatchStart() && currentIndex >= GetBatchEnd(currentBatchStart);
+                break;
+        }
+
+        TickButton.gameObject.SetActive(showTick);
+    }
+
+    void OnTickButtonClicked()
+    {
+        selectedContent.Clear();
+        selectedContextList.Clear();
     }
 
     IEnumerator FeedBackFlicker(Image image, Sprite feedbackSprite, float interval, int count, Button sourceButton = null)

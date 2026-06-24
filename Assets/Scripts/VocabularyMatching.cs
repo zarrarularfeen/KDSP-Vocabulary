@@ -37,7 +37,6 @@ public class VocabularyMatching : MonoBehaviour
 
     [SerializeField] private Sprite correctSprite;
     [SerializeField] private Sprite wrongSprite;
-    private bool isNameAudioPlaying = false;
     private readonly List<int> currentBatchOrder = new List<int>();
 
     void Awake()
