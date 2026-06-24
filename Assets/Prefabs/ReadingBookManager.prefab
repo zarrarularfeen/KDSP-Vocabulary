@@ -384,7 +384,7 @@ MonoBehaviour:
     - content: paratha
       image: {fileID: -2857512692057529537, guid: a1b9f87e2a4f119438a629e94cd149a7, type: 3}
       audio: {fileID: 8300000, guid: beaf4fa08f551e044b3b8771d18a666c, type: 3}
-    - content: tea
+    - content: chai/tea
       image: {fileID: -5469021871315982269, guid: 36f38eab619ca82429efe2f236297b4b, type: 3}
       audio: {fileID: 8300000, guid: c7b6c6be2fc0a074eb21abde2a0aae5a, type: 3}
     - content: lassi

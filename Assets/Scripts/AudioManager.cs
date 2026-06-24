@@ -150,6 +150,7 @@ public class AudioManager : MonoBehaviour
         if (content != null)
         {
             string modifiedContent = content.Replace("/", " or ");
+            Debug.Log("modifiedContent = " + modifiedContent);
             AudioClip audio = Resources.Load<AudioClip>($"Updated-Audios/match_words/{modifiedContent}");
             audioSource.clip = audio;
             audioSource.Play();

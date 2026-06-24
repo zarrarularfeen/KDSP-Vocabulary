@@ -25,8 +25,10 @@ public class VocabularyMatching : MonoBehaviour
     [SerializeField] private Button backButton;
     [SerializeField] private Button NameNextButton;
     [SerializeField] private Button NamePrevButton;
+    [SerializeField] private Button TickButton;
 
     private int currentIndex = 0;
+    private int currentBatchStart = 0;
     public static int batchSize = 2; // can be 1 to 4
 
     public static VocabularyMatching Instance { get; private set; }
@@ -40,10 +42,9 @@ public class VocabularyMatching : MonoBehaviour
 
     void Awake()
     {
-        // Ensure only one instance of SceneController exists
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject); // Destroy duplicate instances
+            Destroy(gameObject);
         }
         Instance = this;
     }
@@ -88,6 +89,9 @@ public class VocabularyMatching : MonoBehaviour
         }
         
         backButton.onClick.AddListener(() => OnBackButtonClicked(backButton));
+        NameNextButton.onClick.AddListener(() => OnNextButtonClicked());
+        NamePrevButton.onClick.AddListener(() => OnPrevButtonClicked());
+       
     }
 
     public static void SetVocabularyMode(VocabularyMode mode)
@@ -112,50 +116,42 @@ public class VocabularyMatching : MonoBehaviour
         }
     }
 
-    // Set up content for Matching mode and Calls relevant methods
     void SetContentMatch()
     {
         ClearGrids();
-
+        currentIndex = 0;
+        currentBatchStart = 0;
+        TickButton.gameObject.SetActive(false);
         SpawnNextBatch();
     }
 
-    //Set up content for Select mode and Calls relevant methods
     void SetContentSelect()
     {
-        // Implement Select mode content setup
         ClearGrids();
-        currentIndex = 0; // start from the first word
-        int batchStart = 0;
-        int batchEnd = Mathf.Min(batchSize, selectedContent.Count);
-
-        SpawnSelectButtons(batchStart, batchEnd, -1, 0);
+        currentIndex = 0;
+        currentBatchStart = 0;
+        TickButton.gameObject.SetActive(false);
+        SpawnSelectButtons(currentBatchStart, GetBatchEnd(currentBatchStart), -1, 0);
 
     }
 
-    // Set up content for Name mode and Calls relevant methods
     void SetContentName()
     {
-        // Implement Select mode content setup
         ClearGrids();
-        int currentIndex = 0;
+        currentIndex = 0;
         NameNextButton.gameObject.SetActive(true);
         NamePrevButton.gameObject.SetActive(true);
         SetNameCard(currentIndex);
-        NameNextButton.onClick.AddListener(() => OnNameNextButtonClicked());
-        NamePrevButton.onClick.AddListener(() => OnNamePrevButtonClicked());
+        UpdateTickState();
 
     }
 
-    // Spawn next batch of 4 words in questions grid for Matching mode
     void SpawnNextBatch()
     {
         ClearGrids();
 
-        // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
-        int currentBatch = currentIndex / batchSize;
-        int batchStart = currentBatch * batchSize;
-        int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
+        int batchStart = currentBatchStart;
+        int batchEnd = GetBatchEnd(batchStart);
 
         BuildCurrentBatchOrder(batchStart, batchEnd);
 
@@ -187,7 +183,6 @@ public class VocabularyMatching : MonoBehaviour
         SpawnNextDraggable();
     }
 
-    // Spawn next draggable card in answers grid for Matching mode
     void SpawnNextDraggable()
     {
         if (currentIndex >= selectedContent.Count)
@@ -205,13 +200,16 @@ public class VocabularyMatching : MonoBehaviour
         draggable.word = word;
         Debug.Log("Spawned draggable for word: " + word);
 
-        // AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].audio);
         AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
         AudioManager.Instance.WaitForCurrentAudio();
 
     }
 
-    // Called when a correct match is made
+    int GetBatchEnd(int batchStart)
+    {
+        return Mathf.Min(batchStart + batchSize, selectedContent.Count);
+    }
+
     public void OnCorrectMatch(GameObject targetPrefab)
     {
         StartCoroutine(HandleCorrectMatch(targetPrefab));
@@ -235,33 +233,18 @@ public class VocabularyMatching : MonoBehaviour
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayCorrectSound();
-        // AudioManager.Instance.WaitForCurrentAudio();
         yield return new WaitForSeconds(1.25f);
 
         AudioManager.Instance.PlayPositiveReinforcementSound();
-        // AudioManager.Instance.WaitForCurrentAudio();
         yield return new WaitForSeconds(1.25f);
-        // CreateOutline(Color.green);
         currentIndex++;
-        // Check if all words are done
-        if (currentIndex >= selectedContent.Count)
+        if (currentIndex >= GetBatchEnd(currentBatchStart))
         {
-            Debug.Log("All words matched!");
-            selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Vocabulary", 1.5f));
+            UpdateTickState();
             yield break;
         }
 
-        // If currentIndex has passed the current batch, spawn next batch
-        if (currentIndex % batchSize == 0)
-        {
-            SpawnNextBatch(); // This will automatically spawn the first draggable of the new batch
-        }
-        else
-        {
-            // Spawn next draggable in current batch
-            SpawnNextDraggable();
-        }
+        SpawnNextDraggable();
     }
 
     public void OnIncorrectMatch(GameObject targetPrefab)
@@ -281,7 +264,6 @@ public class VocabularyMatching : MonoBehaviour
             StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3));
         }
         AudioManager.Instance.PlayWrongSound();
-        // AudioManager.Instance.WaitForCurrentAudio();
     }
 
     void SetNameCard(int index)
@@ -312,46 +294,19 @@ public class VocabularyMatching : MonoBehaviour
 
     void OnNameCardClicked(int index, Button sourceButton)
     {
-        // if (isNameAudioPlaying) return;
         Debug.Log("Name card clicked: " + selectedContent[index].content);
         AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
-        // StartCoroutine(PlayNameThenAdvance(index, sourceButton));
     }
-
-    // IEnumerator PlayNameThenAdvance(int index, Button sourceButton)
-    // {
-    //     isNameAudioPlaying = true;
-    //     if (sourceButton != null) sourceButton.interactable = false;
-
-
-    //     // AudioManager.Instance.PlayGivenAudioDelayed(selectedContent[index].audio, 2.0f);
-    //     AudioManager.Instance.WordAudioFunction(selectedContent[index].content);
-
-    //     // float waitTime = 2.0f + (selectedContent[index].audio != null ? selectedContent[index].audio.length : 0f);
-    //     float waitTime = 2.5f;
-    //     yield return new WaitForSeconds(waitTime);
-
-    //     isNameAudioPlaying = false;
-    //     if (index + 1 < selectedContent.Count)
-    //     {
-    //         SetNameCard(index + 1);
-    //     }
-    //     else
-    //     {
-    //         Debug.Log("All Name cards shown!");
-    //         selectedContent.Clear();
-    //         StartCoroutine(SceneDelayLoad("Vocabulary", 1.5f));
-    //     }
-    // }
 
     void OnNameNextButtonClicked()
     {
         currentIndex++;
-        if (currentIndex >= selectedContent.Count)
+        if (currentIndex >= selectedContent.Count - 1)
         {
-            currentIndex = 0; // wrap around to the first card
+            currentIndex = selectedContent.Count - 1;
         }
         SetNameCard(currentIndex);
+        UpdateTickState();
     }
 
     void OnNamePrevButtonClicked()
@@ -359,16 +314,14 @@ public class VocabularyMatching : MonoBehaviour
         currentIndex--;
         if (currentIndex < 0)
         {
-            currentIndex = selectedContent.Count - 1; // wrap around to the last card
+            currentIndex = 0;
         }
         SetNameCard(currentIndex);
+        UpdateTickState();
     }
 
     void SpawnSelectButtons(int batchStart, int batchEnd, int previousBatch, int currentBatch)
     {
-
-
-        // int end = Mathf.Min(currentBatchStart + 4, selectedContent.Count);
         if (previousBatch != currentBatch)
         {
             BuildCurrentBatchOrder(batchStart, batchEnd);
@@ -397,9 +350,7 @@ public class VocabularyMatching : MonoBehaviour
             }
         }
         int contentIndex = GetCurrentBatchContentIndex();
-        // AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].audio);
         AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].content);
-        // AudioManager.Instance.WaitForCurrentAudio();
     }
 
     void BuildCurrentBatchOrder(int batchStart, int batchEnd)
@@ -421,7 +372,7 @@ public class VocabularyMatching : MonoBehaviour
 
     int GetCurrentBatchContentIndex()
     {
-        int batchStart = (currentIndex / batchSize) * batchSize;
+        int batchStart = currentMode == VocabularyMode.Name ? 0 : currentBatchStart;
         int indexInBatch = currentIndex - batchStart;
 
         if (indexInBatch >= 0 && indexInBatch < currentBatchOrder.Count)
@@ -453,15 +404,12 @@ public class VocabularyMatching : MonoBehaviour
                 StartCoroutine(FeedBackFlicker(img, wrongSprite, 0.2f, 3, sourceButton));
             }
             AudioManager.Instance.PlayWrongSound();
-            // AudioManager.Instance.WaitForCurrentAudio();
 
         }
     }
 
     private IEnumerator HandleCorrectSelection(string selectedWord, Button sourceButton)
     {
-        Debug.Log("Correct selection for word: " + selectedWord);
-        Debug.Log("Going to flicker correct sprite");
         Image img = null;
         if (sourceButton != null && sourceButton.transform != null && sourceButton.transform.childCount > 1)
         {
@@ -471,29 +419,104 @@ public class VocabularyMatching : MonoBehaviour
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3, sourceButton));
         }
-        Debug.Log("Played correct sound");
         AudioManager.Instance.PlayCorrectSound();
         yield return new WaitForSeconds(1.25f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
         yield return new WaitForSeconds(1.25f);
 
-        int previousBatch = currentIndex / batchSize;
-
         currentIndex++;
-        if (currentIndex >= selectedContent.Count)
+        int batchEnd = GetBatchEnd(currentBatchStart);
+        if (currentIndex >= batchEnd)
         {
-            Debug.Log("All words selected!");
-            selectedContent.Clear();
-            StartCoroutine(SceneDelayLoad("Vocabulary", 1.5f));
+            UpdateTickState();
             yield break;
         }
-        int currentBatch = currentIndex / batchSize;
-        int batchStart = currentBatch * batchSize;
-        int batchEnd = Mathf.Min(batchStart + batchSize, selectedContent.Count);
-        //if we have finished current batch of 4, move to next batch
         yield return new WaitForSeconds(2.5f);
-        SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
+        SpawnSelectButtons(currentBatchStart, batchEnd, currentBatchStart / batchSize, currentBatchStart / batchSize);
     }
+
+    void OnNextButtonClicked()
+    {
+        switch (currentMode)
+        {
+            case VocabularyMode.Name:
+                OnNameNextButtonClicked();
+                break;
+            case VocabularyMode.Match:
+            case VocabularyMode.Select:
+                MoveBatch(1);
+                break;
+        }
+    }
+
+    void OnPrevButtonClicked()
+    {
+        switch (currentMode)
+        {
+            case VocabularyMode.Name:
+                OnNamePrevButtonClicked();
+                break;
+            case VocabularyMode.Match:
+            case VocabularyMode.Select:
+                MoveBatch(-1);
+                break;
+        }
+    }
+
+    void MoveBatch(int direction)
+    {
+        int nextBatchStart = currentBatchStart + (direction * batchSize);
+        int finalBatchStart = GetFinalBatchStart();
+
+        if (nextBatchStart < 0 || nextBatchStart > finalBatchStart)
+        {
+            return;
+        }
+
+        currentBatchStart = nextBatchStart;
+        currentIndex = currentBatchStart;
+
+        switch (currentMode)
+        {
+            case VocabularyMode.Match:
+                SpawnNextBatch();
+                break;
+            case VocabularyMode.Select:
+                SpawnSelectButtons(currentBatchStart, GetBatchEnd(currentBatchStart), -1, currentBatchStart / batchSize);
+                break;
+        }
+
+        UpdateTickState();
+    }
+
+    int GetFinalBatchStart()
+    {
+        return selectedContent.Count == 0 ? 0 : ((selectedContent.Count - 1) / batchSize) * batchSize;
+    }
+
+    void UpdateTickState()
+    {
+        if (TickButton == null)
+        {
+            return;
+        }
+
+        bool showTick = false;
+        switch (currentMode)
+        {
+            case VocabularyMode.Name:
+                showTick = selectedContent.Count > 0 && currentIndex >= selectedContent.Count - 1;
+                break;
+            case VocabularyMode.Match:
+            case VocabularyMode.Select:
+                showTick = selectedContent.Count > 0 && currentBatchStart >= GetFinalBatchStart() && currentIndex >= GetBatchEnd(currentBatchStart);
+                break;
+        }
+
+        TickButton.gameObject.SetActive(showTick);
+    }
+
+    
 
     IEnumerator FeedBackFlicker(Image image, Sprite feedbackSprite, float interval, int count, Button sourceButton = null)
     {
