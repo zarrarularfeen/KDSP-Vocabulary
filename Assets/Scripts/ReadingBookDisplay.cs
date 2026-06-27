@@ -30,6 +30,7 @@ public class ReadingBookDisplay : MonoBehaviour
     [SerializeField] private Button displayButton;
     [SerializeField] private Button nextButton;
     [SerializeField] private Button previousButton;
+    [SerializeField] private Button tickButton;
 
     [SerializeField] private GameObject VocabularyGrid;
     [SerializeField] private GameObject PhrasesGrid;
@@ -44,6 +45,7 @@ public class ReadingBookDisplay : MonoBehaviour
     [SerializeField] private GameObject SightWordsButton;
     [SerializeField] private GameObject PhrasesButton;
     [SerializeField] private GameObject SentencesButton;
+    
 
     private List<ContentPictureAudioTrio> content = new List<ContentPictureAudioTrio>();
     private int currentidx = 0;
@@ -67,14 +69,16 @@ public class ReadingBookDisplay : MonoBehaviour
 
         if (SceneController.currentScene == Scenes.ReadingBookDisplayBookSelection)
         {
-            if (currentBookForm == ReadingBookForm.NULL || currentBookMode == ReadingBookMode.NULL)
-            {
-                StartSequence();
-            }
-            else
-            {
-                OpenGrids(currentBookForm);
-            }
+            // if (currentBookForm == ReadingBookForm.NULL || currentBookMode == ReadingBookMode.NULL)
+            // {
+            //     // StartSequence();
+            //     OpenGrids(ReadingBookForm.PhrasesOrSentences);
+            // }
+            // else
+            // {
+            //     OpenGrids(currentBookForm);
+            // }
+            OpenGrids();
         }
         else
         {
@@ -87,125 +91,146 @@ public class ReadingBookDisplay : MonoBehaviour
         }
     }
 
-    void Update()
-    {
+    // void Update()
+    // {
 
-    }
+    // }
 
-    private void StartSequence()
-    {
-        if (currentBookMode == ReadingBookMode.Vocabulary)
-        {
-            VocabularyGrid.SetActive(true);
-            VocabularyGridMSB.SetActive(true);
-            NextSceneButton.SetActive(true);
-        }
-        else if (currentBookMode == ReadingBookMode.Phrases)
-        {
-            NextSceneButton.SetActive(false);
-            SightWordsButton.SetActive(true);
-            PhrasesButton.SetActive(true);
+    // private void StartSequence()
+    // {
+    //     if (currentBookMode == ReadingBookMode.Vocabulary)
+    //     {
+    //         VocabularyGrid.SetActive(true);
+    //         VocabularyGridMSB.SetActive(true);
+    //         NextSceneButton.SetActive(true);
+    //     }
+    //     else if (currentBookMode == ReadingBookMode.Phrases)
+    //     {
+    //         NextSceneButton.SetActive(false);
+    //         SightWordsButton.SetActive(true);
+    //         PhrasesButton.SetActive(true);
 
-            SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
-            PhrasesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
-        }
-        else if (currentBookMode == ReadingBookMode.Sentences)
-        {
-            NextSceneButton.SetActive(false);
-            SightWordsButton.SetActive(true);
-            SentencesButton.SetActive(true);
+    //         SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
+    //         PhrasesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
+    //     }
+    //     else if (currentBookMode == ReadingBookMode.Sentences)
+    //     {
+    //         NextSceneButton.SetActive(false);
+    //         SightWordsButton.SetActive(true);
+    //         SentencesButton.SetActive(true);
 
-            SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
-            SentencesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
-        }
-    }
+    //         SightWordsButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.SightWords); });
+    //         SentencesButton.GetComponent<Button>().onClick.AddListener(() => { OpenGrids(ReadingBookForm.PhrasesOrSentences); });
+    //     }
+    // }
 
     private void PreviousSceneButtonClicked()
     {
         content.Clear();
 
+        // if (SceneController.currentScene == Scenes.ReadingBookDisplayBookSelection)
+        // {
+        //     if (!bloodhound)
+        //     {
+        //         SceneController.Instance.OpenLevelSelect("ReadingBookDisplaySelection");
+        //         currentBookForm = ReadingBookForm.NULL;
+        //         currentBookMode = ReadingBookMode.NULL;
+        //     }
+        //     else
+        //     {
+        //         VocabularyGrid.SetActive(false);
+        //         VocabularyGridMSB.SetActive(false);
+        //         PhrasesGrid.SetActive(false);
+        //         PhrasesGridMSB.SetActive(false);
+        //         SentencesGrid.SetActive(false);
+        //         SentencesGridMSB.SetActive(false);
+        //         NextSceneButton.SetActive(false);
+
+        //         StartSequence();
+
+        //         bloodhound = false;
+        //         Debug.Log("PSBC bloodhound: " + bloodhound);
+        //     }
+        // }
+        // else
+        // {
+        //     SceneController.Instance.OpenLevelSelect("ReadingBookDisplayBookSelection");
+        // }
         if (SceneController.currentScene == Scenes.ReadingBookDisplayBookSelection)
         {
-            if (!bloodhound)
-            {
-                SceneController.Instance.OpenLevelSelect("ReadingBookDisplaySelection");
-                currentBookForm = ReadingBookForm.NULL;
-                currentBookMode = ReadingBookMode.NULL;
-            }
-            else
-            {
-                VocabularyGrid.SetActive(false);
-                VocabularyGridMSB.SetActive(false);
-                PhrasesGrid.SetActive(false);
-                PhrasesGridMSB.SetActive(false);
-                SentencesGrid.SetActive(false);
-                SentencesGridMSB.SetActive(false);
-                NextSceneButton.SetActive(false);
-
-                StartSequence();
-
-                bloodhound = false;
-                Debug.Log("PSBC bloodhound: " + bloodhound);
-            }
+            SceneController.Instance.OpenLevelSelect("GameSelection");
+            // currentBookForm = ReadingBookForm.NULL;
+            // currentBookMode = ReadingBookMode.NULL;
+            SentencesGrid.SetActive(false);
+            SentencesGridMSB.SetActive(false);
+            content.Clear();
         }
-        else
-        {
+        else if (SceneController.currentScene == Scenes.ReadingBookDisplay)
+        {   
             SceneController.Instance.OpenLevelSelect("ReadingBookDisplayBookSelection");
+
         }
+        
     }
 
-    public void OpenGrids(ReadingBookForm form)
+    public void OpenGrids()
     {
-        SightWordsButton.SetActive(false);
-        PhrasesButton.SetActive(false);
-        SentencesButton.SetActive(false);
-        NextSceneButton.SetActive(true);
-        if (currentBookMode == ReadingBookMode.Phrases)
-        {
-            PhrasesGrid.SetActive(true);
-            PhrasesGridMSB.SetActive(true);
-        }
-        else if (currentBookMode == ReadingBookMode.Sentences)
-        {
-            SentencesGrid.SetActive(true);
-            SentencesGridMSB.SetActive(true);
-        }
-        currentBookForm = form;
+        // ReadingBookForm form removed parameter as not needed now.
+        // SightWordsButton.SetActive(false);
+        // PhrasesButton.SetActive(false);
+        // SentencesButton.SetActive(false);
+        // NextSceneButton.SetActive(true);
+        SentencesGrid.SetActive(true);
+        SentencesGridMSB.SetActive(true);
+        // if (currentBookMode == ReadingBookMode.Phrases)
+        // {
+        //     PhrasesGrid.SetActive(true);
+        //     PhrasesGridMSB.SetActive(true);
+        // }
+        // else 
+        // if (currentBookMode == ReadingBookMode.Sentences)
+        // {
+        //     SentencesGrid.SetActive(true);
+        //     SentencesGridMSB.SetActive(true);
+        // }
+        // currentBookForm = form;
 
-        bloodhound = true;
-        Debug.Log("OG bloodhound: " + bloodhound);
+        // bloodhound = true;
+        // Debug.Log("OG bloodhound: " + bloodhound);
     }
 
     public void GetContentList()
     {
-        switch (currentBookMode)
-        {
-            case ReadingBookMode.Vocabulary:
-                content = ReadingBook.Instance.GetCurrentEnabledDictionary();
-                break;
+        // switch (currentBookMode)
+        // {
+        //     case ReadingBookMode.Vocabulary:
+        //         content = ReadingBook.Instance.GetCurrentEnabledDictionary();
+        //         break;
 
-            case ReadingBookMode.Phrases:
-                if (currentBookForm == ReadingBookForm.SightWords)
-                {
-                    content = PhrasesManager.Instance.GetCurrentEnabledDictionarySightWords();
-                }
-                else
-                {
-                    content = PhrasesManager.Instance.GetCurrentEnabledDictionaryPhrasesForReadingBook();
-                }
-                break;
+        //     case ReadingBookMode.Phrases:
+        //         if (currentBookForm == ReadingBookForm.SightWords)
+        //         {
+        //             content = PhrasesManager.Instance.GetCurrentEnabledDictionarySightWords();
+        //         }
+        //         else
+        //         {
+        //             content = PhrasesManager.Instance.GetCurrentEnabledDictionaryPhrasesForReadingBook();
+        //         }
+        //         break;
 
-            case ReadingBookMode.Sentences:
-                if (currentBookForm == ReadingBookForm.SightWords)
-                {
-                    content = SentencesManager.Instance.GetCurrentEnabledDictionarySightWords();
-                }
-                else
-                {
-                    content = SentencesManager.Instance.GetCurrentEnabledDictionarySentencesForReadingBook();
-                }
-                break;
-        }
+        //     case ReadingBookMode.Sentences:
+        //         if (currentBookForm == ReadingBookForm.SightWords)
+        //         {
+        //             content = SentencesManager.Instance.GetCurrentEnabledDictionarySightWords();
+        //         }
+        //         else
+        //         {
+        //             content = SentencesManager.Instance.GetCurrentEnabledDictionarySentencesForReadingBook();
+        //         }
+        //         break;
+        // }
+        content = SentencesManager.Instance.GetCurrentEnabledDictionarySentencesForReadingBook();
+
     }
 
     public static void SetRequestedBook(Books book)
@@ -236,16 +261,19 @@ public class ReadingBookDisplay : MonoBehaviour
         {
             nextButton.gameObject.SetActive(true);
             previousButton.gameObject.SetActive(false);
+            tickButton.gameObject.SetActive(false);
         }
         else if (currentidx == content.Count - 1)
         {
             nextButton.gameObject.SetActive(false);
             previousButton.gameObject.SetActive(true);
+            tickButton.gameObject.SetActive(true);
         }
         else
         {
             nextButton.gameObject.SetActive(true);
             previousButton.gameObject.SetActive(true);
+            tickButton.gameObject.SetActive(false);
         }
 
         ContentPictureAudioTrio currentContent = content[currentidx];
@@ -253,34 +281,51 @@ public class ReadingBookDisplay : MonoBehaviour
         displayText.text = currentContent.content;
         displayImage.SetNativeSize();
 
-        if (currentBookMode == ReadingBookMode.Phrases && currentBookForm == ReadingBookForm.PhrasesOrSentences)
+        string[] temp;
+        temp = currentContent.content.Split("*");
+        displayText.text = temp[0];
+        Debug.Log(temp[0] + " * " + temp[1]);
+        if (temp[0].Length > 30)
         {
-            displayButton.onClick.AddListener(() => { AudioManager.Instance.PhrasesAudioFunction(currentContent.content); });
+            displayText.fontSize = 100;
         }
-        else if (currentBookMode == ReadingBookMode.Sentences && currentBookForm == ReadingBookForm.PhrasesOrSentences)
+        if (temp[0].Length > 40)
         {
-            string[] temp;
-            temp = currentContent.content.Split("*");
-            displayText.text = temp[0];
-            Debug.Log(temp[0] + " * " + temp[1]);
-            if (temp[0].Length > 30)
-            {
-                displayText.fontSize = 100;
-            }
-            if (temp[0].Length > 40)
-            {
-                displayText.fontSize = 80;
-            }
-            if (temp[0].Length > 50)
-            {
-                displayText.fontSize = 70;
-            }
-            displayButton.onClick.AddListener(() => { AudioManager.Instance.SentencesAudioFunction(temp[1], temp[0]); });
+            displayText.fontSize = 80;
         }
-        else
+        if (temp[0].Length > 50)
         {
-            displayButton.onClick.AddListener(() => { AudioManager.Instance.WordAudioFunction(currentContent.content); });
+            displayText.fontSize = 70;
         }
+
+        // if (currentBookMode == ReadingBookMode.Phrases && currentBookForm == ReadingBookForm.PhrasesOrSentences)
+        // {
+        //     displayButton.onClick.AddListener(() => { AudioManager.Instance.PhrasesAudioFunction(currentContent.content); });
+        // }
+        // else if (currentBookMode == ReadingBookMode.Sentences && currentBookForm == ReadingBookForm.PhrasesOrSentences)
+        // {
+        //     string[] temp;
+        //     temp = currentContent.content.Split("*");
+        //     displayText.text = temp[0];
+        //     Debug.Log(temp[0] + " * " + temp[1]);
+        //     if (temp[0].Length > 30)
+        //     {
+        //         displayText.fontSize = 100;
+        //     }
+        //     if (temp[0].Length > 40)
+        //     {
+        //         displayText.fontSize = 80;
+        //     }
+        //     if (temp[0].Length > 50)
+        //     {
+        //         displayText.fontSize = 70;
+        //     }
+        //     displayButton.onClick.AddListener(() => { AudioManager.Instance.SentencesAudioFunction(temp[1], temp[0]); });
+        // }
+        // else
+        // {
+        //     displayButton.onClick.AddListener(() => { AudioManager.Instance.WordAudioFunction(currentContent.content); });
+        // }
 
 
     }
