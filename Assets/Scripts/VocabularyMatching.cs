@@ -87,7 +87,7 @@ public class VocabularyMatching : MonoBehaviour
             answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -140);
         }
         
-        backButton.onClick.AddListener(() => OnBackButtonClicked(backButton));
+        backButton.onClick.AddListener(() => OnBackButtonClicked());
         NameNextButton.onClick.AddListener(() => OnNextButtonClicked());
         NamePrevButton.onClick.AddListener(() => OnPrevButtonClicked());
        
@@ -569,7 +569,7 @@ public class VocabularyMatching : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneController.Instance.OpenLevelSelect(sceneName);
     }
-    void OnBackButtonClicked(Button backButton)
+    void OnBackButtonClicked()
     {
         
         selectedContent.Clear();

@@ -56,8 +56,11 @@ public class WordsDisplay : MonoBehaviour
     void Start()
     {
         entryDict.Clear();
+        content.Clear();
+        contextList.Clear();
         VocabularyMatching.selectedContent.Clear();
         PhrasesLevelManager.selectedContextList.Clear();
+        PhrasesLevelManager.selectedContent.Clear();
 
         if (currentMode == WordsDisplayMode.Vocabulary)
         {
@@ -188,6 +191,8 @@ public class WordsDisplay : MonoBehaviour
     void OnNextButtonClicked(Button nextButton)
     {
         nextButton.onClick.RemoveAllListeners();
+        content.Clear();
+        contextList.Clear();
         nextButton.onClick.AddListener(() =>
         {
             if (currentGameMode == GameMode.Vocabulary)
@@ -229,6 +234,8 @@ public class WordsDisplay : MonoBehaviour
 
     void OnBackButtonClicked(Button backButton)
     {
+        content.Clear();
+        contextList.Clear();
         if (currentGameMode == GameMode.Vocabulary)
         {
             VocabularyMatching.selectedContent.Clear();

@@ -39,6 +39,7 @@ public class SentencesLevelManager : MonoBehaviour
     [SerializeField] private GameObject QuestionsBG;
     [SerializeField] private Button NameNextButton;
     [SerializeField] private Button NamePrevButton;
+    [SerializeField] private Button backButton;
     [SerializeField] private Button TickButton;
     [SerializeField] private Sprite correctSprite;
     [SerializeField] private Sprite wrongSprite;
@@ -120,6 +121,7 @@ public class SentencesLevelManager : MonoBehaviour
         }
         answersGrid.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -200);
 
+        backButton.onClick.AddListener(() => OnBackButtonClicked());
         NameNextButton.onClick.AddListener(() => OnNextButtonClicked());
         NamePrevButton.onClick.AddListener(() => OnPrevButtonClicked());
         TickButton.onClick.AddListener(() => OnTickButtonClicked());
@@ -793,6 +795,15 @@ public class SentencesLevelManager : MonoBehaviour
         {
             yield break;
         }
+    }
+
+    void OnBackButtonClicked()
+    {
+        
+        selectedContent.Clear();
+        selectedContentWithContext.Clear();
+        selectedSentences.Clear();
+        selectedSentencesWithContext.Clear();
     }
 
     void ClearGrids()

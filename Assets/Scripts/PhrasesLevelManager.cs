@@ -111,7 +111,7 @@ public class PhrasesLevelManager : MonoBehaviour
             answersGrid.gameObject.SetActive(false);
         }
 
-        backButton.onClick.AddListener(() => OnBackButtonClicked(backButton));
+        backButton.onClick.AddListener(() => OnBackButtonClicked());
         NameNextButton.onClick.AddListener(() => OnNextButtonClicked());
         NamePrevButton.onClick.AddListener(() => OnPrevButtonClicked());
         TickButton.onClick.AddListener(() => OnTickButtonClicked());
@@ -691,11 +691,11 @@ public class PhrasesLevelManager : MonoBehaviour
         SceneController.Instance.OpenLevelSelect(sceneName);
     }
 
-    void OnBackButtonClicked(Button backButton)
+    void OnBackButtonClicked()
     {
         selectedContent.Clear();
         selectedContextList.Clear();
-        backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("Phrases"));
+        // backButton.onClick.AddListener(() => SceneController.Instance.OpenLevelSelect("Phrases"));
     }
     void ClearGrids()
     {

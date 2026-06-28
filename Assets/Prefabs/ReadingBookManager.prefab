@@ -402,7 +402,7 @@ MonoBehaviour:
     - content: Eid
       image: {fileID: -3633939412284602823, guid: 09ae01a1b63350b42b210ca53fc6fcd7, type: 3}
       audio: {fileID: 8300000, guid: f52dc8dbbcf78974dab99071f329673d, type: 3}
-    - content: Ramazan
+    - content: Ramzan
       image: {fileID: 1030122933672692601, guid: 8211f487aa68b3240aae78d27040dddf, type: 3}
       audio: {fileID: 8300000, guid: d51b8e4acfb6a9c4197c28d201de5db7, type: 3}
     - content: Mosque
@@ -531,7 +531,7 @@ MonoBehaviour:
     - content: tummy
       image: {fileID: 2919562843731391373, guid: ec910d6fb65e04e45bd949390dd01a08, type: 3}
       audio: {fileID: 8300000, guid: e7f2d50406ea1344f89fcc3837bb2bec, type: 3}
-    - content: yogurt/yoghurt
+    - content: yogurt
       image: {fileID: 2247589129681168816, guid: f1dca67c22bf40d488fb17bb4a70c903, type: 3}
       audio: {fileID: 8300000, guid: be1255432c86bcc4a9e3f0680a0d0e70, type: 3}
     - content: clapping
@@ -609,7 +609,7 @@ MonoBehaviour:
     - content: cake
       image: {fileID: 8732635013323328055, guid: 0ca618f2dab5ff34b94ef2c04793e40a, type: 3}
       audio: {fileID: 8300000, guid: 2350fb425ae739d49b79efbfd2e67082, type: 3}
-    - content: cooker/oven
+    - content: cooker
       image: {fileID: -5630663290981787631, guid: 749470ac857575547a2c035a35734173, type: 3}
       audio: {fileID: 8300000, guid: f2e6d244c857fc944a876e205229c4ff, type: 3}
     - content: door
