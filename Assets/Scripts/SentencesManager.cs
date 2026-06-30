@@ -14,6 +14,7 @@ public struct SentencesBookInformation
     public bool enabled;
     public string sentenceContext;
     public List<SBEntry> contentList;
+    public List<string> sightWords;
 }
 
 [System.Serializable]
@@ -138,13 +139,13 @@ public class SentencesManager : MonoBehaviour
         {
             if (book.enabled)
             {
-                foreach (SBEntry b in book.contentList)
+                foreach (string b in book.sightWords)
                 {
                     ContentPictureAudioTrio entry = new ContentPictureAudioTrio
                     {
-                        content = b.sightWord,
-                        image = b.CPAT.image,
-                        audio = b.sightWordAudio
+                        content = b,
+                        image = Resources.Load<Sprite>($"Words-Pictures/{b}"),
+                        audio = Resources.Load<AudioClip>($"Updated-Audios/words/{b}"),
                     };
                     sightWords.Add(entry);
                 }

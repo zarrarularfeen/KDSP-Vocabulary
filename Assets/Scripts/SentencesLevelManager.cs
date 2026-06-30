@@ -454,7 +454,14 @@ public class SentencesLevelManager : MonoBehaviour
     void OnNameCardClicked(int index, Button sourceButton)
     {
         Debug.Log("Name card clicked: " + selectedContent[index].content);
-        AudioManager.Instance.SentencesAudioFunction(selectedContentWithContext[index].context, selectedContentWithContext[index].content.CPAT.content);
+        if (currentMode == SentencesLevelMode.ReadSentences)
+        {
+            AudioManager.Instance.SentencesAudioFunction(selectedContentWithContext[index].context, selectedContentWithContext[index].content.CPAT.content);
+        }
+        else
+        {
+            AudioManager.Instance.PlayGivenAudioNonDelayed(selectedContent[index].audio);
+        }
     }
 
     void OnNameNextButtonClicked()
@@ -799,7 +806,7 @@ public class SentencesLevelManager : MonoBehaviour
 
     void OnBackButtonClicked()
     {
-        
+
         selectedContent.Clear();
         selectedContentWithContext.Clear();
         selectedSentences.Clear();

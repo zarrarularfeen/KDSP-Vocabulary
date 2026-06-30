@@ -146,6 +146,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0300000004000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 7
     enabled: 0
     sentenceContext: 2. How do you feel
@@ -250,6 +251,7 @@ MonoBehaviour:
       - positions: 02000000
       - positions: 0000000001000000
       - positions: 000000000100000002000000
+    sightWords: []
   - book: 8
     enabled: 0
     sentenceContext: 3. The body
@@ -348,6 +350,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0200000003000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 9
     enabled: 0
     sentenceContext: 4. What do you like?
@@ -448,6 +451,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0000000001000000
       - positions: 000000000100000002000000
+    sightWords: []
   - book: 10
     enabled: 0
     sentenceContext: 5. Look at the animals
@@ -552,6 +556,7 @@ MonoBehaviour:
       - positions: 0000000001000000
       - positions: 0100000003000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 11
     enabled: 0
     sentenceContext: 6. At home
@@ -656,6 +661,7 @@ MonoBehaviour:
       - positions: 0200000004000000
       - positions: 0000000002000000
       - positions: 000000000100000002000000
+    sightWords: []
   - book: 12
     enabled: 0
     sentenceContext: 7. Here is
@@ -760,6 +766,7 @@ MonoBehaviour:
       - positions: 0200000003000000
       - positions: 000000000100000002000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 13
     enabled: 0
     sentenceContext: 8. Girls and Boys
@@ -864,6 +871,7 @@ MonoBehaviour:
       - positions: 0100000002000000
       - positions: 0100000002000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 14
     enabled: 0
     sentenceContext: 9. What are you doing?
@@ -958,6 +966,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0000000001000000
       - positions: 000000000100000002000000
+    sightWords: []
   - book: 15
     enabled: 0
     sentenceContext: 10. What do you like doing?
@@ -1051,6 +1060,7 @@ MonoBehaviour:
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
+    sightWords: []
   - book: 16
     enabled: 0
     sentenceContext: 11. Where are they?
@@ -1155,6 +1165,7 @@ MonoBehaviour:
       - positions: 010000000200000003000000
       - positions: 0200000003000000
       - positions: 0000000001000000020000000300000004000000
+    sightWords: []
   - book: 17
     enabled: 0
     sentenceContext: 12. I like eating and drinking
@@ -1251,6 +1262,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0200000003000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 18
     enabled: 0
     sentenceContext: 13. What is different?
@@ -1355,6 +1367,7 @@ MonoBehaviour:
       - positions: 0200000003000000
       - positions: 0100000003000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 19
     enabled: 0
     sentenceContext: 14. At breakfast
@@ -1459,6 +1472,7 @@ MonoBehaviour:
       - positions: 000000000100000002000000
       - positions: 0000000001000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 20
     enabled: 0
     sentenceContext: 15. What are they doing?
@@ -1563,6 +1577,7 @@ MonoBehaviour:
       - positions: 020000000300000004000000
       - positions: 00000000010000000200000003000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 21
     enabled: 0
     sentenceContext: 16. What are the animals doing?
@@ -1657,6 +1672,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 010000000200000003000000
       - positions: 00000000010000000200000003000000
+    sightWords: []
   - book: 22
     enabled: 0
     sentenceContext: 17. The animals are eating and drinking
@@ -1751,6 +1767,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 010000000200000003000000
       - positions: 01000000020000000300000004000000
+    sightWords: []
   - book: 23
     enabled: 0
     sentenceContext: 18. Look at the girl and the boy
@@ -1855,6 +1872,7 @@ MonoBehaviour:
       - positions: 020000000300000004000000
       - positions: 00000000040000000500000006000000
       - positions: 01000000030000000400000005000000
+    sightWords: []
   - book: 24
     enabled: 0
     sentenceContext: 19. Look at the lady and the man
@@ -1959,6 +1977,7 @@ MonoBehaviour:
       - positions: 00000000020000000300000006000000
       - positions: 01000000030000000400000005000000
       - positions: 00000000010000000200000005000000
+    sightWords: []
   - book: 25
     enabled: 0
     sentenceContext: 20. Look at the girls and the boys
@@ -2063,6 +2082,7 @@ MonoBehaviour:
       - positions: 00000000010000000300000004000000
       - positions: 02000000030000000400000005000000
       - positions: 0000000003000000040000000500000006000000
+    sightWords: []
   - book: 26
     enabled: 0
     sentenceContext: 21. Hello Tom
@@ -2166,6 +2186,7 @@ MonoBehaviour:
       blankPositions:
       - positions: 0100000002000000
       - positions: 000000000100000002000000
+    sightWords: []
   - book: 27
     enabled: 0
     sentenceContext: 22. Good night Emma
@@ -2270,6 +2291,7 @@ MonoBehaviour:
       - positions: 020000000300000006000000
       - positions: 00000000040000000500000006000000
       - positions: 00000000010000000200000004000000
+    sightWords: []
   - book: 28
     enabled: 0
     sentenceContext: 23. They are eating and drinking
@@ -2374,6 +2396,7 @@ MonoBehaviour:
       - positions: 020000000300000006000000
       - positions: 00000000040000000500000006000000
       - positions: 00000000010000000200000004000000
+    sightWords: []
   - book: 29
     enabled: 0
     sentenceContext: 24. At Lunch
@@ -2478,6 +2501,7 @@ MonoBehaviour:
       - positions: 020000000300000006000000
       - positions: 00000000040000000500000006000000
       - positions: 00000000010000000200000004000000
+    sightWords: []
   - book: 30
     enabled: 0
     sentenceContext: 25. Good Morning Emma
@@ -2582,3 +2606,4 @@ MonoBehaviour:
       - positions: 020000000300000006000000
       - positions: 00000000040000000500000006000000
       - positions: 00000000010000000200000004000000
+    sightWords: []
