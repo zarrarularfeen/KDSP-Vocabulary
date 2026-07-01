@@ -620,13 +620,11 @@ public class SentencesLevelManager : MonoBehaviour
         if (currentIndex >= selectedContent.Count)
         {
             Debug.Log("All words selected!");
-            UpdateTickState();
-            yield break;
         }
-        int currentBatch = currentIndex / batchSize;
-        currentBatchStart = currentBatch * batchSize;
-        int batchStart = currentBatch * batchSize;
-        int batchEnd = GetBatchEnd(batchStart);
+        // int currentBatch = currentIndex / batchSize;
+        // currentBatchStart = currentBatch * batchSize;
+        // int batchStart = currentBatch * batchSize;
+        int batchEnd = GetBatchEnd(currentBatchStart);
         //if we have finished current batch, stop and let the player advance manually
         if (currentIndex >= batchEnd)
         {
@@ -634,7 +632,7 @@ public class SentencesLevelManager : MonoBehaviour
             yield break;
         }
         yield return new WaitForSeconds(2.5f);
-        SpawnSelectButtons(batchStart, batchEnd, previousBatch, currentBatch);
+        SpawnSelectButtons(currentBatchStart, batchEnd, currentBatchStart / batchSize, currentBatchStart / batchSize);
     }
 
     void OnNextButtonClicked()

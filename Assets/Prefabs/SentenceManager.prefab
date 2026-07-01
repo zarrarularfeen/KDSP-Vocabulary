@@ -146,7 +146,17 @@ MonoBehaviour:
       blankPositions:
       - positions: 0300000004000000
       - positions: 00000000010000000200000003000000
-    sightWords: []
+    sightWords:
+    - leaf
+    - moon
+    - park
+    - pool
+    - rain
+    - rock
+    - sky
+    - snow
+    - sun
+    - water
   - book: 7
     enabled: 0
     sentenceContext: 2. How do you feel
@@ -251,7 +261,17 @@ MonoBehaviour:
       - positions: 02000000
       - positions: 0000000001000000
       - positions: 000000000100000002000000
-    sightWords: []
+    sightWords:
+    - cold
+    - dry
+    - happy
+    - hot
+    - hungry
+    - hurt
+    - sad
+    - thirsty
+    - tired
+    - wet
   - book: 8
     enabled: 0
     sentenceContext: 3. The body
