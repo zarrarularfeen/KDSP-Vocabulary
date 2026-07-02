@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7ce93aebb130f1d4a9c42e446688dcc7
+guid: cf63a8848bccc614d88ada4c4fade197
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1191963718168549177
-    second: here is a pillow_0
+      213: 5233157789744897747
+    second: here is a pillow 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: here is a pillow_0
+      name: here is a pillow 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7c8e869405b457fe0800000000000000
-      internalID: -1191963718168549177
+      spriteID: 3de10578849ef9840800000000000000
+      internalID: 5233157789744897747
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      here is a pillow_0: -1191963718168549177
+      here is a pillow 1_0: 5233157789744897747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

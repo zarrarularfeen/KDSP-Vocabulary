@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c3753d63af8b3824da87112850e1b19b
+guid: c150004a09258a2458eb4ebdd6fc621d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3197658200511187495
-    second: this is a floor_0
+      213: 1040383648829737064
+    second: this is a floor 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: this is a floor_0
+      name: this is a floor 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d57a6dfec2af93d0800000000000000
-      internalID: -3197658200511187495
+      spriteID: 8680f9a9a6f207e00800000000000000
+      internalID: 1040383648829737064
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      this is a floor_0: -3197658200511187495
+      this is a floor 1_0: 1040383648829737064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

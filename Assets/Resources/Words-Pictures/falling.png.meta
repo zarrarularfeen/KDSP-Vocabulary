@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 77a405c599a7d0546b869b79e759679d
+guid: 0e8b6f1cc784ec34ab629d2a4d5118c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9014768415921902150
-    second: falling_0
+      213: 2700940188178851148
+    second: falling 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: falling_0
+      name: falling 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abd609453eb15e280800000000000000
-      internalID: -9014768415921902150
+      spriteID: c452afb7acaab7520800000000000000
+      internalID: 2700940188178851148
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      falling_0: -9014768415921902150
+      falling 1_0: 2700940188178851148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

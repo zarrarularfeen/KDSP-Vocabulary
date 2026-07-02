@@ -625,7 +625,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 7488f8d27d760b9408378e40de8fb43c, type: 3}
       CPAT:
         content: this is a bathroom
-        image: {fileID: 5526748263384793396, guid: 54465af43be052b46bae4993b10a290e, type: 3}
+        image: {fileID: 7278272708749582336, guid: fbdc863eee87f6743b33badc15760015, type: 3}
         audio: {fileID: 8300000, guid: 27763827ca480d443a86f36a51648169, type: 3}
       blankPositions:
       - positions: 0200000003000000
@@ -665,7 +665,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: e1a4bbf25cee8eb449340421955ea9ee, type: 3}
       CPAT:
         content: this is a floor
-        image: {fileID: -3197658200511187495, guid: c3753d63af8b3824da87112850e1b19b, type: 3}
+        image: {fileID: 1040383648829737064, guid: c150004a09258a2458eb4ebdd6fc621d, type: 3}
         audio: {fileID: 8300000, guid: 20c193597bfff15468486e6bcbc6f076, type: 3}
       blankPositions:
       - positions: 0200000003000000
@@ -750,7 +750,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 8300000, guid: 4143152d9853a354e95940044f159d77, type: 3}
       CPAT:
         content: Here is a pillow.
-        image: {fileID: -1191963718168549177, guid: 7ce93aebb130f1d4a9c42e446688dcc7, type: 3}
+        image: {fileID: 5233157789744897747, guid: cf63a8848bccc614d88ada4c4fade197, type: 3}
         audio: {fileID: 8300000, guid: 0d8a49c9af3476d4ea01db0ac4e2f3c5, type: 3}
       blankPositions:
       - positions: 010000000200000003000000
@@ -800,7 +800,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Here is a toy.
-        image: {fileID: 8666611117555604209, guid: b3a8d67a16f141e4dae8a8e8a5cca127, type: 3}
+        image: {fileID: 4500883985504791159, guid: 42119854629462d43b00d0dad99e7ec6, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0000000001000000
@@ -1663,7 +1663,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The girl is brushing a horse.
-        image: {fileID: 4629058361598081670, guid: 9ae95e4775ef3eb4ba0f0bede6f61726, type: 3}
+        image: {fileID: -469515403908594598, guid: 32e9246aea3f12a448d28d160540899d, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 000000000100000002000000
@@ -1683,7 +1683,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: The boy is brushing a horse.
-        image: {fileID: 7864042434823022133, guid: f4402806bf29c524c9e3702193035d32, type: 3}
+        image: {fileID: -4082319100948599882, guid: b75c0a9b48eda2e45bc199ffe57fc9ba, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 0100000002000000
@@ -2827,7 +2827,7 @@ MonoBehaviour:
       sightWordAudio: {fileID: 0}
       CPAT:
         content: Emma is outside. She is hot.
-        image: {fileID: -8319579086345647821, guid: 24434062ebe45ac418eec6dc3598f0ec, type: 3}
+        image: {fileID: 3711119130742481744, guid: b45d48cbd68739a45a74573d2267efab, type: 3}
         audio: {fileID: 0}
       blankPositions:
       - positions: 020000000300000006000000

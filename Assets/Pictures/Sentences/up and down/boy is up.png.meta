@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 584ca725ab40edc4bbe41c6ffd332613
+guid: 3b6682ebf6a9cc94eafaa48ac562b3a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3857818762780778048
-    second: boy is up_0
+      213: -1139908618635209779
+    second: boy is up 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boy is up_0
+      name: boy is up 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c16d9c5646467ac0800000000000000
-      internalID: -3857818762780778048
+      spriteID: dc397dd962b3e20f0800000000000000
+      internalID: -1139908618635209779
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      boy is up_0: -3857818762780778048
+      boy is up 1_0: -1139908618635209779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

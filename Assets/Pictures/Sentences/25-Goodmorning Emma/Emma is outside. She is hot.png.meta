@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 24434062ebe45ac418eec6dc3598f0ec
+guid: b45d48cbd68739a45a74573d2267efab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8319579086345647821
-    second: Emma is outside. She is hot_0
+      213: 3711119130742481744
+    second: Emma is outside. She is hot 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Emma is outside. She is hot_0
+      name: Emma is outside. She is hot 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 339499566eaea8c80800000000000000
-      internalID: -8319579086345647821
+      spriteID: 053ef03ef2b808330800000000000000
+      internalID: 3711119130742481744
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Emma is outside. She is hot_0: -8319579086345647821
+      Emma is outside. She is hot 1_0: 3711119130742481744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

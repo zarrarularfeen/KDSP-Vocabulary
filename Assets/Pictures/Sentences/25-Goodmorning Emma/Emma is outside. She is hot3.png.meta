@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3aac46ba8602f9d4da3f71adc19e1d97
+guid: 24434062ebe45ac418eec6dc3598f0ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1751381528705752478
-    second: dry_0
+      213: -8319579086345647821
+    second: Emma is outside. She is hot_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dry_0
+      name: Emma is outside. She is hot_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 262205367c7d1b7e0800000000000000
-      internalID: -1751381528705752478
+      spriteID: 339499566eaea8c80800000000000000
+      internalID: -8319579086345647821
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dry_0: -1751381528705752478
+      Emma is outside. She is hot_0: -8319579086345647821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

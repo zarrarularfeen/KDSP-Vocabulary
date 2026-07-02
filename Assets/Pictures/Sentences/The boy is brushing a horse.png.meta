@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f4402806bf29c524c9e3702193035d32
+guid: b75c0a9b48eda2e45bc199ffe57fc9ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7864042434823022133
-    second: The boy is brushing a horse_0
+      213: -4082319100948599882
+    second: The boy is brushing a horse 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: The boy is brushing a horse_0
+      name: The boy is brushing a horse 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5366932dde0b22d60800000000000000
-      internalID: 7864042434823022133
+      spriteID: 6bbaa202860b857c0800000000000000
+      internalID: -4082319100948599882
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      The boy is brushing a horse_0: 7864042434823022133
+      The boy is brushing a horse 1_0: -4082319100948599882
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
