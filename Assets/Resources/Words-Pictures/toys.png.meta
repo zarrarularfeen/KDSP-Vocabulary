@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe4e84cc84d1325499bfc5d4f071d624
+guid: 3532cf820dc9b8b47a8b1d194c57f0ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5178856618704963196
-    second: leg 1_0
+      213: -8782809401901546629
+    second: i like toys_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,24 +109,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: leg 1_0
+      name: i like toys_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 489f86318510128b0800000000000000
-      internalID: -5178856618704963196
+      spriteID: b7382bdd1613d1680800000000000000
+      internalID: -8782809401901546629
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      leg 1_0: -5178856618704963196
+      i like toys_0: -8782809401901546629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

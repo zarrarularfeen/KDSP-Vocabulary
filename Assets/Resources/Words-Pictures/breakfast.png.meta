@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 838dc320b77e6e44f85447d7159ebcd7
+guid: 8560ec5f8e3f508499a59d4affd88194
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4785156349502552234
-    second: breakfast_0
+      213: 190120128838447329
+    second: breakfast 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: breakfast_0
+      name: breakfast 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 657023927a5b79db0800000000000000
-      internalID: -4785156349502552234
+      spriteID: 1e03118ff3173a200800000000000000
+      internalID: 190120128838447329
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      breakfast_0: -4785156349502552234
+      breakfast 1_0: 190120128838447329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

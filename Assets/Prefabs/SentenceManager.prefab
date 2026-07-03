@@ -603,6 +603,7 @@ MonoBehaviour:
     - fish
     - frog
     - lion
+    - look
     - mouse
     - owl
     - spider
@@ -1941,11 +1942,12 @@ MonoBehaviour:
     - drinking
     - eating
     - elephant
-    - elephantsgrass
+    - elephants
     - lion
     - lions
     - sheep
     - water
+    - grass
   - book: 23
     enabled: 0
     sentenceContext: 18. Look at the girl and the boy
@@ -2645,6 +2647,7 @@ MonoBehaviour:
     - man
     - milk
     - pizza
+    - cakes
   - book: 29
     enabled: 0
     sentenceContext: 24. At Lunch

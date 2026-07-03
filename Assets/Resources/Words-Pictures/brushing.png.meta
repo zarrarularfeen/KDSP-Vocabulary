@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c57a46f40cf50fa40bb006ddb8a06f55
+guid: 12eedb3250cb69e45b483b5c16dded6e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3363107272752092999
-    second: this is a garden_0
+      213: -8434802967142093911
+    second: brushing (hair)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: this is a garden_0
+      name: brushing (hair)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b8241201c7d351d0800000000000000
-      internalID: -3363107272752092999
+      spriteID: 9aba511146f81fa80800000000000000
+      internalID: -8434802967142093911
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      this is a garden_0: -3363107272752092999
+      brushing (hair)_0: -8434802967142093911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

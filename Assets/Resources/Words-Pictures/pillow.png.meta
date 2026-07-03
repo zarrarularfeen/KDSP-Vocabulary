@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8560ec5f8e3f508499a59d4affd88194
+guid: 536c7c15b423da945a5a736ffbd09cf6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 190120128838447329
-    second: breakfast 1_0
+      213: 5233157789744897747
+    second: here is a pillow 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: breakfast 1_0
+      name: here is a pillow 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e03118ff3173a200800000000000000
-      internalID: 190120128838447329
+      spriteID: 3de10578849ef9840800000000000000
+      internalID: 5233157789744897747
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      breakfast 1_0: 190120128838447329
+      here is a pillow 1_0: 5233157789744897747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

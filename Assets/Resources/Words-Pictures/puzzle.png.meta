@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c57a46f40cf50fa40bb006ddb8a06f55
+guid: 08094530fafb9c846ab535e96b3c91f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3363107272752092999
-    second: this is a garden_0
+      213: 6100923630358752671
+    second: i like a puzzle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: this is a garden_0
+      name: i like a puzzle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b8241201c7d351d0800000000000000
-      internalID: -3363107272752092999
+      spriteID: f9de15db7b5daa450800000000000000
+      internalID: 6100923630358752671
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      this is a garden_0: -3363107272752092999
+      i like a puzzle_0: 6100923630358752671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

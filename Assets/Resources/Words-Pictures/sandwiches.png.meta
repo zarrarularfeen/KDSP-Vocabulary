@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 744912f84088f0f459288cd7f0508a5e
+guid: a8e589e492c466c4b9756fb8a89c45f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1876003562533393374
-    second: full 1_0
+      213: 7991336335836205231
+    second: i like sandwiches_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,24 +109,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: full 1_0
+      name: i like sandwiches_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22c64d903b817f5e0800000000000000
-      internalID: -1876003562533393374
+      spriteID: fa0503abe0ee6ee60800000000000000
+      internalID: 7991336335836205231
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      full 1_0: -1876003562533393374
+      i like sandwiches_0: 7991336335836205231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

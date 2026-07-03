@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c57a46f40cf50fa40bb006ddb8a06f55
+guid: 6082e309c8f676b489d337d34b6b25e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3363107272752092999
-    second: this is a garden_0
+      213: -6205358259752014198
+    second: look at the head_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: this is a garden_0
+      name: look at the head_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b8241201c7d351d0800000000000000
-      internalID: -3363107272752092999
+      spriteID: a8ee1774a8322e9a0800000000000000
+      internalID: -6205358259752014198
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      this is a garden_0: -3363107272752092999
+      look at the head_0: -6205358259752014198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c57a46f40cf50fa40bb006ddb8a06f55
+guid: 838dc320b77e6e44f85447d7159ebcd7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3363107272752092999
-    second: this is a garden_0
+      213: -4785156349502552234
+    second: breakfast_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: this is a garden_0
+      name: breakfast_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b8241201c7d351d0800000000000000
-      internalID: -3363107272752092999
+      spriteID: 657023927a5b79db0800000000000000
+      internalID: -4785156349502552234
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      this is a garden_0: -3363107272752092999
+      breakfast_0: -4785156349502552234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
