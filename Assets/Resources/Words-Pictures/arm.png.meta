@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bd2d00af80bfa464abddb9030b30f9fc
+guid: b8b3044c008231e4a9c8eef5fa3f7288
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6837170349365210292
-    second: sandwiches 1_0
+      213: 861105081771728581
+    second: look at the arm_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sandwiches 1_0
+      name: look at the arm_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c43d049cacd7d11a0800000000000000
-      internalID: -6837170349365210292
+      spriteID: 5ce9941728243fb00800000000000000
+      internalID: 861105081771728581
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sandwiches 1_0: -6837170349365210292
+      look at the arm_0: 861105081771728581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
