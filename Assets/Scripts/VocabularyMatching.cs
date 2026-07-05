@@ -199,6 +199,10 @@ public class VocabularyMatching : MonoBehaviour
         draggable.word = word;
         Debug.Log("Spawned draggable for word: " + word);
 
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(1.5f);
+        }
         AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
         AudioManager.Instance.WaitForCurrentAudio();
 
@@ -216,6 +220,8 @@ public class VocabularyMatching : MonoBehaviour
 
     private IEnumerator HandleCorrectMatch(GameObject targetPrefab)
     {
+        NameNextButton.enabled = false;
+        NamePrevButton.enabled = false;
         Image img = null;
         if (targetPrefab != null && targetPrefab.transform != null && targetPrefab.transform.childCount > 1)
         {
@@ -231,6 +237,7 @@ public class VocabularyMatching : MonoBehaviour
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
+        
         AudioManager.Instance.PlayCorrectSound();
         yield return new WaitForSeconds(1.25f);
 
@@ -239,11 +246,15 @@ public class VocabularyMatching : MonoBehaviour
         currentIndex++;
         if (currentIndex >= GetBatchEnd(currentBatchStart))
         {
+            NameNextButton.enabled = true;
+            NamePrevButton.enabled = true;
             UpdateTickState();
             yield break;
         }
 
         SpawnNextDraggable();
+        NameNextButton.enabled = true;
+        NamePrevButton.enabled = true;
     }
 
     public void OnIncorrectMatch(GameObject targetPrefab)
@@ -349,6 +360,10 @@ public class VocabularyMatching : MonoBehaviour
             }
         }
         int contentIndex = GetCurrentBatchContentIndex();
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(1.5f);
+        }
         AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].content);
     }
 
@@ -409,6 +424,8 @@ public class VocabularyMatching : MonoBehaviour
 
     private IEnumerator HandleCorrectSelection(string selectedWord, Button sourceButton)
     {
+        NameNextButton.enabled = false;
+        NamePrevButton.enabled = false;
         Image img = null;
         if (sourceButton != null && sourceButton.transform != null && sourceButton.transform.childCount > 1)
         {
@@ -418,6 +435,7 @@ public class VocabularyMatching : MonoBehaviour
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3, sourceButton));
         }
+        
         AudioManager.Instance.PlayCorrectSound();
         yield return new WaitForSeconds(1.25f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
@@ -427,11 +445,15 @@ public class VocabularyMatching : MonoBehaviour
         int batchEnd = GetBatchEnd(currentBatchStart);
         if (currentIndex >= batchEnd)
         {
+            NameNextButton.enabled = true;
+            NamePrevButton.enabled = true;
             UpdateTickState();
             yield break;
         }
         yield return new WaitForSeconds(2.5f);
         SpawnSelectButtons(currentBatchStart, batchEnd, currentBatchStart / batchSize, currentBatchStart / batchSize);
+        NameNextButton.enabled = true;
+        NamePrevButton.enabled = true;
     }
 
     void OnNextButtonClicked()

@@ -329,6 +329,10 @@ public class SentencesLevelManager : MonoBehaviour
                 break;
         }
         // AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].audio);
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(1.5f);
+        }
         AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
         AudioManager.Instance.WaitForCurrentAudio();
         Debug.Log("Spawned draggable for word: " + word);
@@ -348,6 +352,8 @@ public class SentencesLevelManager : MonoBehaviour
 
     private IEnumerator HandleCorrectMatch(GameObject targetPrefab)
     {
+        NameNextButton.enabled = false;
+        NamePrevButton.enabled = false;
         Image img = null;
         if (targetPrefab != null && targetPrefab.transform != null && targetPrefab.transform.childCount > 1)
         {
@@ -356,13 +362,14 @@ public class SentencesLevelManager : MonoBehaviour
 
         if (BlockerManager.Instance != null)
         {
-            BlockerManager.Instance.ActivateBlocker(1.0f);
+            BlockerManager.Instance.ActivateBlocker(3.5f);
         }
 
         if (img != null)
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
+
         AudioManager.Instance.PlayCorrectSound();
         yield return new WaitForSeconds(1.25f);
 
@@ -374,18 +381,24 @@ public class SentencesLevelManager : MonoBehaviour
         if (currentIndex >= selectedContent.Count)
         {
             Debug.Log("All words matched!");
+            NameNextButton.enabled = true;
+            NamePrevButton.enabled = true;
             UpdateTickState();
             yield break;
         }
 
         if (currentIndex >= GetBatchEnd(currentBatchStart))
         {
+            NameNextButton.enabled = true;
+            NamePrevButton.enabled = true;
             UpdateTickState();
             yield break;
         }
 
         // Spawn next draggable in current batch
         SpawnNextDraggable();
+        NameNextButton.enabled = true;
+        NamePrevButton.enabled = true;
         UpdateTickState();
     }
 
@@ -535,6 +548,10 @@ public class SentencesLevelManager : MonoBehaviour
         }
         int contentIndex = GetCurrentBatchContentIndex();
         // AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].audio);
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(1.5f);
+        }
         AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].content);
         // AudioManager.Instance.WaitForCurrentAudio();
     }
@@ -598,6 +615,8 @@ public class SentencesLevelManager : MonoBehaviour
     private IEnumerator HandleCorrectSelection(string selectedWord, Button sourceButton)
     {
         Debug.Log("Correct selection for word: " + selectedWord);
+        NameNextButton.enabled = false;
+        NamePrevButton.enabled = false;
         Image img = null;
         if (sourceButton != null && sourceButton.transform != null && sourceButton.transform.childCount > 1)
         {
@@ -628,11 +647,15 @@ public class SentencesLevelManager : MonoBehaviour
         //if we have finished current batch, stop and let the player advance manually
         if (currentIndex >= batchEnd)
         {
+            NameNextButton.enabled = true;
+            NamePrevButton.enabled = true;
             UpdateTickState();
             yield break;
         }
         yield return new WaitForSeconds(2.5f);
         SpawnSelectButtons(currentBatchStart, batchEnd, currentBatchStart / batchSize, currentBatchStart / batchSize);
+        NameNextButton.enabled = true;
+        NamePrevButton.enabled = true;
     }
 
     void OnNextButtonClicked()

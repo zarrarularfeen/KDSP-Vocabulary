@@ -259,7 +259,10 @@ public class PhrasesLevelManager : MonoBehaviour
         dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
 
         Debug.Log("Spawned draggable for word: " + word);
-        // AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].audio);
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(1.5f);
+        }
         AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
     }
 
@@ -275,6 +278,8 @@ public class PhrasesLevelManager : MonoBehaviour
 
     private IEnumerator HandleCorrectMatch(GameObject targetPrefab)
     {
+        NameNextButton.enabled = false;
+        NamePrevButton.enabled = false;
         Image img = null;
         if (targetPrefab != null && targetPrefab.transform != null && targetPrefab.transform.childCount > 1)
         {
@@ -290,6 +295,11 @@ public class PhrasesLevelManager : MonoBehaviour
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3));
         }
+        
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(2.0f);
+        }
         AudioManager.Instance.PlayCorrectSound();
 
         //nullreference error over here using audioSource.clip.length because audioSource.clip is null
@@ -301,18 +311,24 @@ public class PhrasesLevelManager : MonoBehaviour
         // Check if all words are done
         if (currentIndex >= selectedContent.Count)
         {
+            NameNextButton.enabled = true;
+            NamePrevButton.enabled = true;
             UpdateTickState();
             yield break;
         }
 
         if (currentIndex >= GetBatchEnd(currentBatchStart))
         {
+            NameNextButton.enabled = true;
+            NamePrevButton.enabled = true;
             UpdateTickState();
             yield break;
         }
 
         // Spawn next draggable in current batch
         SpawnNextDraggable();
+        NameNextButton.enabled = true;
+        NamePrevButton.enabled = true;
         UpdateTickState();
     }
 
@@ -435,9 +451,11 @@ public class PhrasesLevelManager : MonoBehaviour
             }
         }
         int contentIndex = GetCurrentBatchContentIndex();
-        // AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].audio);
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(1.5f);
+        }
         AudioManager.Instance.ShowMeFunction(selectedContent[contentIndex].content);
-        // AudioManager.Instance.WaitForCurrentAudio();
     }
 
     void BuildCurrentBatchOrder(int batchStart, int batchEnd)
@@ -503,6 +521,8 @@ public class PhrasesLevelManager : MonoBehaviour
     private IEnumerator HandleCorrectSelection(string selectedWord, Button sourceButton)
     {
         Debug.Log("Correct selection for word: " + selectedWord);
+        NameNextButton.enabled = false;
+        NamePrevButton.enabled = false;
         Image img = null;
         if (sourceButton != null && sourceButton.transform != null && sourceButton.transform.childCount > 1)
         {
@@ -512,14 +532,15 @@ public class PhrasesLevelManager : MonoBehaviour
         {
             yield return StartCoroutine(FeedBackFlicker(img, correctSprite, 0.2f, 3, sourceButton));
         }
+        if (BlockerManager.Instance != null)
+        {
+            BlockerManager.Instance.ActivateBlocker(2.0f);
+        }
         AudioManager.Instance.PlayCorrectSound();
         yield return new WaitForSeconds(1.25f);
         AudioManager.Instance.PlayPositiveReinforcementSound();
         yield return new WaitForSeconds(1.25f);
-        if (sourceButton != null)
-        {
-            sourceButton.interactable = false;
-        }
+    
         int previousBatch = currentIndex / batchSize;
         currentIndex++;
 
@@ -535,11 +556,15 @@ public class PhrasesLevelManager : MonoBehaviour
         //if we have finished current batch of 4, move to next batch
         if (currentIndex >= batchEnd)
         {
+            NameNextButton.enabled = true;
+            NamePrevButton.enabled = true;
             UpdateTickState();
             yield break;
         }
         yield return new WaitForSeconds(2.5f);
         SpawnSelectButtons(currentBatchStart, batchEnd, currentBatchStart / batchSize, currentBatchStart / batchSize);
+        NameNextButton.enabled = true;
+        NamePrevButton.enabled = true;
     }
 
     void OnNextButtonClicked()
