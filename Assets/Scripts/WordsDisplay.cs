@@ -344,22 +344,25 @@ public class WordsDisplay : MonoBehaviour
                     {
                         SpriteSwap(pair.content, false);
                     }
-
+                    allSelected = false;
                     Debug.Log("All vocabulary content unselected.");
                     return;
                 }
-
-                foreach (ContentPictureAudioTrio pair in content)
+                else
                 {
-                    if (!VocabularyMatching.selectedContent.Contains(pair))
+                    foreach (ContentPictureAudioTrio pair in content)
                     {
-                        VocabularyMatching.selectedContent.Add(pair);
+                        if (!VocabularyMatching.selectedContent.Contains(pair))
+                        {
+                            VocabularyMatching.selectedContent.Add(pair);
+                        }
+                        SpriteSwap(pair.content, true);
                     }
-
-                    SpriteSwap(pair.content, true);
+                    allSelected = true;
+                    Debug.Log("All vocabulary content selected.");
+                    return;    
                 }
-
-                Debug.Log("All vocabulary content selected.");
+                
             }
             else if (currentGameMode == GameMode.Phrases)
             {
