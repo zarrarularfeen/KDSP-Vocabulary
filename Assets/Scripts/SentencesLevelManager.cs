@@ -873,9 +873,9 @@ public class SentencesLevelManager : MonoBehaviour
                 currIndex = 0;
                 // ✅ Proper wait
                 yield return new WaitUntil(() => FITBCheck);
-                // AudioManager.Instance.PlayGivenAudioNonDelayed(entry.CPAT.audio);
-                AudioManager.Instance.SentencesAudioFunction(entry.context, entry.content.CPAT.content);
-                yield return new WaitForSeconds(4f);
+                // AudioManager.Instance.SentencesAudioFunction(entry.context, entry.content.CPAT.content);
+                // yield return new WaitForSeconds(4f);
+                yield return new WaitForSeconds(1f);
             }
         }
     }
