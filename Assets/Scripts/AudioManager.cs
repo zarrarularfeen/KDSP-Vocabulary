@@ -245,7 +245,10 @@ public class AudioManager : MonoBehaviour
     {
         if (audioSource.isPlaying)
         {
-            yield return new WaitForSeconds(audioSource.clip.length);
+            if (audioSource != null)
+            {
+                yield return new WaitForSeconds(audioSource.clip.length);
+            }
         }
     }
 }

@@ -171,6 +171,8 @@ public class SentencesLevelManager : MonoBehaviour
                 SetContentMatch();
                 break;
             case SentencesLevelMode.BuildSentences:
+                NameNextButton.gameObject.SetActive(false);
+                NamePrevButton.gameObject.SetActive(false);
                 FITBAnswersGrid.gameObject.SetActive(true);
                 FITBQuestionText.gameObject.SetActive(true);
                 QuestionsBG.gameObject.SetActive(true);
@@ -333,8 +335,13 @@ public class SentencesLevelManager : MonoBehaviour
         {
             BlockerManager.Instance.ActivateBlocker(1.5f);
         }
-        AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
-        AudioManager.Instance.WaitForCurrentAudio();
+
+        if (currentMode != SentencesLevelMode.MatchSentencesPicture)
+        {
+            AudioManager.Instance.MatchWithFunction(selectedContent[contentIndex].content);
+            AudioManager.Instance.WaitForCurrentAudio();
+        }
+
         Debug.Log("Spawned draggable for word: " + word);
         // dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 36;
     }
