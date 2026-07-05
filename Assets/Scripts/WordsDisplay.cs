@@ -194,8 +194,6 @@ public class WordsDisplay : MonoBehaviour
         nextButton.onClick.RemoveAllListeners();
         nextButton.onClick.AddListener(() =>
         {
-            content.Clear();
-            contextList.Clear();
 
             if (currentGameMode == GameMode.Vocabulary)
             {
@@ -207,10 +205,14 @@ public class WordsDisplay : MonoBehaviour
                 }
                 if (VocabularyMatching.currentMode != VocabularyMode.Name)
                 {
+                    content.Clear();
+                    contextList.Clear();
                     SceneController.Instance.OpenBatchSizeSetting(Scenes.VocabularyMatching);
                 }
                 else
                 {
+                    content.Clear();
+                    contextList.Clear();
                     SceneController.Instance.OpenLevelSelect("VocabularyMatching");
                 }
             }
@@ -223,10 +225,14 @@ public class WordsDisplay : MonoBehaviour
                 }
                 if (PhrasesLevelManager.currentMode != PhrasesLevelMode.ReadSightWord)
                 {
+                    content.Clear();
+                    contextList.Clear();
                     SceneController.Instance.OpenBatchSizeSetting(Scenes.PhrasesLevel);
                 }
                 else
                 {
+                    content.Clear();
+                    contextList.Clear();
                     SceneController.Instance.OpenLevelSelect("PhrasesLevel");
                 }
             }
