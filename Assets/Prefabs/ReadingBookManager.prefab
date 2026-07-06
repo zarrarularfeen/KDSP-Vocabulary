@@ -606,7 +606,7 @@ MonoBehaviour:
     - content: cake
       image: {fileID: 8732635013323328055, guid: 0ca618f2dab5ff34b94ef2c04793e40a, type: 3}
       audio: {fileID: 8300000, guid: 2350fb425ae739d49b79efbfd2e67082, type: 3}
-    - content: cooker
+    - content: oven
       image: {fileID: -5630663290981787631, guid: 749470ac857575547a2c035a35734173, type: 3}
       audio: {fileID: 8300000, guid: f2e6d244c857fc944a876e205229c4ff, type: 3}
     - content: door
@@ -678,7 +678,7 @@ MonoBehaviour:
     - content: potty
       image: {fileID: 216510009038366504, guid: 92f0d10392800424c9ceeea06b3527c1, type: 3}
       audio: {fileID: 8300000, guid: dc6a6738728e3b84a986cc80402e51b1, type: 3}
-    - content: pushchair/stroller
+    - content: pushchair
       image: {fileID: 8162346365750617714, guid: 4cd6fd6e86453124a9d2e4a2e0f8d13e, type: 3}
       audio: {fileID: 8300000, guid: 73d747b1f1e832448a9bd69cd0aff168, type: 3}
     - content: sand

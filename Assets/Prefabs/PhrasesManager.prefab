@@ -617,7 +617,7 @@ MonoBehaviour:
       image: {fileID: 657289779235973496, guid: 6472924389692ea4abd86ec0c2a526c3, type: 3}
       audio: {fileID: 8300000, guid: a3b44dab288baf84bb6401e2b3f897ba, type: 3}
     - content: swings
-      image: {fileID: 657289779235973496, guid: 6472924389692ea4abd86ec0c2a526c3, type: 3}
+      image: {fileID: -3809252089606546843, guid: 01e329e4b5886f949ac6de1e85e0d0e4, type: 3}
       audio: {fileID: 8300000, guid: 34e0bcd19a00a8d41beed94d9ab2baeb, type: 3}
     - content: table
       image: {fileID: -8841490917199087839, guid: 76c3dd7a9856e194c9a9234e4cdd69e1, type: 3}

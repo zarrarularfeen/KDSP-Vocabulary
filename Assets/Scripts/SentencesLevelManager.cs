@@ -258,7 +258,7 @@ public class SentencesLevelManager : MonoBehaviour
 
                 case SentencesLevelMode.MatchSightWord:
                     target.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[i].content;
-                    target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                    target.GetComponentInChildren<TextMeshProUGUI>().fontSize = 85;
                     target.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                     break;
 
@@ -314,13 +314,13 @@ public class SentencesLevelManager : MonoBehaviour
 
             case SentencesLevelMode.MatchSightWord:
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[contentIndex].content;
-                dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 85;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
             case SentencesLevelMode.MatchSightWordPicture:
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().text = selectedContent[contentIndex].content;
                 // dragCard.GetComponentInChildren<Image>().sprite = null;
-                dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 90;
+                dragCard.GetComponentInChildren<TextMeshProUGUI>().fontSize = 85;
                 dragCard.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
                 break;
             case SentencesLevelMode.MatchSentencesPicture:

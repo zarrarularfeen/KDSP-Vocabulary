@@ -952,6 +952,110 @@ MonoBehaviour:
     - girls
     - reading
     - walking
+  - book: 15
+    enabled: 0
+    sentenceContext: 10. What do you like doing?
+    contentList:
+    - sightWord: playing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like playing
+        image: {fileID: 8846346469183968631, guid: 30c103ff4b3d8c84392563d680114bc9, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0000000002000000
+      - positions: 0000000001000000
+    - sightWord: painting
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like painting
+        image: {fileID: 8100483622361625846, guid: c7347e3ab681d994c946ae16ed59311e, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0000000002000000
+      - positions: 0000000001000000
+    - sightWord: drawing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like drawing
+        image: {fileID: -1283068231547454972, guid: e1c14043c24f8304a9880d2503b446fb, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0000000002000000
+      - positions: 000000000100000002000000
+    - sightWord: writing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like writing
+        image: {fileID: 4390960404607850056, guid: 90c3d7e168948d0418b899950e1e4623, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0100000002000000
+      - positions: 000000000100000002000000
+    - sightWord: cooking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like cooking
+        image: {fileID: 8046028249274725093, guid: b0399928e097aca41817722c26e19da3, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0100000002000000
+      - positions: 000000000100000002000000
+    - sightWord: splashing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like splashing
+        image: {fileID: -7918911663575771870, guid: 72be31cff5791924e8986efec39fb739, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0100000002000000
+      - positions: 000000000100000002000000
+    - sightWord: building
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like building
+        image: {fileID: -1899666132796268396, guid: 4725018f75bed454889135737682797e, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0100000002000000
+      - positions: 000000000100000002000000
+    - sightWord: walking
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like walking
+        image: {fileID: 6059224892489504050, guid: 0cdfcd990d439f745938b3d972095ecc, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0100000002000000
+      - positions: 000000000100000002000000
+    - sightWord: dancing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like dancing
+        image: {fileID: 381395297151655283, guid: 9ad5012eec9886941b3f82d8e7341bf8, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0100000002000000
+      - positions: 000000000100000002000000
+    - sightWord: singing
+      sightWordAudio: {fileID: 0}
+      CPAT:
+        content: I like singing
+        image: {fileID: 369695522211660735, guid: 1bba2b78ecf88ec4482fcf7a694849ad, type: 3}
+        audio: {fileID: 0}
+      blankPositions:
+      - positions: 0100000002000000
+    sightWords:
+    - building
+    - cooking
+    - dancing
+    - drawing
+    - painting
+    - playing
+    - singing
+    - splashing
+    - walking
+    - writing
   - book: 14
     enabled: 0
     sentenceContext: 9. What are you doing?
@@ -1056,110 +1160,6 @@ MonoBehaviour:
     - playing
     - singing
     - washing
-    - writing
-  - book: 15
-    enabled: 0
-    sentenceContext: 10. What do you like doing?
-    contentList:
-    - sightWord: playing
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like playing
-        image: {fileID: 8846346469183968631, guid: 30c103ff4b3d8c84392563d680114bc9, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0000000002000000
-      - positions: 0000000001000000
-    - sightWord: painting
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like painting
-        image: {fileID: 8100483622361625846, guid: c7347e3ab681d994c946ae16ed59311e, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0000000002000000
-      - positions: 0000000001000000
-    - sightWord: drawing
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like drawing
-        image: {fileID: -1283068231547454972, guid: e1c14043c24f8304a9880d2503b446fb, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0000000002000000
-      - positions: 000000000100000002000000
-    - sightWord: writing
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like writing
-        image: {fileID: 4390960404607850056, guid: 90c3d7e168948d0418b899950e1e4623, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0100000002000000
-      - positions: 000000000100000002000000
-    - sightWord: cooking
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like cooking
-        image: {fileID: 8046028249274725093, guid: b0399928e097aca41817722c26e19da3, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0100000002000000
-      - positions: 000000000100000002000000
-    - sightWord: splashing
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like splashing
-        image: {fileID: -7918911663575771870, guid: 72be31cff5791924e8986efec39fb739, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0100000002000000
-      - positions: 000000000100000002000000
-    - sightWord: building
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like building
-        image: {fileID: -1899666132796268396, guid: 4725018f75bed454889135737682797e, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0100000002000000
-      - positions: 000000000100000002000000
-    - sightWord: walking
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like walking
-        image: {fileID: 6059224892489504050, guid: 0cdfcd990d439f745938b3d972095ecc, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0100000002000000
-      - positions: 000000000100000002000000
-    - sightWord: dancing
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like dancing
-        image: {fileID: 381395297151655283, guid: 9ad5012eec9886941b3f82d8e7341bf8, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0100000002000000
-      - positions: 000000000100000002000000
-    - sightWord: singing
-      sightWordAudio: {fileID: 0}
-      CPAT:
-        content: I like singing
-        image: {fileID: 369695522211660735, guid: 1bba2b78ecf88ec4482fcf7a694849ad, type: 3}
-        audio: {fileID: 0}
-      blankPositions:
-      - positions: 0100000002000000
-    sightWords:
-    - building
-    - cooking
-    - dancing
-    - drawing
-    - painting
-    - playing
-    - singing
-    - splashing
-    - walking
     - writing
   - book: 16
     enabled: 0
@@ -2508,7 +2508,7 @@ MonoBehaviour:
     - sightWord: bed
       sightWordAudio: {fileID: 0}
       CPAT:
-        content: Esha and bear are in bed. 'Good night, Esha.'
+        content: Esha and bear are in bed. Good night, Esha.
         image: {fileID: -1773796890312478828, guid: f36744b4b85a0074396299da0a90becb, type: 3}
         audio: {fileID: 0}
       blankPositions:

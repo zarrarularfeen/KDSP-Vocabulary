@@ -11,9 +11,9 @@ async def generate_audio(text, filename):
 
 # Match your exact Unity folder names
 data = [
-    ("chef", "words", "chef"),
-    ("match chef with chef", "match_words", "match_chef_with_chef"), 
-    ("show me chef", "show_me", "show_me_chef"),
+    ("The man is washing the car", "words", "The man is washing the car."),
+    # ("match pushchair with pushchair", "match_words", "match_pushchair_with_pushchair"), 
+    # ("show me pushchair", "show_me", "show_me_pushchair"),
 ]
 
 # Modified path since the script is already inside the Assets folder
