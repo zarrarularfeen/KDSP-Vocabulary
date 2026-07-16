@@ -2413,7 +2413,7 @@ MonoBehaviour:
     - writing
   - book: 27
     enabled: 0
-    sentenceContext: 22. Good night Emma
+    sentenceContext: 22. Good night Eisha
     contentList:
     - sightWord: playing
       sightWordAudio: {fileID: 0}
